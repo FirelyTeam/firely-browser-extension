@@ -1,0 +1,1 @@
+console.log('Firely FHIR Extension: This is a FHIR page. Open the Firely FHIR plugin for helpful link.');
