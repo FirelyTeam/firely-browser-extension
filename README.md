@@ -1,8 +1,8 @@
-# Firely FHIR extension: A browser extension for working with FHIR
+# Firely browser extension for FHIR
 
 ## Installing locally
 
-1. Go to [chrome://extensions](chrome://extensions) and turn on Developer Mode on top-right.
+1. Go to [chrome://extensions](chrome://extensions) and turn on `Developer Mode` on top-right.
 2. Click `Load unpacked` and select the folder where the browser plugin is located
 
 ## Testing
