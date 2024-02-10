@@ -48,6 +48,16 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration: underline;
 }
 
+.more-button {
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.more-button:hover {
+    text-decoration: none;
+}
+
+
 /* #search-box {
     position: relative;
     display: inline-block;

@@ -1,0 +1,11 @@
+{
+    "appName": {
+        "message": "Firely FHIR extension"
+    },
+    "appShortName": {
+        "message": "Firely FHIR extension"
+    },
+    "appDescription": {
+        "message": "Get helpful FHIR links and tools across the web."
+    }
+}

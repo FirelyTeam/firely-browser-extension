@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
     <div id="popup-content">
@@ -17,13 +17,17 @@
             </div>
 
             <div id="search-scope" style="display: none;">
-                <input type="text" id="package-text-field" name="package" hidden>
-                <input type="radio" name="search-type" value="package" id="search-type-package" disabled>
-                <label for="search-type-package">In this package</label> <br/>
+                <div id="search-scope-package-name" style="display: none;">
+                    <input type="text" id="package-text-field" name="package" hidden>
+                    <input type="radio" name="search-type" value="package" id="search-type-package" disabled>
+                    <label for="search-type-package">In this package</label> <br/>
+                </div>
 
-                <input type="text" id="fhir-version-text-field" name="fhir-version" hidden>
-                <input type="radio" name="search-type" value="fhir-version" id="search-type-fhir-version" disabled>
-                <label for="search-type-fhir-version">In this FHIR version</label> <br/>
+                <div id="search-scope-fhir-version" style="display: none;">
+                    <input type="text" id="fhir-version-text-field" name="fhir-version" hidden>
+                    <input type="radio" name="search-type" value="fhir-version" id="search-type-fhir-version" disabled>
+                    <label for="search-type-fhir-version">In this FHIR version</label> <br/>
+                </div>
 
                 <input type="radio" name="search-type" value="all" id="search-type-all" checked>
                 <label for="search-type-all">In all</label> <br/>
@@ -31,6 +35,5 @@
         </form>
     </div>
     <script src="popup.js"></script>
-    <script src="functions.js"></script>
 </body>
 </html>
