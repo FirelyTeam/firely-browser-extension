@@ -74,11 +74,79 @@ export function getMatchingGuide(urlString) {
     let url = new URL(urlString);
     let locationHostname = String(url.hostname).toLowerCase();
 
-    var matchingGuide = getMatchingHL7Guide(url)
-    if (matchingGuide) {
-        return matchingGuide
-    } else if (locationHostname == 'hl7.org' || locationHostname == 'www.hl7.org' || locationHostname == 'build.fhir.org') {
-        return getMatchingHl7FhirCoreGuide(url);
+    if (locationHostname == 'simplifier.net') {
+        // Match against Simplifier.net
+        return getSimplifierDetails(url);
+    } else if (locationHostname == 'registry.fhir.org') {
+        // Match against registry.fhir.org
+    } else {
+        var matchingGuide = getMatchingHL7Guide(url)
+        if (matchingGuide) {
+            return matchingGuide
+        } else if (locationHostname == 'hl7.org' || locationHostname == 'www.hl7.org' || locationHostname == 'build.fhir.org') {
+            return getMatchingHl7FhirCoreGuide(url);
+        }
+    }
+}
+
+function getSimplifierDetails(url) {
+    let pathParts = url.pathname.split('/');
+    if (pathParts.length > 2) {
+        let entityType = pathParts[1];
+        if (entityType == 'guide' || entityType == 'published-guide') {
+            // https://simplifier.net/guide/HL7-FHIR-Guide-Template/Home/FHIR-Artifacts/US-Core-Patient.page.md?version=current
+            let guideUrlKey = pathParts[2];
+
+            // Add the recommended version
+            let return_array = {
+                path: '',
+                guideVersions: [
+                    {
+                        guideVersionLabel: 'Recommended',
+                        guideVersionLink: 'https://simplifier.net/guide/' + guideUrlKey,
+                    }
+                ]
+            }
+
+            // Add the currrently selected version, if there's a version parameter
+            if (entityType == 'guide') {
+                let urlParams = new URLSearchParams(url.search);
+                let version = urlParams.get('version');
+                if (version) {
+                    return_array.guideVersions.push(
+                        {
+                            guideVersionLabel: version,
+                            guideVersionLink: 'https://simplifier.net/guide/' + guideUrlKey + '?version=' + version,
+                            selected: true
+                        }
+                    );
+                }
+            }
+
+            // Add the all versions link
+            let allGuideVersions = {
+                guideVersionLabel: 'All versions',
+                guideVersionLink: 'https://simplifier.net/published-guide/' + guideUrlKey + '/versions',
+            }
+            if (entityType == 'published-guide' && pathParts[3] == 'versions') {
+                allGuideVersions.selected = true;
+            }
+            return_array.guideVersions.push(allGuideVersions);
+
+            return return_array;
+
+        } else if (entityType == 'packages') {
+            // https://simplifier.net/packages/hl7.fhir.r3.core/3.0.2/files/59464
+            let packageName = pathParts[2];
+            let packageVersion = pathParts[3];
+            let return_array = {
+                packageName: packageName
+            }
+            if (packageVersion) {
+                return_array['packageVersion'] = packageVersion
+            }
+            return return_array
+        }
     }
 }
 
@@ -100,12 +168,15 @@ function getMatchingHL7Guide(url) {
     let longestMatch = findLongestMatch(processedUrl, Object.keys(guide_url_list));
     let guide_url_metadata = guide_url_list[longestMatch]
 
+    // If there's a match and there are guide details for this match
     if (guide_url_metadata) {
         let current_guide_version = guide_url_metadata.version
+        let current_path = processedUrl.substring(longestMatch.length).replace(/^\/+/, '')
         let guide_details = guides[guide_url_metadata['package_id']]
 
         let guideVersions = []
 
+        // Add the current version
         const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.version === 'current');
         if (currentVersionEntry) {
             let currentGuideVersion = {}
@@ -116,18 +187,20 @@ function getMatchingHL7Guide(url) {
             if (currentVersionEntry.name) {
                 currentGuideVersion['guideVersionLabel'] += ' (${currentVersionEntry.name})';
             }
-            currentGuideVersion['guideVersionBase'] = currentVersionEntry.path;
+            currentGuideVersion['guideVersionLink'] = currentVersionEntry.path + '/' + current_path;
             guideVersions.push(currentGuideVersion);
         }
 
+        // Add the latest (root) version
         let latestGuideVersion = {}
         if (current_guide_version == 'latest') {
             latestGuideVersion['selected'] = true;
         }
         latestGuideVersion['guideVersionLabel'] = 'latest';
-        latestGuideVersion['guideVersionBase'] = guide_details.url;
+        latestGuideVersion['guideVersionLink'] = guide_details.url + '/' + current_path;
         guideVersions.push(latestGuideVersion);
 
+        // Add the other versions
         for (var i = 0; i < guide_details.versions.length; i++) {
             if (guide_details.versions[i].version != 'current') {
                 let guideVersion = {}
@@ -138,18 +211,18 @@ function getMatchingHL7Guide(url) {
                 if (guide_details.versions[i].name) {
                     guideVersion['guideVersionLabel'] += ' ('+guide_details.versions[i].name+')';
                 }
-                guideVersion['guideVersionBase'] = guide_details.versions[i].path;
+                guideVersion['guideVersionLink'] = guide_details.versions[i].path + '/' + current_path;
                 guideVersions.push(guideVersion);
             }
         }
         
         let return_array = {
             packageName: guide_url_metadata.package_id,
-            path: processedUrl.substring(longestMatch.length).replace(/^\/+/, ''),
             guideVersions: guideVersions
         }
 
-        
+
+        // Add the FHIR version of the current guide version
         let current_guide_version_fhir_version;
         if (current_guide_version=='latest') {
             // get the details from the root
@@ -178,6 +251,7 @@ function getMatchingHl7FhirCoreGuide(url) {
 
     if (guide_details) {
 
+        let current_path = processedUrl.substring(longestMatch.length).replace(/^\/+/, '')
         let guideVersions = []
 
         for (let [key, value] of Object.entries(guide_url_list)) {
@@ -186,12 +260,11 @@ function getMatchingHl7FhirCoreGuide(url) {
                 guideVersion['selected'] = true;
             }
             guideVersion['guideVersionLabel'] = value['name'];
-            guideVersion['guideVersionBase'] = 'https://'+key;
+            guideVersion['guideVersionLink'] = 'https://'+key + '/' + current_path;
             guideVersions.push(guideVersion);
         }
 
         let return_array = {
-            path: processedUrl.substring(longestMatch.length).replace(/^\/+/, ''),
             guideVersions: guideVersions
         }
         if (guide_details.package_id) {
@@ -230,10 +303,9 @@ export function updateUI(urlString) {
     // Here we should send the URL and get:
     // - currentFhirVersion: the FHIR version
     // - packageName: the package name
-    // - path: the path of the current page
     // - guideVersions: a list of all versions of the guide
     //    - guideVersionLabel: Version label
-    //    - guideVersionBase: Version base URL
+    //    - guideVersionLink: Version link
     //    - selected: true if this is the selected version
     resetUI();
 
@@ -244,7 +316,6 @@ export function updateUI(urlString) {
         let currentFhirVersion = matchingGuide.currentFhirVersion;
         let packageName = matchingGuide.packageName;
         let guideVersions = matchingGuide.guideVersions;
-        let currentPath = matchingGuide.path;
 
         console.log(matchingGuide)
 
@@ -252,7 +323,7 @@ export function updateUI(urlString) {
             var versionListElement = document.getElementById("version-list");
             for (var i = 0; i < guideVersions.length; i++) {
                 var version = guideVersions[i];
-                createVersionListItem(versionListElement, version.guideVersionLabel, version.guideVersionBase + '/' + currentPath, version.selected);
+                createVersionListItem(versionListElement, version.guideVersionLabel, version.guideVersionLink, version.selected);
             }
 
             if (guideVersions.length > 6) {
