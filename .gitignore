@@ -6,4 +6,3 @@ release
 dist
 release.zip
 .nyc_output
-package-lock.json
