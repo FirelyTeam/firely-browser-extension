@@ -10,7 +10,7 @@ var searchForm = document.getElementById("search-form");
 searchForm.addEventListener("submit", function(event) {
     event.preventDefault();
     var searchUrl = generateSearchUrl(document);
-    chrome.tabs.update({url: searchUrl});
+    chrome.tabs.create({url: searchUrl});
 });
 
 document.addEventListener("DOMContentLoaded", function() {
