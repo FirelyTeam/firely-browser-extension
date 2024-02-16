@@ -3,7 +3,7 @@ import {
     getMatchingGuide,
 } from '../src/functions.js';
 
-describe("generateSearchUrl-package", function() {
+describe("generateSearchUrl", function() {
 
     it("should generate the correct search URL when searchTypePackage is checked and package-text-field is hl7.fhir.r4.core", function() {
         
@@ -18,6 +18,8 @@ describe("generateSearchUrl-package", function() {
                     return { value: "hl7.fhir.r4.core" };
                 } else if (id === "search-type-fhir-version") {
                     return { checked: false };
+                } else if (id === "search-type-guide") {
+                    return { checked: false };
                 }
             }
         };
@@ -28,9 +30,6 @@ describe("generateSearchUrl-package", function() {
         // Check the result
         expect(searchUrl).to.equal("https://simplifier.net/search?q=test&package=hl7.fhir.r4.core");
     });
-});
-
-describe("generateSearchUrl-fhirVersion", function() {
 
     it("should generate the correct search URL when searchTypePackage is checked and package-text-field is hl7.fhir.r4.core", function() {
         
@@ -45,6 +44,8 @@ describe("generateSearchUrl-fhirVersion", function() {
                     return { value: "r4" };
                 } else if (id === "search-type-fhir-version") {
                     return { checked: true };
+                } else if (id === "search-type-guide") {
+                    return { checked: false };
                 }
             }
         };
@@ -55,6 +56,9 @@ describe("generateSearchUrl-fhirVersion", function() {
         // Check the result
         expect(searchUrl).to.equal("https://simplifier.net/search?q=test&fhir=r4");
     });
+
+    // TODO generateSearchUrl-simplifierGuideKey
+
 });
 
 describe("getMatchingGuide", function() {
@@ -245,4 +249,13 @@ describe("getMatchingGuide", function() {
         //     expect(guide_details['packageVersion']).to.equal('0.2.1');
         //     expect(guide_details['currentFhirVersion']).to.be.undefined;
         // });
+});
+
+describe("updateUI", function() {
+    // TODO
+
+    // Mock document
+    // Mock getMatchingGuide
+    // See if right versions are added, right search elements are populated
+
 });

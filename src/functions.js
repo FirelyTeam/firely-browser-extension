@@ -8,6 +8,11 @@ export function generateSearchUrl(document) {
         var packageTextField = document.getElementById("package-text-field").value;
         searchUrl += "&package=" + encodeURIComponent(packageTextField);
     }
+    var searchTypeGuide = document.getElementById("search-type-guide");
+    if (searchTypeGuide.checked) {
+        let guideTextField = document.getElementById("guide-text-field").value;
+        searchUrl += "&guide=" + encodeURIComponent(guideTextField);
+    }
     var searchTypeFHIRVersion = document.getElementById("search-type-fhir-version");
     if (searchTypeFHIRVersion.checked) {
         var fhirVersionTextField = document.getElementById("fhir-version-text-field").value;
@@ -100,6 +105,7 @@ function getSimplifierDetails(url) {
             // Add the recommended version
             let return_array = {
                 path: '',
+                simplifierGuideKey: guideUrlKey,
                 guideVersions: [
                     {
                         guideVersionLabel: 'Recommended',
@@ -316,6 +322,7 @@ export function updateUI(urlString) {
         let currentFhirVersion = matchingGuide.currentFhirVersion;
         let packageName = matchingGuide.packageName;
         let guideVersions = matchingGuide.guideVersions;
+        let simplifierGuideKey = matchingGuide.simplifierGuideKey;
 
         console.log(matchingGuide)
 
@@ -347,7 +354,8 @@ export function updateUI(urlString) {
             }
         }
 
-        if (packageName !== undefined || currentFhirVersion !== undefined) {
+        if (packageName !== undefined || currentFhirVersion !== undefined
+            || simplifierGuideKey !== undefined) {
             var searchScope = document.getElementById("search-scope");
             searchScope.style.display = "block";
             
@@ -365,6 +373,19 @@ export function updateUI(urlString) {
                 packageTextField.value = packageName;
             } else {
                 document.getElementById("search-scope-package-name").style.display = "none";
+            }
+
+            if (simplifierGuideKey) {
+                console.log('simplifierGuideKey: ' + simplifierGuideKey);
+                document.getElementById("search-scope-guide-key").style.display = "block";
+
+                let searchTypeGuide = document.getElementById("search-type-guide");
+                searchTypeGuide.removeAttribute("disabled");
+                searchTypeGuide.checked = true;
+                let guideTextField = document.getElementById("guide-text-field");
+                guideTextField.value = simplifierGuideKey;
+            } else {
+                document.getElementById("search-scope-guide-key").style.display = "none";
             }
 
             if (currentFhirVersion) {
