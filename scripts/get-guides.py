@@ -11,19 +11,15 @@ guides = {}
 
 if response_qas.status_code == 200:
     json_data_qas = response_qas.json()
-    for entry in json_data_qas:
-        url = entry.get('url')
-        parsed_url = urlparse(url)
-        url_no_protocol = (parsed_url.hostname + parsed_url.path)
-        
-        # if url_no_protocol.startswith('hl7.org/fhir/') or url_no_protocol.startswith('www.hl7.org/fhir/') or url_no_protocol.startswith('fhir.org/guides/'):
+    for entry in json_data_qas:        
         package_id = entry.get('package-id')
         if package_id not in guides:
+            print(f"Processing {package_id}")
 
-            repo = entry.get('repo')
-            repo = f"https://github.com/{'/'.join(repo.split('/')[0:2])}"
+            repo_path = '/'.join(entry.get('repo').split('/')[0:2])
+            repo = f"https://github.com/{repo_path}"
 
-            root_url = url.split('/ImplementationGuide')[0]
+            root_url = entry.get('url').split('/ImplementationGuide')[0]
 
             # Get history page and scrape versions
             try:
@@ -52,8 +48,24 @@ if response_qas.status_code == 200:
                         'fhirversion_latest': entry.get('version'),
                         'repo': repo,
                     }
+            else:
+                guides[package_id] = {
+                        'url': root_url,
+                        'versions': [
+                            {
+                                'version': 'current',
+                                'path': 'http://build.fhir.org/ig/'+repo_path,
+                                'fhirversion': entry.get('version')
+                            }
+                        ],
+                        'name': entry.get('name'),
+                        'title': entry.get('title'),
+                        'fhirversion_latest': entry.get('version'),
+                        'repo': repo,
+                    }
                 
     with open('guides.json', 'w') as file:
+        print("Writing to guides.json")
         json.dump(guides, file, indent=4)
 else:
     print("Failed to retrieve JSON from the URL.")
