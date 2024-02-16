@@ -231,7 +231,12 @@ function getMatchingHL7Guide(url) {
         // Add the FHIR version of the current guide version
         let current_guide_version_fhir_version;
         if (current_guide_version=='latest') {
-            // get the details from the root
+            // get the details from the latest version
+            let current_guide_version_details = guide_details['versions'].find(version => version['current'] === true && version['version'] !== 'current');
+            if (current_guide_version_details) {
+                current_guide_version_fhir_version = current_guide_version_details['fhirversion'];
+            }
+        } else if (current_guide_version=='current') {
             current_guide_version_fhir_version = guide_details['fhirversion_latest']
         } else {
             // get the details from the version
