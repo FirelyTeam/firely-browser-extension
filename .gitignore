@@ -2,7 +2,7 @@
 node_modules
 venv
 public
-release
+releases
 dist
 release.zip
 .nyc_output
