@@ -6,8 +6,14 @@
 </head>
 <body>
     <div id="popup-content">
-        <h1>Firely FHIR extension</h1>
+        <div id="logo-container">
+            <a href="#"><img src="assets/img/firely-logo.svg" alt="Firely logo" id="firely-logo" title="Learn more about Firely"></a>
+        </div>
+        
         <div id="version-list"></div>
+
+        <div id="tools-list"></div>
+
         <form action="https://simplifier.net/search" id="search-form">
             <div class="search-box">
                 <input aria-label="Search on Simplifier.net" class="form-control" name="q" placeholder="Search on Simplifier.net" type="text" autocomplete="off" id="search-query">
@@ -36,7 +42,7 @@
                 </div>
 
                 <input type="radio" name="search-type" value="all" id="search-type-all" checked>
-                <label for="search-type-all">In all</label> <br/>
+                <label for="search-type-all">In all specifications</label> <br/>
             </div>
         </form>
     </div>

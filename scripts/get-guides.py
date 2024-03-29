@@ -46,11 +46,13 @@ if response_qas.status_code == 200:
                         'name': entry.get('name'),
                         'title': entry.get('title'),
                         'fhirversion_latest': entry.get('version'),
+                        'current_version': entry.get('ig-ver'),
                         'repo': repo,
                     }
             else:
                 guides[package_id] = {
                         'url': root_url,
+                        'not_yet_published': True, # 'history.html' not found
                         'versions': [
                             {
                                 'version': 'current',
@@ -61,6 +63,7 @@ if response_qas.status_code == 200:
                         'name': entry.get('name'),
                         'title': entry.get('title'),
                         'fhirversion_latest': entry.get('version'),
+                        'current_version': entry.get('ig-ver'),
                         'repo': repo,
                     }
                 

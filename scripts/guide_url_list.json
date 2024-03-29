@@ -16,8 +16,12 @@
         "version": "current"
     },
     "standards.digital.health.nz": {
-        "package_id": "tewhatuora.fhir.mywai",
+        "package_id": "tewhatuora.fhir.nzps",
         "version": "latest"
+    },
+    "build.fhir.org/ig/tewhatuora/fhir-primary-care-acquisition": {
+        "package_id": "tewhatuora.fhir.primarycare-acquisition",
+        "version": "current"
     },
     "build.fhir.org/ig/tewhatuora/fhir-nzps": {
         "package_id": "tewhatuora.fhir.nzps",
@@ -31,12 +35,12 @@
         "package_id": "hl7.fhir.us.ohsuhypertensionig",
         "version": "current"
     },
-    "unicom-project.eu/fhir/d4-12": {
-        "package_id": "unicom.fhir.idmp-datafeed",
+    "ihe-d.de/fhir": {
+        "package_id": "ihe.de.iti.xds-vs",
         "version": "latest"
     },
-    "build.fhir.org/ig/unicom-project-eu/d4.12": {
-        "package_id": "unicom.fhir.idmp-datafeed",
+    "build.fhir.org/ig/IHE-Germany/ITI.XDS.VS": {
+        "package_id": "ihe.de.iti.xds-vs",
         "version": "current"
     },
     "hl7.org.au/fhir": {
@@ -45,14 +49,6 @@
     },
     "build.fhir.org/ig/robeastwood-agency/au-fhir-base": {
         "package_id": "hl7.fhir.au.base",
-        "version": "current"
-    },
-    "ns.electronichealth.net.au/fhir": {
-        "package_id": "au.digitalhealth.r4",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/robeastwood-agency/test-fhir-ig-2": {
-        "package_id": "au.digitalhealth.r4",
         "version": "current"
     },
     "hl7.org/fhir/smart-app-launch": {
@@ -139,14 +135,6 @@
         "package_id": "hl7.fhir.uv.playground",
         "version": "current"
     },
-    "hl7.org.au/fhir/ips": {
-        "package_id": "hl7.fhir.au.ips",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/HealthIntersections/au-ips": {
-        "package_id": "hl7.fhir.au.ips",
-        "version": "current"
-    },
     "ns.electronichealth.net.au/fhir/Template/adha.template.fhir": {
         "package_id": "adha.template.fhir",
         "version": "latest"
@@ -171,6 +159,14 @@
         "package_id": "adha.template.base",
         "version": "current"
     },
+    "ns.electronichealth.net.au/fhir": {
+        "package_id": "au.digitalhealth.r4",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/AuDigitalHealth/ci-fhir-r4": {
+        "package_id": "au.digitalhealth.r4",
+        "version": "current"
+    },
     "hl7.org.au/fhir/pd": {
         "package_id": "hl7.fhir.au.pd",
         "version": "latest"
@@ -179,13 +175,17 @@
         "package_id": "hl7.fhir.au.pd",
         "version": "current"
     },
-    "worldhealthorganization.github.io/smart": {
-        "package_id": "fhir.who.smart-base",
+    "smart.who.int/trust": {
+        "package_id": "who.trust",
         "version": "latest"
     },
-    "build.fhir.org/ig/ritikarawlani/smart-ig-test-3": {
-        "package_id": "who.fhir.smart-ig-empty",
+    "worldhealthorganization.github.io/smart-trust": {
+        "package_id": "who.trust",
         "version": "current"
+    },
+    "smart.who.int/trust/1.0.0": {
+        "package_id": "who.trust",
+        "version": "1.0.0"
     },
     "hl7.it/fhir/dossierPharma": {
         "package_id": "hl7.fhir.it.dossierpharma",
@@ -222,6 +222,10 @@
     "build.fhir.org/ig/hl7-it/lab-report": {
         "package_id": "hl7.fhir.it.lab-report",
         "version": "current"
+    },
+    "hl7.it/fhir/lab-report/0.2.0": {
+        "package_id": "hl7.fhir.it.lab-report",
+        "version": "0.2.0"
     },
     "hl7.it/fhir/lab-report/0.1.0": {
         "package_id": "hl7.fhir.it.lab-report",
@@ -320,7 +324,7 @@
         "version": "1.0.0"
     },
     "hl7.eu/fhir/ig/gravitate-health": {
-        "package_id": "hl7.eu.fhir.gh",
+        "package_id": "hl7.eu.fhir.ghepi",
         "version": "latest"
     },
     "build.fhir.org/ig/Gravitate-Health/hackathon": {
@@ -339,6 +343,34 @@
         "package_id": "fhir.hrsa.uds-plus",
         "version": "1.0.1"
     },
+    "fhir.org/guides/who/anc-cds": {
+        "package_id": "who.fhir.anc-cds",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/mozzy11/smart-hiv": {
+        "package_id": "who.fhir.hiv",
+        "version": "current"
+    },
+    "worldhealthorganization.github.io/smart-hiv": {
+        "package_id": "who.fhir.hiv",
+        "version": "latest"
+    },
+    "globalalliantinc.com/enhancing-oncology-model": {
+        "package_id": "fhir.eom",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/FirelyTeam/enhancing-oncology-model-ig": {
+        "package_id": "fhir.eom",
+        "version": "current"
+    },
+    "chmed.emediplan.ch/fhir": {
+        "package_id": "ch.chmed.emediplan",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/pjolo/test": {
+        "package_id": "ch.chmed.emediplan",
+        "version": "current"
+    },
     "example.org": {
         "package_id": "hl7.fhir.us.medication-rems",
         "version": "latest"
@@ -354,6 +386,10 @@
     "build.fhir.org/ig/HL7Austria/at-fhir-ig-template/": {
         "package_id": "hl7.at.fhir.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.at.fhir.template/0.4.0": {
+        "package_id": "hl7.at.fhir.template",
+        "version": "0.4.0"
     },
     "fhir.org/templates/hl7.at.fhir.template/0.3.0": {
         "package_id": "hl7.at.fhir.template",
@@ -379,6 +415,14 @@
         "package_id": "patient.clinical.trial.matching",
         "version": "current"
     },
+    "hl7.org/fhir/us/ctcae": {
+        "package_id": "hl7.fhir.us.ctcae",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/standardhealth/fsh-ae": {
+        "package_id": "hl7.fhir.us.ctcae",
+        "version": "current"
+    },
     "aehrc.csiro.au/fhir/logical-models": {
         "package_id": "au.csiro.fhir.logical-models",
         "version": "latest"
@@ -399,36 +443,16 @@
         "package_id": "csiro.fhir.au.smartforms",
         "version": "0.1.0-draft"
     },
-    "fhir.openmrs.org/core": {
-        "package_id": "openmrs.fhir.core",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/abertnamanya/openmrs-contrib-fhir2-ig": {
-        "package_id": "openmrs.fhir.core",
-        "version": "current"
-    },
-    "worldhealthorganization.github.io/smart-hiv": {
-        "package_id": "who.fhir.hiv",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/abertnamanya/smart-hiv": {
-        "package_id": "who.fhir.hiv",
-        "version": "current"
-    },
-    "build.fhir.org/ig/IntelliSOFT-Consulting/ChanjoKe-Fhir-IG": {
-        "package_id": "fhir.chanjoKe",
+    "build.fhir.org/ig/IntelliSOFT-Consulting/Kenya-core-FHIR-IG": {
+        "package_id": "fhir.kenyaCoreIG",
         "version": "current"
     },
     "build.fhir.org/ig/IntelliSOFT-Consulting/mamaToTo-FHIR-IG": {
         "package_id": "fhir.mamaToto",
         "version": "current"
     },
-    "hl7chile.cl/fhir/ig/deis321": {
-        "package_id": "hl7.fhir.cl.deis321",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/HL7Chile/deis": {
-        "package_id": "hl7.fhir.cl.deis321",
+    "build.fhir.org/ig/IntelliSOFT-Consulting/ChanjoKe-fhir-ig": {
+        "package_id": "fhir.chanjoKe",
         "version": "current"
     },
     "hl7chile.cl/fhir/ig/clcore": {
@@ -438,6 +462,10 @@
     "build.fhir.org/ig/HL7Chile/clcore": {
         "package_id": "hl7.fhir.cl.clcore",
         "version": "current"
+    },
+    "hl7chile.cl/fhir/ig/clcore/1.8.10": {
+        "package_id": "hl7.fhir.cl.clcore",
+        "version": "1.8.10"
     },
     "hl7chile.cl/fhir/ig/clcore/1.8.6": {
         "package_id": "hl7.fhir.cl.clcore",
@@ -463,14 +491,6 @@
         "package_id": "hl7.fhir.cl.clcore",
         "version": "1.8.0"
     },
-    "johnmoehrke.github.io/testvital": {
-        "package_id": "johnmoehrke.testvital.example",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/JohnMoehrke/testVital": {
-        "package_id": "johnmoehrke.testvital.example",
-        "version": "current"
-    },
     "johnmoehrke.github.io/testDicom": {
         "package_id": "johnmoehrke.testdicom.example",
         "version": "latest"
@@ -479,12 +499,12 @@
         "package_id": "johnmoehrke.testdicom.example",
         "version": "current"
     },
-    "johnmoehrke.github.io/testBinary": {
-        "package_id": "johnmoehrke.testbinary",
+    "johnmoehrke.github.io/RelatedPersonConsent": {
+        "package_id": "johnmoehrke.relatedpersonconsent.example",
         "version": "latest"
     },
-    "build.fhir.org/ig/JohnMoehrke/testBinary": {
-        "package_id": "johnmoehrke.testbinary",
+    "build.fhir.org/ig/JohnMoehrke/RelatedPersonConsent": {
+        "package_id": "johnmoehrke.relatedpersonconsent.example",
         "version": "current"
     },
     "johnmoehrke.github.io/testcore": {
@@ -519,6 +539,14 @@
         "package_id": "va.mhv.fhir.phr",
         "version": "current"
     },
+    "electronichealth.se/fhir/katalog": {
+        "package_id": "ehalsomyndigheten.se.katalog",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/danka74/VOKIG": {
+        "package_id": "ehalsomyndigheten.se.katalog",
+        "version": "current"
+    },
     "hl7.eu/fhir/laboratory": {
         "package_id": "hl7.fhir.eu.laboratory",
         "version": "latest"
@@ -526,6 +554,10 @@
     "build.fhir.org/ig/hl7-eu/laboratory": {
         "package_id": "nl.santeon.sim.r4",
         "version": "current"
+    },
+    "hl7.eu/fhir/laboratory/0.1.0": {
+        "package_id": "nl.santeon.sim.r4",
+        "version": "0.1.0"
     },
     "hl7.eu/fhir/laboratory/0.1.0-ballot": {
         "package_id": "nl.santeon.sim.r4",
@@ -535,29 +567,53 @@
         "package_id": "nl.santeon.sim.r4",
         "version": "latest"
     },
+    "hl7.org/cda/stds/core": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/CDA-core-sd/": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "current"
+    },
+    "hl7.org/cda/stds/core/2.0.0-sd-snapshot1": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "2.0.0-sd-snapshot1"
+    },
+    "hl7.org/cda/stds/core/2023Sep": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "2.0.0-sd-ballot"
+    },
+    "hl7.org/cda/stds/core/draft1": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "2.1.0-draft1"
+    },
     "fhir.ch/ig/ch-elm": {
         "package_id": "ch.fhir.ig.ch-elm",
         "version": "latest"
     },
     "build.fhir.org/ig/ahdis/ch-elm/index.html": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "current"
     },
+    "fhir.ch/ig/ch-elm/1.2.0": {
+        "package_id": "ch.fhir.ig.ch-elm",
+        "version": "1.2.0"
+    },
+    "fhir.ch/ig/ch-elm/1.1.1": {
+        "package_id": "ch.fhir.ig.ch-elm",
+        "version": "1.1.1"
+    },
     "fhir.ch/ig/ch-elm/1.1.0": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "1.1.0"
     },
     "fhir.ch/ig/ch-elm/1.0.0": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "1.0.0"
     },
     "fhir.ch/ig/ch-elm/1.0.0-trialuse": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "1.0.0-trialuse"
-    },
-    "gitlab.mitre.org/awatson/fast-access-control": {
-        "package_id": "mitre.fast.access-control",
-        "version": "latest"
     },
     "commonprofiles.care/fhir": {
         "package_id": "care.commonprofiles.fhir",
@@ -582,6 +638,14 @@
     "hi.iv.elga.gv.at": {
         "package_id": "elga.iv.hi",
         "version": "latest"
+    },
+    "somewhere.org/fhir/uv/myig": {
+        "package_id": "example.fhir.uv.myig",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/mburwit/RiskAssessment": {
+        "package_id": "example.fhir.uv.myig",
+        "version": "current"
     },
     "fhir.ch/ig/ch-vacd": {
         "package_id": "ch.fhir.ig.ch-vacd",
@@ -723,6 +787,18 @@
         "package_id": "ch.fhir.ig.template",
         "version": "current"
     },
+    "fhir.ch/ig/ch-rad-order": {
+        "package_id": "ch.fhir.ig.ch-rad-order",
+        "version": "1.0.0"
+    },
+    "build.fhir.org/ig/hl7ch/ch-rad-order": {
+        "package_id": "ch.fhir.ig.ch-rad-order",
+        "version": "current"
+    },
+    "fhir.ch/ig/ch-rad-order/0.1.0": {
+        "package_id": "ch.fhir.ig.ch-rad-order",
+        "version": "0.1.0"
+    },
     "fhir.ch/ig/ch-allergyintolerance": {
         "package_id": "ch.fhir.ig.ch-allergyintolerance",
         "version": "latest"
@@ -835,18 +911,6 @@
         "package_id": "who.ddcc",
         "version": "current"
     },
-    "smart.who.int/trust": {
-        "package_id": "who.trust",
-        "version": "latest"
-    },
-    "worldhealthorganization.github.io/smart-trust": {
-        "package_id": "who.trust",
-        "version": "current"
-    },
-    "smart.who.int/trust/1.0.0": {
-        "package_id": "who.trust",
-        "version": "1.0.0"
-    },
     "smart.who.int/ips-pilgrimage": {
         "package_id": "who.ips-pilgrimage",
         "version": "latest"
@@ -861,6 +925,14 @@
     },
     "build.fhir.org/ig/WorldHealthOrganization/smart-immunizations-measles": {
         "package_id": "smart.who.int.immunizations-measles",
+        "version": "current"
+    },
+    "worldhealthorganization.github.io/smart": {
+        "package_id": "who.fhir.smart-measles-catopia",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/WorldHealthOrganization/smart-tuberculosis": {
+        "package_id": "who.fhir.smart-ig-empty",
         "version": "current"
     },
     "smart.who.int/ig/smart-ig-starter-kit": {
@@ -879,10 +951,6 @@
         "package_id": "fhir.worldhealthorganization.smart-ot",
         "version": "current"
     },
-    "build.fhir.org/ig/WorldHealthOrganization/smart-base-old": {
-        "package_id": "fhir.who.smart-base",
-        "version": "current"
-    },
     "worldhealthorganization.github.io/smart-base": {
         "package_id": "who.fhir.smart-base",
         "version": "latest"
@@ -894,14 +962,6 @@
     "smart.who.int/base": {
         "package_id": "who.base",
         "version": "latest"
-    },
-    "fhir.org/guides/who/anc-cds": {
-        "package_id": "who.fhir.anc-cds",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/WorldHealthOrganization/smart-anc": {
-        "package_id": "who.fhir.anc-cds",
-        "version": "current"
     },
     "github.com/WorldHealthOrganization/smart-ig-template-who": {
         "package_id": "who.template.root",
@@ -927,6 +987,14 @@
         "package_id": "uk.nhs.england",
         "version": "current"
     },
+    "hl7.nl/fhir/mdt-viewer": {
+        "package_id": "hl7.fhir.nl.mdt",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7nl/regional-mdt-ig": {
+        "package_id": "hl7.fhir.nl.mdt",
+        "version": "current"
+    },
     "fhir.ch/ig/ch-epr-mhealth": {
         "package_id": "ch.fhir.ig.ch-epr-mhealth",
         "version": "latest"
@@ -934,6 +1002,10 @@
     "build.fhir.org/ig/ehealthsuisse/ch-epr-mhealth": {
         "package_id": "ch.fhir.ig.ch-epr-mhealth",
         "version": "current"
+    },
+    "fhir.ch/ig/ch-epr-mhealth/3.0.0": {
+        "package_id": "ch.fhir.ig.ch-epr-mhealth",
+        "version": "3.0.0"
     },
     "fhir.ch/ig/ch-epr-mhealth/3.0.0-ballot": {
         "package_id": "ch.fhir.ig.ch-epr-mhealth",
@@ -1259,6 +1331,14 @@
         "package_id": "hl7.fhir.be.core-clinical",
         "version": "1.0.0"
     },
+    "ehealth.fgov.be/standards/fhir/etariff": {
+        "package_id": "hl7.fhir.be.etariff",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-be/etariff": {
+        "package_id": "hl7.fhir.be.etariff",
+        "version": "current"
+    },
     "ehealth.fgov.be/standards/fhir/core": {
         "package_id": "hl7.fhir.be.core",
         "version": "latest"
@@ -1298,30 +1378,6 @@
     "build.fhir.org/ig/hl7-be/capabilities": {
         "package_id": "hl7.fhir.be.capabilities",
         "version": "current"
-    },
-    "fhir.kl.dk/prevention": {
-        "package_id": "kl.dk.fhir.prevention",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/hl7dk/kl-gateway-prevention/": {
-        "package_id": "kl.dk.fhir.prevention",
-        "version": "current"
-    },
-    "fhir.kl.dk/prevention/1.0.0": {
-        "package_id": "kl.dk.fhir.prevention",
-        "version": "1.0.0"
-    },
-    "fhir.kl.dk/rehab": {
-        "package_id": "kl.dk.fhir.rehab",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/hl7dk/kl-gateway-rehab/": {
-        "package_id": "kl.dk.fhir.rehab",
-        "version": "current"
-    },
-    "fhir.kl.dk/rehab/1.0.0": {
-        "package_id": "kl.dk.fhir.rehab",
-        "version": "1.0.0"
     },
     "fhir.kl.dk/gateway": {
         "package_id": "kl.dk.fhir.gateway",
@@ -1395,20 +1451,16 @@
         "package_id": "fhir.giis",
         "version": "current"
     },
-    "who-umc.org/idmp": {
-        "package_id": "who-umc.fhir.poc-php",
+    "build.fhir.org/ig/DigitalSQR/catopia-measles": {
+        "package_id": "who.fhir.smart-measles-catopia",
+        "version": "current"
+    },
+    "idmp.who-umc.org/fhir": {
+        "package_id": "idmp.who-umc.org.fhir",
         "version": "latest"
     },
     "build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service": {
-        "package_id": "who-umc.fhir.poc-php",
-        "version": "current"
-    },
-    "somewhere.org/fhir/uv/myig": {
-        "package_id": "example.fhir.uv.myig",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/costateixeira/sample-ig": {
-        "package_id": "example.fhir.uv.myig",
+        "package_id": "idmp.who-umc.org.fhir",
         "version": "current"
     },
     "mitre.org/gdx": {
@@ -1511,6 +1563,10 @@
         "package_id": "ihe.formatcode.fhir",
         "version": "current"
     },
+    "profiles.ihe.net/fhir/ihe.formatcode.fhir/1.2.0": {
+        "package_id": "ihe.formatcode.fhir",
+        "version": "1.2.0"
+    },
     "profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.1": {
         "package_id": "ihe.formatcode.fhir",
         "version": "1.1.1"
@@ -1554,6 +1610,10 @@
     "build.fhir.org/ig/IHE/ITI.PCF/branches/master/index.html": {
         "package_id": "ihe.iti.pcf",
         "version": "current"
+    },
+    "profiles.ihe.net/ITI/PCF/1.1.0": {
+        "package_id": "ihe.iti.pcf",
+        "version": "1.1.0"
     },
     "profiles.ihe.net/ITI/PCF/1.0.0": {
         "package_id": "ihe.iti.pcf",
@@ -1643,6 +1703,10 @@
         "package_id": "ihe.iti.pdqm",
         "version": "current"
     },
+    "profiles.ihe.net/ITI/PDQm/3.0.0": {
+        "package_id": "ihe.iti.pdqm",
+        "version": "3.0.0"
+    },
     "profiles.ihe.net/ITI/PDQm/3.0.0-comment": {
         "package_id": "ihe.iti.pdqm",
         "version": "3.0.0-comment"
@@ -1687,6 +1751,10 @@
         "package_id": "ihe.iti.pixm",
         "version": "current"
     },
+    "profiles.ihe.net/ITI/PIXm/3.0.4": {
+        "package_id": "ihe.iti.pixm",
+        "version": "3.0.4"
+    },
     "profiles.ihe.net/ITI/PIXm/3.0.3": {
         "package_id": "ihe.iti.pixm",
         "version": "3.0.3"
@@ -1719,9 +1787,13 @@
         "package_id": "ihe.pcc.odh",
         "version": "latest"
     },
-    "build.fhir.org/ig/IHE/PCC.ODH": {
+    "build.fhir.org/ig/IHE/PCC.ODH/branches/master/index.html": {
         "package_id": "ihe.pcc.odh",
         "version": "current"
+    },
+    "profiles.ihe.net/PCC/ODH/1.0.0-comment": {
+        "package_id": "ihe.pcc.odh",
+        "version": "1.0.0-comment"
     },
     "profiles.ihe.net/ITI/DSUBm": {
         "package_id": "ihe.iti.dsubm",
@@ -1730,6 +1802,10 @@
     "build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/index.html": {
         "package_id": "ihe.iti.dsubm",
         "version": "current"
+    },
+    "profiles.ihe.net/ITI/DSUBm/1.0.0": {
+        "package_id": "ihe.iti.dsubm",
+        "version": "1.0.0"
     },
     "profiles.ihe.net/ITI/DSUBm/1.0.0-comment": {
         "package_id": "ihe.iti.dsubm",
@@ -1843,6 +1919,14 @@
         "package_id": "ihe.pcc.aps",
         "version": "current"
     },
+    "profiles.ihe.net/Domain/LogicalDatatypes": {
+        "package_id": "ihe.domain.logical-datatypes",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/IHE/datatypes": {
+        "package_id": "ihe.domain.logical-datatypes",
+        "version": "current"
+    },
     "fhir.org/templates/ihe.fhir.template": {
         "package_id": "ihe.fhir.template",
         "version": "latest"
@@ -1850,6 +1934,10 @@
     "build.fhir.org/ig/IHE/ihe-ig-template": {
         "package_id": "ihe.fhir.template",
         "version": "current"
+    },
+    "fhir.org/templates/ihe.fhir.template/0.10.0": {
+        "package_id": "ihe.fhir.template",
+        "version": "0.10.0"
     },
     "fhir.org/templates/ihe.fhir.template/0.9.0": {
         "package_id": "ihe.fhir.template",
@@ -2011,12 +2099,32 @@
         "package_id": "ihe.iti.mcsd",
         "version": "3.3.0"
     },
+    "profiles.ihe.net/QRPH/VRDR": {
+        "package_id": "ihe.qrph.vrdr",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/IHE/QRPH.VRDR": {
+        "package_id": "ihe.qrph.vrdr",
+        "version": "current"
+    },
     "example.com/fhir/example": {
-        "package_id": "my-ig",
+        "package_id": "hl7.fhir.pt.patient-admin-ig",
         "version": "latest"
     },
     "build.fhir.org/ig/hl7-pt/adr-ig": {
         "package_id": "my-ig",
+        "version": "current"
+    },
+    "build.fhir.org/ig/hl7-pt/patient-admin-ig": {
+        "package_id": "hl7.fhir.pt.patient-admin-ig",
+        "version": "current"
+    },
+    "hl7.pt/fhir/core": {
+        "package_id": "hl7.fhir.pt.core",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-pt/core": {
+        "package_id": "hl7.fhir.pt.core",
         "version": "current"
     },
     "fhir.health.gov.il/mri": {
@@ -2040,27 +2148,31 @@
         "version": "latest"
     },
     "build.fhir.org/ig/medcomdk/dk-medcom-acknowledgement": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "current"
     },
     "medcomfhir.dk/ig/acknowledgement/2.0.2": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "2.0.2"
     },
     "medcomfhir.dk/ig/acknowledgement/2.0.1": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "2.0.1"
     },
     "medcomfhir.dk/ig/acknowledgement/2.0.0": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "2.0.0"
     },
     "medcomfhir.dk/fhir/ig/dk-medcom-acknowledgement": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "1.0.0"
     },
     "medcomehmi.dk/ig/ehmi-eds": {
         "package_id": "dk.medcom.ehmi.eds",
+        "version": "latest"
+    },
+    "medcomehmi.dk/ig/ehmi-sbdh": {
+        "package_id": "dk-ehmi-sbdh",
         "version": "latest"
     },
     "medcomfhir.dk/ig/carecommunicationtestscripts": {
@@ -2069,6 +2181,14 @@
     },
     "build.fhir.org/ig/medcomdk/dk-medcom-carecommunication-testscripts": {
         "package_id": "medcom.fhir.dk.carecommunicationtestscripts",
+        "version": "current"
+    },
+    "medcomehmi.dk/ig/dk-ehmi-eds": {
+        "package_id": "dk.ehmi.eds",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-medcom-ehmi-eds": {
+        "package_id": "dk.ehmi.eds",
         "version": "current"
     },
     "medcomfhir.dk/ig/ihexdsmetadata": {
@@ -2095,13 +2215,37 @@
         "package_id": "medcom.fhir.dk.diagnosiscard",
         "version": "current"
     },
+    "medcomehmi.dk/ig/dk-ehmi-eer": {
+        "package_id": "dk.ehmi.eer",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-ehmi-eer": {
+        "package_id": "dk.ehmi.eer",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/carecommunication": {
+        "package_id": "medcom.fhir.dk.carecommunication",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-medcom-carecommunication": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/carecommunication/2.1.0": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "2.1.0"
+    },
+    "medcomfhir.dk/ig/carecommunication/2.0.0": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "2.0.0"
+    },
+    "medcomfhir.dk/fhir/ig/dk-medcom-carecommunication": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "1.0.0"
+    },
     "medcomehmi.dk/ig/dk-ehmi-terminology": {
         "package_id": "dk.ehmi.terminology",
         "version": "latest"
-    },
-    "build.fhir.org/ig/medcomdk/dk-ehmi-terminology": {
-        "package_id": "dk.ehmi.terminology",
-        "version": "current"
     },
     "medcomfhir.dk/ig/terminology": {
         "package_id": "medcom.fhir.dk.terminology",
@@ -2143,6 +2287,46 @@
         "package_id": "medcom.fhir.dk.terminology",
         "version": "1.0.0"
     },
+    "medcomfhir.dk/ig/homecareobservation": {
+        "package_id": "medcom.fhir.dk.homecareobservation",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk_HomeCareObservations": {
+        "package_id": "medcom.fhir.dk.homecareobservation",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/messaging": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-medcom-messaging": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/messaging/2.0.0": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "2.0.0"
+    },
+    "medcomfhir.dk/fhir/messaging/ig/dk-medcom-messaging": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "1.0.3"
+    },
+    "hl7.eu/fhir/ig/gk": {
+        "package_id": "hl7.eu.fhir.gk",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gatekeeper-project/gk-fhir-ig": {
+        "package_id": "hl7.eu.fhir.gk",
+        "version": "current"
+    },
+    "hl7.eu/fhir/ig/gk-poc-ai": {
+        "package_id": "hl7.eu.fhir.gk-poc-ai",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gatekeeper-project/poc-ai-gk": {
+        "package_id": "hl7.eu.fhir.gk-poc-ai",
+        "version": "current"
+    },
     "fhir.org/templates/hl7.base.template": {
         "package_id": "hl7.base.template",
         "version": "latest"
@@ -2150,6 +2334,10 @@
     "build.fhir.org/ig/HL7/ig-template-hl7": {
         "package_id": "hl7.base.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.base.template/0.9.0": {
+        "package_id": "hl7.base.template",
+        "version": "0.9.0"
     },
     "fhir.org/templates/hl7.base.template/0.8.0": {
         "package_id": "hl7.base.template",
@@ -2207,6 +2395,10 @@
         "package_id": "hl7.au.fhir.template",
         "version": "current"
     },
+    "fhir.org/templates/hl7.au.fhir.template/0.8.0": {
+        "package_id": "hl7.au.fhir.template",
+        "version": "0.8.0"
+    },
     "fhir.org/templates/hl7.au.fhir.template/0.7.0": {
         "package_id": "hl7.au.fhir.template",
         "version": "0.7.0"
@@ -2259,6 +2451,14 @@
         "package_id": "hl7.fhir.au.core",
         "version": "current"
     },
+    "hl7.org.au/fhir/erequesting": {
+        "package_id": "hl7.fhir.au.erequesting",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7au/au-fhir-erequesting": {
+        "package_id": "hl7.fhir.au.erequesting",
+        "version": "current"
+    },
     "draft.hl7.org.au/fhir/diagnostic-orders": {
         "package_id": "hl7.fhir.au.draft.diagnostic-orders",
         "version": "latest"
@@ -2274,6 +2474,10 @@
     "build.fhir.org/ig/HL7au/hl7.au.sparked.template": {
         "package_id": "hl7.au.sparked.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.au.sparked.template/0.3.0": {
+        "package_id": "hl7.au.sparked.template",
+        "version": "0.3.0"
     },
     "fhir.org/templates/hl7.au.sparked.template/0.2.0": {
         "package_id": "hl7.au.sparked.template",
@@ -2331,14 +2535,6 @@
         "package_id": "hl7.eu.fhir.xpandh.lab",
         "version": "current"
     },
-    "hl7.eu/fhir/ig/base": {
-        "package_id": "hl7.fhir.eu.base",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/hl7-eu/base": {
-        "package_id": "hl7.fhir.eu.base",
-        "version": "current"
-    },
     "hl7.eu/fhir/ig/xpandh/hdr": {
         "package_id": "hl7.eu.fhir.xpandh.hdr",
         "version": "latest"
@@ -2358,6 +2554,18 @@
     "hl7.eu/fhir/ig/pcsp/0.1.0": {
         "package_id": "hl7.eu.fhir.pcsp",
         "version": "0.1.0"
+    },
+    "hl7.eu/fhir/r5/mpd": {
+        "package_id": "hl7.fhir.eu.r5.mpd",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-eu/mpd": {
+        "package_id": "hl7.fhir.eu.mpd",
+        "version": "current"
+    },
+    "hl7.eu/fhir/mpd": {
+        "package_id": "hl7.fhir.eu.mpd",
+        "version": "latest"
     },
     "hl7.eu/fhir/ig/coalesced": {
         "package_id": "hl7.eu.fhir.coalesced",
@@ -2383,20 +2591,24 @@
         "package_id": "hl7.eu.fhir.idea4rc",
         "version": "current"
     },
+    "hl7.eu/fhir/extensions": {
+        "package_id": "hl7.fhir.eu.extensions",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-eu/extensions": {
+        "package_id": "hl7.fhir.eu.extensions",
+        "version": "current"
+    },
+    "hl7.eu/fhir/extensions/0.1.0": {
+        "package_id": "hl7.fhir.eu.extensions",
+        "version": "0.1.0"
+    },
     "fhir.hl7.org.uk/uk-core-access": {
         "package_id": "uk-core-access",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7-UK/UK-Core-Access": {
         "package_id": "uk-core-access",
-        "version": "current"
-    },
-    "ncez.mzcr.cz/standards/fhir/ig/lab": {
-        "package_id": "ncez.cz.fhir.lab",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/ncez-cz/cz-lab": {
-        "package_id": "ncez.cz.fhir.lab",
         "version": "current"
     },
     "ncez.mzcr.cz/standards/fhir/ig/core": {
@@ -2423,33 +2635,9 @@
         "package_id": "ehi.api",
         "version": "current"
     },
-    "build.fhir.org/ig/daniel-thomson/mywai": {
-        "package_id": "tewhatuora.fhir.mywai",
+    "build.fhir.org/ig/ReMeDi-Blut/remedi_ig": {
+        "package_id": "fhir.blood",
         "version": "current"
-    },
-    "fhir.ch/ig/ch-epr-ppqm": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/ehealthsuisse/ch-epr-ppqm": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "current"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/2.0.0": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "2.0.0"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/2.0.0-ballot": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "2.0.0-ballot"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/0.2.0": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "0.2.0"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/0.1.0": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "0.1.0"
     },
     "fhir.ch/ig/ch-atc": {
         "package_id": "ch.fhir.ig.ch-atc",
@@ -2491,7 +2679,7 @@
         "package_id": "hl7.org.nz.fhir.ig.hpi",
         "version": "current"
     },
-    "hl7.org.nz/fhir/ig/formulary": {
+    "fhir-docs.nzf.org.nz": {
         "package_id": "hl7.org.nz.fhir.ig.formulary",
         "version": "latest"
     },
@@ -2525,6 +2713,34 @@
     },
     "build.fhir.org/ig/HL7NZ/cca": {
         "package_id": "hl7.org.nz.fhir.ig.cca",
+        "version": "current"
+    },
+    "hl7.at/fhir/HL7ATCoreProfiles/4.0.1": {
+        "package_id": "gabriel0316.hl7atcoreprofiles",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gabriel0316/HL7-AT-FHIR-Core-R4": {
+        "package_id": "gabriel0316.hl7atcoreprofiles",
+        "version": "current"
+    },
+    "gabriel0316.github.io/ig-tooling-pages/ig/ig-tooling": {
+        "package_id": "hl7.at.fhir.gkl.ig-tooling",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gabriel0316/ig-tooling/": {
+        "package_id": "hl7.at.fhir.gkl.ig-tooling",
+        "version": "current"
+    },
+    "gabriel0316.github.io/ig-tooling-pages/ig/ig-tooling/0.1.0": {
+        "package_id": "hl7.at.fhir.gkl.ig-tooling",
+        "version": "0.1.0"
+    },
+    "termgit.elga.gv.at": {
+        "package_id": "gabriel0316.terminologies",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gabriel0316/terminology": {
+        "package_id": "gabriel0316.terminologies",
         "version": "current"
     },
     "hl7.org/cda/us/eyecare": {
@@ -2567,12 +2783,12 @@
         "package_id": "hl7.fhir.uv.fhir-for-fair",
         "version": "0.1.0"
     },
-    "hl7.org/fhir/uv/tinkar": {
-        "package_id": "hl7.fhir.uv.tinkar",
+    "hl7.org/fhir/uv/termchangeset": {
+        "package_id": "hl7.fhir.uv.termchangeset",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/tinkar-ig": {
-        "package_id": "hl7.fhir.uv.tinkar",
+        "package_id": "hl7.fhir.uv.termchangeset",
         "version": "current"
     },
     "fhir.org/templates/hl7.ca.fhir.template": {
@@ -2582,6 +2798,10 @@
     "build.fhir.org/ig/HL7/ig-template-ca": {
         "package_id": "hl7.ca.fhir.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.ca.fhir.template/0.4.0": {
+        "package_id": "hl7.ca.fhir.template",
+        "version": "0.4.0"
     },
     "fhir.org/templates/hl7.ca.fhir.template/0.3.0": {
         "package_id": "hl7.ca.fhir.template",
@@ -2754,26 +2974,6 @@
     "hl7.org/documentcenter/public/standards/dstu/HL7_CQLANG_R1_DSTU_2015MAY.zip": {
         "package_id": "hl7.cql",
         "version": "1.0.0"
-    },
-    "hl7.org/cda/stds/core": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/HL7/CDA-core-sd/": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "current"
-    },
-    "hl7.org/cda/stds/core/2.0.0-sd-snapshot1": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "2.0.0-sd-snapshot1"
-    },
-    "hl7.org/cda/stds/core/2023Sep": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "2.0.0-sd-ballot"
-    },
-    "hl7.org/cda/stds/core/draft1": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "2.1.0-draft1"
     },
     "hl7.org/fhir/uv/ae-research-ig": {
         "package_id": "hl7.fhir.uv.ae-research-ig",
@@ -2962,6 +3162,10 @@
     "build.fhir.org/ig/HL7/ig-template-davinci/": {
         "package_id": "hl7.davinci.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.davinci.template/0.7.0": {
+        "package_id": "hl7.davinci.template",
+        "version": "0.7.0"
     },
     "fhir.org/templates/hl7.davinci.template/0.6.0": {
         "package_id": "hl7.davinci.template",
@@ -3259,13 +3463,17 @@
         "package_id": "hl7.fhir.uv.security-label-ds4p",
         "version": "0.1.0"
     },
-    "hl7.org/fhir/us": {
-        "package_id": "fhir.efss",
+    "hl7.org/fhir/us/efss": {
+        "package_id": "hl7.fhir.efss",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/efss": {
         "package_id": "fhir.efss",
         "version": "current"
+    },
+    "hl7.org/fhir/us": {
+        "package_id": "fhir.efss",
+        "version": "latest"
     },
     "hl7.org/fhir/us/cancer-reporting": {
         "package_id": "hl7.fhir.us.cancer-reporting",
@@ -3559,6 +3767,10 @@
         "package_id": "hl7.fhir.us.ccda",
         "version": "current"
     },
+    "hl7.org/fhir/us/ccda/STU1.2": {
+        "package_id": "hl7.fhir.us.ccda",
+        "version": "1.2.0"
+    },
     "hl7.org/fhir/us/ccda/2023May": {
         "package_id": "hl7.fhir.us.ccda",
         "version": "1.2.0-ballot"
@@ -3659,6 +3871,14 @@
         "package_id": "hl7.fhir.us.bfdr",
         "version": "0.1.0"
     },
+    "hl7.org/fhir/us/pq-cmc-fda": {
+        "package_id": "hl7.fhir.us.pq-cmc-fda",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/FHIR-us-pq-cmc-fda": {
+        "package_id": "hl7.fhir.us.pq-cmc-fda",
+        "version": "current"
+    },
     "hl7.org/fhir/us/sirb": {
         "package_id": "hl7.fhir.us.sirb",
         "version": "latest"
@@ -3674,6 +3894,14 @@
     "hl7.org/fhir/us/sirb/2021Sep": {
         "package_id": "hl7.fhir.us.sirb",
         "version": "0.1.0"
+    },
+    "hl7.org/fhir/us/reportofilltraveler": {
+        "package_id": "hl7.fhir.us.illTraveler",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/ReportIIITraveler-ig": {
+        "package_id": "hl7.fhir.us.illTraveler",
+        "version": "current"
     },
     "hl7.org/fhir/us/davinci-drug-formulary": {
         "package_id": "hl7.fhir.us.davinci-drug-formulary",
@@ -3711,12 +3939,12 @@
         "package_id": "hl7.fhir.us.davinci-drug-formulary",
         "version": "0.1.0"
     },
-    "hl7.org/fhir/uv/cardx-htn": {
-        "package_id": "hl7.fhir.uv.cardx-htn",
+    "hl7.org/fhir/uv/CardX-HTN-MNG": {
+        "package_id": "hl7.fhir.uv.CardX-HTN-MNG",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/CardX-HTN-MNG": {
-        "package_id": "hl7.fhir.uv.cardx-htn",
+        "package_id": "hl7.fhir.uv.CardX-HTN-MNG",
         "version": "current"
     },
     "hl7.org/fhir/us/cardx-htn": {
@@ -3767,6 +3995,10 @@
         "package_id": "hl7.other.template",
         "version": "current"
     },
+    "fhir.org/templates/hl7.fhir.template/0.9.0": {
+        "package_id": "hl7.other.template",
+        "version": "0.9.0"
+    },
     "fhir.org/templates/hl7.fhir.template/0.8.0": {
         "package_id": "hl7.other.template",
         "version": "0.8.0"
@@ -3811,6 +4043,14 @@
         "package_id": "hl7.other.template",
         "version": "0.0.5"
     },
+    "hl7.org/fhir/us/consent-management": {
+        "package_id": "hl7.fhir.us.consent-management",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/fhir-consent-management": {
+        "package_id": "hl7.fhir.us.consent-management",
+        "version": "current"
+    },
     "hl7.org/fhir/us/breast-radiology": {
         "package_id": "hl7.fhir.us.breast-radiology",
         "version": "latest"
@@ -3854,6 +4094,14 @@
     "hl7.org/fhir/uv/pddi/2018Sep": {
         "package_id": "hl7.fhir.uv.pddi",
         "version": "0.1.0"
+    },
+    "hl7.org/fhir/us/nhsn-dqm": {
+        "package_id": "hl7.fhir.us.nhsn-dqm",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/nhsn-dqm": {
+        "package_id": "hl7.fhir.us.nhsn-dqm",
+        "version": "current"
     },
     "hl7.org/fhir/us/core": {
         "package_id": "hl7.fhir.us.core",
@@ -4010,6 +4258,10 @@
     "build.fhir.org/ig/HL7/ig-template-base": {
         "package_id": "fhir.base.template",
         "version": "current"
+    },
+    "fhir.org/templates/fhir.base.template/0.7.0": {
+        "package_id": "fhir.base.template",
+        "version": "0.7.0"
     },
     "fhir.org/templates/fhir.base.template/0.6.0": {
         "package_id": "fhir.base.template",
@@ -4215,17 +4467,13 @@
         "package_id": "hl7.fhir.us.identity-matching",
         "version": "1.0.0-ballot"
     },
-    "github.com/phenopackets/core-ig": {
-        "package_id": "hl7.fhir.us.ga4gh.phenopacket",
+    "hl7.org/fhir/uv/phenomics-exchange": {
+        "package_id": "hl7.fhir.uv.phenomics-exchange",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/phenomics-exchange-ig": {
         "package_id": "hl7.fhir.uv.phenomics-exchange",
         "version": "current"
-    },
-    "hl7.org/fhir/uv/phenomics-exchange": {
-        "package_id": "hl7.fhir.uv.phenomics-exchange",
-        "version": "latest"
     },
     "hl7.org/fhir/us/pdmp": {
         "package_id": "hl7.fhir.us.pdmp",
@@ -4262,6 +4510,10 @@
     "build.fhir.org/ig/HL7/fhir-qi-core": {
         "package_id": "hl7.fhir.us.qicore",
         "version": "current"
+    },
+    "hl7.org/fhir/us/qicore/STU6": {
+        "package_id": "hl7.fhir.us.qicore",
+        "version": "6.0.0"
     },
     "hl7.org/fhir/us/qicore/2023Sep": {
         "package_id": "hl7.fhir.us.qicore",
@@ -4371,6 +4623,10 @@
         "package_id": "hl7.fhir.uv.extensions",
         "version": "current"
     },
+    "hl7.org/fhir/extensions/5.1.0-snapshot1": {
+        "package_id": "hl7.fhir.uv.extensions",
+        "version": "5.1.0-snapshot1"
+    },
     "hl7.org/fhir/extensions/5.1.0-ballot": {
         "package_id": "hl7.fhir.uv.extensions",
         "version": "5.1.0-ballot"
@@ -4414,6 +4670,10 @@
     "build.fhir.org/ig/HL7/UTG": {
         "package_id": "hl7.terminology",
         "version": "current"
+    },
+    "terminology.hl7.org/5.5.0": {
+        "package_id": "hl7.terminology",
+        "version": "5.5.0"
     },
     "terminology.hl7.org/5.4.0": {
         "package_id": "hl7.terminology",
@@ -5040,39 +5300,39 @@
         "version": "0.1.0"
     },
     "hl7.org/fhirpath": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/FHIRPath": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "current"
     },
     "hl7.org/fhirpath/N1/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "2.0.0"
     },
     "hl7.org/fhirpath/2019May/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.3.0"
     },
     "hl7.org/fhirpath/2018Sep/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.2.0"
     },
     "hl7.org/fhirpath/2018May/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.1.0"
     },
     "hl7.org/fhirpath/2017Jan/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.0.0"
     },
     "hl7.org/fhirpath/2016Sept/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "0.3.0"
     },
     "hl7.org/fhirpath/2016May/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "0.2.0"
     },
     "hl7.org/fhir/us/vrdr": {
@@ -5344,11 +5604,23 @@
         "version": "1.0.0-ballot"
     },
     "build.fhir.org/ig/joofio/spor-as-cs": {
-        "package_id": "hl7.eu.fhir.cs",
+        "package_id": "hl7.fhir.eu.spor",
         "version": "current"
     },
     "build.fhir.org/ig/joofio/ufis-swe-ig": {
         "package_id": "hl7.eu.fhir.ufis-swe-unicom",
+        "version": "current"
+    },
+    "build.fhir.org/ig/joofio/test-epi-composition": {
+        "package_id": "hl7.eu.fhir.ghepi",
+        "version": "current"
+    },
+    "joofio.github.io/obs-cdss-fhir": {
+        "package_id": "obs.cdss.ig",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/joofio/obs-cdss-fhir": {
+        "package_id": "obs.cdss.ig",
         "version": "current"
     },
     "hl7.org/fhir/us/vrsandbox": {
@@ -5357,6 +5629,14 @@
     },
     "build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig": {
         "package_id": "hl7.fhir.us.vrsandbox",
+        "version": "current"
+    },
+    "who-umc.org/idmp": {
+        "package_id": "who-umc.fhir.poc-php",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gcangioli/who-umc-poc": {
+        "package_id": "who-umc.fhir.poc-php",
         "version": "current"
     },
     "hl7.org/fhir/uv/sql-on-fhir": {
@@ -5387,12 +5667,20 @@
         "package_id": "hl7.fhir.uv.tools",
         "version": "0.1.0"
     },
-    "terminology.smarthealth.cards": {
-        "package_id": "cards.smarthealth.terminology",
+    "interoperabilidad.minsal.cl/fhir/ig/eis": {
+        "package_id": "hl7.fhir.cl.minsal.eis",
         "version": "latest"
     },
-    "build.fhir.org/ig/dvci/shc-terminology": {
-        "package_id": "cards.smarthealth.terminology",
+    "build.fhir.org/ig/Minsal-CL/eis": {
+        "package_id": "hl7.fhir.cl.minsal.eis",
+        "version": "current"
+    },
+    "hl7chile.cl/fhir/ig/deis321": {
+        "package_id": "hl7.fhir.cl.deis321",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/Minsal-CL/deis": {
+        "package_id": "hl7.fhir.cl.deis321",
         "version": "current"
     },
     "interoperabilidad.minsal.cl/fhir/ig/snre": {
@@ -5403,13 +5691,17 @@
         "package_id": "hl7.fhir.cl.minsal.snre",
         "version": "current"
     },
-    "interoperabilidad.minsal.cl/fhir/ig/tei": {
-        "package_id": "hl7.fhir.cl.minsal.tei",
+    "minsal.cl/listaespera": {
+        "package_id": "fhir.minsal.ListaDeEspera",
         "version": "latest"
     },
     "build.fhir.org/ig/Minsal-CL/SIGTEv2-IG": {
         "package_id": "hl7.fhir.cl.minsal.tei",
         "version": "current"
+    },
+    "interoperabilidad.minsal.cl/fhir/ig/tei": {
+        "package_id": "hl7.fhir.cl.minsal.tei",
+        "version": "latest"
     },
     "interoperabilidad.minsal.cl/fhir/ig/mpi": {
         "package_id": "hl7.fhir.cl.minsal.mpi",
@@ -5424,7 +5716,11 @@
         "version": "latest"
     },
     "build.fhir.org/ig/Minsal-CL/MFR": {
-        "package_id": "minsal.fhir.core",
+        "package_id": "hl7.fhir.cl.minsal.mfr",
         "version": "current"
+    },
+    "interoperabilidad.minsal.cl/fhir/ig/mfr": {
+        "package_id": "hl7.fhir.cl.minsal.mfr",
+        "version": "latest"
     }
 }

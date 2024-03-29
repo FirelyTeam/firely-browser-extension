@@ -1,6 +1,7 @@
 export var guides = {
     "hl7.fhir.ca.baseline": {
         "url": "http://hl7.org/fhir/ca/baseline",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -11,10 +12,12 @@ export var guides = {
         "name": "CanadianBaseline",
         "title": "Canadian Baseline",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7-Canada/ca-baseline"
     },
     "nz.central.ihub.ig": {
         "url": "https://fhir.org.nz/ig/tewhatuora/crih-fhir-ig",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -23,12 +26,30 @@ export var guides = {
             }
         ],
         "name": "CRIntegrationHub",
-        "title": null,
+        "title": "Te Whatu Ora, Central Region Integration Hub",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/tewhatuora/centralRegion-integrationHub-ig"
+    },
+    "tewhatuora.fhir.primarycare-acquisition": {
+        "url": "https://standards.digital.health.nz",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/tewhatuora/fhir-primary-care-acquisition",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "primarycareacquisition",
+        "title": "Primary care data acquisition API",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/tewhatuora/fhir-primary-care-acquisition"
     },
     "tewhatuora.fhir.nzps": {
         "url": "https://standards.digital.health.nz",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -37,12 +58,14 @@ export var guides = {
             }
         ],
         "name": "nzps",
-        "title": null,
+        "title": "FHIR New Zealand Patient Summary IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/tewhatuora/fhir-nzps"
     },
     "hl7.fhir.us.ohsuhypertensionig": {
         "url": "http://fhir.org/guides/ohsuhypertensionig",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -53,24 +76,28 @@ export var guides = {
         "name": "ohsuhypertensionig",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/OHSUCMP/htnu18ig"
     },
-    "unicom.fhir.idmp-datafeed": {
-        "url": "http://unicom-project.eu/fhir/d4-12",
+    "ihe.de.iti.xds-vs": {
+        "url": "http://www.ihe-d.de/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/unicom-project-eu/d4.12",
-                "fhirversion": "5.0.0"
+                "path": "http://build.fhir.org/ig/IHE-Germany/ITI.XDS.VS",
+                "fhirversion": "4.0.1"
             }
         ],
-        "name": "D412",
-        "title": null,
-        "fhirversion_latest": "5.0.0",
-        "repo": "https://github.com/unicom-project-eu/d4.12"
+        "name": "IHE_DE_ITI_XDS_VS",
+        "title": "IHE Germany - Value Sets for XDS",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/IHE-Germany/ITI.XDS.VS"
     },
     "hl7.fhir.au.base": {
         "url": "http://hl7.org.au/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -81,21 +108,8 @@ export var guides = {
         "name": "AUBaseImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "4.1.1",
         "repo": "https://github.com/robeastwood-agency/au-fhir-base"
-    },
-    "au.digitalhealth.r4": {
-        "url": "http://ns.electronichealth.net.au/fhir",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/robeastwood-agency/test-fhir-ig-2",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "ADHAFHIR",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/robeastwood-agency/test-fhir-ig-2"
     },
     "hl7.fhir.uv.smart-app-launch": {
         "url": "http://hl7.org/fhir/smart-app-launch",
@@ -176,6 +190,7 @@ export var guides = {
         "name": "SmartAppLaunch",
         "title": "SMART App Launch",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.2.0",
         "repo": "https://github.com/bvdh/smart-app-launch-bvdh"
     },
     "ch.fhir.ig.ch-core": {
@@ -273,12 +288,14 @@ export var guides = {
             }
         ],
         "name": "CH_Core",
-        "title": null,
+        "title": "CH Core (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "5.0.0-ci-build",
         "repo": "https://github.com/ralych/ch-core"
     },
     "hl7.fhir.uv.playground": {
         "url": "http://healthintersections.com.au/fhir/playground",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -289,24 +306,12 @@ export var guides = {
         "name": "FHIRToolExtensionsIG",
         "title": "FHIR Tooling Extensions IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HealthIntersections/fhir-playground"
-    },
-    "hl7.fhir.au.ips": {
-        "url": "http://hl7.org.au/fhir/ips",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/HealthIntersections/au-ips",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "AustralianPatientSummaryIG",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/HealthIntersections/au-ips"
     },
     "adha.template.fhir": {
         "url": "http://ns.electronichealth.net.au/fhir/Template/adha.template.fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -317,10 +322,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.0.2",
         "repo": "https://github.com/AuDigitalHealth/adha-template-fhir"
     },
     "au.digitalhealth.stu3.medicare-records": {
         "url": "http://ns.electronichealth.net.au/ci/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -331,10 +338,12 @@ export var guides = {
         "name": "ADHAMedicareRecords",
         "title": "Australian Digital Health Agency Medicare Records FHIR Implementation Guide",
         "fhirversion_latest": "3.0.2",
+        "current_version": "2.2.0-ci-build",
         "repo": "https://github.com/AuDigitalHealth/ci-medicare-records"
     },
     "adha.template.base": {
         "url": "http://ns.electronichealth.net.au/fhir/Template/adha.template.base",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -345,10 +354,28 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.2",
         "repo": "https://github.com/AuDigitalHealth/adha-template-base"
+    },
+    "au.digitalhealth.r4": {
+        "url": "http://ns.electronichealth.net.au/fhir",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/AuDigitalHealth/ci-fhir-r4",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "ADHAFHIR",
+        "title": "Australian Digital Health Agency FHIR Implementation Guide",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "1.2.0-ci-build",
+        "repo": "https://github.com/AuDigitalHealth/ci-fhir-r4"
     },
     "hl7.fhir.au.pd": {
         "url": "http://hl7.org.au/fhir/pd",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -359,24 +386,38 @@ export var guides = {
         "name": "AUProviderDirectoryImplementationGuide",
         "title": "AU Provider Directory Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/AuDigitalHealth/au-fhir-pd"
     },
-    "who.fhir.smart-ig-empty": {
-        "url": "http://worldhealthorganization.github.io/smart",
+    "smart.who.int.trust": {
+        "url": "http://smart.who.int/trust",
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/ritikarawlani/smart-ig-test-3",
-                "fhirversion": "4.3.0"
+                "path": "http://worldhealthorganization.github.io/smart-trust",
+                "status": "ci-build",
+                "sequence": "ci-build"
+            },
+            {
+                "version": "1.0.0",
+                "path": "http://smart.who.int/trust/1.0.0",
+                "status": "release",
+                "sequence": "Releases",
+                "fhirversion": "4.0.1",
+                "date": "2024-01-29",
+                "current": true,
+                "desc": "First stable release"
             }
         ],
-        "name": "SMART",
-        "title": null,
-        "fhirversion_latest": "4.3.0",
-        "repo": "https://github.com/ritikarawlani/smart-ig-test-3"
+        "name": "trust",
+        "title": "WHO SMART Trust",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
+        "repo": "https://github.com/ritikarawlani/smart-trust"
     },
     "hl7.fhir.it.dossierpharma": {
         "url": "http://hl7.it/fhir/dossierPharma",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -387,6 +428,7 @@ export var guides = {
         "name": "HL7ITDossierPharma",
         "title": "HL7 Italia Dossier Farmaceutico FHIR Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-it/dossier-pharma"
     },
     "hl7.fhir.it.base": {
@@ -413,10 +455,12 @@ export var guides = {
         "name": "HL7ITFhirBase",
         "title": "HL7 Italia FHIR Implementation Guide (base)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.1",
         "repo": "https://github.com/hl7-it/base"
     },
     "hl7.fhir.it.terminology": {
         "url": "http://terminology.hl7.it",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -427,6 +471,7 @@ export var guides = {
         "name": "HL7ITTerminology",
         "title": "HL7 Italia Terminologies",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
         "repo": "https://github.com/hl7-it/terminology"
     },
     "hl7.fhir.it.lab-report": {
@@ -439,23 +484,34 @@ export var guides = {
                 "sequence": "ci-build"
             },
             {
+                "version": "0.2.0",
+                "path": "http://hl7.it/fhir/lab-report/0.2.0",
+                "status": "trial-use",
+                "sequence": "Release 1",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-08",
+                "current": true,
+                "desc": "This is the Edition 1 STU 1 release"
+            },
+            {
                 "version": "0.1.0",
                 "path": "http://hl7.it/fhir/lab-report/0.1.0",
                 "status": "ballot",
                 "sequence": "Release 1",
                 "fhirversion": "4.0.1",
                 "date": "2023-07-11",
-                "current": true,
                 "desc": "This is the June 2023 STU ballot version."
             }
         ],
         "name": "HL7ITLabReport",
-        "title": null,
+        "title": "HL7 FHIR Implementation Guide Laboratory Report",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.0",
         "repo": "https://github.com/hl7-it/lab-report"
     },
     "fhir.nachc.hiv-cds": {
         "url": "http://fhir.org/guides/nachc/hiv-cds",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -464,12 +520,14 @@ export var guides = {
             }
         ],
         "name": "HIV_NACHC",
-        "title": null,
+        "title": "HIV Screening Clinical Guidelines Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/cqframework/hiv-cds"
     },
     "fhir.cdc.opioid-cds-r4": {
         "url": "http://fhir.org/guides/cdc/opioid-cds",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -480,10 +538,12 @@ export var guides = {
         "name": "Opioid_CDC",
         "title": "2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2022.1.0",
         "repo": "https://github.com/cqframework/opioid-cds-r4"
     },
     "hl7.fhir.uv.cpg.opioids": {
         "url": "http://hl7.org/fhir/uv/cpg/opioids",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -492,12 +552,14 @@ export var guides = {
             }
         ],
         "name": "CPGOpioidPrescribingGuidelineExamples",
-        "title": null,
+        "title": "CPG Opioid Prescribing Guideline Examples",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/cqframework/cpg-example-opioids"
     },
     "hl7.fhir.uv.cpg.hepb": {
         "url": "http://hl7.org/fhir/uv/cpg/hepb",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -506,12 +568,14 @@ export var guides = {
             }
         ],
         "name": "CPGHepatitisBVaccinationExample",
-        "title": null,
+        "title": "Clinical Practice Guidelines Example Implmentation Guide - Hepatitis B Vaccination",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/cqframework/cpg-example-hepb"
     },
     "hl7.fhir.uv.cpg.anthrax": {
         "url": "http://hl7.org/fhir/uv/cpg/anthrax",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -520,12 +584,14 @@ export var guides = {
             }
         ],
         "name": "CPGExampleAnthraxPostExposure",
-        "title": null,
+        "title": "Clinical Practice Guidelines Example Implementation Guide - Anthrax Post-Exposure Prophylaxis",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/cqframework/cpg-example-anthrax"
     },
     "hl7.fhir.uv.cpg.antenatalcare": {
         "url": "http://hl7.org/fhir/uv/cpg/antenatalcare",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -534,12 +600,14 @@ export var guides = {
             }
         ],
         "name": "CPGExampleAntenatalCareGuidelines",
-        "title": null,
+        "title": "Clinical Practice Guidelines Example Implementation Guide - Antenatal Care Guidelines",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/cqframework/cpg-example-anc"
     },
     "example.fhir.uv.mycontentig": {
         "url": "http://somewhere.org/fhir/uv/mycontentig",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -550,10 +618,12 @@ export var guides = {
         "name": "YourComputableMyContentIGNameHere",
         "title": "Your User Friendly Name for MyContentIG Here",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.4.0",
         "repo": "https://github.com/cqframework/sample-content-ig"
     },
     "cqf.fhir.cds4cpm": {
         "url": "http://fhir.org/guides/cqf/cds4cpm",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -562,12 +632,14 @@ export var guides = {
             }
         ],
         "name": "CDS4CPM",
-        "title": null,
+        "title": "Clinical Decision Support for Chronic Pain Management and Shared Decision-Making IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/cqframework/cds4cpm"
     },
     "hl7.fhir.uv.cpg.ckd": {
         "url": "http://fhir.org/fhir/uv/cpg/ckd",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -576,12 +648,14 @@ export var guides = {
             }
         ],
         "name": "CPGChronicKidneyDiseaseExamples",
-        "title": null,
+        "title": "Clinical Practice Guidelines Example Implementation Guide - Chronic Kidney Disease",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/cqframework/cpg-example-ckd"
     },
     "fhir.cqf.us.common": {
         "url": "http://fhir.org/guides/cqf/us/common",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -590,8 +664,9 @@ export var guides = {
             }
         ],
         "name": "CQFUSCommon",
-        "title": null,
+        "title": "Clinical Quality Framework Common FHIR Assets (US-Based)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/cqframework/cqf-us"
     },
     "ch.fhir.ig.ch-emed-epr": {
@@ -622,10 +697,12 @@ export var guides = {
         "name": "ChEmedEpr",
         "title": "CH EMED EPR",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/CARA-ch/ch-emed-epr"
     },
     "hl7.eu.fhir.gh": {
         "url": "http://hl7.eu/fhir/ig/gravitate-health",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -636,6 +713,7 @@ export var guides = {
         "name": "GhHackacthonImplementationGuide",
         "title": "Gravitate Health Hackathon FHIR Implementation Guide",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/Gravitate-Health/hackathon"
     },
     "fhir.hrsa.uds-plus": {
@@ -662,10 +740,76 @@ export var guides = {
         "name": "UdsPlusFhirIg",
         "title": "HRSA 2023 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/drajer-health/uds-plus"
+    },
+    "who.fhir.anc-cds": {
+        "url": "http://fhir.org/guides/who/anc-cds",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/mozzy11/smart-hiv",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "ANCCDS",
+        "title": "SMART WHO HIV Implmementation Guide",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
+        "repo": "https://github.com/mozzy11/smart-hiv"
+    },
+    "who.fhir.hiv": {
+        "url": "http://worldhealthorganization.github.io/smart-hiv",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/mozzy11/smart-hiv",
+                "fhirversion": "4.3.0"
+            }
+        ],
+        "name": "HIV",
+        "title": "SMART WHO HIV Implmementation Guide",
+        "fhirversion_latest": "4.3.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/mozzy11/smart-hiv"
+    },
+    "fhir.eom": {
+        "url": "https://globalalliantinc.com/enhancing-oncology-model",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/FirelyTeam/enhancing-oncology-model-ig",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "eom",
+        "title": "Enhancing Oncology Model",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/FirelyTeam/enhancing-oncology-model-ig"
+    },
+    "ch.chmed.emediplan": {
+        "url": "http://chmed.emediplan.ch/fhir",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/pjolo/test",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "CHMED",
+        "title": "CHMED Implementation Guide",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-ci-build",
+        "repo": "https://github.com/pjolo/test"
     },
     "fhir.example": {
         "url": "http://example.org",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -676,6 +820,7 @@ export var guides = {
         "name": "ExampleIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/pjolo/ExampleIG"
     },
     "hl7.at.fhir.template": {
@@ -689,14 +834,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.4.0",
+                "path": "http://fhir.org/templates/hl7.at.fhir.template/0.4.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.3.0",
                 "path": "http://fhir.org/templates/hl7.at.fhir.template/0.3.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.2.0",
@@ -728,10 +882,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.0.1",
         "repo": "https://github.com/HL7Austria/at-fhir-ig-template"
     },
     "patient.clinical.trial.matching": {
         "url": "http://mcodeinitiative.org/codex/us/patient.clinical.trial.matching",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -742,10 +898,28 @@ export var guides = {
         "name": "DRAFTCodeXImplementationGuideIntegratedTrialMatchingforCancerPatientsandProviders",
         "title": "DRAFT - CodeX Implementation Guide: Integrated Trial Matching for Cancer Patients and Providers",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/standardhealth/fsh-pct"
+    },
+    "hl7.fhir.us.ctcae": {
+        "url": "http://hl7.org/fhir/us/ctcae",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/standardhealth/fsh-ae",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "HL7FHIRImplementationGuideCTCAdverseEventsRelease1USRealmSTU1",
+        "title": "HL7 FHIR Implementation Guide: Common Terminology Criteria (CTC) Adverse Events Release 1 - DRAFT",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
+        "repo": "https://github.com/standardhealth/fsh-ae"
     },
     "au.csiro.fhir.logical-models": {
         "url": "https://aehrc.csiro.au/fhir/logical-models",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -756,6 +930,7 @@ export var guides = {
         "name": "SparkedLogicalModels",
         "title": "Sparked Logical Models",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
         "repo": "https://github.com/aehrc/logical-model-web"
     },
     "csiro.fhir.au.smartforms": {
@@ -773,60 +948,35 @@ export var guides = {
                 "status": "draft",
                 "sequence": "Releases",
                 "fhirversion": "4.0.1",
-                "date": "2024-02-15",
-                "current": true,
+                "date": "2024-02-19",
                 "desc": "This draft is for informal use and review."
             }
         ],
         "name": "SmartForms",
         "title": "Smart Forms",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/aehrc/smart-forms-ig"
     },
-    "openmrs.fhir.core": {
-        "url": "http://fhir.openmrs.org/core",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/abertnamanya/openmrs-contrib-fhir2-ig",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "OMRSFhir2ImplementationGuide",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/abertnamanya/openmrs-contrib-fhir2-ig"
-    },
-    "who.fhir.hiv": {
-        "url": "http://worldhealthorganization.github.io/smart-hiv",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/abertnamanya/smart-hiv",
-                "fhirversion": "4.3.0"
-            }
-        ],
-        "name": "HIV",
-        "title": null,
-        "fhirversion_latest": "4.3.0",
-        "repo": "https://github.com/abertnamanya/smart-hiv"
-    },
-    "fhir.chanjoKe": {
+    "fhir.kenyaCoreIG": {
         "url": "http://example.org",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/IntelliSOFT-Consulting/ChanjoKe-Fhir-IG",
+                "path": "http://build.fhir.org/ig/IntelliSOFT-Consulting/Kenya-core-FHIR-IG",
                 "fhirversion": "4.0.1"
             }
         ],
-        "name": "chanjoKeIG",
+        "name": "KENYACoreImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/IntelliSOFT-Consulting/ChanjoKe-Fhir-IG"
+        "current_version": "0.1.0",
+        "repo": "https://github.com/IntelliSOFT-Consulting/Kenya-core-FHIR-IG"
     },
     "fhir.mamaToto": {
         "url": "http://example.org",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -837,21 +987,24 @@ export var guides = {
         "name": "mamaTotofhirIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/IntelliSOFT-Consulting/mamaToTo-FHIR-IG"
     },
-    "hl7.fhir.cl.deis321": {
-        "url": "https://hl7chile.cl/fhir/ig/deis321",
+    "fhir.chanjoKe": {
+        "url": "http://example.org",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/HL7Chile/deis",
+                "path": "http://build.fhir.org/ig/IntelliSOFT-Consulting/ChanjoKe-fhir-ig",
                 "fhirversion": "4.0.1"
             }
         ],
-        "name": "DEIS321",
-        "title": null,
+        "name": "chanjoKeIG",
+        "title": "ChanjoKE Immunization Implementation Guide",
         "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/HL7Chile/deis"
+        "current_version": "0.1.0",
+        "repo": "https://github.com/IntelliSOFT-Consulting/ChanjoKe-fhir-ig"
     },
     "hl7.fhir.cl.clcore": {
         "url": "https://hl7chile.cl/fhir/ig/clcore",
@@ -861,6 +1014,116 @@ export var guides = {
                 "path": "http://build.fhir.org/ig/HL7Chile/clcore",
                 "status": "ci-build",
                 "sequence": "ci-build"
+            },
+            {
+                "version": "1.8.10",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.10",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-19",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.9",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-19",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.8",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-19",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.7",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-07",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.6",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-05",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.6",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-04",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.6",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-04",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.6",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-04",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.6",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-20",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.6",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-20",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
+            },
+            {
+                "version": "1.8.6",
+                "path": "https://hl7chile.cl/fhir/ig/clcore/1.8.6",
+                "status": "draft",
+                "sequence": "STU2",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-20",
+                "desc": "Versi\u00c3\u00b3n de desarrollo",
+                "changes": "changes.html"
             },
             {
                 "version": "1.8.6",
@@ -924,26 +1187,14 @@ export var guides = {
             }
         ],
         "name": "clcore",
-        "title": "Gu\u00eda de Implementaci\u00f3n \"cl core\" FHIR R4, (Versi\u00f3n Evolutiva)",
+        "title": "Gu\u00eda de Implementaci\u00f3n ''cl core'' FHIR R4, (Versi\u00f3n Evolutiva)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.8.6",
         "repo": "https://github.com/HL7Chile/clcore_ig"
-    },
-    "johnmoehrke.testvital.example": {
-        "url": "http://johnmoehrke.github.io/testvital",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/JohnMoehrke/testVital",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "JohnMoehrkeTestVital",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/JohnMoehrke/testVital"
     },
     "johnmoehrke.testdicom.example": {
         "url": "http://johnmoehrke.github.io/testDicom",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -954,24 +1205,28 @@ export var guides = {
         "name": "JohnMoehrkeTestDicom",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0-current",
         "repo": "https://github.com/JohnMoehrke/testDicom"
     },
-    "johnmoehrke.testbinary": {
-        "url": "http://johnmoehrke.github.io/testBinary",
+    "johnmoehrke.relatedpersonconsent.example": {
+        "url": "http://johnmoehrke.github.io/RelatedPersonConsent",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/JohnMoehrke/testBinary",
-                "fhirversion": "5.0.0"
+                "path": "http://build.fhir.org/ig/JohnMoehrke/RelatedPersonConsent",
+                "fhirversion": "4.3.0"
             }
         ],
-        "name": "TestBinary",
-        "title": null,
-        "fhirversion_latest": "5.0.0",
-        "repo": "https://github.com/JohnMoehrke/testBinary"
+        "name": "JohnMoehrkeRelatedPersonConsent",
+        "title": "JohnMoehrke RelatedPerson Consent",
+        "fhirversion_latest": "4.3.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/JohnMoehrke/RelatedPersonConsent"
     },
     "johnmoehrke.testcore.example": {
         "url": "http://johnmoehrke.github.io/testcore",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -982,10 +1237,12 @@ export var guides = {
         "name": "JohnMoehrkeTestCore",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/JohnMoehrke/testCore"
     },
     "johnmoehrke.testmed.example": {
         "url": "http://johnmoehrke.github.io/testmed",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -996,10 +1253,12 @@ export var guides = {
         "name": "JohnMoehrkeTestMed",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/JohnMoehrke/testMed"
     },
     "fhir.asu.consent-validation": {
         "url": "https://github.com/mojitoj/ASU-research-consent-on-FHIR",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -1010,10 +1269,12 @@ export var guides = {
         "name": "ASUResearchConsentOnFHIR",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/mojitoj/ASU-research-consent-on-FHIR"
     },
     "va.mhv.fhir.phr": {
         "url": "https://department-of-veterans-affairs.github.io/mhv-fhir-phr-mapping",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -1024,7 +1285,24 @@ export var guides = {
         "name": "VAMHVFHIRPHR",
         "title": "MyHealtheVet PHR FHIR API",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.5-current",
         "repo": "https://github.com/department-of-veterans-affairs/mhv-fhir-phr-mapping"
+    },
+    "ehalsomyndigheten.se.katalog": {
+        "url": "http://electronichealth.se/fhir/katalog",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/danka74/VOKIG",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "VOKIg",
+        "title": "Implementationsguide f\u00f6r Nationell katalog \u00f6ver v\u00e5rdgivare och utf\u00f6rare av socialtj\u00e4nst",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/danka74/VOKIG"
     },
     "hl7.fhir.eu.laboratory": {
         "url": "http://hl7.eu/fhir/laboratory",
@@ -1036,19 +1314,29 @@ export var guides = {
                 "sequence": "ci-build"
             },
             {
+                "version": "0.1.0",
+                "path": "http://hl7.eu/fhir/laboratory/0.1.0",
+                "status": "trial-use",
+                "sequence": "STU 1",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-26",
+                "current": true,
+                "desc": "This is the Edition 1 STU 1 release"
+            },
+            {
                 "version": "0.1.0-ballot",
                 "path": "http://hl7.eu/fhir/laboratory/0.1.0-ballot",
                 "status": "ballot",
                 "sequence": "STU 1",
                 "fhirversion": "4.0.1",
                 "date": "2023-10-22",
-                "current": true,
                 "desc": "This is the version released for the STU 1 ballot"
             }
         ],
         "name": "Hl7EuLaboratoryIg",
         "title": "HL7 Europe Laboratory Report",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0-ci",
         "repo": "https://github.com/danka74/hl7-eu-laboratory"
     },
     "nl.santeon.sim.r4": {
@@ -1061,20 +1349,73 @@ export var guides = {
                 "sequence": "ci-build"
             },
             {
+                "version": "0.1.0",
+                "path": "http://hl7.eu/fhir/laboratory/0.1.0",
+                "status": "trial-use",
+                "sequence": "STU 1",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-26",
+                "current": true,
+                "desc": "This is the Edition 1 STU 1 release"
+            },
+            {
                 "version": "0.1.0-ballot",
                 "path": "http://hl7.eu/fhir/laboratory/0.1.0-ballot",
                 "status": "ballot",
                 "sequence": "STU 1",
                 "fhirversion": "4.0.1",
                 "date": "2023-10-22",
-                "current": true,
                 "desc": "This is the version released for the STU 1 ballot"
             }
         ],
         "name": "SIMonFHIR",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/SanteonNL/sim-on-fhir"
+    },
+    "hl7.cda.uv.core": {
+        "url": "http://hl7.org/cda/stds/core",
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/HL7/CDA-core-sd/",
+                "status": "ci-build",
+                "sequence": "ci-build"
+            },
+            {
+                "version": "2.0.0-sd-snapshot1",
+                "path": "http://hl7.org/cda/stds/core/2.0.0-sd-snapshot1",
+                "status": "draft",
+                "sequence": "CDA2",
+                "fhirversion": "5.0.0",
+                "date": "2023-12-16",
+                "desc": "Minor updates to address discovered issues during CCDA ballot preparation."
+            },
+            {
+                "version": "2.0.0-sd-ballot",
+                "path": "http://hl7.org/cda/stds/core/2023Sep",
+                "status": "ballot",
+                "sequence": "CDA 2.0",
+                "fhirversion": "5.0.0",
+                "date": "2023-10-27",
+                "desc": "A representation of the CDA specification using FHIR Logical Models and Structure Definitions."
+            },
+            {
+                "version": "2.1.0-draft1",
+                "path": "http://hl7.org/cda/stds/core/draft1",
+                "status": "draft",
+                "sequence": "CDA 2.1",
+                "fhirversion": "5.0.0",
+                "date": "2023-01-16",
+                "desc": "First draft to support the publication of CCDA 2.1"
+            }
+        ],
+        "name": "ClinicalDocumentArchitecture",
+        "title": "Clinical Document Architecture",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "2.0.0-sd-ballot",
+        "repo": "https://github.com/ahdis/cda-core-2.0"
     },
     "ch.fhir.ig.ch-elm": {
         "url": "http://fhir.ch/ig/ch-elm",
@@ -1086,13 +1427,33 @@ export var guides = {
                 "sequence": "ci-build"
             },
             {
+                "version": "1.2.0",
+                "path": "http://fhir.ch/ig/ch-elm/1.2.0",
+                "status": "release",
+                "sequence": "STU 1",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-28",
+                "current": true,
+                "desc": "FOPH",
+                "changes": "changelog.html"
+            },
+            {
+                "version": "1.1.1",
+                "path": "http://fhir.ch/ig/ch-elm/1.1.1",
+                "status": "draft",
+                "sequence": "STU 1",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-27",
+                "desc": "FOPH",
+                "changes": "changelog.html"
+            },
+            {
                 "version": "1.1.0",
                 "path": "http://fhir.ch/ig/ch-elm/1.1.0",
                 "status": "draft",
                 "sequence": "STU 1",
                 "fhirversion": "4.0.1",
                 "date": "2024-01-31",
-                "current": true,
                 "desc": "FOPH",
                 "changes": "changelog.html"
             },
@@ -1120,53 +1481,8 @@ export var guides = {
         "name": "CH_ELM",
         "title": "CH ELM (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.2.0-cibuild",
         "repo": "https://github.com/ahdis/ch-elm"
-    },
-    "mitre.fast.access-control": {
-        "url": "https://gitlab.mitre.org/awatson/fast-access-control",
-        "versions": [
-            {
-                "version": "current",
-                "path": "https://build.fhir.org/ig/ahdis/ch-elm/index.html",
-                "status": "ci-build",
-                "sequence": "ci-build"
-            },
-            {
-                "version": "1.1.0",
-                "path": "http://fhir.ch/ig/ch-elm/1.1.0",
-                "status": "draft",
-                "sequence": "STU 1",
-                "fhirversion": "4.0.1",
-                "date": "2024-01-31",
-                "current": true,
-                "desc": "FOPH",
-                "changes": "changelog.html"
-            },
-            {
-                "version": "1.0.0",
-                "path": "http://fhir.ch/ig/ch-elm/1.0.0",
-                "status": "draft",
-                "sequence": "STU 1",
-                "fhirversion": "4.0.1",
-                "date": "2023-11-16",
-                "desc": "FOPH",
-                "changes": "changelog.html"
-            },
-            {
-                "version": "1.0.0-trialuse",
-                "path": "http://fhir.ch/ig/ch-elm/1.0.0-trialuse",
-                "status": "draft",
-                "sequence": "STU 1",
-                "fhirversion": "4.0.1",
-                "date": "2023-09-13",
-                "desc": "FOPH",
-                "changes": "changelog.html"
-            }
-        ],
-        "name": "FastAccessControl",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/awatson1978/fhir-access-control-ig"
     },
     "care.commonprofiles.fhir": {
         "url": "https://commonprofiles.care/fhir",
@@ -1200,6 +1516,7 @@ export var guides = {
         "name": "SwedishFHIRgroupcommonprofiles",
         "title": "Swedish FHIR group common profiles",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.2",
         "repo": "https://github.com/commonprofiles-care/fhir"
     },
     "health.gov.il.fhir.core": {
@@ -1234,6 +1551,7 @@ export var guides = {
         "name": "ILCoreImplementationGuide",
         "title": "IL Core Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.13.2",
         "repo": "https://github.com/erezshalom/ILCOREIG"
     },
     "elga.iv.hi": {
@@ -1268,7 +1586,24 @@ export var guides = {
         "name": "IntegrierteVersorgungHerzinsuffizienz",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/ELGA-GmbH/iv-hi"
+    },
+    "example.fhir.uv.myig": {
+        "url": "http://somewhere.org/fhir/uv/myig",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/mburwit/RiskAssessment",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "YourComputableMyIGNameHere",
+        "title": "Your User Friendly Name for MyIG Here",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.0",
+        "repo": "https://github.com/mburwit/RiskAssessment"
     },
     "ch.fhir.ig.ch-vacd": {
         "url": "http://fhir.ch/ig/ch-vacd",
@@ -1367,6 +1702,7 @@ export var guides = {
         "name": "CH_VACD",
         "title": "Implementation Guide CH VACD",
         "fhirversion_latest": "4.0.1",
+        "current_version": "5.0.0-ci-build",
         "repo": "https://github.com/hl7ch/ch-vacd"
     },
     "ch.fhir.ig.ch-lab-report": {
@@ -1399,8 +1735,9 @@ export var guides = {
             }
         ],
         "name": "CH_LAB_REPORT",
-        "title": null,
+        "title": "CH LAB-Report (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ci-build",
         "repo": "https://github.com/hl7ch/ch-lab-report"
     },
     "ch.fhir.ig.ch-etoc": {
@@ -1463,6 +1800,7 @@ export var guides = {
         "name": "CH_eTOC",
         "title": "CH eTOC (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-ci-build",
         "repo": "https://github.com/hl7ch/ch-etoc"
     },
     "ch.fhir.ig.ch-emed": {
@@ -1580,6 +1918,7 @@ export var guides = {
         "name": "CH_EMED",
         "title": "CH EMED (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "5.0.0-ci-build",
         "repo": "https://github.com/hl7ch/ch-emed"
     },
     "ch.fhir.ig.ch-lab-order": {
@@ -1624,6 +1963,7 @@ export var guides = {
         "name": "CH_LAB_ORDER",
         "title": "CH LAB-Order (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0",
         "repo": "https://github.com/hl7ch/ch-lab-order"
     },
     "ch.fhir.ig.template": {
@@ -1650,7 +1990,44 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.6.0",
         "repo": "https://github.com/hl7ch/ig-template"
+    },
+    "ch.fhir.ig.ch-rad-order": {
+        "url": "http://fhir.ch/ig/ch-rad-order",
+        "versions": [
+            {
+                "version": "current",
+                "desc": "Continuous Integration Build (latest in version control)",
+                "path": "http://build.fhir.org/ig/hl7ch/ch-rad-order",
+                "status": "ci-build",
+                "current": true
+            },
+            {
+                "version": "1.0.0",
+                "date": "2022-02-22",
+                "desc": "HL7 Switzerland STU 1",
+                "path": "http://fhir.ch/ig/ch-rad-order",
+                "status": "trial-use",
+                "sequence": "STU 1",
+                "fhirversion": "4.0.1",
+                "current": true
+            },
+            {
+                "version": "0.1.0",
+                "date": "2021-06-17",
+                "desc": "HL7 Switzerland STU 1 Ballot",
+                "path": "http://fhir.ch/ig/ch-rad-order/0.1.0",
+                "status": "trial-use",
+                "sequence": "STU 1",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "CH_RAD_Order",
+        "title": "CH RAD-Order (R4)",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
+        "repo": "https://github.com/hl7ch/ch-rad-order"
     },
     "ch.fhir.ig.ch-allergyintolerance": {
         "url": "http://fhir.ch/ig/ch-allergyintolerance",
@@ -1709,8 +2086,9 @@ export var guides = {
             }
         ],
         "name": "CHAllergyIntolerance",
-        "title": "CH-AllergyIntolerance (R4)",
+        "title": "CH AllergyIntolerance (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-ci-build",
         "repo": "https://github.com/hl7ch/ch-allergyintolerance"
     },
     "ch.fhir.ig.ch-orf": {
@@ -1779,8 +2157,9 @@ export var guides = {
             }
         ],
         "name": "CH_ORF",
-        "title": null,
+        "title": "CH ORF (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-ci-build",
         "repo": "https://github.com/hl7ch/ch-orf"
     },
     "ch.fhir.ig.ch-epr-term": {
@@ -1895,12 +2274,14 @@ export var guides = {
             }
         ],
         "name": "CH_EPR_TERM",
-        "title": "CH EPR Term",
+        "title": "CH EPR Term (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-ci-build",
         "repo": "https://github.com/hl7ch/ch-epr-term"
     },
     "who.ddcc": {
         "url": "http://smart.who.int/ddcc",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -1911,35 +2292,12 @@ export var guides = {
         "name": "DDCC",
         "title": "WHO Digital Documentation of COVID-19 Certificates (DDCC)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/WorldHealthOrganization/ddcc"
-    },
-    "smart.who.int.trust": {
-        "url": "http://smart.who.int/trust",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://worldhealthorganization.github.io/smart-trust",
-                "status": "ci-build",
-                "sequence": "ci-build"
-            },
-            {
-                "version": "1.0.0",
-                "path": "http://smart.who.int/trust/1.0.0",
-                "status": "release",
-                "sequence": "Releases",
-                "fhirversion": "4.0.1",
-                "date": "2024-01-29",
-                "current": true,
-                "desc": "First stable release"
-            }
-        ],
-        "name": "trust",
-        "title": "WHO SMART Trust",
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/WorldHealthOrganization/smart-trust"
     },
     "who.ips-pilgrimage": {
         "url": "http://smart.who.int/ips-pilgrimage",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -1950,10 +2308,12 @@ export var guides = {
         "name": "SMARTIPSforPilgrimage",
         "title": "SMART Verifiable IPS for Pilgrimage",
         "fhirversion_latest": "4.3.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/WorldHealthOrganization/smart-ips-pilgrimage"
     },
     "smart.who.int.immunizations-measles": {
         "url": "http://smart.who.int/immunizations-measles",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -1964,10 +2324,28 @@ export var guides = {
         "name": "SMART",
         "title": "WHO SMART Guidelines - Measles Immunization",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/WorldHealthOrganization/smart-immunizations-measles"
+    },
+    "who.fhir.smart-ig-empty": {
+        "url": "http://worldhealthorganization.github.io/smart",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/WorldHealthOrganization/smart-tuberculosis",
+                "fhirversion": "4.3.0"
+            }
+        ],
+        "name": "SMART",
+        "title": "SMART Empty IG",
+        "fhirversion_latest": "4.3.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/WorldHealthOrganization/smart-tuberculosis"
     },
     "who.fhir.smart-ig-starter-kit": {
         "url": "http://smart.who.int/ig/smart-ig-starter-kit",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -1978,10 +2356,12 @@ export var guides = {
         "name": "SMARTStarterKit",
         "title": "DRAFT SMART Guidelines L3 SOP",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.2.1",
         "repo": "https://github.com/WorldHealthOrganization/smart-ig-starter-kit"
     },
     "fhir.worldhealthorganization.smart-ot": {
         "url": "http://worldhealthorganization.github.io/smart-ot",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -1992,24 +2372,12 @@ export var guides = {
         "name": "smartot",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.1",
         "repo": "https://github.com/WorldHealthOrganization/smart-ot"
-    },
-    "fhir.who.smart-base": {
-        "url": "http://worldhealthorganization.github.io/smart",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/WorldHealthOrganization/smart-base-old",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "SMART",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/WorldHealthOrganization/smart-base-old"
     },
     "who.fhir.smart-base": {
         "url": "http://worldhealthorganization.github.io/smart-base",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2020,10 +2388,12 @@ export var guides = {
         "name": "SMARTBase",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/WorldHealthOrganization/smart-base"
     },
     "who.base": {
         "url": "http://smart.who.int/base",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2034,24 +2404,12 @@ export var guides = {
         "name": "SMARTBase",
         "title": "SMART Base",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/WorldHealthOrganization/smart-base"
-    },
-    "who.fhir.anc-cds": {
-        "url": "http://fhir.org/guides/who/anc-cds",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/WorldHealthOrganization/smart-anc",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "ANCCDS",
-        "title": "WHO Antenatal Care Guideline Implementation Guide",
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/WorldHealthOrganization/smart-anc"
     },
     "who.template.root": {
         "url": "http://github.com/WorldHealthOrganization/smart-ig-template-who",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2062,10 +2420,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.4.0",
         "repo": "https://github.com/WorldHealthOrganization/smart-ig-template-who"
     },
     "who.fhir.immunization": {
         "url": "http://smart.who.int/ig/smart-immunizations",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2076,10 +2436,12 @@ export var guides = {
         "name": "Immunization",
         "title": "WHO Immunization Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/WorldHealthOrganization/smart-immunizations"
     },
     "uk.nhs.england": {
         "url": "https://fhir.nhs.uk/England",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2090,7 +2452,24 @@ export var guides = {
         "name": "NHSEnglandInteroperability",
         "title": "Interoperability Standards - Discovery",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
         "repo": "https://github.com/NHSDigital/interoperability-standards-experimental"
+    },
+    "hl7.fhir.nl.mdt": {
+        "url": "http://hl7.nl/fhir/mdt-viewer",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/HL7nl/regional-mdt-ig",
+                "fhirversion": "3.0.2"
+            }
+        ],
+        "name": "mdt",
+        "title": "MDT Implementation Guide",
+        "fhirversion_latest": "3.0.2",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/HL7nl/regional-mdt-ig"
     },
     "ch.fhir.ig.ch-epr-mhealth": {
         "url": "http://fhir.ch/ig/ch-epr-mhealth",
@@ -2103,13 +2482,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "3.0.0",
+                "path": "http://fhir.ch/ig/ch-epr-mhealth/3.0.0",
+                "status": "trial-use",
+                "sequence": "DSTU3",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-05",
+                "current": true,
+                "desc": "eHealth Suissse",
+                "changes": "openissues.html"
+            },
+            {
                 "version": "3.0.0-ballot",
                 "path": "http://fhir.ch/ig/ch-epr-mhealth/3.0.0-ballot",
                 "status": "ballot",
                 "sequence": "Draft",
                 "fhirversion": "4.0.1",
                 "date": "2023-06-30",
-                "current": true,
                 "desc": "eHealth Suissse",
                 "changes": "openissues.html"
             },
@@ -2171,10 +2560,12 @@ export var guides = {
         "name": "CHEprMhealth",
         "title": "CH EPR mHealth (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-cibuild",
         "repo": "https://github.com/qligier/ch-epr-mhealth"
     },
     "hl7.org.nz.fhir.ig.icp": {
         "url": "http://hl7.org.nz/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2185,6 +2576,7 @@ export var guides = {
         "name": "icp",
         "title": "New Zealand ICP Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/acc-fhir-publisher/icp"
     },
     "hl7.fhir.fi.base": {
@@ -2374,10 +2766,12 @@ export var guides = {
         "name": "FinnishBaseProfiles",
         "title": "Finnish Base Profiles",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1-cibuild",
         "repo": "https://github.com/fhir-fi/finnish-base-profiles"
     },
     "actnow.canshare.co.nz": {
         "url": "http://canshare.co.nz/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2388,10 +2782,12 @@ export var guides = {
         "name": "actnow",
         "title": "ACT-NOW Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.4.0",
         "repo": "https://github.com/davidhay25/actnow"
     },
     "hl7.fhir.uv.epi-test": {
         "url": "http://hl7.org/fhir/uv/epi-test",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2402,10 +2798,12 @@ export var guides = {
         "name": "ImplementationGuide",
         "title": "Miscellaneous ePI Test",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/cander2/epi-test"
     },
     "sequoiaproject.fhir.us.pushnotifications": {
         "url": "https://sequoiaproject.org/fhir/push-r4",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2416,10 +2814,12 @@ export var guides = {
         "name": "Carequality_Subscription_Implementation_Guide",
         "title": "Carequality Subscription Implementation Guide for Push Notifications",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.1",
         "repo": "https://github.com/Carequality/CEQSubscription"
     },
     "fhir.carequality.template": {
         "url": "https://github.com/Carequality/ig-template-carequality",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2430,10 +2830,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "current",
         "repo": "https://github.com/Carequality/ig-template-carequality"
     },
     "snomed-ig": {
         "url": "http://snomed.info/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2444,6 +2846,7 @@ export var guides = {
         "name": "SNOMEDCTImplementationGuideforFHIR",
         "title": "SNOMED CT Implementation Guide for FHIR",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
         "repo": "https://github.com/IHTSDO/snomed-ig"
     },
     "hl7.fhir.be.vaccination": {
@@ -2503,6 +2906,7 @@ export var guides = {
         "name": "BeVaccination",
         "title": "HL7 Belgium Vaccination (Patient Dossier)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.3",
         "repo": "https://github.com/hl7-be/vaccination"
     },
     "hl7.fhir.be.infsec": {
@@ -2535,8 +2939,9 @@ export var guides = {
             }
         ],
         "name": "hl7fhirbeinfsec",
-        "title": null,
+        "title": "eHealth Platform Federal infsec Profiles",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/hl7-be/infsec"
     },
     "hl7.fhir.be.public-health": {
@@ -2581,10 +2986,12 @@ export var guides = {
         "name": "PublicHealth",
         "title": "HL7 FHIR Implementation Guide: Public Health IG Release 1 - BE Realm | STU1",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.2",
         "repo": "https://github.com/hl7-be/public-health"
     },
     "hl7.fhir.be.nihdi-terminology": {
         "url": "https://www.ehealth.fgov.be/standards/fhir/nihdi-terminology",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2593,8 +3000,9 @@ export var guides = {
             }
         ],
         "name": "BeNihdiTerminology",
-        "title": null,
+        "title": "HL7 Belgium NIHDI Terminology",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/hl7-be/nihdi-terminology"
     },
     "hl7.fhir.be.allergy": {
@@ -2652,12 +3060,14 @@ export var guides = {
             }
         ],
         "name": "AllergyPatientDossier",
-        "title": null,
+        "title": "Allergy (Patient Dossier)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/hl7-be/allergy"
     },
     "hl7.fhir.be.eattestation": {
         "url": "https://www.ehealth.fgov.be/standards/fhir/eattestation",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2666,8 +3076,9 @@ export var guides = {
             }
         ],
         "name": "BelgianMyCareNeteAttestationProfiles",
-        "title": null,
+        "title": "Belgian MyCareNet eAttestation Profiles",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/hl7-be/eattestation"
     },
     "hl7.fhir.be.lab": {
@@ -2697,6 +3108,7 @@ export var guides = {
         "name": "Laboratory",
         "title": "HL7 BE Laboratory WG Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/hl7-be/lab"
     },
     "hl7.fhir.be.patientwill": {
@@ -2720,8 +3132,9 @@ export var guides = {
             }
         ],
         "name": "BePatientwill",
-        "title": null,
+        "title": "HL7 Belgium Patientwill (Patient Dossier)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/hl7-be/patientwill"
     },
     "hl7.fhir.be.mycarenet": {
@@ -2751,6 +3164,7 @@ export var guides = {
         "name": "BelgianMyCareNetProfiles",
         "title": "Belgian MyCareNet Profiles",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/hl7-be/mycarenet"
     },
     "hl7.fhir.be.medication": {
@@ -2778,12 +3192,14 @@ export var guides = {
             }
         ],
         "name": "Medication",
-        "title": null,
+        "title": "Medication",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/hl7-be/medication"
     },
     "hl7.fhir.be.riziv-medicationrecord": {
         "url": "http://hl7belgium.org/fhir/riziv-medicationrecord",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2794,6 +3210,7 @@ export var guides = {
         "name": "MedicationRecord",
         "title": "MedicationRecord",
         "fhirversion_latest": "4.3.0",
+        "current_version": "0.1.0-test",
         "repo": "https://github.com/hl7-be/medication-record"
     },
     "hl7.fhir.be.core-clinical": {
@@ -2823,7 +3240,24 @@ export var guides = {
         "name": "TransversalClinicalCore",
         "title": "HL7 FHIR Implementation Guide: Transversal Clinical Core",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/hl7-be/core-clinical"
+    },
+    "hl7.fhir.be.etariff": {
+        "url": "https://www.ehealth.fgov.be/standards/fhir/etariff",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/hl7-be/etariff",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "BelgianMyCareNeteTariffProfiles",
+        "title": "Belgian MyCareNet eTariff Profiles",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
+        "repo": "https://github.com/hl7-be/etariff"
     },
     "hl7.fhir.be.core": {
         "url": "https://www.ehealth.fgov.be/standards/fhir/core",
@@ -2864,10 +3298,12 @@ export var guides = {
         "name": "hl7fhirbecore",
         "title": "eHealth Platform Federal Core Profiles",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/hl7-be/core"
     },
     "hl7.fhir.be.referral": {
         "url": "https://www.ehealth.fgov.be/standards/fhir/referral",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2878,10 +3314,12 @@ export var guides = {
         "name": "ReferralPrescription",
         "title": "Referral Prescription",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/hl7-be/referral"
     },
     "hl7.be.fhir.template": {
         "url": "http://github.com/HL7/ig-template-fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2892,10 +3330,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.0.1",
         "repo": "https://github.com/hl7-be/hl7.be.fhir.template"
     },
     "hl7.fhir.be.capabilities": {
         "url": "https://www.ehealth.fgov.be/standards/fhir/capabilities",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -2906,59 +3346,8 @@ export var guides = {
         "name": "BeCapabilities",
         "title": "HL7 Belgium Capabilities",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/hl7-be/capabilities"
-    },
-    "kl.dk.fhir.prevention": {
-        "url": "http://fhir.kl.dk/prevention",
-        "versions": [
-            {
-                "version": "current",
-                "path": "https://build.fhir.org/ig/hl7dk/kl-gateway-prevention/",
-                "status": "ci-build",
-                "sequence": "ci-build"
-            },
-            {
-                "version": "1.0.0",
-                "path": "http://fhir.kl.dk/prevention/1.0.0",
-                "status": "release",
-                "sequence": "Releases",
-                "fhirversion": "4.0.1",
-                "date": "2023-09-28",
-                "current": true,
-                "desc": "Initial release",
-                "descmd": "Initial release"
-            }
-        ],
-        "name": "KLGatewayPrevention",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/hl7dk/kl-gateway-prevention"
-    },
-    "kl.dk.fhir.rehab": {
-        "url": "http://fhir.kl.dk/rehab",
-        "versions": [
-            {
-                "version": "current",
-                "path": "https://build.fhir.org/ig/hl7dk/kl-gateway-rehab/",
-                "status": "ci-build",
-                "sequence": "ci-build"
-            },
-            {
-                "version": "1.0.0",
-                "path": "http://fhir.kl.dk/rehab/1.0.0",
-                "status": "release",
-                "sequence": "Releases",
-                "fhirversion": "4.0.1",
-                "date": "2023-09-28",
-                "current": true,
-                "desc": "Initial release",
-                "descmd": "Version 1.0.0 of KLs \u00a7140 IG.\n\nInitial release of \u00a7140 reporting IG"
-            }
-        ],
-        "name": "KLGatewayRehab",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/hl7dk/kl-gateway-rehab"
     },
     "kl.dk.fhir.gateway": {
         "url": "http://fhir.kl.dk/gateway",
@@ -2983,6 +3372,7 @@ export var guides = {
         "name": "KLGateway",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/hl7dk/kl-gateway"
     },
     "hl7.fhir.dk.core": {
@@ -3056,8 +3446,9 @@ export var guides = {
             }
         ],
         "name": "DKCore",
-        "title": null,
+        "title": "HL7 FHIR Implementation Guide: DK Core",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.2.0",
         "repo": "https://github.com/hl7dk/dk-core"
     },
     "kl.dk.fhir.children": {
@@ -3084,10 +3475,12 @@ export var guides = {
         "name": "KLChildren",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/hl7dk/kl-children"
     },
     "uv.esavi": {
         "url": "https://paho.org/fhir/esavi",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3098,10 +3491,12 @@ export var guides = {
         "name": "ESAVI",
         "title": "Gu\u00eda de Implementaci\u00f3n FHIR de ESAVI",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.44",
         "repo": "https://github.com/PanAmericanHealthOrganization/ESAVI-IG-FHIR"
     },
     "fhir.giis": {
         "url": "https://paho.org/fhir/giis",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3112,10 +3507,28 @@ export var guides = {
         "name": "giisIG",
         "title": "GIIS Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.8",
         "repo": "https://github.com/cens-chile/giis_fhir_IG"
     },
-    "who-umc.fhir.poc-php": {
-        "url": "http://www.who-umc.org/idmp",
+    "who.fhir.smart-measles-catopia": {
+        "url": "http://worldhealthorganization.github.io/smart",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/DigitalSQR/catopia-measles",
+                "fhirversion": "4.3.0"
+            }
+        ],
+        "name": "SMART",
+        "title": "SMART Empty IG",
+        "fhirversion_latest": "4.3.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/DigitalSQR/catopia-measles"
+    },
+    "idmp.who-umc.org.fhir": {
+        "url": "http://idmp.who-umc.org/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3126,6 +3539,7 @@ export var guides = {
         "name": "WhoUmcIDMPManagement",
         "title": "WHO-UMC IDMP Management and Publish API",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.5.0",
         "repo": "https://github.com/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service"
     },
     "who.trust": {
@@ -3151,24 +3565,12 @@ export var guides = {
         "name": "trust",
         "title": "WHO SMART Trust",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/costateixeira/smart-trust"
-    },
-    "example.fhir.uv.myig": {
-        "url": "http://somewhere.org/fhir/uv/myig",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/costateixeira/sample-ig",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "YourComputableMyIGNameHere",
-        "title": "Your User Friendly Name for MyIG Here",
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/costateixeira/sample-ig"
     },
     "fhir.gdx": {
         "url": "http://mitre.org/gdx",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3179,10 +3581,12 @@ export var guides = {
         "name": "GenomeXDataExchange",
         "title": "GenomeX Data Exchange FHIR IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/CodeX-HL7-FHIR-Accelerator/GenomeX-DataExchange"
     },
     "fhir.mcodelite": {
         "url": "http://mitre.org/mcodelite",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3193,10 +3597,12 @@ export var guides = {
         "name": "mcodelite",
         "title": "mCODE-Lite FHIR IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/CodeX-HL7-FHIR-Accelerator/mcode-eom"
     },
     "fhir.mcodefh": {
         "url": "http://mitre.org/mcodefh",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3207,10 +3613,12 @@ export var guides = {
         "name": "McodeFederalHealth",
         "title": "mCODE for Federal Health (mCODE-FH)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/CodeX-HL7-FHIR-Accelerator/mcode-lite"
     },
     "ccu": {
         "url": "https://fhir.fabrica.inf.ufg.br/ccu",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3221,10 +3629,12 @@ export var guides = {
         "name": "CancerColoDoUtero",
         "title": "Rastreamento de C\u00e2ncer de Colo de \u00datero",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
         "repo": "https://github.com/kyriosdata/farol"
     },
     "ihe.qrph.ccg": {
         "url": "https://profiles.ihe.net/QRPH/CCG",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3235,10 +3645,12 @@ export var guides = {
         "name": "IHE_QRPH_CCG",
         "title": "Computable Care Guidelines",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1-current",
         "repo": "https://github.com/IHE/QRPH.CCG"
     },
     "ihe.pharm.meow": {
         "url": "http://profiles.ihe.net/PHARM/MEOW",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3249,6 +3661,7 @@ export var guides = {
         "name": "IHE_PHARM_MEOW",
         "title": "IHE Pharmacy Medication Overview",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/IHE/pharm-meow"
     },
     "ihe.iti.pmir": {
@@ -3293,6 +3706,7 @@ export var guides = {
         "name": "IHE_ITI_PMIR",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.5.1-current",
         "repo": "https://github.com/IHE/ITI.PMIR"
     },
     "ihe.iti.svcm": {
@@ -3348,6 +3762,7 @@ export var guides = {
         "name": "IHE_ITI_SVCM",
         "title": "Sharing Valuesets, Codes, and Maps (SVCM)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.5.2-current",
         "repo": "https://github.com/IHE/ITI.SVCM"
     },
     "ihe.formatcode.fhir": {
@@ -3361,13 +3776,22 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "1.2.0",
+                "path": "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.2.0",
+                "status": "normative",
+                "sequence": "Publication",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-12",
+                "current": true,
+                "desc": "Minor release in recognition of change in past patch release to add status active to active codes."
+            },
+            {
                 "version": "1.1.1",
                 "path": "https://profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.1",
                 "status": "trial-use",
                 "sequence": "Publication",
                 "fhirversion": "4.0.1",
                 "date": "2024-02-14",
-                "current": true,
                 "desc": "Add status active to active codes."
             },
             {
@@ -3410,10 +3834,12 @@ export var guides = {
         "name": "IHE_FORMATCODE",
         "title": "IHE FormatCode Vocabulary",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.1",
         "repo": "https://github.com/IHE/FormatCode"
     },
     "ihe.pharm.mpd": {
         "url": "http://profiles.ihe.net/PHARM/ihe.pharm.mpd",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3424,10 +3850,12 @@ export var guides = {
         "name": "IHE_MPD",
         "title": "Medication Prescription and Delivery (MPD)",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/IHE/pharm-mpd"
     },
     "ihe.iti.scheduling": {
         "url": "https://profiles.ihe.net/ITI/Scheduling",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3438,6 +3866,7 @@ export var guides = {
         "name": "IHE_ITI_Scheduling",
         "title": "IHE ITI Scheduling",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.8.0-current",
         "repo": "https://github.com/IHE/ITI.Scheduling"
     },
     "ihe.iti.pcf": {
@@ -3450,13 +3879,24 @@ export var guides = {
                 "sequence": "ci-build"
             },
             {
+                "version": "1.1.0",
+                "path": "https://profiles.ihe.net/ITI/PCF/1.1.0",
+                "status": "trial-use",
+                "sequence": "Publication",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-22",
+                "current": true,
+                "desc": "Trial-Implementation release built for FHIR R4",
+                "descmd": "1.1.0\r\n\r\n    - Build for FHIR R4 rather than R4B to better support marketplace that is using R4 and not R4B. This also enables PCF to be depended upon by other IGs that further refine the Consent profiling.\r\n    - fix bug in the oAuth token fragment for not-authoredBy Consent\r\n    - fixes to new warnings from IG publisher such as requirement for all examples of vital signas to be compliant with vital signs profiles from FHIR core",
+                "changes": "issues.html"
+            },
+            {
                 "version": "1.0.0",
                 "path": "https://profiles.ihe.net/ITI/PCF/1.0.0",
                 "status": "trial-use",
                 "sequence": "Publication",
                 "fhirversion": "4.3.0",
                 "date": "2023-08-02",
-                "current": true,
                 "desc": "Trial-Implementation release with resolved public comment",
                 "descmd": "1.0.0 Trial-Implementation\r\n- Public Comment resolution\r\n- Change from SEX to SDV\r\n- Provide guidance on methods of managing changes to a persons Consent\r\n- Relax some restrictions on Consent elements that were not justified\r\n- Add example of consent to clinical trial data use\r\n- Add example of delegate consenting onbehalf of the patient",
                 "changes": "issues.html"
@@ -3474,8 +3914,9 @@ export var guides = {
             }
         ],
         "name": "IHE_ITI_PCF",
-        "title": null,
+        "title": "Privacy Consent on FHIR (PCF)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/IHE/ITI.PCF"
     },
     "ihe.rad.ira": {
@@ -3514,10 +3955,12 @@ export var guides = {
         "name": "IHE_RAD_IRA",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.1",
         "repo": "https://github.com/IHE/RAD.RTC-IMR"
     },
     "ihe.pcc.qedm": {
         "url": "https://profiles.ihe.net/PCC/QEDm",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3528,10 +3971,12 @@ export var guides = {
         "name": "IHE_PCC_QEDm",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1-current",
         "repo": "https://github.com/IHE/QEDm"
     },
     "ihe.domain.profile": {
         "url": "https://profiles.ihe.net/Domain/Profile",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3542,6 +3987,7 @@ export var guides = {
         "name": "IHE_Domain_Profile",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1-current",
         "repo": "https://github.com/IHE/supplement-template"
     },
     "ihe.iti.mhd": {
@@ -3635,6 +4081,7 @@ export var guides = {
         "name": "IHE_ITI_MHD",
         "title": "Mobile access to Health Documents (MHD)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "4.2.2-current",
         "repo": "https://github.com/IHE/ITI.MHD"
     },
     "ihe.iti.pdqm": {
@@ -3646,6 +4093,18 @@ export var guides = {
                 "path": "http://build.fhir.org/ig/IHE/ITI.PDQm/branches/main",
                 "status": "ci-build",
                 "current": true
+            },
+            {
+                "version": "3.0.0",
+                "path": "https://profiles.ihe.net/ITI/PDQm/3.0.0",
+                "status": "trial-use",
+                "sequence": "Publication",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-23",
+                "current": true,
+                "desc": "PDQm updated with $match operation for Trial Implementation",
+                "descmd": "PDQm Version 3.0.0 for Trial Implementation\r\n\r\n- Introduced ITI-119 Patient Demographics Match as an alternative to ITI-78 Mobile Patient Demographics Query.\r\n- Introduced 2 options on the Patient Demographics Consumer, Patient Search and Match Operation, that correspond to support the ITI-78 and ITI-119 transactions, respectively. The Patient Demographics Consumer MAY support either or both options. \r\n- Introduced the Match Operation Option on the Patient Demographics Supplier to declare support for the ITI-119 transaction. The ITI-78 transaction remains REQUIRED on all Patient Demographics Suppliers. \r\n- Updated the PDQm Patient Profile to require business identifiers and align with requirements from [IPA Patient](http://hl7.org/fhir/uv/ipa/STU1/StructureDefinition-ipa-patient.html).\r\n- Added requirements for which combinations of search parameters shall be supported by Patient Demographics consumers in section 2:3.78.4.1.2.1.1. \r\n- Added recommended response patterns for handling deprecated patient identifies to sections 2:3.78.4.1.3 and 2:3.78.4.3.3. \r\n- Updated conformance language to conform to BCP 14.\r\n- Other minor updates for clarity and conciseness.",
+                "changes": "issues.html"
             },
             {
                 "version": "3.0.0-comment",
@@ -3665,8 +4124,7 @@ export var guides = {
                 "status": "trial-use",
                 "fhirversion": "4.0.1",
                 "sequence": "Publication",
-                "date": "2022-02-28",
-                "current": true
+                "date": "2022-02-28"
             },
             {
                 "version": "2.3.0",
@@ -3697,12 +4155,14 @@ export var guides = {
             }
         ],
         "name": "IHE_PDQm",
-        "title": "Patient Demographics Query for mobile (PDQm)",
+        "title": "Patient Demographics Query for Mobile (PDQm)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0",
         "repo": "https://github.com/IHE/ITI.PDQm"
     },
     "ihe.qrph.bfdr": {
         "url": "https://profiles.ihe.net/QRPH/bfdr",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3713,10 +4173,12 @@ export var guides = {
         "name": "UV_Vital_Records_Birth_and_Fetal_Death_Reporting",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/IHE/fhir-bfdr"
     },
     "ihe.pcc.ems-overall": {
         "url": "https://profiles.ihe.net/PCC/EMS-Overall",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3727,6 +4189,7 @@ export var guides = {
         "name": "IHE_PCC_EMSOverall",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.1-current",
         "repo": "https://github.com/IHE/EMS-Overall"
     },
     "ihe.iti.pixm": {
@@ -3740,13 +4203,24 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "3.0.4",
+                "path": "https://profiles.ihe.net/ITI/PIXm/3.0.4",
+                "status": "trial-use",
+                "sequence": "Publication",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-22",
+                "current": true,
+                "desc": "PIXm updated to use OperationOutcome for errors.",
+                "descmd": "Clarified to use OperationOutcome directly for the error response example instead of within a Parameters resource.",
+                "changes": "a_issues.html"
+            },
+            {
                 "version": "3.0.3",
                 "path": "https://profiles.ihe.net/ITI/PIXm/3.0.3",
                 "status": "trial-use",
                 "sequence": "Publication",
                 "fhirversion": "4.0.1",
                 "date": "2023-08-03",
-                "current": true,
                 "desc": "Trial Implementation - quality, capabilityStatement improvements.",
                 "descmd": "Version 3.0.3\r\n- add response recommendation for deleted or merged patient\r\n- quality improvements\r\n- capabilityStatement improvements.",
                 "changes": "issues.html"
@@ -3791,10 +4265,12 @@ export var guides = {
         "name": "IHE_PIXm",
         "title": "Patient Identifier Cross-referencing for mobile (PIXm)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.3",
         "repo": "https://github.com/IHE/ITI.PIXm"
     },
     "ihe.pcc.pcs": {
         "url": "https://profiles.ihe.net/PCC/PCS",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3805,6 +4281,7 @@ export var guides = {
         "name": "IHE_PCC_PCS",
         "title": "PCC - Paramedicine Care Summary (PCS)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-draft",
         "repo": "https://github.com/IHE/PCC.PCS"
     },
     "ihe.pcc.odh": {
@@ -3812,13 +4289,25 @@ export var guides = {
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/IHE/PCC.ODH",
-                "fhirversion": "4.0.1"
+                "path": "https://build.fhir.org/ig/IHE/PCC.ODH/branches/master/index.html",
+                "status": "ci-build",
+                "sequence": "ci-build"
+            },
+            {
+                "version": "1.0.0-comment",
+                "path": "https://profiles.ihe.net/PCC/ODH/1.0.0-comment",
+                "status": "ballot",
+                "sequence": "Publication",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-08",
+                "current": true,
+                "desc": "Public-Comment"
             }
         ],
         "name": "IHE_PCC_ODH",
         "title": "IHE FHIR Profile: Occupational Data for Health (ODH) - International",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-comment",
         "repo": "https://github.com/IHE/PCC.ODH"
     },
     "ihe.iti.dsubm": {
@@ -3829,6 +4318,18 @@ export var guides = {
                 "path": "http://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/index.html",
                 "status": "ci-build",
                 "sequence": "ci-build"
+            },
+            {
+                "version": "1.0.0",
+                "path": "https://profiles.ihe.net/ITI/DSUBm/1.0.0",
+                "status": "trial-use",
+                "sequence": "Publication",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-29",
+                "current": true,
+                "desc": "DSUBm Version 1.0.0 for Trial Implementation",
+                "descmd": "DSUBm Version 1.0.0 for Trial Implementation",
+                "changes": "issues.html"
             },
             {
                 "version": "1.0.0-comment",
@@ -3845,10 +4346,12 @@ export var guides = {
         "name": "IHE_ITI_DSUBm",
         "title": "Document Subscription for Mobile (DSUBm)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1-current",
         "repo": "https://github.com/IHE/ITI.DSUBm"
     },
     "ihe-fhir-pharm-medicationrecord": {
         "url": "http://profiles.ihe.net/PHARM/ihe.pharm.medicationrecord",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3859,6 +4362,7 @@ export var guides = {
         "name": "IHE_MPD",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/IHE/pharm-medo"
     },
     "ihe.iti.sips": {
@@ -3895,12 +4399,14 @@ export var guides = {
             }
         ],
         "name": "IHE_ITI_sIPS",
-        "title": null,
+        "title": "Sharing of IPS (sIPS)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1-current",
         "repo": "https://github.com/IHE/ITI.sIPS"
     },
     "ihe.palm.rpc": {
         "url": "http://profiles.ihe.net/PaLM/RPC",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3911,10 +4417,12 @@ export var guides = {
         "name": "IHE_PaLM_RPC",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/IHE/PaLM.RPC"
     },
     "ihe.iti.aips": {
         "url": "https://profiles.ihe.net/ITI/aIPS",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -3925,6 +4433,7 @@ export var guides = {
         "name": "IHE_ITI_aIPS",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1-current",
         "repo": "https://github.com/IHE/ITI.aIPS"
     },
     "ihe.iti.npfs": {
@@ -3963,6 +4472,7 @@ export var guides = {
         "name": "IHE_ITI_NPFS",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.2.1-current",
         "repo": "https://github.com/IHE/ITI.NPFS"
     },
     "ihe.rad.imr": {
@@ -4007,6 +4517,7 @@ export var guides = {
         "name": "IHE_RAD_IMR",
         "title": "Interactive Multimedia Report (IMR)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1-current",
         "repo": "https://github.com/IHE/RAD.IMR"
     },
     "ihe.iti.mhds": {
@@ -4062,10 +4573,12 @@ export var guides = {
         "name": "IHE_ITI_MHDS",
         "title": "Mobile Health Document Sharing",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.3.2-current",
         "repo": "https://github.com/IHE/ITI.MHDS"
     },
     "ihe.pcc.aps": {
         "url": "https://profiles.ihe.net/PCC/APS",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4076,7 +4589,24 @@ export var guides = {
         "name": "IHE_PCC_APS",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1-current",
         "repo": "https://github.com/IHE/PCC.APS"
+    },
+    "ihe.domain.logical-datatypes": {
+        "url": "https://profiles.ihe.net/Domain/LogicalDatatypes",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/IHE/datatypes",
+                "fhirversion": "5.0.0"
+            }
+        ],
+        "name": "LogicalDatatypes",
+        "title": "Logical Data Types",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "0.0.1-current",
+        "repo": "https://github.com/IHE/datatypes"
     },
     "ihe.fhir.template": {
         "url": "http://fhir.org/templates/ihe.fhir.template",
@@ -4089,14 +4619,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.10.0",
+                "path": "http://fhir.org/templates/ihe.fhir.template/0.10.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.9.0",
                 "path": "http://fhir.org/templates/ihe.fhir.template/0.9.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.8.0",
@@ -4206,10 +4745,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.10.0",
         "repo": "https://github.com/IHE/ihe-ig-template"
     },
     "ihe.rad.idr": {
         "url": "https://profiles.ihe.net/RAD/IDR",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4220,6 +4761,7 @@ export var guides = {
         "name": "IHE_RAD_IDR",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1-current",
         "repo": "https://github.com/IHE/RAD.IDR"
     },
     "ihe.iti.balp": {
@@ -4286,10 +4828,12 @@ export var guides = {
         "name": "IHE_ITI_BALP",
         "title": "Basic Audit Log Patterns (BALP)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.3",
         "repo": "https://github.com/IHE/ITI.BasicAudit"
     },
     "ihe.pcc.ript": {
         "url": "http://profiles.ihe.net/PCC/RIPT",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4300,10 +4844,12 @@ export var guides = {
         "name": "IHE_PCC_RIPT",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-draft",
         "repo": "https://github.com/IHE/PCC.RIPT"
     },
     "ihe.pharm.supply": {
         "url": "http://profiles.ihe.net/PHARM/supply",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4312,8 +4858,9 @@ export var guides = {
             }
         ],
         "name": "IHE_PHARM_SUPPLY",
-        "title": null,
+        "title": "Supply of Products for Healthcare (SUPPLY)",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.3.0",
         "repo": "https://github.com/IHE/pharm-supply"
     },
     "ihe.iti.mxde": {
@@ -4361,6 +4908,7 @@ export var guides = {
         "name": "IHE_ITI_mXDE",
         "title": "Mobile Cross-Enterprise Document Data Element Extraction (mXDE)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.3.0",
         "repo": "https://github.com/IHE/ITI.mXDE"
     },
     "ihe.iti.mcsd": {
@@ -4432,10 +4980,28 @@ export var guides = {
         "name": "IHE_ITI_mCSD",
         "title": "Mobile Care Services Discovery (mCSD)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.8.1-current",
         "repo": "https://github.com/IHE/ITI.mCSD"
+    },
+    "ihe.qrph.vrdr": {
+        "url": "http://profiles.ihe.net/QRPH/VRDR",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/IHE/QRPH.VRDR",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "IHE_QRPH_VRDR",
+        "title": "Vital Records Death Reporting (VRDR) FHIR Implementation Guide",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.0-current",
+        "repo": "https://github.com/IHE/QRPH.VRDR"
     },
     "my-ig": {
         "url": "http://example.com/fhir/example",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4446,10 +5012,44 @@ export var guides = {
         "name": "ExampleIG",
         "title": "HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/hl7-pt/adr-ig"
+    },
+    "hl7.fhir.pt.patient-admin-ig": {
+        "url": "http://example.com/fhir/example",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/hl7-pt/patient-admin-ig",
+                "fhirversion": "4.3.0"
+            }
+        ],
+        "name": "ExampleIG",
+        "title": "HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1",
+        "fhirversion_latest": "4.3.0",
+        "current_version": "1.0.0",
+        "repo": "https://github.com/hl7-pt/patient-admin-ig"
+    },
+    "hl7.fhir.pt.core": {
+        "url": "http://hl7.pt/fhir/core",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/hl7-pt/core",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "hl7fhirptcore",
+        "title": "HL7 PT FHIR Implementation Guide: Example IG Release 1 | STU1",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
+        "repo": "https://github.com/hl7-pt/core"
     },
     "il.moh.mri.r4": {
         "url": "http://fhir.health.gov.il/mri",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4460,10 +5060,12 @@ export var guides = {
         "name": "MRIScheduling",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/vadi2/MRI-Scheduling"
     },
     "medcom.fhir.dk.xds.metadata": {
         "url": "http://medcomfhir.dk/ig/xdsmetadata",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4474,6 +5076,7 @@ export var guides = {
         "name": "TerminologyforXDSMetadata",
         "title": "Terminology for XDS Metadata",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.96.5",
         "repo": "https://github.com/medcomdk/dk-medcom-xds-metadata"
     },
     "medcom.fhir.dk.acknowledgement": {
@@ -4528,6 +5131,7 @@ export var guides = {
         "name": "MedComAcknowledgement",
         "title": "DK MedCom acknowledgement",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.2",
         "repo": "https://github.com/medcomdk/dk-medcom-acknowledgement"
     },
     "dk.medcom.ehmi.eds": {
@@ -4582,10 +5186,67 @@ export var guides = {
         "name": "EHMIedsIG",
         "title": "DK EHMI Delivery Status (EDS)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
         "repo": "https://github.com/medcomdk/dk-ehmi-com-status"
+    },
+    "dk-ehmi-sbdh": {
+        "url": "http://medcomehmi.dk/ig/ehmi-sbdh",
+        "versions": [
+            {
+                "version": "current",
+                "desc": "Continuous Integration Build (latest in version control)",
+                "path": "http://build.fhir.org/ig/medcomdk/dk-medcom-acknowledgement",
+                "status": "ci-build",
+                "fhirversion": "4.0.1"
+            },
+            {
+                "version": "2.0.2",
+                "path": "http://medcomfhir.dk/ig/acknowledgement/2.0.2",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-05",
+                "descmd": "* Updated reference to medcom.fhir.dk.terminology\r\n* Updated instances due to the change in terminology reference\r\n* Technical modification of the invariant medcom-acknowledgement-2, no requirements has changed",
+                "changes": "https://github.com/medcomdk/dk-medcom-acknowledgement/releases",
+                "current": true
+            },
+            {
+                "version": "2.0.1",
+                "path": "http://medcomfhir.dk/ig/acknowledgement/2.0.1",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "date": "2023-03-10",
+                "descmd": "Updated description of MessageHeader.source and modified examples"
+            },
+            {
+                "version": "2.0.0",
+                "desc": "MedCom acknowledgement",
+                "path": "http://medcomfhir.dk/ig/acknowledgement/2.0.0",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "date": "2022-10-05"
+            },
+            {
+                "version": "1.0.0",
+                "date": "2021-03-23",
+                "desc": "MedCom acknowledgement",
+                "path": "http://medcomfhir.dk/fhir/ig/dk-medcom-acknowledgement",
+                "status": "trial-use",
+                "sequence": "STU",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "DKEHMISBDHIG",
+        "title": "DK EHMI SBDH IG",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.9.0",
+        "repo": "https://github.com/medcomdk/dk-ehmi-sbdh"
     },
     "medcom.fhir.dk.carecommunicationtestscripts": {
         "url": "http://medcomfhir.dk/ig/carecommunicationtestscripts",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4596,10 +5257,28 @@ export var guides = {
         "name": "CareCommunicationTestscripts",
         "title": "CareCommunication Test scripts",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0",
         "repo": "https://github.com/medcomdk/dk-medcom-carecommunication-testscripts"
+    },
+    "dk.ehmi.eds": {
+        "url": "http://medcomehmi.dk/ig/dk-ehmi-eds",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/medcomdk/dk-medcom-ehmi-eds",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "EHMIedsIG",
+        "title": "DK EHMI Delivery Status (EDS)",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
+        "repo": "https://github.com/medcomdk/dk-medcom-ehmi-eds"
     },
     "medcom.fhir.dk.ihe.xds.metadata": {
         "url": "https://medcomfhir.dk/ig/ihexdsmetadata",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4610,10 +5289,12 @@ export var guides = {
         "name": "MedComIHEXDSMetadata",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.96.0",
         "repo": "https://github.com/medcomdk/dk-medcom-ihe-xds-metadata"
     },
     "dk.medcom.ehmi.eer": {
         "url": "http://medcomehmi.dk/ig/ehmi-eer",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4624,10 +5305,12 @@ export var guides = {
         "name": "EHMIEERIG",
         "title": "DK EHMI Endpoint Register (EER)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
         "repo": "https://github.com/medcomdk/dk-ehmi-mCSD"
     },
     "medcom.fhir.dk.diagnosiscard": {
         "url": "http://medcomfhir.dk/ig/diagnosiscard",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4638,20 +5321,117 @@ export var guides = {
         "name": "MedComDiagnosisCard",
         "title": "DK MedCom Diagnosis Card",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/medcomdk/dk-medcom-diagnosiscard"
+    },
+    "dk.ehmi.eer": {
+        "url": "http://medcomehmi.dk/ig/dk-ehmi-eer",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/medcomdk/dk-ehmi-eer",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "EHMIEndpointRegisterEERIG",
+        "title": "DK EHMI Endpoint Register (EER)",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
+        "repo": "https://github.com/medcomdk/dk-ehmi-eer"
+    },
+    "medcom.fhir.dk.carecommunication": {
+        "url": "http://medcomfhir.dk/ig/carecommunication",
+        "versions": [
+            {
+                "version": "current",
+                "desc": "Continuous Integration Build (latest in version control)",
+                "path": "http://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication",
+                "status": "ci-build",
+                "fhirversion": "4.0.1"
+            },
+            {
+                "version": "2.1.0",
+                "path": "http://medcomfhir.dk/ig/carecommunication/2.1.0",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "date": "2023-04-14",
+                "descmd": "- CareCommunication profile: \r\n    - In the CareCommunication profile author, authorrole, relevant phonenumber and creation date is made optional (card 0..1) to include for attachments.\r\n    - Information about the episode of care identifier is clarified.\r\n    - Figure under Scope and Usage is updated\r\n- In general: \r\n    - Examples are updated and more examples are included. \r\n    - A recommendation about use of predefined reasons for cancellations is added under Introduction > Cancel message. \r\n    - A description about download is added under Download",
+                "changes": "https://github.com/medcomdk/dk-medcom-carecommunication/releases",
+                "current": true
+            },
+            {
+                "version": "2.0.0",
+                "date": "2022-11-24",
+                "path": "http://medcomfhir.dk/ig/carecommunication/2.0.0",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "descmd": "- Communication.recipient may reference a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- MedComCareCommunicationSenderExtension is added an allow reference to a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- Communication.sender is no longer MS, Communication.extension.sender is MS\r\n- MedComCareCommunicationPayloadAuthorContactExtension is added and referenced from Communication.payload.extension.authorContact\r\n- MessageHeader.focus is changed from 1..1 to 1..2\r\n- Constraint 1-13 applied to MedComCommunication and MedComCareCommunicationMessage are added or updated.\r\n- Examples and descriptions updated due to the above changes",
+                "changes": "https://github.com/medcomdk/dk-medcom-carecommunication/releases"
+            },
+            {
+                "version": "1.0.0",
+                "date": "2021-03-23",
+                "desc": "MedCom CareCommunication",
+                "path": "http://medcomfhir.dk/fhir/ig/dk-medcom-carecommunication",
+                "status": "trial-use",
+                "sequence": "STU",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "MedComCarecommunication",
+        "title": "DK MedCom Carecommunication",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0",
+        "repo": "https://github.com/medcomdk/dk-medcom-carecommunication"
     },
     "dk.ehmi.terminology": {
         "url": "http://medcomehmi.dk/ig/dk-ehmi-terminology",
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/medcomdk/dk-ehmi-terminology",
+                "desc": "Continuous Integration Build (latest in version control)",
+                "path": "http://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication",
+                "status": "ci-build",
+                "fhirversion": "4.0.1"
+            },
+            {
+                "version": "2.1.0",
+                "path": "http://medcomfhir.dk/ig/carecommunication/2.1.0",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "date": "2023-04-14",
+                "descmd": "- CareCommunication profile: \r\n    - In the CareCommunication profile author, authorrole, relevant phonenumber and creation date is made optional (card 0..1) to include for attachments.\r\n    - Information about the episode of care identifier is clarified.\r\n    - Figure under Scope and Usage is updated\r\n- In general: \r\n    - Examples are updated and more examples are included. \r\n    - A recommendation about use of predefined reasons for cancellations is added under Introduction > Cancel message. \r\n    - A description about download is added under Download",
+                "changes": "https://github.com/medcomdk/dk-medcom-carecommunication/releases",
+                "current": true
+            },
+            {
+                "version": "2.0.0",
+                "date": "2022-11-24",
+                "path": "http://medcomfhir.dk/ig/carecommunication/2.0.0",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "descmd": "- Communication.recipient may reference a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- MedComCareCommunicationSenderExtension is added an allow reference to a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- Communication.sender is no longer MS, Communication.extension.sender is MS\r\n- MedComCareCommunicationPayloadAuthorContactExtension is added and referenced from Communication.payload.extension.authorContact\r\n- MessageHeader.focus is changed from 1..1 to 1..2\r\n- Constraint 1-13 applied to MedComCommunication and MedComCareCommunicationMessage are added or updated.\r\n- Examples and descriptions updated due to the above changes",
+                "changes": "https://github.com/medcomdk/dk-medcom-carecommunication/releases"
+            },
+            {
+                "version": "1.0.0",
+                "date": "2021-03-23",
+                "desc": "MedCom CareCommunication",
+                "path": "http://medcomfhir.dk/fhir/ig/dk-medcom-carecommunication",
+                "status": "trial-use",
+                "sequence": "STU",
                 "fhirversion": "4.0.1"
             }
         ],
         "name": "DKEHMITerminologyIG",
         "title": "DK EHMI Terminology",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.8.0",
         "repo": "https://github.com/medcomdk/dk-ehmi-terminology"
     },
     "medcom.fhir.dk.terminology": {
@@ -4742,7 +5522,93 @@ export var guides = {
         "name": "MedComTerminology",
         "title": "DK MedCom Terminology",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.6.0",
         "repo": "https://github.com/medcomdk/dk-medcom-terminology"
+    },
+    "medcom.fhir.dk.homecareobservation": {
+        "url": "http://medcomfhir.dk/ig/homecareobservation",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/medcomdk/dk_HomeCareObservations",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "MedComHomeCareObservation",
+        "title": "MedCom HomeCareObservation",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
+        "repo": "https://github.com/medcomdk/dk_HomeCareObservations"
+    },
+    "medcom.fhir.dk.messaging": {
+        "url": "http://medcomfhir.dk/ig/messaging",
+        "versions": [
+            {
+                "version": "current",
+                "desc": "Continuous Integration Build (latest in version control)",
+                "path": "http://build.fhir.org/ig/medcomdk/dk-medcom-messaging",
+                "status": "ci-build",
+                "fhirVersion": "4.0.1",
+                "current": true
+            },
+            {
+                "version": "2.0.0",
+                "desc": "MedCom Messaging",
+                "path": "http://medcomfhir.dk/ig/messaging/2.0.0",
+                "status": "release",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "date": "2022-10-05",
+                "current": true
+            },
+            {
+                "version": "1.0.3",
+                "date": "2021-03-23",
+                "desc": "MedCom Messaging",
+                "path": "http://medcomfhir.dk/fhir/messaging/ig/dk-medcom-messaging",
+                "status": "trial-use",
+                "sequence": "STU",
+                "fhirVersion": "4.0.1"
+            }
+        ],
+        "name": "MedComMessaging",
+        "title": "DK MedCom Messaging",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
+        "repo": "https://github.com/medcomdk/dk-medcom-messaging"
+    },
+    "hl7.eu.fhir.gk": {
+        "url": "http://hl7.eu/fhir/ig/gk",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/gatekeeper-project/gk-fhir-ig",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "GatekeeperImplementationGuide",
+        "title": "GATEKEEPER Implementation Guide",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/gatekeeper-project/gk-fhir-ig"
+    },
+    "hl7.eu.fhir.gk-poc-ai": {
+        "url": "http://hl7.eu/fhir/ig/gk-poc-ai",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/gatekeeper-project/poc-ai-gk",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "GatekeeperAiProofOfConcept",
+        "title": "GATEKEEPER Proof of Concept for AI operations",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/gatekeeper-project/poc-ai-gk"
     },
     "hl7.au.base.template": {
         "url": "http://fhir.org/templates/hl7.base.template",
@@ -4755,14 +5621,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.9.0",
+                "path": "http://fhir.org/templates/hl7.base.template/0.9.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.8.0",
                 "path": "http://fhir.org/templates/hl7.base.template/0.8.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.7.0",
@@ -4858,6 +5733,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.7.0",
         "repo": "https://github.com/hl7au/hl7.au.base.template"
     },
     "hl7.au.fhir.template": {
@@ -4871,14 +5747,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.8.0",
+                "path": "http://fhir.org/templates/hl7.au.fhir.template/0.8.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Revised CSS styling",
+                "current": true,
+                "date": "2024-03-07"
+            },
+            {
                 "version": "0.7.0",
                 "path": "http://fhir.org/templates/hl7.au.fhir.template/0.7.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade to add CSS for new labels",
-                "date": "2024-01-18",
-                "current": true
+                "date": "2024-01-18"
             },
             {
                 "version": "0.6.0",
@@ -4967,10 +5852,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.8.0",
         "repo": "https://github.com/hl7au/hl7.au.fhir.template"
     },
     "hl7.fhir.au.core": {
         "url": "http://hl7.org.au/fhir/core",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4981,10 +5868,28 @@ export var guides = {
         "name": "AUCoreImplementationGuide",
         "title": "AU Core Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
         "repo": "https://github.com/hl7au/au-fhir-core"
+    },
+    "hl7.fhir.au.erequesting": {
+        "url": "http://hl7.org.au/fhir/erequesting",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/hl7au/au-fhir-erequesting",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "AUeRequesting",
+        "title": "AU eRequesting",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0-ci-build",
+        "repo": "https://github.com/hl7au/au-fhir-erequesting"
     },
     "hl7.fhir.au.draft.diagnostic-orders": {
         "url": "http://draft.hl7.org.au/fhir/diagnostic-orders",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -4995,6 +5900,7 @@ export var guides = {
         "name": "ERequesting",
         "title": "Diagnostic Requests",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.9",
         "repo": "https://github.com/hl7au/draft-diagnostic-orders"
     },
     "hl7.au.sparked.template": {
@@ -5008,14 +5914,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.3.0",
+                "path": "http://fhir.org/templates/hl7.au.sparked.template/0.3.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on hl7.au.fhir.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.2.0",
                 "path": "http://fhir.org/templates/hl7.au.sparked.template/0.2.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on hl7.au.fhir.template",
-                "date": "2024-01-18",
-                "current": true
+                "date": "2024-01-18"
             },
             {
                 "version": "0.1.0",
@@ -5030,10 +5945,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.3.0",
         "repo": "https://github.com/hl7au/hl7.au.sparked.template"
     },
     "hl7.fhir.nl.zorgviewer": {
         "url": "http://hl7.nl/fhir/zorgviewer",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5044,10 +5961,12 @@ export var guides = {
         "name": "zorgviewer-ig",
         "title": "RIVO-Noord Zorgviewer MVP2 Implementation Guide",
         "fhirversion_latest": "3.0.2",
+        "current_version": "0.21.0",
         "repo": "https://github.com/RIVO-Noord/zorgviewer-ig"
     },
     "hl7.eu.fhir.gh-ips": {
         "url": "http://hl7.eu/fhir/ig/gravitate-health-ips",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5058,10 +5977,12 @@ export var guides = {
         "name": "GhR4ImplementationGuide",
         "title": "Gravitate Health FHIR Implementation Guide (FHIR R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/gravitate-health-ips"
     },
     "hl7.eu.fhir.xpandh.ps": {
         "url": "http://hl7.eu/fhir/ig/xpandh/ps",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5072,10 +5993,12 @@ export var guides = {
         "name": "XpandhPatientSummaryIg",
         "title": "XpanDH Patient Summary",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/xpandh-ps"
     },
     "hl7.eu.fhir.unicom": {
         "url": "http://unicom-project.eu/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5086,10 +6009,12 @@ export var guides = {
         "name": "UnicomIG",
         "title": "UnicomIG",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/unicom-ig"
     },
     "hl7.fhir.eu.extensions.r4": {
         "url": "http://hl7.eu/fhir/r4/extensions",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5100,10 +6025,12 @@ export var guides = {
         "name": "Hl7EuExtensions",
         "title": "HL7 Europe Extensions",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0-ci",
         "repo": "https://github.com/hl7-eu/extensions-r4"
     },
     "hl7.eu.fhir.xpandh.lab": {
         "url": "http://hl7.eu/fhir/ig/xpandh/lab",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5114,24 +6041,12 @@ export var guides = {
         "name": "XpandhLaboratoryIg",
         "title": "XpanDH Laboratory Report",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/xpandh-lab"
-    },
-    "hl7.fhir.eu.base": {
-        "url": "http://hl7.eu/fhir/ig/base",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/hl7-eu/base",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "Hl7EuBaseIg",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/hl7-eu/base"
     },
     "hl7.eu.fhir.xpandh.hdr": {
         "url": "http://hl7.eu/fhir/ig/xpandh/hdr",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5142,6 +6057,7 @@ export var guides = {
         "name": "XpandhHospitalDischargeReportIg",
         "title": "XpanDH Hospital Discharge Report",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/xpandh-hdr"
     },
     "hl7.eu.fhir.pcsp": {
@@ -5167,10 +6083,44 @@ export var guides = {
         "name": "PCSPImplementationGuide",
         "title": "PanCareSurPass Project HL7 FHIR Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.0",
         "repo": "https://github.com/hl7-eu/pcsp"
+    },
+    "hl7.fhir.eu.r5.mpd": {
+        "url": "http://hl7.eu/fhir/r5/mpd",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/hl7-eu/mpd",
+                "fhirversion": "5.0.0"
+            }
+        ],
+        "name": "Hl7EuMedPrescriptionDispenseIg",
+        "title": "HL7 Europe Medication Prescription and Dispense",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/hl7-eu/mpd"
+    },
+    "hl7.fhir.eu.mpd": {
+        "url": "http://hl7.eu/fhir/mpd",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/hl7-eu/mpd",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "Hl7EuMedPrescriptionDispenseIg",
+        "title": "HL7 Europe Medication Prescription and Dispense",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/hl7-eu/mpd"
     },
     "hl7.eu.fhir.coalesced": {
         "url": "http://hl7.eu/fhir/ig/coalesced",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5181,10 +6131,12 @@ export var guides = {
         "name": "CoalescedImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/coalesced"
     },
     "hl7.eu.fhir.xpandh": {
         "url": "http://hl7.eu/fhir/ig/xpandh",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5195,10 +6147,12 @@ export var guides = {
         "name": "XpandhIg",
         "title": "XpanDH Project",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/xpandh"
     },
     "hl7.eu.fhir.idea4rc": {
         "url": "http://hl7.eu/fhir/ig/idea4rc",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5209,10 +6163,38 @@ export var guides = {
         "name": "IDEA4RCImplementationGuide",
         "title": "IDEA4RC FHIR Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/hl7-eu/idea4rc"
+    },
+    "hl7.fhir.eu.extensions": {
+        "url": "http://hl7.eu/fhir/extensions",
+        "versions": [
+            {
+                "version": "current",
+                "path": "https://build.fhir.org/ig/hl7-eu/extensions",
+                "status": "ci-build",
+                "sequence": "ci-build"
+            },
+            {
+                "version": "0.1.0",
+                "path": "http://hl7.eu/fhir/extensions/0.1.0",
+                "status": "trial-use",
+                "sequence": "Release",
+                "fhirversion": "4.0.1",
+                "date": "2024-02-20",
+                "current": true,
+                "desc": "This is the first STU version released"
+            }
+        ],
+        "name": "Hl7EuExtensions",
+        "title": "HL7 Europe Extensions",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/hl7-eu/extensions"
     },
     "uk-core-access": {
         "url": "https://fhir.hl7.org.uk/uk-core-access",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5223,24 +6205,12 @@ export var guides = {
         "name": "UKCoreAccess",
         "title": "HL7 UK - UK Core Access",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7-UK/UK-Core-Access"
-    },
-    "ncez.cz.fhir.lab": {
-        "url": "https://ncez.mzcr.cz/standards/fhir/ig/lab",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/ncez-cz/cz-lab",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "CzLabImplementationGuide",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/ncez-cz/cz-lab"
     },
     "ncez.cz.fhir.core": {
         "url": "https://ncez.mzcr.cz/standards/fhir/ig/core",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5251,10 +6221,12 @@ export var guides = {
         "name": "CzCoreImplementationGuide",
         "title": "Czech Core Resources IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/ncez-cz/cz-core"
     },
     "openhie.fhir.template": {
         "url": "http://github.com/openhie/openhie-ig-template",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5265,10 +6237,12 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/openhie/openhie-ig-template"
     },
     "ehi.api": {
         "url": "http://fhir.org/argonaut/ehi-api",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5279,76 +6253,24 @@ export var guides = {
         "name": "EHIExportAPI",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/argonautproject/ehi-api"
     },
-    "tewhatuora.fhir.mywai": {
-        "url": "https://standards.digital.health.nz",
+    "fhir.blood": {
+        "url": "https://build.fhir.org/ig/ReMeDi-Blut/remedi_ig",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/daniel-thomson/mywai",
+                "path": "http://build.fhir.org/ig/ReMeDi-Blut/remedi_ig",
                 "fhirversion": "4.0.1"
             }
         ],
-        "name": "mywai",
+        "name": "BluttransfusionenImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/daniel-thomson/mywai"
-    },
-    "ch.fhir.ig.ch-epr-ppqm": {
-        "url": "http://fhir.ch/ig/ch-epr-ppqm",
-        "versions": [
-            {
-                "version": "current",
-                "desc": "Continuous Integration Build (latest in version control)",
-                "path": "http://build.fhir.org/ig/ehealthsuisse/ch-epr-ppqm",
-                "status": "ci-build",
-                "fhirVersion": "4.0.1"
-            },
-            {
-                "version": "2.0.0",
-                "path": "http://fhir.ch/ig/ch-epr-ppqm/2.0.0",
-                "status": "draft",
-                "sequence": "DSTU 2",
-                "fhirversion": "4.0.1",
-                "date": "2023-12-20",
-                "current": true,
-                "desc": "eHealth Suissse DSTU 2",
-                "changes": "changelog.html"
-            },
-            {
-                "version": "2.0.0-ballot",
-                "path": "http://fhir.ch/ig/ch-epr-ppqm/2.0.0-ballot",
-                "status": "ballot",
-                "sequence": "DSTU 2",
-                "fhirversion": "4.0.1",
-                "date": "2023-06-30",
-                "desc": "HL7 Switzerland Informative Ballot DSTU 2",
-                "changes": "changelog.html"
-            },
-            {
-                "version": "0.2.0",
-                "path": "http://fhir.ch/ig/ch-epr-ppqm/0.2.0",
-                "date": "2022-04-13",
-                "desc": "HL7 Switzerland Informative Ballot DSTU 1",
-                "status": "ballot",
-                "sequence": "DSTU 1",
-                "fhirversion": "4.0.1"
-            },
-            {
-                "version": "0.1.0",
-                "date": "2022-02-11",
-                "desc": "eHealth Suisse DSTU 1",
-                "path": "http://fhir.ch/ig/ch-epr-ppqm/0.1.0",
-                "status": "draft",
-                "sequence": "DSTU 1",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "CH_EPR_PPQm",
-        "title": "CH EPR PPQm (R4)",
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/ehealthsuisse/ch-epr-ppqm"
+        "current_version": "0.1.0",
+        "repo": "https://github.com/ReMeDi-Blut/remedi_ig"
     },
     "ch.fhir.ig.ch-atc": {
         "url": "http://fhir.ch/ig/ch-atc",
@@ -5404,10 +6326,12 @@ export var guides = {
         "name": "CH_ATC",
         "title": "CH ATC (R4)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.3.0-cibuild",
         "repo": "https://github.com/ehealthsuisse/ch-atc"
     },
     "fhir.remedi-blut": {
         "url": "https://fhir.simplifier.net/remedi-blut",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5418,10 +6342,12 @@ export var guides = {
         "name": "RemediBlutIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/lhake17/ig_remedi"
     },
     "hl7.org.nz.fhir.ig.hpi": {
         "url": "http://hl7.org.nz/fhir/ig/hpi",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5432,10 +6358,12 @@ export var guides = {
         "name": "NewZealandHPIIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.9.0",
         "repo": "https://github.com/HL7NZ/hpi"
     },
     "hl7.org.nz.fhir.ig.formulary": {
-        "url": "http://hl7.org.nz/fhir/ig/formulary",
+        "url": "https://fhir-docs.nzf.org.nz",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5444,12 +6372,14 @@ export var guides = {
             }
         ],
         "name": "NZFormularyIG",
-        "title": null,
+        "title": "HL7 FHIR Implementation Guide - New Zealand Formulary/NZULM IG",
         "fhirversion_latest": "4.3.0",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7NZ/nzf"
     },
     "hl7.org.nz.fhir.ig.mdr": {
         "url": "http://hl7.org.nz/fhir/ig/mdr",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5460,10 +6390,12 @@ export var guides = {
         "name": "MedicinesDataRepository",
         "title": "Medicines Data Repository Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7NZ/mdr"
     },
     "fhir.org.nz.ig.base": {
         "url": "http://hl7.org.nz/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5472,12 +6404,14 @@ export var guides = {
             }
         ],
         "name": "HL7FHIRNewZealandBaseImplementationGuide",
-        "title": null,
+        "title": "HL7\u00ae FHIR\u00ae New Zealand Base Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.1.0",
         "repo": "https://github.com/HL7NZ/nzbase"
     },
     "fhir.org.nz.ig.northernregion": {
         "url": "http://fhir.org.nz/ig/northernregion",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5488,10 +6422,12 @@ export var guides = {
         "name": "NorthernRegionIG",
         "title": "Northern Region Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.4.6",
         "repo": "https://github.com/HL7NZ/northernRegion"
     },
     "hl7.org.nz.fhir.ig.cca": {
         "url": "http://hl7.org.nz/fhir/ig/cca",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5500,12 +6436,72 @@ export var guides = {
             }
         ],
         "name": "CcaImplementationGuide",
+        "title": "HL7\u00ae FHIR\u00ae Te Aho o Te Kahu, Cancer Control Agency Implementation Guide",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/HL7NZ/cca"
+    },
+    "gabriel0316.hl7atcoreprofiles": {
+        "url": "http://hl7.at/fhir/HL7ATCoreProfiles/4.0.1",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/gabriel0316/HL7-AT-FHIR-Core-R4",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "HL7AustriaImplementationGuide",
+        "title": "HL7\u00ae Austria FHIR\u00ae Core Implementation Guide",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
+        "repo": "https://github.com/gabriel0316/HL7-AT-FHIR-Core-R4"
+    },
+    "hl7.at.fhir.gkl.ig-tooling": {
+        "url": "https://gabriel0316.github.io/ig-tooling-pages/ig/ig-tooling",
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/gabriel0316/ig-tooling/",
+                "status": "ci-build",
+                "sequence": "ci-build"
+            },
+            {
+                "version": "0.1.0",
+                "path": "https://gabriel0316.github.io/ig-tooling-pages/ig/ig-tooling/0.1.0",
+                "status": "trial-use",
+                "sequence": "DSTU 1",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-28",
+                "desc": "First attempt of release",
+                "changes": "changelog.html"
+            }
+        ],
+        "name": "IntegrierteVersorgungHerzinsuffizienz",
         "title": null,
         "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/HL7NZ/cca"
+        "current_version": "0.1.0",
+        "repo": "https://github.com/gabriel0316/ig-tooling"
+    },
+    "gabriel0316.terminologies": {
+        "url": "https://termgit.elga.gv.at",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/gabriel0316/terminology",
+                "fhirversion": "4.3.0"
+            }
+        ],
+        "name": "termgit",
+        "title": "\u00d6sterreichischer e-Health-Terminologie-Browser",
+        "fhirversion_latest": "4.3.0",
+        "current_version": "2.6.0",
+        "repo": "https://github.com/gabriel0316/terminology"
     },
     "hl7.cda.us.eyecare": {
         "url": "http://hl7.org/cda/us/eyecare",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5516,6 +6512,7 @@ export var guides = {
         "name": "CDAEyecare",
         "title": "Specialty Eyecare CDA Implementation Guide",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/cda-eyecare"
     },
     "hl7.fhir.us.pacio-rt": {
@@ -5551,6 +6548,7 @@ export var guides = {
         "name": "PACIOReAssessmentTimepoints",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-pacio-rt"
     },
     "hl7.fhir.uv.fhir-for-fair": {
@@ -5587,10 +6585,12 @@ export var guides = {
         "name": "FhirForFairIG",
         "title": "FHIR for FAIR - FHIR Implementation Guide",
         "fhirversion_latest": "4.3.0",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-for-fair"
     },
-    "hl7.fhir.uv.tinkar": {
-        "url": "https://hl7.org/fhir/uv/tinkar",
+    "hl7.fhir.uv.termchangeset": {
+        "url": "https://hl7.org/fhir/uv/termchangeset",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5598,9 +6598,10 @@ export var guides = {
                 "fhirversion": "4.0.1"
             }
         ],
-        "name": "tinkar-ig",
-        "title": "Tinkar Terminology Exchange",
+        "name": "termchangeset",
+        "title": "Terminology Change Set Exchange",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.0",
         "repo": "https://github.com/HL7/tinkar-ig"
     },
     "hl7.ca.fhir.template": {
@@ -5614,14 +6615,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.4.0",
+                "path": "http://fhir.org/templates/hl7.ca.fhir.template/0.4.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.3.0",
                 "path": "http://fhir.org/templates/hl7.ca.fhir.template/0.3.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template (again)",
-                "date": "2023-10-27",
-                "current": true
+                "date": "2023-10-27"
             },
             {
                 "version": "0.2.0",
@@ -5644,6 +6654,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.4.0",
         "repo": "https://github.com/HL7/ig-template-ca"
     },
     "hl7.fhir.uv.livd": {
@@ -5696,6 +6707,7 @@ export var guides = {
         "name": "LoincIvdTestCodeMapping",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
         "repo": "https://github.com/HL7/livd"
     },
     "hl7.fhir.us.physical-activity": {
@@ -5730,12 +6742,14 @@ export var guides = {
             }
         ],
         "name": "PhysicalActivity",
-        "title": null,
+        "title": "Physical Activity Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/HL7/physical-activity"
     },
     "hl7.fhir.affiliate.template": {
         "url": "http://fhir.org/templates/hl7.fhir.affiliate.template",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -5746,6 +6760,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "4.6.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/ig-template-affiliate"
     },
     "hl7.fhir.us.medmorph-research-dex": {
@@ -5773,6 +6788,7 @@ export var guides = {
         "name": "MedMorphResearchDataExchangeContentIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-medmorph-research-dex-ig"
     },
     "hl7.fhir.uv.rtls": {
@@ -5796,8 +6812,9 @@ export var guides = {
             }
         ],
         "name": "RTLS",
-        "title": null,
+        "title": "Real Time Location Services Implementation Guide",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/rtls-ig"
     },
     "hl7.fhir.uv.shc-vaccination": {
@@ -5823,6 +6840,7 @@ export var guides = {
         "name": "SMARTHealthCardsVaccinationAndTestingIG",
         "title": "SMART Health Cards: Vaccination &amp; Testing Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-shc-vaccination-ig"
     },
     "hl7.fhir.us.military-service": {
@@ -5858,6 +6876,7 @@ export var guides = {
         "name": "MilitaryService",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-military-service"
     },
     "hl7.fhir.uv.ipa": {
@@ -5894,6 +6913,7 @@ export var guides = {
         "name": "InternationalPatientAccess",
         "title": "International Patient Access",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-ipa"
     },
     "hl7.cql": {
@@ -6007,49 +7027,8 @@ export var guides = {
         "name": "CQL",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.5.2",
         "repo": "https://github.com/HL7/cql"
-    },
-    "hl7.cda.uv.core": {
-        "url": "http://hl7.org/cda/stds/core",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/HL7/CDA-core-sd/",
-                "status": "ci-build",
-                "sequence": "ci-build"
-            },
-            {
-                "version": "2.0.0-sd-snapshot1",
-                "path": "http://hl7.org/cda/stds/core/2.0.0-sd-snapshot1",
-                "status": "draft",
-                "sequence": "CDA2",
-                "fhirversion": "5.0.0",
-                "date": "2023-12-16",
-                "desc": "Minor updates to address discovered issues during CCDA ballot preparation."
-            },
-            {
-                "version": "2.0.0-sd-ballot",
-                "path": "http://hl7.org/cda/stds/core/2023Sep",
-                "status": "ballot",
-                "sequence": "CDA 2.0",
-                "fhirversion": "5.0.0",
-                "date": "2023-10-27",
-                "desc": "A representation of the CDA specification using FHIR Logical Models and Structure Definitions."
-            },
-            {
-                "version": "2.1.0-draft1",
-                "path": "http://hl7.org/cda/stds/core/draft1",
-                "status": "draft",
-                "sequence": "CDA 2.1",
-                "fhirversion": "5.0.0",
-                "date": "2023-01-16",
-                "desc": "First draft to support the publication of CCDA 2.1"
-            }
-        ],
-        "name": "ClinicalDocumentArchitecture",
-        "title": null,
-        "fhirversion_latest": "5.0.0",
-        "repo": "https://github.com/HL7/CDA-core-2.0"
     },
     "hl7.fhir.uv.ae-research-ig": {
         "url": "http://hl7.org/fhir/uv/ae-research-ig",
@@ -6072,8 +7051,9 @@ export var guides = {
             }
         ],
         "name": "AdverseEventClinicalResearch",
-        "title": null,
+        "title": "Adverse Event Clinical Research",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-ae-research-ig"
     },
     "hl7.fhir.uv.sdc": {
@@ -6187,6 +7167,7 @@ export var guides = {
         "name": "StructuredDataCapture",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0",
         "repo": "https://github.com/HL7/sdc"
     },
     "hl7.fhir.uv.ips": {
@@ -6250,6 +7231,7 @@ export var guides = {
         "name": "InternationalPatientSummaryIG",
         "title": "International Patient Summary Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/fhir-ips"
     },
     "hl7.fhir.uv.shorthand": {
@@ -6313,10 +7295,12 @@ export var guides = {
         "name": "FHIRShorthand",
         "title": "FHIR Shorthand",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-shorthand"
     },
     "hl7.fast.template": {
         "url": "http://fhir.org/templates/hl7.fast.template",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -6327,6 +7311,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/ig-template-fast"
     },
     "hl7.fhir.us.registry-protocols": {
@@ -6361,6 +7346,7 @@ export var guides = {
         "name": "FHIRRegistryProtocolsIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-registry-protocols-ig"
     },
     "hl7.fhir.uv.saner": {
@@ -6396,10 +7382,12 @@ export var guides = {
         "name": "SituationalAwarenessforNovelEpidemicResponse",
         "title": "Situational Awareness for Novel Epidemic Response",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/HL7/fhir-saner"
     },
     "hl7.fhir.uv.capstmt": {
         "url": "http://www.hl7.org/fhir/uv/capstmt",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -6410,6 +7398,7 @@ export var guides = {
         "name": "CapabilityStatementIG",
         "title": "FHIR CapabilityStatement Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/capstmt"
     },
     "hl7.fhir.us.eltss": {
@@ -6457,6 +7446,7 @@ export var guides = {
         "name": "ELTSS",
         "title": "Electronic Long-Term Services and Supports (eLTSS) Release 1 - US Realm",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-ballot",
         "repo": "https://github.com/HL7/eLTSS"
     },
     "hl7.davinci.template": {
@@ -6470,14 +7460,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.7.0",
+                "path": "http://fhir.org/templates/hl7.davinci.template/0.7.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.6.0",
                 "path": "http://fhir.org/templates/hl7.davinci.template/0.6.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.5.0",
@@ -6525,6 +7524,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.7.0",
         "repo": "https://github.com/HL7/ig-template-davinci"
     },
     "hl7.fhir.us.davinci-pdex": {
@@ -6579,10 +7579,12 @@ export var guides = {
         "name": "DaVinciPayerDataExchange",
         "title": "Da Vinci Payer Data Exchange",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0",
         "repo": "https://github.com/HL7/davinci-epdx"
     },
     "hl7.utg.template": {
         "url": "http://github.com/HL7/ig-template-hl7",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -6593,6 +7595,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.7.0",
         "repo": "https://github.com/HL7/ig-template-utg"
     },
     "hl7.fhir.us.dental-data-exchange": {
@@ -6627,8 +7630,9 @@ export var guides = {
             }
         ],
         "name": "DentalDataExchange",
-        "title": null,
+        "title": "Dental Data Exchange",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/dental-data-exchange"
     },
     "hl7.fhir.us.davinci-hrex": {
@@ -6671,8 +7675,9 @@ export var guides = {
             }
         ],
         "name": "DaVinciHealthRecordExchangeHRex",
-        "title": null,
+        "title": "Da Vinci Health Record Exchange (HRex)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/davinci-ehrx"
     },
     "hl7.fhir.us.davinci-crd": {
@@ -6743,6 +7748,7 @@ export var guides = {
         "name": "CoverageRequirementsDiscovery",
         "title": "Da Vinci - Coverage Requirements Discovery",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.1",
         "repo": "https://github.com/HL7/davinci-crd"
     },
     "hl7.fhir.uv.cql": {
@@ -6768,6 +7774,7 @@ export var guides = {
         "name": "CQL",
         "title": "Using CQL with FHIR",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/cql-ig"
     },
     "hl7.fhir.uv.order-catalog": {
@@ -6793,6 +7800,7 @@ export var guides = {
         "name": "OrderCatalogIG",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "current",
         "repo": "https://github.com/HL7/fhir-order-catalog"
     },
     "hl7.fhir.us.mcode": {
@@ -6879,6 +7887,7 @@ export var guides = {
         "name": "MinimalCommonOncologyDataElements",
         "title": "minimal Common Oncology Data Elements (mCODE) Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "4.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-mCODE-ig"
     },
     "hl7.fhir.us.pacio-pfe": {
@@ -6915,8 +7924,9 @@ export var guides = {
             }
         ],
         "name": "PACIOPersonalFunctioningAndEngagementImplementationGuide",
-        "title": null,
+        "title": "PACIO Personal Functioning and Engagement Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-pacio-pfe"
     },
     "hl7.cda.us.ccdar2dot2": {
@@ -6950,10 +7960,12 @@ export var guides = {
         "name": "CCDAR2dot2",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.2",
         "repo": "https://github.com/HL7/CDA-ccda-2.2"
     },
     "hl7.cda.template": {
         "url": "http://github.com/HL7/ig-template-cda",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -6964,6 +7976,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.8.0",
         "repo": "https://github.com/HL7/ig-template-cda"
     },
     "hl7.fhir.uv.v2mappings": {
@@ -6998,6 +8011,7 @@ export var guides = {
         "name": "HL7Version2toFHIR",
         "title": "HL7 Version 2 to FHIR",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/v2-to-fhir"
     },
     "hl7.fhir.us.hai-ltcf": {
@@ -7044,6 +8058,7 @@ export var guides = {
         "name": "HealthcareAssociatedInfectionReportsLongTermCareFacilities",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/HAI-LTCF"
     },
     "hl7.cda.us.ccda": {
@@ -7077,6 +8092,7 @@ export var guides = {
         "name": "CCDA",
         "title": "Consolidated CDA",
         "fhirversion_latest": "5.0.0",
+        "current_version": "3.0.0-ballot",
         "repo": "https://github.com/HL7/CDA-ccda"
     },
     "hl7.fhir.us.insurance-card": {
@@ -7110,8 +8126,9 @@ export var guides = {
             }
         ],
         "name": "CARINForDigitalInsuranceCard",
-        "title": null,
+        "title": "CARIN Digital Insurance Card",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/carin-digital-insurance-card"
     },
     "hl7.fhir.uv.security-label-ds4p": {
@@ -7167,10 +8184,28 @@ export var guides = {
         "name": "HL7_fhir_security_label_ds4p",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-security-label-ds4p"
+    },
+    "hl7.fhir.efss": {
+        "url": "http://hl7.org/fhir/us/efss",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/HL7/efss",
+                "fhirversion": "5.0.0"
+            }
+        ],
+        "name": "EFSSIG",
+        "title": "Enhancing FHIR for Social Services",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/HL7/efss"
     },
     "fhir.efss": {
         "url": "http://hl7.org/fhir/us",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -7181,6 +8216,7 @@ export var guides = {
         "name": "EFSSIG",
         "title": "Enhancing FHIR for Social Services",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/efss"
     },
     "hl7.fhir.us.cancer-reporting": {
@@ -7217,12 +8253,14 @@ export var guides = {
             }
         ],
         "name": "USCancerPathologyData",
-        "title": null,
+        "title": "Cancer Pathology Data Sharing",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/HL7/cancer-reporting"
     },
     "hl7.gravity.template": {
         "url": "http://github.com/HL7/ig-template-gravity",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -7233,6 +8271,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.0.1",
         "repo": "https://github.com/HL7/ig-template-gravity"
     },
     "hl7.fhir.uv.radiation-dose-summary": {
@@ -7259,6 +8298,7 @@ export var guides = {
         "name": "RadiationDoseSummaryForDiagnosticProceduresOnFHIR",
         "title": "Radiation Dose Summary for Diagnostic Procedures on FHIR",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-radiation-dose-summary-ig"
     },
     "hl7.fhir.us.bser": {
@@ -7314,6 +8354,7 @@ export var guides = {
         "name": "BSeRBidirectionalServicesEReferral",
         "title": "Bidirectional Services eReferral (BSeR)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-ballot",
         "repo": "https://github.com/HL7/bser"
     },
     "hl7.fhir.us.specialty-rx": {
@@ -7371,6 +8412,7 @@ export var guides = {
         "name": "SpecialtyRx",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/HL7/fhir-specialty-rx"
     },
     "hl7.fhir.uv.fhircast": {
@@ -7416,8 +8458,9 @@ export var guides = {
             }
         ],
         "name": "FHIRcast",
-        "title": null,
+        "title": "FHIRcast",
         "fhirversion_latest": "4.3.0",
+        "current_version": "3.0.0",
         "repo": "https://github.com/HL7/fhircast-docs"
     },
     "hl7.fhir.us.davinci-dtr": {
@@ -7488,6 +8531,7 @@ export var guides = {
         "name": "DocumentationTemplatesRules",
         "title": "Da Vinci - Documentation Templates and Rules",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.1",
         "repo": "https://github.com/HL7/davinci-dtr"
     },
     "hl7.fhir.us.resp-net": {
@@ -7513,6 +8557,7 @@ export var guides = {
         "name": "RESPNET",
         "title": "Respiratory Virus Hospitalization Surveillance Network (RESP-NET) Content Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-resp-net-ig"
     },
     "hl7.fhir.uv.ihe-sdc-ecc": {
@@ -7551,6 +8596,7 @@ export var guides = {
         "name": "IHESDCeCCOnFHIR",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/ihe-sdc-ecc-on-fhir"
     },
     "hl7.fhir.uv.vulcan-schedule": {
@@ -7586,10 +8632,12 @@ export var guides = {
         "name": "StudyScheduleOfActivities",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/Vulcan-schedule-ig"
     },
     "hl7.fhir.uv.vulcan-soa": {
         "url": "http://hl7.org/fhir/uv/vulcan-soa",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -7600,6 +8648,7 @@ export var guides = {
         "name": "VulcanSofA",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/Vulcan-schedule-ig"
     },
     "hl7.fhir.uv.ichom-breast-cancer": {
@@ -7635,10 +8684,12 @@ export var guides = {
         "name": "BreastCancerICHOM",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-ichom-breast-cancer-ig"
     },
     "hl7.fhir.uv.ichom.breastcancer": {
         "url": "https://connect.ichom.org/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -7649,6 +8700,7 @@ export var guides = {
         "name": "BreastCancerICHOM",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.0.1",
         "repo": "https://github.com/HL7/fhir-ichom-breast-cancer-ig"
     },
     "hl7.fhir.us.ecr": {
@@ -7732,6 +8784,7 @@ export var guides = {
         "name": "ElectronicCaseReporting",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.1",
         "repo": "https://github.com/HL7/case-reporting"
     },
     "hl7.fhir.uv.bulkdata": {
@@ -7800,6 +8853,7 @@ export var guides = {
         "name": "BulkDataAccessIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0",
         "repo": "https://github.com/HL7/bulk-data"
     },
     "hl7.fhir.uv.pocd": {
@@ -7844,6 +8898,7 @@ export var guides = {
         "name": "PoCDImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "current",
         "repo": "https://github.com/HL7/uv-pocd"
     },
     "hl7.fhir.us.ccda": {
@@ -7855,6 +8910,17 @@ export var guides = {
                 "path": "http://build.fhir.org/ig/HL7/ccda-on-fhir",
                 "status": "ci-build",
                 "current": true
+            },
+            {
+                "version": "1.2.0",
+                "path": "http://hl7.org/fhir/us/ccda/STU1.2",
+                "status": "trial-use",
+                "sequence": "STU 1",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-12",
+                "current": true,
+                "desc": "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+). The clinical document header and document guidance from the earlier publications have not been updated since 2020.",
+                "descmd": "The C-CDA on FHIR Implementation Guide is a US Realm Implementation Guide of the FHIR Specification addressing the key aspects of Consolidated CDA (C-CDA) required for Meaningful Use (MU). This IG publication release focuses on providing data mappings for problems, allergies, medications, immunization, patient and procedures (PAMI+). The clinical document header and document guidance from the earlier publications have not been updated since 2020."
             },
             {
                 "version": "1.2.0-ballot",
@@ -7873,8 +8939,7 @@ export var guides = {
                 "fhirversion": "4.0.1",
                 "status": "trial-use",
                 "sequence": "STU 1.1",
-                "date": "2020-10-21",
-                "current": true
+                "date": "2020-10-21"
             },
             {
                 "version": "1.0.0",
@@ -7907,6 +8972,7 @@ export var guides = {
         "name": "CCDAonFHIR",
         "title": "C-CDA on FHIR",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.2.0-ballot",
         "repo": "https://github.com/HL7/ccda-on-fhir"
     },
     "hl7.fhir.us.directory-query": {
@@ -7932,6 +8998,7 @@ export var guides = {
         "name": "NationalHealthcareDirectoryQuery",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-directory-query"
     },
     "hl7.fhir.us.pacio-adi": {
@@ -7967,8 +9034,9 @@ export var guides = {
             }
         ],
         "name": "PACIOAdvanceDirectiveInteroperability",
-        "title": null,
+        "title": "PACIO Advance Directive Interoperability Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/HL7/fhir-pacio-adi"
     },
     "hl7.fhir.us.hai": {
@@ -8033,6 +9101,7 @@ export var guides = {
         "name": "HealthcareAssociatedInfectionReports",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/HL7/HAI"
     },
     "hl7.fhir.us.bfdr": {
@@ -8086,9 +9155,26 @@ export var guides = {
             }
         ],
         "name": "BirthAndFetalDeath",
-        "title": null,
+        "title": "Birth And Fetal Death (BFDR) - STU2-ballot",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-CIbuild",
         "repo": "https://github.com/HL7/fhir-bfdr"
+    },
+    "hl7.fhir.us.pq-cmc-fda": {
+        "url": "http://hl7.org/fhir/us/pq-cmc-fda",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/HL7/FHIR-us-pq-cmc-fda",
+                "fhirversion": "5.0.0"
+            }
+        ],
+        "name": "FHIR_pqcmc_fda",
+        "title": "Pharmaceutical Quality - Chemistry, Manufacturing and Controls (PQ-CMC) Submissions to FDA",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0-ballot",
+        "repo": "https://github.com/HL7/FHIR-us-pq-cmc-fda"
     },
     "hl7.fhir.us.sirb": {
         "url": "http://hl7.org/fhir/us/sirb",
@@ -8125,7 +9211,24 @@ export var guides = {
         "name": "SingleInstitutionalReviewBoard",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-sirb"
+    },
+    "hl7.fhir.us.illTraveler": {
+        "url": "http://hl7.org/fhir/us/reportofilltraveler",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/HL7/ReportIIITraveler-ig",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "CDCDGMHReportofIllTraveler",
+        "title": "CDC DGMH Report of Ill Traveler",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/HL7/ReportIIITraveler-ig"
     },
     "hl7.fhir.us.davinci-drug-formulary": {
         "url": "http://hl7.org/fhir/us/davinci-drug-formulary",
@@ -8205,10 +9308,12 @@ export var guides = {
         "name": "Formulary",
         "title": "DaVinci Payer Data Exchange (PDex) US Drug Formulary",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.1",
         "repo": "https://github.com/HL7/davinci-pdex-formulary"
     },
-    "hl7.fhir.uv.cardx-htn": {
-        "url": "http://hl7.org/fhir/uv/cardx-htn",
+    "hl7.fhir.uv.CardX-HTN-MNG": {
+        "url": "http://hl7.org/fhir/uv/CardX-HTN-MNG",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -8219,10 +9324,12 @@ export var guides = {
         "name": "HTNMngCardX",
         "title": "CardX Hypertension Management",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/CardX-HTN-MNG"
     },
     "hl7.fhir.us.cardx-htn": {
         "url": "http://hl7.org/fhir/us/cardx-htn",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -8233,6 +9340,7 @@ export var guides = {
         "name": "HTNMngCardX",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/cardx-ig"
     },
     "hl7.fhir.uv.genomics-reporting": {
@@ -8303,8 +9411,9 @@ export var guides = {
             }
         ],
         "name": "GenomicsReporting",
-        "title": null,
+        "title": "Genomics Reporting Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.1-SNAPSHOT",
         "repo": "https://github.com/HL7/genomics-reporting"
     },
     "hl7.fhir.template": {
@@ -8318,14 +9427,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.9.0",
+                "path": "http://fhir.org/templates/hl7.fhir.template/0.9.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.8.0",
                 "path": "http://fhir.org/templates/hl7.fhir.template/0.8.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.7.0",
@@ -8429,7 +9547,24 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.9.0",
         "repo": "https://github.com/HL7/ig-template-fhir"
+    },
+    "hl7.fhir.us.consent-management": {
+        "url": "http://hl7.org/fhir/us/consent-management",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/HL7/fhir-consent-management",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "ScalableConsentManagement",
+        "title": "Scalable Consent Management",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/HL7/fhir-consent-management"
     },
     "hl7.fhir.us.breast-radiology": {
         "url": "http://hl7.org/fhir/us/breast-radiology",
@@ -8464,10 +9599,12 @@ export var guides = {
         "name": "BreastImagingReporting2ndSTUballot",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.3.0",
         "repo": "https://github.com/HL7/fhir-breast-radiology-ig"
     },
     "hl7.fhir.us.cimilabs": {
         "url": "http://hl7.org/fhir/us/cimi-labs",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -8478,6 +9615,7 @@ export var guides = {
         "name": "CIMILaboratoryResults",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1",
         "repo": "https://github.com/HL7/cimi-labs"
     },
     "hl7.fhir.uv.pddi": {
@@ -8523,7 +9661,24 @@ export var guides = {
         "name": "PDDI_CDS",
         "title": "Potential Drug-Drug Interaction (PDDI) CDS IG : STU1 Ballot 2",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/PDDI-CDS"
+    },
+    "hl7.fhir.us.nhsn-dqm": {
+        "url": "http://hl7.org/fhir/us/nhsn-dqm",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/HL7/nhsn-dqm",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "NHSNdQM",
+        "title": "National Healthcare Safety Network (NHSN) using digital quality measures (dQMs)",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-cibuild",
+        "repo": "https://github.com/HL7/nhsn-dqm"
     },
     "hl7.fhir.us.core": {
         "url": "http://hl7.org/fhir/us/core",
@@ -8740,6 +9895,7 @@ export var guides = {
         "name": "USCore",
         "title": "US Core Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "7.0.0",
         "repo": "https://github.com/HL7/US-Core"
     },
     "hl7.fhir.uv.vulcan-rwd": {
@@ -8775,10 +9931,12 @@ export var guides = {
         "name": "RealWorldData",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/vulcan-rwd"
     },
     "hl7.fhir.uv.cmi": {
         "url": "http://hl7.org/fhir/uv/cmi",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -8789,6 +9947,7 @@ export var guides = {
         "name": "CMI",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/Content-Management-Infrastructure-IG"
     },
     "hl7.fhir.us.ndh": {
@@ -8813,10 +9972,12 @@ export var guides = {
         "name": "NationalDirectoryHealthcare",
         "title": "National Directory of Healthcare Providers & Services (NDH) Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-us-ndh"
     },
     "hl7.fhir.us.medication-rems": {
         "url": "http://example.org",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -8827,6 +9988,7 @@ export var guides = {
         "name": "RemsIG",
         "title": "US Medication Risk Evaluation and Mitigation Strategies (REMS) FHIR IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-medication-rems-ig"
     },
     "hl7.fhir.us.directory-attestation": {
@@ -8852,10 +10014,12 @@ export var guides = {
         "name": "NationalHealthcareDirectoryAttestationAndVerification",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-directory-attestation"
     },
     "hl7.fhir.uv.deval": {
         "url": "http://hl7.org/fhir/uv/deval",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -8866,6 +10030,7 @@ export var guides = {
         "name": "DeviceAlerting",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/DeviceAlerting"
     },
     "fhir.base.template": {
@@ -8879,13 +10044,21 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.7.0",
+                "desc": "Force snapshot release of all templates prior to making a change to the base template that depends on a new IG publisher",
+                "path": "http://fhir.org/templates/fhir.base.template/0.7.0",
+                "status": "release",
+                "sequence": "Publications",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.6.0",
                 "desc": "Update template for apply-wg",
                 "path": "http://fhir.org/templates/fhir.base.template/0.6.0",
                 "status": "release",
                 "sequence": "Publications",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.5.0",
@@ -8965,6 +10138,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.7.0",
         "repo": "https://github.com/HL7/ig-template-base"
     },
     "hl7.fhir.us.davinci-vbpr": {
@@ -8990,10 +10164,12 @@ export var guides = {
         "name": "ValueBasedPerformanceReporting",
         "title": "Da Vinci Value-Based Performance Reporting Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/davinci-vbpr"
     },
     "hl7.fhir.us.lower-extremity-skin-wound-assessment": {
         "url": "http://hl7.org/fhir/us/lower-extremity-skin-wound-assessment",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -9004,10 +10180,12 @@ export var guides = {
         "name": "LowerExtremitySkinWoundAssessmentIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-skin-wound-ig"
     },
     "hl7.fhir.uv.adverseeventclinicalcare": {
         "url": "http://hl7.org/fhir/uv/adverseeventclinicalcare",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -9018,6 +10196,7 @@ export var guides = {
         "name": "adverseeventclinicalcare",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.2.0",
         "repo": "https://github.com/HL7/fhir-ae-care-ig"
     },
     "hl7.fhir.us.vitals": {
@@ -9055,6 +10234,7 @@ export var guides = {
         "name": "CIMIVitalSigns",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0",
         "repo": "https://github.com/HL7/cimi-vital-signs"
     },
     "hl7.fhir.us.nhsn-ade": {
@@ -9093,6 +10273,7 @@ export var guides = {
         "name": "AdverseDrugEventsGlycemicControl",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-nhsn-ade-ig"
     },
     "hl7.fhir.us.central-cancer-registry-reporting": {
@@ -9120,6 +10301,7 @@ export var guides = {
         "name": "CentralCancerRegistryReporting",
         "title": "Central Cancer Registry Reporting Content IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-central-cancer-registry-reporting-ig"
     },
     "hl7.fhir.us.mcc": {
@@ -9156,10 +10338,11 @@ export var guides = {
         "name": "MCCeCarePlan",
         "title": "MCC eCare Plan Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot2",
         "repo": "https://github.com/HL7/fhir-us-mcc"
     },
     "hl7.fhir.uv.ebm": {
-        "url": "https://hl7.org/fhir/uv/ebm",
+        "url": "http://hl7.org/fhir/uv/ebm",
         "versions": [
             {
                 "version": "current",
@@ -9178,8 +10361,9 @@ export var guides = {
             }
         ],
         "name": "EBMIG",
-        "title": null,
+        "title": "Evidence Based Medicine on FHIR Implementation Guide",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/ebm"
     },
     "hl7.fhir.us.medmorph": {
@@ -9227,6 +10411,7 @@ export var guides = {
         "name": "MakingElectronicDataMoreAvailableForResearchAndPublicHealth",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-medmorph"
     },
     "hl7.fhir.us.carin-bb": {
@@ -9290,6 +10475,7 @@ export var guides = {
         "name": "CARINConsumerDirectedPayerDataExchange",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0",
         "repo": "https://github.com/HL7/carin-bb"
     },
     "hl7.base.template": {
@@ -9303,14 +10489,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.9.0",
+                "path": "http://fhir.org/templates/hl7.base.template/0.9.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.8.0",
                 "path": "http://fhir.org/templates/hl7.base.template/0.8.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.7.0",
@@ -9406,6 +10601,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.9.0",
         "repo": "https://github.com/HL7/ig-template-hl7"
     },
     "hl7.fhir.us.identity-matching": {
@@ -9441,24 +10637,12 @@ export var guides = {
         "name": "DigitalIdentity",
         "title": "Interoperable Digital Identity and Patient Matching",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-draft",
         "repo": "https://github.com/HL7/fhir-identity-matching-ig"
-    },
-    "hl7.fhir.us.ga4gh.phenopacket": {
-        "url": "https://github.com/phenopackets/core-ig",
-        "versions": [
-            {
-                "version": "current",
-                "path": "http://build.fhir.org/ig/HL7/phenomics-exchange-ig",
-                "fhirversion": "4.0.1"
-            }
-        ],
-        "name": "GA4GHPhenopacketIG",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/HL7/phenomics-exchange-ig"
     },
     "hl7.fhir.uv.phenomics-exchange": {
         "url": "http://hl7.org/fhir/uv/phenomics-exchange",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -9469,10 +10653,12 @@ export var guides = {
         "name": "PhenomicsExchange",
         "title": "Phenomics Exchange for Research and Diagnostics",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/phenomics-exchange-ig"
     },
     "hl7.fhir.us.pdmp": {
         "url": "http://hl7.org/fhir/us/pdmp",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -9481,8 +10667,9 @@ export var guides = {
             }
         ],
         "name": "PDMP",
-        "title": null,
+        "title": "US Prescription Drug Monitoring Program (PDMP)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-pdmp"
     },
     "hl7.fhir.us.davinci-ra": {
@@ -9529,6 +10716,7 @@ export var guides = {
         "name": "RiskAdjustment",
         "title": "Da Vinci Risk Adjustment Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0",
         "repo": "https://github.com/HL7/davinci-ra"
     },
     "hl7.fhir.us.qicore": {
@@ -9542,6 +10730,17 @@ export var guides = {
                 "status": "ci-build",
                 "fhirversion": "4.0.1",
                 "current": true
+            },
+            {
+                "version": "6.0.0",
+                "path": "http://hl7.org/fhir/us/qicore/STU6",
+                "status": "trial-use",
+                "sequence": "STU6 (v6.0.0)",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-01",
+                "current": true,
+                "desc": "STU6 (v6.0.0) Publication",
+                "descmd": "This version updates the QI-Core (Quality Improvement Core Framework) Implementation Guide to STU6 (v6.0.0) and aligns with the US Core Implementation Guide STU6 (v6.1.0)"
             },
             {
                 "version": "6.0.0-ballot",
@@ -9561,8 +10760,7 @@ export var guides = {
                 "fhirversion": "4.0.1",
                 "date": "2023-04-04",
                 "desc": "STU5 (v5.0.0)",
-                "descmd": "This version updates the QI-Core (Quality Improvement Core Framework) Implementation Guide to STU5 (v5.0.0) and aligns with the US Core Implementation Guide STU5",
-                "current": true
+                "descmd": "This version updates the QI-Core (Quality Improvement Core Framework) Implementation Guide to STU5 (v5.0.0) and aligns with the US Core Implementation Guide STU5"
             },
             {
                 "version": "5.0.0-ballot",
@@ -9691,8 +10889,9 @@ export var guides = {
             }
         ],
         "name": "QICore",
-        "title": null,
+        "title": "QI-Core Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "6.0.0",
         "repo": "https://github.com/HL7/fhir-qi-core"
     },
     "hl7.fhir.us.ph-library": {
@@ -9731,6 +10930,7 @@ export var guides = {
         "name": "USPublicHealthProfilesLibrary",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-us-ph-common-library-ig"
     },
     "hl7.fhir.us.vr-common-library": {
@@ -9786,6 +10986,7 @@ export var guides = {
         "name": "VitalRecordsCommonLibrary",
         "title": "Vital Records Common Library (VRCL) STU2-ballot",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-ballot",
         "repo": "https://github.com/HL7/vr-common-library"
     },
     "hl7.fhir.uv.xver": {
@@ -9796,6 +10997,20 @@ export var guides = {
                 "path": "http://build.fhir.org/ig/HL7/fhir-extensions",
                 "status": "ci-build",
                 "sequence": "ci-build"
+            },
+            {
+                "version": "5.1.0-snapshot1",
+                "path": "http://hl7.org/fhir/extensions/5.1.0-snapshot1",
+                "status": "trial-use",
+                "sequence": "Release 5.1",
+                "fhirversion": "5.0.0",
+                "date": "2024-03-12",
+                "desc": "Snapshot1 - Implementation Support prior to ballot completion",
+                "sub-packages": [
+                    "r3",
+                    "r4",
+                    "r5"
+                ]
             },
             {
                 "version": "5.1.0-ballot",
@@ -9834,6 +11049,7 @@ export var guides = {
         "name": "FHIRXVersionMappingPack",
         "title": "FHIR Cross-Version Mapping Pack",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-cross-version"
     },
     "hl7.fhir.us.home-lab-report": {
@@ -9872,10 +11088,12 @@ export var guides = {
         "name": "AtHomeInVitroTestReport",
         "title": "At-Home In-Vitro Test Report",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/home-lab-report"
     },
     "hl7.fhir.uv.omop": {
         "url": "http://hl7.org/fhir/uv/omop",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -9886,6 +11104,7 @@ export var guides = {
         "name": "FHIROMOP",
         "title": "FHIR to OMOP FHIR IG",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-omop-ig"
     },
     "hl7.terminology": {
@@ -9904,13 +11123,27 @@ export var guides = {
                 ]
             },
             {
+                "version": "5.5.0",
+                "path": "http://terminology.hl7.org/5.5.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "date": "2024-03-09",
+                "current": true,
+                "desc": "Twelfth publication of the HL7 Terminology 20 UTG approved tickets applied.",
+                "sub-packages": [
+                    "r3",
+                    "r4",
+                    "r5"
+                ]
+            },
+            {
                 "version": "5.4.0",
                 "path": "http://terminology.hl7.org/5.4.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "date": "2023-11-17",
-                "current": true,
                 "desc": "Eleventh publication of the HL7 Terminology 9 UTG approved tickets applied.",
                 "sub-packages": [
                     "r3",
@@ -10052,6 +11285,7 @@ export var guides = {
         "name": "HL7Terminology",
         "title": "HL7 Terminology (THO)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "5.4.18",
         "repo": "https://github.com/HL7/UTG"
     },
     "hl7.fhir.us.hsds": {
@@ -10087,6 +11321,7 @@ export var guides = {
         "name": "FHIRHumanServicesDirectory",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/FHIR-IG-Human-Services-Directory"
     },
     "hl7.fhir.us.pacio-fs": {
@@ -10122,6 +11357,7 @@ export var guides = {
         "name": "PACIOFunctionalStatusImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-pacio-functional-status"
     },
     "hl7.fhir.uv.ehrs-rle": {
@@ -10169,10 +11405,12 @@ export var guides = {
         "name": "EHRSFunctionalModelRecordLifecycleEventsIG",
         "title": "EHR and PHR System Functional Models - Record Lifecycle Events Implementation Guide",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/ehrs-rle-ig"
     },
     "hl7.fhir.uv.dap": {
         "url": "http://hl7.org/fhir/uv/dap",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -10183,6 +11421,7 @@ export var guides = {
         "name": "DataAccessPolicies",
         "title": "HL7 FHIR Implementation Guide: Data Access Policies",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0-current",
         "repo": "https://github.com/HL7/data-access-policies"
     },
     "hl7.fhir.us.cqfmeasures": {
@@ -10290,6 +11529,7 @@ export var guides = {
         "name": "CQFMeasures",
         "title": "Quality Measure Implementation Guide (STU5)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "5.0.0-ballot2",
         "repo": "https://github.com/HL7/cqf-measures"
     },
     "hl7.fhir.uv.vhdir": {
@@ -10325,6 +11565,7 @@ export var guides = {
         "name": "ValidatedHealthcareDirectory",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.0",
         "repo": "https://github.com/HL7/VhDir"
     },
     "hl7.fhir.us.davinci-pct": {
@@ -10370,6 +11611,7 @@ export var guides = {
         "name": "PatientCostTransparency",
         "title": "Patient Cost Transparency Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/davinci-pct"
     },
     "hl7.fhir.us.davinci-pcde": {
@@ -10405,6 +11647,7 @@ export var guides = {
         "name": "PayerCoverageDecisionExchange",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/davinci-pcde"
     },
     "hl7.fhir.us.icsr-ae-reporting": {
@@ -10447,6 +11690,7 @@ export var guides = {
         "name": "TransfusionVaccinationAdverseEventDetectionReporting",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/HL7/fhir-icsr-ae-reporting"
     },
     "hl7.xprod.uv.gender-harmony": {
@@ -10484,6 +11728,7 @@ export var guides = {
         "name": "hl7genderharmony",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-gender-harmony"
     },
     "hl7.fhir.uv.pharm-quality": {
@@ -10508,6 +11753,7 @@ export var guides = {
         "name": "PharmaceuticalQualityIndustry",
         "title": "Pharmaceutical Quality (Industry)",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/uv-dx-pq"
     },
     "hl7.fhir.us.directory-exchange": {
@@ -10533,6 +11779,7 @@ export var guides = {
         "name": "NationalHealthcareDirectoryExchange",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-directory-exchange"
     },
     "hl7.fhir.us.davinci-cdex": {
@@ -10604,6 +11851,7 @@ export var guides = {
         "name": "DaVinciCDex",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0-preview",
         "repo": "https://github.com/HL7/davinci-ecdx"
     },
     "hl7.fhir.us.cdmh": {
@@ -10641,6 +11889,7 @@ export var guides = {
         "name": "CommonDataModelsHarmonization",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/cdmh"
     },
     "hl7.fhir.us.codex-radiation-therapy": {
@@ -10677,6 +11926,7 @@ export var guides = {
         "name": "CodeXRadiationTherapy",
         "title": "CodeX Radiation Therapy",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0-cibuild",
         "repo": "https://github.com/HL7/codex-radiation-therapy"
     },
     "hl7.fhir.us.health-care-surveys-reporting": {
@@ -10715,6 +11965,7 @@ export var guides = {
         "name": "HealthcareSurveysReporting",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.1",
         "repo": "https://github.com/HL7/fhir-health-care-surveys-reporting-ig"
     },
     "hl7.fhir.uv.smart-web-messaging": {
@@ -10750,6 +12001,7 @@ export var guides = {
         "name": "SmartWebMessaging",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/smart-web-messaging"
     },
     "hl7.fhir.uv.extensions": {
@@ -10760,6 +12012,20 @@ export var guides = {
                 "path": "http://build.fhir.org/ig/HL7/fhir-extensions",
                 "status": "ci-build",
                 "sequence": "ci-build"
+            },
+            {
+                "version": "5.1.0-snapshot1",
+                "path": "http://hl7.org/fhir/extensions/5.1.0-snapshot1",
+                "status": "trial-use",
+                "sequence": "Release 5.1",
+                "fhirversion": "5.0.0",
+                "date": "2024-03-12",
+                "desc": "Snapshot1 - Implementation Support prior to ballot completion",
+                "sub-packages": [
+                    "r3",
+                    "r4",
+                    "r5"
+                ]
             },
             {
                 "version": "5.1.0-ballot",
@@ -10798,6 +12064,7 @@ export var guides = {
         "name": "FHIRExtensionPack",
         "title": "FHIR Extensions Pack",
         "fhirversion_latest": "5.0.0",
+        "current_version": "5.1.0-cibuild",
         "repo": "https://github.com/HL7/fhir-extensions"
     },
     "hl7.fhir.uv.patient-corrections": {
@@ -10823,10 +12090,12 @@ export var guides = {
         "name": "PatientCorrectionsImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/fhir-patient-correction"
     },
     "hl7.fhir.us.pq-cmc": {
         "url": "http://hl7.org/fhir/us/pq-cmc",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -10835,12 +12104,14 @@ export var guides = {
             }
         ],
         "name": "FHIR_pqcmc",
-        "title": "PQ/CMC FHIR Implementation Guide",
+        "title": "Pharmaceutical Quality Submissions to Food & Drug Administration (PQ/CMC)",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.20",
         "repo": "https://github.com/HL7/FHIR-us-pq-cmc"
     },
     "hl7.vulcan.template": {
         "url": "http://fhir.org/templates/hl7.vulcan.template",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -10851,6 +12122,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0-snapshot1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/ig-template-vulcan"
     },
     "hl7.fhir.us.dme-orders": {
@@ -10885,6 +12157,7 @@ export var guides = {
         "name": "PostAcuteOrderExchange",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.2",
         "repo": "https://github.com/HL7/dme-orders"
     },
     "hl7.fhir.uv.emedicinal-product-info": {
@@ -10920,6 +12193,7 @@ export var guides = {
         "name": "EpiIG",
         "title": "Electronic Medicinal Product Information (ePI) FHIR Implementation Guide",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/emedicinal-product-info"
     },
     "hl7.fhir.uv.eyecare": {
@@ -10946,6 +12220,7 @@ export var guides = {
         "name": "OphthalmologyImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-eyecare-ig"
     },
     "hl7.fhir.us.udap-security": {
@@ -10981,20 +12256,23 @@ export var guides = {
         "name": "UDAPSecurity",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-udap-security-ig"
     },
     "hl7.fhir.us.spl": {
         "url": "http://hl7.org/fhir/us/spl",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
                 "path": "http://build.fhir.org/ig/HL7/fhir-spl",
-                "fhirversion": "4.3.0"
+                "fhirversion": "5.0.0"
             }
         ],
         "name": "FHIR_SPL",
-        "title": null,
-        "fhirversion_latest": "4.3.0",
+        "title": "SPL Mapping FHIR R5 Implementation Guide",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "0.2.0",
         "repo": "https://github.com/HL7/fhir-spl"
     },
     "hl7.fhir.us.davinci-deqm": {
@@ -11109,12 +12387,14 @@ export var guides = {
             }
         ],
         "name": "DEQM",
-        "title": null,
+        "title": "Data Exchange For Quality Measures Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "4.0.0",
         "repo": "https://github.com/HL7/davinci-deqm"
     },
     "hl7.fhir.us.smp": {
         "url": "http://hl7.org/fhir/us/smp",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -11125,6 +12405,7 @@ export var guides = {
         "name": "StandardizedMedicationProfile",
         "title": "Standardized Medication Profile (SMP) FHIR IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/smp-ig"
     },
     "hl7.fhir.us.odh": {
@@ -11187,6 +12468,7 @@ export var guides = {
         "name": "HL7_FHIR_Profile_Occupational_Data_for_Health_ODH_Release_1_3_Standard_for_Trial_Use",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.3.0",
         "repo": "https://github.com/HL7/us-odh"
     },
     "hl7.fhir.us.pacio-cs": {
@@ -11222,6 +12504,7 @@ export var guides = {
         "name": "PACIOCognitiveStatusImplementationGuide",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-pacio-cognitive-status"
     },
     "hl7.fhir.us.mdi": {
@@ -11268,10 +12551,12 @@ export var guides = {
         "name": "MedicolegalDeathInvestigation",
         "title": "Medicolegal Death Investigation (MDI)",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/fhir-mdi-ig"
     },
     "hl7.fhir.uv.dicom-sr": {
         "url": "http://hl7.org/fhir/dicom-sr",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -11282,6 +12567,7 @@ export var guides = {
         "name": "DICOMSRToFHIRResourceMappingIG",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/dicom-sr"
     },
     "hl7.other.template": {
@@ -11295,14 +12581,23 @@ export var guides = {
                 "current": true
             },
             {
+                "version": "0.9.0",
+                "path": "http://fhir.org/templates/hl7.fhir.template/0.9.0",
+                "status": "release",
+                "sequence": "Publications",
+                "fhirversion": "4.0.1",
+                "desc": "Upgrade for dependency on fhir.base.template",
+                "date": "2024-03-07",
+                "current": true
+            },
+            {
                 "version": "0.8.0",
                 "path": "http://fhir.org/templates/hl7.fhir.template/0.8.0",
                 "status": "release",
                 "sequence": "Publications",
                 "fhirversion": "4.0.1",
                 "desc": "Upgrade for dependency on fhir.base.template",
-                "date": "2023-09-21",
-                "current": true
+                "date": "2023-09-21"
             },
             {
                 "version": "0.7.0",
@@ -11406,6 +12701,7 @@ export var guides = {
         "name": null,
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/ig-template-other"
     },
     "hl7.fhir.us.mihr": {
@@ -11443,6 +12739,7 @@ export var guides = {
         "name": "MaternalInfantHealthResearch",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-mmm-ig"
     },
     "hl7.fhir.uv.crmi": {
@@ -11478,6 +12775,7 @@ export var guides = {
         "name": "CRMI",
         "title": "Canonical Resource Management Infrastructure Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0-ballot2",
         "repo": "https://github.com/HL7/crmi-ig"
     },
     "hl7.fhir.us.exchange-routing": {
@@ -11515,6 +12813,7 @@ export var guides = {
         "name": "HybridIntermediaryExchange",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-exchange-routing-ig"
     },
     "hl7.fhir.uv.fhirpath": {
@@ -11590,81 +12889,7 @@ export var guides = {
         "name": "FHIRPath",
         "title": "FHIRPath Specification",
         "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/HL7/FHIRPath"
-    },
-    "hl7.fhirpath": {
-        "url": "http://hl7.org/fhirpath",
-        "versions": [
-            {
-                "version": "current",
-                "date": "n/a",
-                "descmd": "Continuous Integration Build (latest in version control)",
-                "path": "https://build.fhir.org/ig/HL7/FHIRPath",
-                "status": "ci-build",
-                "current": true
-            },
-            {
-                "version": "2.0.0",
-                "date": "2020-Jan-16",
-                "desc": "Normative Release",
-                "descmd": "Normative Release. Changes:\r\n\r\n* Clarified calendar duration vs definite duration time-valued quantities\r\n* Clarified calendar semantics for date/time arithmetic\r\n* Clarified UCUM support conformance requirements\r\n* Added reference to conformance language\r\n* Reorganized conversion documentation for clarity\r\n* Clarified date/time literal in the grammar\r\n* Clarified conversion and formatting patterns throughout\r\n* Updated error handling language for consistency throughout\r\n* Added missing example explanations throughout\r\n* Added definitions and references for clarity throughout\r\n* Clarified escape-handling in strings and identifiers\r\n* Clarified unary operator precedence behavior\r\n* Clarified function invocation terms and descriptions throughout\r\n* Typographical corrections and clarifications throughout",
-                "path": "https://hl7.org/fhirpath/N1/index.html",
-                "status": "normative",
-                "sequence": "Normative",
-                "current": true
-            },
-            {
-                "version": "1.3.0",
-                "date": "2019-05-01",
-                "descmd": "3rd Normative Ballot. Changes:\r\n\r\n* Removed timezone offset from Time values (still present on DateTime values)\r\n* Corrected convertsToTime to not require the `T` prefix\r\n* Marked Aggregate and Reflection sections as STU\r\n* Defined seconds as a decimal rather than having a separate millisecond precision for comparison\r\n* Added .is() and .as() functions for backwards compatibility\r\n* Allowed strings to be used for environment variables for backwards compability\r\n* Added literal notation for parital datetimes\r\n* Added quantity conversion functions\r\n* Added contains as a keyword to the grammar\r\n* Added Math functions (as STU): .round(), .sqrt(), .log(), .exp(), .ln(), .power(), .floor(), .ceiling(), .truncate(), and .abs()\r\n* Added an optional argument to trace() to allow logged content to be shaped\r\n* Clarified today() and now() semantics and added timeOfDay()\r\n* Various errata and clarifications throughout.",
-                "path": "https://hl7.org/fhirpath/2019May/index.html",
-                "status": "ballot",
-                "sequence": "Normative"
-            },
-            {
-                "version": "1.2.0",
-                "date": "2018-08-21",
-                "descmd": "2nd Normative Ballot. Changes:\r\n\r\n* Changed delimited identifiers to use a backtick rather than a double-quote\r\n* Changed isXXX conversion testing operators to convertsToXXX\r\n* Added Date type literals, system type, and operators\r\n* Clarified semantics of equality/equivalence for Date/Time types\r\n* Added weeks to Date/Time addition/subtraction\r\n* Clarified partial Date/Time comparison semantics\r\n* Various errata and clarifications throughout",
-                "path": "https://hl7.org/fhirpath/2018Sep/index.html",
-                "status": "ballot",
-                "sequence": "Normative"
-            },
-            {
-                "version": "1.1.0",
-                "date": "2018-03-31",
-                "descmd": "Normative Ballot. Changes:\r\n\r\n* Added terminology operators to FHIR appendix\r\n* Increased precedence of is/as operators\r\n* Added .aggregate() operator\r\n* Clarified support for namespaces in FHIRPath and its usage contexts (FHIR, CQL, V2)\r\n* Relaxed conversion failures to return null instead of throw an error\r\n* Added support for quantity comparisons\r\n* Relaxed definition of code equivalence (only uses code and system, not version or text/display)\r\n* Added $index accessor to iteratio contexts\r\n* Added profile validation operators to FHIR appendix\r\n\r\nSee changes from ballot to release for the [spec](http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhirpath%2F2016Sept%2Findex.html&doc2=http%3A%2F%2Fhl7.org%2Ffhirpath%2Findex.html) or the [grammar](http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhirpath%2F2016Sept%2Fgrammar.html&doc2=http%3A%2F%2Fhl7.org%2Ffhirpath%2Fgrammar.html)",
-                "path": "https://hl7.org/fhirpath/2018May/index.html",
-                "status": "ballot",
-                "sequence": "Normative"
-            },
-            {
-                "version": "1.0.0",
-                "date": "2016-12-06",
-                "descmd": "STU1 Release. Changes:\r\n* Rename from FluentPath to FHIRPath for trademark reasons\r\n* Added string concatenate (&) operator\r\n* Added URI and Media Types\r\n* Added combine operator to support combining lists without removing duplicates\r\n* Added anyFalse and allFalse operators\r\n* Clarified lexical elements for whitespace, comments, case-sensitivity, etc.\r\n* Added ability to reference case-insensitive models, and note about models specifying alternative collection offsets\r\n* Added a usage appendix for HL7 V2\r\n* Added an implementation appendix\r\n* Added examples and clarifying documentation throughout\r\n\r\nSee changes from ballot to release for the [spec](http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhirpath%2F2016Sept%2Findex.html&doc2=http%3A%2F%2Fhl7.org%2Ffhirpath%2Findex.html) or the [grammar](http://services.w3.org/htmldiff?doc1=http%3A%2F%2Fhl7.org%2Ffhirpath%2F2016Sept%2Fgrammar.html&doc2=http%3A%2F%2Fhl7.org%2Ffhirpath%2Fgrammar.html)",
-                "path": "https://hl7.org/fhirpath/2017Jan/index.html",
-                "status": "trial-use",
-                "sequence": "STU 1"
-            },
-            {
-                "version": "0.3.0",
-                "date": "2016-08-11",
-                "descmd": "STU1 Ballot. Changes:\r\n* refine notions around 3 value Boolean logic\r\n* clarify use & syntax of constants\r\n* add date operations\r\n* many minor changes to functions\r\n* provide test cases for FHIR implementations\r\n* added support for reflection\r\n* improved support for extensions and profiles in FHIR",
-                "path": "https://hl7.org/fhirpath/2016Sept/index.html",
-                "status": "ballot",
-                "sequence": "STU 1"
-            },
-            {
-                "version": "0.2.0",
-                "date": "2015-03-31",
-                "descmd": "STU1 Draft (first joint version between FHIR & CQL)",
-                "path": "https://hl7.org/fhirpath/2016May/index.html",
-                "status": "ballot",
-                "sequence": "STU 1"
-            }
-        ],
-        "name": "FHIRPath",
-        "title": null,
-        "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/HL7/FHIRPath"
     },
     "hl7.fhir.us.vrdr": {
@@ -11740,6 +12965,7 @@ export var guides = {
         "name": "VRDR",
         "title": "Vital Records Death Reporting (VRDR) FHIR Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "3.0.0-CIBuild",
         "repo": "https://github.com/HL7/vrdr"
     },
     "hl7.fhir.us.covid19library": {
@@ -11784,10 +13010,12 @@ export var guides = {
         "name": "COVID19FHIRProfileLibraryIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-COVID19Library-ig"
     },
     "hl7.fhir.uv.cow": {
         "url": "http://hl7.org/fhir/uv/cow",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -11798,6 +13026,7 @@ export var guides = {
         "name": "ClinicalOrderWorkflows",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/HL7/fhir-cow-ig"
     },
     "hl7.fhir.us.davinci-pdex-plan-net": {
@@ -11842,6 +13071,7 @@ export var guides = {
         "name": "DaVinciPDEXPlanNet",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0",
         "repo": "https://github.com/HL7/davinci-pdex-plan-net"
     },
     "hl7.fhir.us.davinci-pas": {
@@ -11909,8 +13139,9 @@ export var guides = {
             }
         ],
         "name": "DaVinciPriorAuthorizationSupport",
-        "title": null,
+        "title": "Da Vinci Prior Authorization Support (PAS) FHIR IG",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.1",
         "repo": "https://github.com/HL7/davinci-pas"
     },
     "hl7.fhir.uv.cpg": {
@@ -11960,6 +13191,7 @@ export var guides = {
         "name": "CPG",
         "title": "Clinical Practice Guidelines",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0-ballot",
         "repo": "https://github.com/HL7/cqf-recommendations"
     },
     "hl7.fhir.uv.subscriptions-backport": {
@@ -12015,6 +13247,7 @@ export var guides = {
         "name": "SubscriptionsR5Backport",
         "title": "Subscriptions R5 Backport",
         "fhirversion_latest": "4.3.0",
+        "current_version": "1.2.0-ballot",
         "repo": "https://github.com/HL7/fhir-subscription-backport-ig"
     },
     "hl7.fhir.us.davinci-alerts": {
@@ -12052,6 +13285,7 @@ export var guides = {
         "name": "DaVinciUnsolicitedNotifications",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.1.0-preview",
         "repo": "https://github.com/HL7/davinci-alerts"
     },
     "hl7.fhir.us.sdoh-clinicalcare": {
@@ -12118,6 +13352,7 @@ export var guides = {
         "name": "Sdohclinicalcare",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.1.0",
         "repo": "https://github.com/HL7/fhir-sdoh-clinicalcare"
     },
     "hl7.fhir.uv.ibcm": {
@@ -12142,6 +13377,7 @@ export var guides = {
         "name": "InternationalBirthAndChildModel",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0-ballot",
         "repo": "https://github.com/HL7/fetal_records"
     },
     "hl7.fhir.us.davinci-atr": {
@@ -12199,6 +13435,7 @@ export var guides = {
         "name": "MemberAttributionList",
         "title": "Da Vinci - Member Attribution (ATR) List",
         "fhirversion_latest": "4.0.1",
+        "current_version": "2.0.0",
         "repo": "https://github.com/HL7/davinci-atr"
     },
     "hl7.fhir.uv.phd": {
@@ -12250,8 +13487,9 @@ export var guides = {
             }
         ],
         "name": "PhdImplementationGuide",
-        "title": null,
+        "title": "Personal Health Device Implementation Guide",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/phd"
     },
     "hl7.fhir.uv.ae-research-backport-ig": {
@@ -12275,12 +13513,14 @@ export var guides = {
             }
         ],
         "name": "AdverseEventClinicalResearchR4backport",
-        "title": null,
+        "title": "Adverse Event Clinical Research R4 Backport",
         "fhirversion_latest": "4.0.1",
+        "current_version": "1.0.0",
         "repo": "https://github.com/HL7/fhir-ae-research-backport-ig"
     },
-    "hl7.eu.fhir.cs": {
+    "hl7.fhir.eu.spor": {
         "url": "http://unicom-project.eu/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12291,10 +13531,12 @@ export var guides = {
         "name": "UnicomIG",
         "title": "UnicomIG",
         "fhirversion_latest": "5.0.0",
+        "current_version": "1.0.0",
         "repo": "https://github.com/joofio/spor-as-cs"
     },
     "hl7.eu.fhir.ufis-swe-unicom": {
         "url": "http://unicom-project.eu/fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12305,10 +13547,44 @@ export var guides = {
         "name": "UFISSWEIG",
         "title": "UFIS-SWE-IG",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/joofio/ufis-swe-ig"
+    },
+    "hl7.eu.fhir.ghepi": {
+        "url": "http://hl7.eu/fhir/ig/gravitate-health",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/joofio/test-epi-composition",
+                "fhirversion": "5.0.0"
+            }
+        ],
+        "name": "GhImplementationGuide",
+        "title": "Gravitate Health FHIR Implementation Guide",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/joofio/test-epi-composition"
+    },
+    "obs.cdss.ig": {
+        "url": "https://joofio.github.io/obs-cdss-fhir",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/joofio/obs-cdss-fhir",
+                "fhirversion": "5.0.0"
+            }
+        ],
+        "name": "OBSCDSS",
+        "title": null,
+        "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/joofio/obs-cdss-fhir"
     },
     "hl7.fhir.us.vrsandbox": {
         "url": "http://hl7.org/fhir/us/vrsandbox",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12319,10 +13595,28 @@ export var guides = {
         "name": "VitalRecordsSandboxIG",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
         "repo": "https://github.com/nightingaleproject/vital_records_sandbox_ig"
+    },
+    "who-umc.fhir.poc-php": {
+        "url": "http://www.who-umc.org/idmp",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/gcangioli/who-umc-poc",
+                "fhirversion": "5.0.0"
+            }
+        ],
+        "name": "WhoUmcIDMPManagement",
+        "title": "WHO-UMC IDMP Management and Publish API",
+        "fhirversion_latest": "5.0.0",
+        "current_version": "0.3.0",
+        "repo": "https://github.com/gcangioli/who-umc-poc"
     },
     "hl7.fhir.uv.sql-on-fhir": {
         "url": "http://hl7.org/fhir/uv/sql-on-fhir",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12333,10 +13627,12 @@ export var guides = {
         "name": "SQLonFHIR",
         "title": "SQL on FHIR",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.0.1-pre",
         "repo": "https://github.com/FHIR/sql-on-fhir-v2"
     },
     "hl7.fhir.uv.howto": {
         "url": "http://hl7.org/fhir/uv/howto",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12347,6 +13643,7 @@ export var guides = {
         "name": "HowToCreateIGs",
         "title": null,
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.1.0",
         "repo": "https://github.com/FHIR/ig-guidance"
     },
     "hl7.fhir.uv.tools": {
@@ -12376,24 +13673,44 @@ export var guides = {
         "name": "FHIRToolExtensionsIG",
         "title": "FHIR Tooling Extensions IG",
         "fhirversion_latest": "5.0.0",
+        "current_version": "0.2.0-snapshot",
         "repo": "https://github.com/FHIR/fhir-tools-ig"
     },
-    "cards.smarthealth.terminology": {
-        "url": "https://terminology.smarthealth.cards",
+    "hl7.fhir.cl.minsal.eis": {
+        "url": "https://interoperabilidad.minsal.cl/fhir/ig/eis",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
-                "path": "http://build.fhir.org/ig/dvci/shc-terminology",
+                "path": "http://build.fhir.org/ig/Minsal-CL/eis",
                 "fhirversion": "4.0.1"
             }
         ],
-        "name": "SMARTHealthCardsTerminology",
-        "title": null,
+        "name": "EstandaresdeInformaciondeSalud",
+        "title": "Gu\u00eda de Estandares de Informacionde Salud",
         "fhirversion_latest": "4.0.1",
-        "repo": "https://github.com/dvci/shc-terminology"
+        "current_version": "0.1.1",
+        "repo": "https://github.com/Minsal-CL/eis"
+    },
+    "hl7.fhir.cl.deis321": {
+        "url": "https://hl7chile.cl/fhir/ig/deis321",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/Minsal-CL/deis",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "DEIS321",
+        "title": "Gu\u00eda de Implementaci\u00f3n DExe 321-Reemplaza 820 DEIS",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.0",
+        "repo": "https://github.com/Minsal-CL/deis"
     },
     "hl7.fhir.cl.minsal.snre": {
         "url": "https://interoperabilidad.minsal.cl/fhir/ig/snre",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12404,10 +13721,28 @@ export var guides = {
         "name": "SistemaNacionalDeRecetaElectronica",
         "title": "Sistema Nacional de receta electronica",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.9.6",
         "repo": "https://github.com/Minsal-CL/IG_snre"
+    },
+    "fhir.minsal.ListaDeEspera": {
+        "url": "http://minsal.cl/listaespera",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/Minsal-CL/SIGTEv2-IG",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "ListaEsperaChile",
+        "title": "Proyecto Listas de Espera MINSAL CHILE",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.3",
+        "repo": "https://github.com/Minsal-CL/SIGTEv2-IG"
     },
     "hl7.fhir.cl.minsal.tei": {
         "url": "https://interoperabilidad.minsal.cl/fhir/ig/tei",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12418,10 +13753,12 @@ export var guides = {
         "name": "TiemposDeEsperaInteroperable",
         "title": "Tiempos de Espera Interoperable",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.6",
         "repo": "https://github.com/Minsal-CL/SIGTEv2-IG"
     },
     "hl7.fhir.cl.minsal.mpi": {
         "url": "https://interoperabilidad.minsal.cl/fhir/ig/mpi",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12432,10 +13769,12 @@ export var guides = {
         "name": "MaestroDePacientes",
         "title": "Maestro de pacientes",
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.2.0",
         "repo": "https://github.com/Minsal-CL/IG_mpi"
     },
     "minsal.fhir.core": {
         "url": "http://minsal.cl/fhir/core",
+        "not_yet_published": true,
         "versions": [
             {
                 "version": "current",
@@ -12446,6 +13785,23 @@ export var guides = {
         "name": "CoreMinsal",
         "title": null,
         "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.0",
+        "repo": "https://github.com/Minsal-CL/MFR"
+    },
+    "hl7.fhir.cl.minsal.mfr": {
+        "url": "https://interoperabilidad.minsal.cl/fhir/ig/mfr",
+        "not_yet_published": true,
+        "versions": [
+            {
+                "version": "current",
+                "path": "http://build.fhir.org/ig/Minsal-CL/MFR",
+                "fhirversion": "4.0.1"
+            }
+        ],
+        "name": "MaestroPrestadoresInstitucionales",
+        "title": "Maestro Prestadores Institucionales",
+        "fhirversion_latest": "4.0.1",
+        "current_version": "0.1.4",
         "repo": "https://github.com/Minsal-CL/MFR"
     }
 };
@@ -12468,8 +13824,12 @@ export var guide_url_list = {
         "version": "current"
     },
     "standards.digital.health.nz": {
-        "package_id": "tewhatuora.fhir.mywai",
+        "package_id": "tewhatuora.fhir.nzps",
         "version": "latest"
+    },
+    "build.fhir.org/ig/tewhatuora/fhir-primary-care-acquisition": {
+        "package_id": "tewhatuora.fhir.primarycare-acquisition",
+        "version": "current"
     },
     "build.fhir.org/ig/tewhatuora/fhir-nzps": {
         "package_id": "tewhatuora.fhir.nzps",
@@ -12483,12 +13843,12 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.us.ohsuhypertensionig",
         "version": "current"
     },
-    "unicom-project.eu/fhir/d4-12": {
-        "package_id": "unicom.fhir.idmp-datafeed",
+    "ihe-d.de/fhir": {
+        "package_id": "ihe.de.iti.xds-vs",
         "version": "latest"
     },
-    "build.fhir.org/ig/unicom-project-eu/d4.12": {
-        "package_id": "unicom.fhir.idmp-datafeed",
+    "build.fhir.org/ig/IHE-Germany/ITI.XDS.VS": {
+        "package_id": "ihe.de.iti.xds-vs",
         "version": "current"
     },
     "hl7.org.au/fhir": {
@@ -12497,14 +13857,6 @@ export var guide_url_list = {
     },
     "build.fhir.org/ig/robeastwood-agency/au-fhir-base": {
         "package_id": "hl7.fhir.au.base",
-        "version": "current"
-    },
-    "ns.electronichealth.net.au/fhir": {
-        "package_id": "au.digitalhealth.r4",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/robeastwood-agency/test-fhir-ig-2": {
-        "package_id": "au.digitalhealth.r4",
         "version": "current"
     },
     "hl7.org/fhir/smart-app-launch": {
@@ -12591,14 +13943,6 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.uv.playground",
         "version": "current"
     },
-    "hl7.org.au/fhir/ips": {
-        "package_id": "hl7.fhir.au.ips",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/HealthIntersections/au-ips": {
-        "package_id": "hl7.fhir.au.ips",
-        "version": "current"
-    },
     "ns.electronichealth.net.au/fhir/Template/adha.template.fhir": {
         "package_id": "adha.template.fhir",
         "version": "latest"
@@ -12623,6 +13967,14 @@ export var guide_url_list = {
         "package_id": "adha.template.base",
         "version": "current"
     },
+    "ns.electronichealth.net.au/fhir": {
+        "package_id": "au.digitalhealth.r4",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/AuDigitalHealth/ci-fhir-r4": {
+        "package_id": "au.digitalhealth.r4",
+        "version": "current"
+    },
     "hl7.org.au/fhir/pd": {
         "package_id": "hl7.fhir.au.pd",
         "version": "latest"
@@ -12631,13 +13983,17 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.au.pd",
         "version": "current"
     },
-    "worldhealthorganization.github.io/smart": {
-        "package_id": "fhir.who.smart-base",
+    "smart.who.int/trust": {
+        "package_id": "who.trust",
         "version": "latest"
     },
-    "build.fhir.org/ig/ritikarawlani/smart-ig-test-3": {
-        "package_id": "who.fhir.smart-ig-empty",
+    "worldhealthorganization.github.io/smart-trust": {
+        "package_id": "who.trust",
         "version": "current"
+    },
+    "smart.who.int/trust/1.0.0": {
+        "package_id": "who.trust",
+        "version": "1.0.0"
     },
     "hl7.it/fhir/dossierPharma": {
         "package_id": "hl7.fhir.it.dossierpharma",
@@ -12674,6 +14030,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/hl7-it/lab-report": {
         "package_id": "hl7.fhir.it.lab-report",
         "version": "current"
+    },
+    "hl7.it/fhir/lab-report/0.2.0": {
+        "package_id": "hl7.fhir.it.lab-report",
+        "version": "0.2.0"
     },
     "hl7.it/fhir/lab-report/0.1.0": {
         "package_id": "hl7.fhir.it.lab-report",
@@ -12772,7 +14132,7 @@ export var guide_url_list = {
         "version": "1.0.0"
     },
     "hl7.eu/fhir/ig/gravitate-health": {
-        "package_id": "hl7.eu.fhir.gh",
+        "package_id": "hl7.eu.fhir.ghepi",
         "version": "latest"
     },
     "build.fhir.org/ig/Gravitate-Health/hackathon": {
@@ -12791,6 +14151,34 @@ export var guide_url_list = {
         "package_id": "fhir.hrsa.uds-plus",
         "version": "1.0.1"
     },
+    "fhir.org/guides/who/anc-cds": {
+        "package_id": "who.fhir.anc-cds",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/mozzy11/smart-hiv": {
+        "package_id": "who.fhir.hiv",
+        "version": "current"
+    },
+    "worldhealthorganization.github.io/smart-hiv": {
+        "package_id": "who.fhir.hiv",
+        "version": "latest"
+    },
+    "globalalliantinc.com/enhancing-oncology-model": {
+        "package_id": "fhir.eom",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/FirelyTeam/enhancing-oncology-model-ig": {
+        "package_id": "fhir.eom",
+        "version": "current"
+    },
+    "chmed.emediplan.ch/fhir": {
+        "package_id": "ch.chmed.emediplan",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/pjolo/test": {
+        "package_id": "ch.chmed.emediplan",
+        "version": "current"
+    },
     "example.org": {
         "package_id": "hl7.fhir.us.medication-rems",
         "version": "latest"
@@ -12806,6 +14194,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7Austria/at-fhir-ig-template/": {
         "package_id": "hl7.at.fhir.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.at.fhir.template/0.4.0": {
+        "package_id": "hl7.at.fhir.template",
+        "version": "0.4.0"
     },
     "fhir.org/templates/hl7.at.fhir.template/0.3.0": {
         "package_id": "hl7.at.fhir.template",
@@ -12831,6 +14223,14 @@ export var guide_url_list = {
         "package_id": "patient.clinical.trial.matching",
         "version": "current"
     },
+    "hl7.org/fhir/us/ctcae": {
+        "package_id": "hl7.fhir.us.ctcae",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/standardhealth/fsh-ae": {
+        "package_id": "hl7.fhir.us.ctcae",
+        "version": "current"
+    },
     "aehrc.csiro.au/fhir/logical-models": {
         "package_id": "au.csiro.fhir.logical-models",
         "version": "latest"
@@ -12851,36 +14251,16 @@ export var guide_url_list = {
         "package_id": "csiro.fhir.au.smartforms",
         "version": "0.1.0-draft"
     },
-    "fhir.openmrs.org/core": {
-        "package_id": "openmrs.fhir.core",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/abertnamanya/openmrs-contrib-fhir2-ig": {
-        "package_id": "openmrs.fhir.core",
-        "version": "current"
-    },
-    "worldhealthorganization.github.io/smart-hiv": {
-        "package_id": "who.fhir.hiv",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/abertnamanya/smart-hiv": {
-        "package_id": "who.fhir.hiv",
-        "version": "current"
-    },
-    "build.fhir.org/ig/IntelliSOFT-Consulting/ChanjoKe-Fhir-IG": {
-        "package_id": "fhir.chanjoKe",
+    "build.fhir.org/ig/IntelliSOFT-Consulting/Kenya-core-FHIR-IG": {
+        "package_id": "fhir.kenyaCoreIG",
         "version": "current"
     },
     "build.fhir.org/ig/IntelliSOFT-Consulting/mamaToTo-FHIR-IG": {
         "package_id": "fhir.mamaToto",
         "version": "current"
     },
-    "hl7chile.cl/fhir/ig/deis321": {
-        "package_id": "hl7.fhir.cl.deis321",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/HL7Chile/deis": {
-        "package_id": "hl7.fhir.cl.deis321",
+    "build.fhir.org/ig/IntelliSOFT-Consulting/ChanjoKe-fhir-ig": {
+        "package_id": "fhir.chanjoKe",
         "version": "current"
     },
     "hl7chile.cl/fhir/ig/clcore": {
@@ -12890,6 +14270,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7Chile/clcore": {
         "package_id": "hl7.fhir.cl.clcore",
         "version": "current"
+    },
+    "hl7chile.cl/fhir/ig/clcore/1.8.10": {
+        "package_id": "hl7.fhir.cl.clcore",
+        "version": "1.8.10"
     },
     "hl7chile.cl/fhir/ig/clcore/1.8.6": {
         "package_id": "hl7.fhir.cl.clcore",
@@ -12915,14 +14299,6 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.cl.clcore",
         "version": "1.8.0"
     },
-    "johnmoehrke.github.io/testvital": {
-        "package_id": "johnmoehrke.testvital.example",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/JohnMoehrke/testVital": {
-        "package_id": "johnmoehrke.testvital.example",
-        "version": "current"
-    },
     "johnmoehrke.github.io/testDicom": {
         "package_id": "johnmoehrke.testdicom.example",
         "version": "latest"
@@ -12931,12 +14307,12 @@ export var guide_url_list = {
         "package_id": "johnmoehrke.testdicom.example",
         "version": "current"
     },
-    "johnmoehrke.github.io/testBinary": {
-        "package_id": "johnmoehrke.testbinary",
+    "johnmoehrke.github.io/RelatedPersonConsent": {
+        "package_id": "johnmoehrke.relatedpersonconsent.example",
         "version": "latest"
     },
-    "build.fhir.org/ig/JohnMoehrke/testBinary": {
-        "package_id": "johnmoehrke.testbinary",
+    "build.fhir.org/ig/JohnMoehrke/RelatedPersonConsent": {
+        "package_id": "johnmoehrke.relatedpersonconsent.example",
         "version": "current"
     },
     "johnmoehrke.github.io/testcore": {
@@ -12971,6 +14347,14 @@ export var guide_url_list = {
         "package_id": "va.mhv.fhir.phr",
         "version": "current"
     },
+    "electronichealth.se/fhir/katalog": {
+        "package_id": "ehalsomyndigheten.se.katalog",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/danka74/VOKIG": {
+        "package_id": "ehalsomyndigheten.se.katalog",
+        "version": "current"
+    },
     "hl7.eu/fhir/laboratory": {
         "package_id": "hl7.fhir.eu.laboratory",
         "version": "latest"
@@ -12978,6 +14362,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/hl7-eu/laboratory": {
         "package_id": "nl.santeon.sim.r4",
         "version": "current"
+    },
+    "hl7.eu/fhir/laboratory/0.1.0": {
+        "package_id": "nl.santeon.sim.r4",
+        "version": "0.1.0"
     },
     "hl7.eu/fhir/laboratory/0.1.0-ballot": {
         "package_id": "nl.santeon.sim.r4",
@@ -12987,29 +14375,53 @@ export var guide_url_list = {
         "package_id": "nl.santeon.sim.r4",
         "version": "latest"
     },
+    "hl7.org/cda/stds/core": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/CDA-core-sd/": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "current"
+    },
+    "hl7.org/cda/stds/core/2.0.0-sd-snapshot1": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "2.0.0-sd-snapshot1"
+    },
+    "hl7.org/cda/stds/core/2023Sep": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "2.0.0-sd-ballot"
+    },
+    "hl7.org/cda/stds/core/draft1": {
+        "package_id": "hl7.cda.uv.core",
+        "version": "2.1.0-draft1"
+    },
     "fhir.ch/ig/ch-elm": {
         "package_id": "ch.fhir.ig.ch-elm",
         "version": "latest"
     },
     "build.fhir.org/ig/ahdis/ch-elm/index.html": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "current"
     },
+    "fhir.ch/ig/ch-elm/1.2.0": {
+        "package_id": "ch.fhir.ig.ch-elm",
+        "version": "1.2.0"
+    },
+    "fhir.ch/ig/ch-elm/1.1.1": {
+        "package_id": "ch.fhir.ig.ch-elm",
+        "version": "1.1.1"
+    },
     "fhir.ch/ig/ch-elm/1.1.0": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "1.1.0"
     },
     "fhir.ch/ig/ch-elm/1.0.0": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "1.0.0"
     },
     "fhir.ch/ig/ch-elm/1.0.0-trialuse": {
-        "package_id": "mitre.fast.access-control",
+        "package_id": "ch.fhir.ig.ch-elm",
         "version": "1.0.0-trialuse"
-    },
-    "gitlab.mitre.org/awatson/fast-access-control": {
-        "package_id": "mitre.fast.access-control",
-        "version": "latest"
     },
     "commonprofiles.care/fhir": {
         "package_id": "care.commonprofiles.fhir",
@@ -13034,6 +14446,14 @@ export var guide_url_list = {
     "hi.iv.elga.gv.at": {
         "package_id": "elga.iv.hi",
         "version": "latest"
+    },
+    "somewhere.org/fhir/uv/myig": {
+        "package_id": "example.fhir.uv.myig",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/mburwit/RiskAssessment": {
+        "package_id": "example.fhir.uv.myig",
+        "version": "current"
     },
     "fhir.ch/ig/ch-vacd": {
         "package_id": "ch.fhir.ig.ch-vacd",
@@ -13175,6 +14595,18 @@ export var guide_url_list = {
         "package_id": "ch.fhir.ig.template",
         "version": "current"
     },
+    "fhir.ch/ig/ch-rad-order": {
+        "package_id": "ch.fhir.ig.ch-rad-order",
+        "version": "1.0.0"
+    },
+    "build.fhir.org/ig/hl7ch/ch-rad-order": {
+        "package_id": "ch.fhir.ig.ch-rad-order",
+        "version": "current"
+    },
+    "fhir.ch/ig/ch-rad-order/0.1.0": {
+        "package_id": "ch.fhir.ig.ch-rad-order",
+        "version": "0.1.0"
+    },
     "fhir.ch/ig/ch-allergyintolerance": {
         "package_id": "ch.fhir.ig.ch-allergyintolerance",
         "version": "latest"
@@ -13287,18 +14719,6 @@ export var guide_url_list = {
         "package_id": "who.ddcc",
         "version": "current"
     },
-    "smart.who.int/trust": {
-        "package_id": "who.trust",
-        "version": "latest"
-    },
-    "worldhealthorganization.github.io/smart-trust": {
-        "package_id": "who.trust",
-        "version": "current"
-    },
-    "smart.who.int/trust/1.0.0": {
-        "package_id": "who.trust",
-        "version": "1.0.0"
-    },
     "smart.who.int/ips-pilgrimage": {
         "package_id": "who.ips-pilgrimage",
         "version": "latest"
@@ -13313,6 +14733,14 @@ export var guide_url_list = {
     },
     "build.fhir.org/ig/WorldHealthOrganization/smart-immunizations-measles": {
         "package_id": "smart.who.int.immunizations-measles",
+        "version": "current"
+    },
+    "worldhealthorganization.github.io/smart": {
+        "package_id": "who.fhir.smart-measles-catopia",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/WorldHealthOrganization/smart-tuberculosis": {
+        "package_id": "who.fhir.smart-ig-empty",
         "version": "current"
     },
     "smart.who.int/ig/smart-ig-starter-kit": {
@@ -13331,10 +14759,6 @@ export var guide_url_list = {
         "package_id": "fhir.worldhealthorganization.smart-ot",
         "version": "current"
     },
-    "build.fhir.org/ig/WorldHealthOrganization/smart-base-old": {
-        "package_id": "fhir.who.smart-base",
-        "version": "current"
-    },
     "worldhealthorganization.github.io/smart-base": {
         "package_id": "who.fhir.smart-base",
         "version": "latest"
@@ -13346,14 +14770,6 @@ export var guide_url_list = {
     "smart.who.int/base": {
         "package_id": "who.base",
         "version": "latest"
-    },
-    "fhir.org/guides/who/anc-cds": {
-        "package_id": "who.fhir.anc-cds",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/WorldHealthOrganization/smart-anc": {
-        "package_id": "who.fhir.anc-cds",
-        "version": "current"
     },
     "github.com/WorldHealthOrganization/smart-ig-template-who": {
         "package_id": "who.template.root",
@@ -13379,6 +14795,14 @@ export var guide_url_list = {
         "package_id": "uk.nhs.england",
         "version": "current"
     },
+    "hl7.nl/fhir/mdt-viewer": {
+        "package_id": "hl7.fhir.nl.mdt",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7nl/regional-mdt-ig": {
+        "package_id": "hl7.fhir.nl.mdt",
+        "version": "current"
+    },
     "fhir.ch/ig/ch-epr-mhealth": {
         "package_id": "ch.fhir.ig.ch-epr-mhealth",
         "version": "latest"
@@ -13386,6 +14810,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/ehealthsuisse/ch-epr-mhealth": {
         "package_id": "ch.fhir.ig.ch-epr-mhealth",
         "version": "current"
+    },
+    "fhir.ch/ig/ch-epr-mhealth/3.0.0": {
+        "package_id": "ch.fhir.ig.ch-epr-mhealth",
+        "version": "3.0.0"
     },
     "fhir.ch/ig/ch-epr-mhealth/3.0.0-ballot": {
         "package_id": "ch.fhir.ig.ch-epr-mhealth",
@@ -13711,6 +15139,14 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.be.core-clinical",
         "version": "1.0.0"
     },
+    "ehealth.fgov.be/standards/fhir/etariff": {
+        "package_id": "hl7.fhir.be.etariff",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-be/etariff": {
+        "package_id": "hl7.fhir.be.etariff",
+        "version": "current"
+    },
     "ehealth.fgov.be/standards/fhir/core": {
         "package_id": "hl7.fhir.be.core",
         "version": "latest"
@@ -13750,30 +15186,6 @@ export var guide_url_list = {
     "build.fhir.org/ig/hl7-be/capabilities": {
         "package_id": "hl7.fhir.be.capabilities",
         "version": "current"
-    },
-    "fhir.kl.dk/prevention": {
-        "package_id": "kl.dk.fhir.prevention",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/hl7dk/kl-gateway-prevention/": {
-        "package_id": "kl.dk.fhir.prevention",
-        "version": "current"
-    },
-    "fhir.kl.dk/prevention/1.0.0": {
-        "package_id": "kl.dk.fhir.prevention",
-        "version": "1.0.0"
-    },
-    "fhir.kl.dk/rehab": {
-        "package_id": "kl.dk.fhir.rehab",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/hl7dk/kl-gateway-rehab/": {
-        "package_id": "kl.dk.fhir.rehab",
-        "version": "current"
-    },
-    "fhir.kl.dk/rehab/1.0.0": {
-        "package_id": "kl.dk.fhir.rehab",
-        "version": "1.0.0"
     },
     "fhir.kl.dk/gateway": {
         "package_id": "kl.dk.fhir.gateway",
@@ -13847,20 +15259,16 @@ export var guide_url_list = {
         "package_id": "fhir.giis",
         "version": "current"
     },
-    "who-umc.org/idmp": {
-        "package_id": "who-umc.fhir.poc-php",
+    "build.fhir.org/ig/DigitalSQR/catopia-measles": {
+        "package_id": "who.fhir.smart-measles-catopia",
+        "version": "current"
+    },
+    "idmp.who-umc.org/fhir": {
+        "package_id": "idmp.who-umc.org.fhir",
         "version": "latest"
     },
     "build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service": {
-        "package_id": "who-umc.fhir.poc-php",
-        "version": "current"
-    },
-    "somewhere.org/fhir/uv/myig": {
-        "package_id": "example.fhir.uv.myig",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/costateixeira/sample-ig": {
-        "package_id": "example.fhir.uv.myig",
+        "package_id": "idmp.who-umc.org.fhir",
         "version": "current"
     },
     "mitre.org/gdx": {
@@ -13963,6 +15371,10 @@ export var guide_url_list = {
         "package_id": "ihe.formatcode.fhir",
         "version": "current"
     },
+    "profiles.ihe.net/fhir/ihe.formatcode.fhir/1.2.0": {
+        "package_id": "ihe.formatcode.fhir",
+        "version": "1.2.0"
+    },
     "profiles.ihe.net/fhir/ihe.formatcode.fhir/1.1.1": {
         "package_id": "ihe.formatcode.fhir",
         "version": "1.1.1"
@@ -14006,6 +15418,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/IHE/ITI.PCF/branches/master/index.html": {
         "package_id": "ihe.iti.pcf",
         "version": "current"
+    },
+    "profiles.ihe.net/ITI/PCF/1.1.0": {
+        "package_id": "ihe.iti.pcf",
+        "version": "1.1.0"
     },
     "profiles.ihe.net/ITI/PCF/1.0.0": {
         "package_id": "ihe.iti.pcf",
@@ -14095,6 +15511,10 @@ export var guide_url_list = {
         "package_id": "ihe.iti.pdqm",
         "version": "current"
     },
+    "profiles.ihe.net/ITI/PDQm/3.0.0": {
+        "package_id": "ihe.iti.pdqm",
+        "version": "3.0.0"
+    },
     "profiles.ihe.net/ITI/PDQm/3.0.0-comment": {
         "package_id": "ihe.iti.pdqm",
         "version": "3.0.0-comment"
@@ -14139,6 +15559,10 @@ export var guide_url_list = {
         "package_id": "ihe.iti.pixm",
         "version": "current"
     },
+    "profiles.ihe.net/ITI/PIXm/3.0.4": {
+        "package_id": "ihe.iti.pixm",
+        "version": "3.0.4"
+    },
     "profiles.ihe.net/ITI/PIXm/3.0.3": {
         "package_id": "ihe.iti.pixm",
         "version": "3.0.3"
@@ -14171,9 +15595,13 @@ export var guide_url_list = {
         "package_id": "ihe.pcc.odh",
         "version": "latest"
     },
-    "build.fhir.org/ig/IHE/PCC.ODH": {
+    "build.fhir.org/ig/IHE/PCC.ODH/branches/master/index.html": {
         "package_id": "ihe.pcc.odh",
         "version": "current"
+    },
+    "profiles.ihe.net/PCC/ODH/1.0.0-comment": {
+        "package_id": "ihe.pcc.odh",
+        "version": "1.0.0-comment"
     },
     "profiles.ihe.net/ITI/DSUBm": {
         "package_id": "ihe.iti.dsubm",
@@ -14182,6 +15610,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/index.html": {
         "package_id": "ihe.iti.dsubm",
         "version": "current"
+    },
+    "profiles.ihe.net/ITI/DSUBm/1.0.0": {
+        "package_id": "ihe.iti.dsubm",
+        "version": "1.0.0"
     },
     "profiles.ihe.net/ITI/DSUBm/1.0.0-comment": {
         "package_id": "ihe.iti.dsubm",
@@ -14295,6 +15727,14 @@ export var guide_url_list = {
         "package_id": "ihe.pcc.aps",
         "version": "current"
     },
+    "profiles.ihe.net/Domain/LogicalDatatypes": {
+        "package_id": "ihe.domain.logical-datatypes",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/IHE/datatypes": {
+        "package_id": "ihe.domain.logical-datatypes",
+        "version": "current"
+    },
     "fhir.org/templates/ihe.fhir.template": {
         "package_id": "ihe.fhir.template",
         "version": "latest"
@@ -14302,6 +15742,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/IHE/ihe-ig-template": {
         "package_id": "ihe.fhir.template",
         "version": "current"
+    },
+    "fhir.org/templates/ihe.fhir.template/0.10.0": {
+        "package_id": "ihe.fhir.template",
+        "version": "0.10.0"
     },
     "fhir.org/templates/ihe.fhir.template/0.9.0": {
         "package_id": "ihe.fhir.template",
@@ -14463,12 +15907,32 @@ export var guide_url_list = {
         "package_id": "ihe.iti.mcsd",
         "version": "3.3.0"
     },
+    "profiles.ihe.net/QRPH/VRDR": {
+        "package_id": "ihe.qrph.vrdr",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/IHE/QRPH.VRDR": {
+        "package_id": "ihe.qrph.vrdr",
+        "version": "current"
+    },
     "example.com/fhir/example": {
-        "package_id": "my-ig",
+        "package_id": "hl7.fhir.pt.patient-admin-ig",
         "version": "latest"
     },
     "build.fhir.org/ig/hl7-pt/adr-ig": {
         "package_id": "my-ig",
+        "version": "current"
+    },
+    "build.fhir.org/ig/hl7-pt/patient-admin-ig": {
+        "package_id": "hl7.fhir.pt.patient-admin-ig",
+        "version": "current"
+    },
+    "hl7.pt/fhir/core": {
+        "package_id": "hl7.fhir.pt.core",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-pt/core": {
+        "package_id": "hl7.fhir.pt.core",
         "version": "current"
     },
     "fhir.health.gov.il/mri": {
@@ -14492,27 +15956,31 @@ export var guide_url_list = {
         "version": "latest"
     },
     "build.fhir.org/ig/medcomdk/dk-medcom-acknowledgement": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "current"
     },
     "medcomfhir.dk/ig/acknowledgement/2.0.2": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "2.0.2"
     },
     "medcomfhir.dk/ig/acknowledgement/2.0.1": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "2.0.1"
     },
     "medcomfhir.dk/ig/acknowledgement/2.0.0": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "2.0.0"
     },
     "medcomfhir.dk/fhir/ig/dk-medcom-acknowledgement": {
-        "package_id": "dk.medcom.ehmi.eds",
+        "package_id": "dk-ehmi-sbdh",
         "version": "1.0.0"
     },
     "medcomehmi.dk/ig/ehmi-eds": {
         "package_id": "dk.medcom.ehmi.eds",
+        "version": "latest"
+    },
+    "medcomehmi.dk/ig/ehmi-sbdh": {
+        "package_id": "dk-ehmi-sbdh",
         "version": "latest"
     },
     "medcomfhir.dk/ig/carecommunicationtestscripts": {
@@ -14521,6 +15989,14 @@ export var guide_url_list = {
     },
     "build.fhir.org/ig/medcomdk/dk-medcom-carecommunication-testscripts": {
         "package_id": "medcom.fhir.dk.carecommunicationtestscripts",
+        "version": "current"
+    },
+    "medcomehmi.dk/ig/dk-ehmi-eds": {
+        "package_id": "dk.ehmi.eds",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-medcom-ehmi-eds": {
+        "package_id": "dk.ehmi.eds",
         "version": "current"
     },
     "medcomfhir.dk/ig/ihexdsmetadata": {
@@ -14547,13 +16023,37 @@ export var guide_url_list = {
         "package_id": "medcom.fhir.dk.diagnosiscard",
         "version": "current"
     },
+    "medcomehmi.dk/ig/dk-ehmi-eer": {
+        "package_id": "dk.ehmi.eer",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-ehmi-eer": {
+        "package_id": "dk.ehmi.eer",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/carecommunication": {
+        "package_id": "medcom.fhir.dk.carecommunication",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-medcom-carecommunication": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/carecommunication/2.1.0": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "2.1.0"
+    },
+    "medcomfhir.dk/ig/carecommunication/2.0.0": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "2.0.0"
+    },
+    "medcomfhir.dk/fhir/ig/dk-medcom-carecommunication": {
+        "package_id": "dk.ehmi.terminology",
+        "version": "1.0.0"
+    },
     "medcomehmi.dk/ig/dk-ehmi-terminology": {
         "package_id": "dk.ehmi.terminology",
         "version": "latest"
-    },
-    "build.fhir.org/ig/medcomdk/dk-ehmi-terminology": {
-        "package_id": "dk.ehmi.terminology",
-        "version": "current"
     },
     "medcomfhir.dk/ig/terminology": {
         "package_id": "medcom.fhir.dk.terminology",
@@ -14595,6 +16095,46 @@ export var guide_url_list = {
         "package_id": "medcom.fhir.dk.terminology",
         "version": "1.0.0"
     },
+    "medcomfhir.dk/ig/homecareobservation": {
+        "package_id": "medcom.fhir.dk.homecareobservation",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk_HomeCareObservations": {
+        "package_id": "medcom.fhir.dk.homecareobservation",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/messaging": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/medcomdk/dk-medcom-messaging": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "current"
+    },
+    "medcomfhir.dk/ig/messaging/2.0.0": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "2.0.0"
+    },
+    "medcomfhir.dk/fhir/messaging/ig/dk-medcom-messaging": {
+        "package_id": "medcom.fhir.dk.messaging",
+        "version": "1.0.3"
+    },
+    "hl7.eu/fhir/ig/gk": {
+        "package_id": "hl7.eu.fhir.gk",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gatekeeper-project/gk-fhir-ig": {
+        "package_id": "hl7.eu.fhir.gk",
+        "version": "current"
+    },
+    "hl7.eu/fhir/ig/gk-poc-ai": {
+        "package_id": "hl7.eu.fhir.gk-poc-ai",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gatekeeper-project/poc-ai-gk": {
+        "package_id": "hl7.eu.fhir.gk-poc-ai",
+        "version": "current"
+    },
     "fhir.org/templates/hl7.base.template": {
         "package_id": "hl7.base.template",
         "version": "latest"
@@ -14602,6 +16142,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7/ig-template-hl7": {
         "package_id": "hl7.base.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.base.template/0.9.0": {
+        "package_id": "hl7.base.template",
+        "version": "0.9.0"
     },
     "fhir.org/templates/hl7.base.template/0.8.0": {
         "package_id": "hl7.base.template",
@@ -14659,6 +16203,10 @@ export var guide_url_list = {
         "package_id": "hl7.au.fhir.template",
         "version": "current"
     },
+    "fhir.org/templates/hl7.au.fhir.template/0.8.0": {
+        "package_id": "hl7.au.fhir.template",
+        "version": "0.8.0"
+    },
     "fhir.org/templates/hl7.au.fhir.template/0.7.0": {
         "package_id": "hl7.au.fhir.template",
         "version": "0.7.0"
@@ -14711,6 +16259,14 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.au.core",
         "version": "current"
     },
+    "hl7.org.au/fhir/erequesting": {
+        "package_id": "hl7.fhir.au.erequesting",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7au/au-fhir-erequesting": {
+        "package_id": "hl7.fhir.au.erequesting",
+        "version": "current"
+    },
     "draft.hl7.org.au/fhir/diagnostic-orders": {
         "package_id": "hl7.fhir.au.draft.diagnostic-orders",
         "version": "latest"
@@ -14726,6 +16282,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7au/hl7.au.sparked.template": {
         "package_id": "hl7.au.sparked.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.au.sparked.template/0.3.0": {
+        "package_id": "hl7.au.sparked.template",
+        "version": "0.3.0"
     },
     "fhir.org/templates/hl7.au.sparked.template/0.2.0": {
         "package_id": "hl7.au.sparked.template",
@@ -14783,14 +16343,6 @@ export var guide_url_list = {
         "package_id": "hl7.eu.fhir.xpandh.lab",
         "version": "current"
     },
-    "hl7.eu/fhir/ig/base": {
-        "package_id": "hl7.fhir.eu.base",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/hl7-eu/base": {
-        "package_id": "hl7.fhir.eu.base",
-        "version": "current"
-    },
     "hl7.eu/fhir/ig/xpandh/hdr": {
         "package_id": "hl7.eu.fhir.xpandh.hdr",
         "version": "latest"
@@ -14810,6 +16362,18 @@ export var guide_url_list = {
     "hl7.eu/fhir/ig/pcsp/0.1.0": {
         "package_id": "hl7.eu.fhir.pcsp",
         "version": "0.1.0"
+    },
+    "hl7.eu/fhir/r5/mpd": {
+        "package_id": "hl7.fhir.eu.r5.mpd",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-eu/mpd": {
+        "package_id": "hl7.fhir.eu.mpd",
+        "version": "current"
+    },
+    "hl7.eu/fhir/mpd": {
+        "package_id": "hl7.fhir.eu.mpd",
+        "version": "latest"
     },
     "hl7.eu/fhir/ig/coalesced": {
         "package_id": "hl7.eu.fhir.coalesced",
@@ -14835,20 +16399,24 @@ export var guide_url_list = {
         "package_id": "hl7.eu.fhir.idea4rc",
         "version": "current"
     },
+    "hl7.eu/fhir/extensions": {
+        "package_id": "hl7.fhir.eu.extensions",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/hl7-eu/extensions": {
+        "package_id": "hl7.fhir.eu.extensions",
+        "version": "current"
+    },
+    "hl7.eu/fhir/extensions/0.1.0": {
+        "package_id": "hl7.fhir.eu.extensions",
+        "version": "0.1.0"
+    },
     "fhir.hl7.org.uk/uk-core-access": {
         "package_id": "uk-core-access",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7-UK/UK-Core-Access": {
         "package_id": "uk-core-access",
-        "version": "current"
-    },
-    "ncez.mzcr.cz/standards/fhir/ig/lab": {
-        "package_id": "ncez.cz.fhir.lab",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/ncez-cz/cz-lab": {
-        "package_id": "ncez.cz.fhir.lab",
         "version": "current"
     },
     "ncez.mzcr.cz/standards/fhir/ig/core": {
@@ -14875,33 +16443,9 @@ export var guide_url_list = {
         "package_id": "ehi.api",
         "version": "current"
     },
-    "build.fhir.org/ig/daniel-thomson/mywai": {
-        "package_id": "tewhatuora.fhir.mywai",
+    "build.fhir.org/ig/ReMeDi-Blut/remedi_ig": {
+        "package_id": "fhir.blood",
         "version": "current"
-    },
-    "fhir.ch/ig/ch-epr-ppqm": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/ehealthsuisse/ch-epr-ppqm": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "current"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/2.0.0": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "2.0.0"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/2.0.0-ballot": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "2.0.0-ballot"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/0.2.0": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "0.2.0"
-    },
-    "fhir.ch/ig/ch-epr-ppqm/0.1.0": {
-        "package_id": "ch.fhir.ig.ch-epr-ppqm",
-        "version": "0.1.0"
     },
     "fhir.ch/ig/ch-atc": {
         "package_id": "ch.fhir.ig.ch-atc",
@@ -14943,7 +16487,7 @@ export var guide_url_list = {
         "package_id": "hl7.org.nz.fhir.ig.hpi",
         "version": "current"
     },
-    "hl7.org.nz/fhir/ig/formulary": {
+    "fhir-docs.nzf.org.nz": {
         "package_id": "hl7.org.nz.fhir.ig.formulary",
         "version": "latest"
     },
@@ -14977,6 +16521,34 @@ export var guide_url_list = {
     },
     "build.fhir.org/ig/HL7NZ/cca": {
         "package_id": "hl7.org.nz.fhir.ig.cca",
+        "version": "current"
+    },
+    "hl7.at/fhir/HL7ATCoreProfiles/4.0.1": {
+        "package_id": "gabriel0316.hl7atcoreprofiles",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gabriel0316/HL7-AT-FHIR-Core-R4": {
+        "package_id": "gabriel0316.hl7atcoreprofiles",
+        "version": "current"
+    },
+    "gabriel0316.github.io/ig-tooling-pages/ig/ig-tooling": {
+        "package_id": "hl7.at.fhir.gkl.ig-tooling",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gabriel0316/ig-tooling/": {
+        "package_id": "hl7.at.fhir.gkl.ig-tooling",
+        "version": "current"
+    },
+    "gabriel0316.github.io/ig-tooling-pages/ig/ig-tooling/0.1.0": {
+        "package_id": "hl7.at.fhir.gkl.ig-tooling",
+        "version": "0.1.0"
+    },
+    "termgit.elga.gv.at": {
+        "package_id": "gabriel0316.terminologies",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gabriel0316/terminology": {
+        "package_id": "gabriel0316.terminologies",
         "version": "current"
     },
     "hl7.org/cda/us/eyecare": {
@@ -15019,12 +16591,12 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.uv.fhir-for-fair",
         "version": "0.1.0"
     },
-    "hl7.org/fhir/uv/tinkar": {
-        "package_id": "hl7.fhir.uv.tinkar",
+    "hl7.org/fhir/uv/termchangeset": {
+        "package_id": "hl7.fhir.uv.termchangeset",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/tinkar-ig": {
-        "package_id": "hl7.fhir.uv.tinkar",
+        "package_id": "hl7.fhir.uv.termchangeset",
         "version": "current"
     },
     "fhir.org/templates/hl7.ca.fhir.template": {
@@ -15034,6 +16606,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7/ig-template-ca": {
         "package_id": "hl7.ca.fhir.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.ca.fhir.template/0.4.0": {
+        "package_id": "hl7.ca.fhir.template",
+        "version": "0.4.0"
     },
     "fhir.org/templates/hl7.ca.fhir.template/0.3.0": {
         "package_id": "hl7.ca.fhir.template",
@@ -15206,26 +16782,6 @@ export var guide_url_list = {
     "hl7.org/documentcenter/public/standards/dstu/HL7_CQLANG_R1_DSTU_2015MAY.zip": {
         "package_id": "hl7.cql",
         "version": "1.0.0"
-    },
-    "hl7.org/cda/stds/core": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "latest"
-    },
-    "build.fhir.org/ig/HL7/CDA-core-sd/": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "current"
-    },
-    "hl7.org/cda/stds/core/2.0.0-sd-snapshot1": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "2.0.0-sd-snapshot1"
-    },
-    "hl7.org/cda/stds/core/2023Sep": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "2.0.0-sd-ballot"
-    },
-    "hl7.org/cda/stds/core/draft1": {
-        "package_id": "hl7.cda.uv.core",
-        "version": "2.1.0-draft1"
     },
     "hl7.org/fhir/uv/ae-research-ig": {
         "package_id": "hl7.fhir.uv.ae-research-ig",
@@ -15414,6 +16970,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7/ig-template-davinci/": {
         "package_id": "hl7.davinci.template",
         "version": "current"
+    },
+    "fhir.org/templates/hl7.davinci.template/0.7.0": {
+        "package_id": "hl7.davinci.template",
+        "version": "0.7.0"
     },
     "fhir.org/templates/hl7.davinci.template/0.6.0": {
         "package_id": "hl7.davinci.template",
@@ -15711,13 +17271,17 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.uv.security-label-ds4p",
         "version": "0.1.0"
     },
-    "hl7.org/fhir/us": {
-        "package_id": "fhir.efss",
+    "hl7.org/fhir/us/efss": {
+        "package_id": "hl7.fhir.efss",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/efss": {
         "package_id": "fhir.efss",
         "version": "current"
+    },
+    "hl7.org/fhir/us": {
+        "package_id": "fhir.efss",
+        "version": "latest"
     },
     "hl7.org/fhir/us/cancer-reporting": {
         "package_id": "hl7.fhir.us.cancer-reporting",
@@ -16011,6 +17575,10 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.us.ccda",
         "version": "current"
     },
+    "hl7.org/fhir/us/ccda/STU1.2": {
+        "package_id": "hl7.fhir.us.ccda",
+        "version": "1.2.0"
+    },
     "hl7.org/fhir/us/ccda/2023May": {
         "package_id": "hl7.fhir.us.ccda",
         "version": "1.2.0-ballot"
@@ -16111,6 +17679,14 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.us.bfdr",
         "version": "0.1.0"
     },
+    "hl7.org/fhir/us/pq-cmc-fda": {
+        "package_id": "hl7.fhir.us.pq-cmc-fda",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/FHIR-us-pq-cmc-fda": {
+        "package_id": "hl7.fhir.us.pq-cmc-fda",
+        "version": "current"
+    },
     "hl7.org/fhir/us/sirb": {
         "package_id": "hl7.fhir.us.sirb",
         "version": "latest"
@@ -16126,6 +17702,14 @@ export var guide_url_list = {
     "hl7.org/fhir/us/sirb/2021Sep": {
         "package_id": "hl7.fhir.us.sirb",
         "version": "0.1.0"
+    },
+    "hl7.org/fhir/us/reportofilltraveler": {
+        "package_id": "hl7.fhir.us.illTraveler",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/ReportIIITraveler-ig": {
+        "package_id": "hl7.fhir.us.illTraveler",
+        "version": "current"
     },
     "hl7.org/fhir/us/davinci-drug-formulary": {
         "package_id": "hl7.fhir.us.davinci-drug-formulary",
@@ -16163,12 +17747,12 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.us.davinci-drug-formulary",
         "version": "0.1.0"
     },
-    "hl7.org/fhir/uv/cardx-htn": {
-        "package_id": "hl7.fhir.uv.cardx-htn",
+    "hl7.org/fhir/uv/CardX-HTN-MNG": {
+        "package_id": "hl7.fhir.uv.CardX-HTN-MNG",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/CardX-HTN-MNG": {
-        "package_id": "hl7.fhir.uv.cardx-htn",
+        "package_id": "hl7.fhir.uv.CardX-HTN-MNG",
         "version": "current"
     },
     "hl7.org/fhir/us/cardx-htn": {
@@ -16219,6 +17803,10 @@ export var guide_url_list = {
         "package_id": "hl7.other.template",
         "version": "current"
     },
+    "fhir.org/templates/hl7.fhir.template/0.9.0": {
+        "package_id": "hl7.other.template",
+        "version": "0.9.0"
+    },
     "fhir.org/templates/hl7.fhir.template/0.8.0": {
         "package_id": "hl7.other.template",
         "version": "0.8.0"
@@ -16263,6 +17851,14 @@ export var guide_url_list = {
         "package_id": "hl7.other.template",
         "version": "0.0.5"
     },
+    "hl7.org/fhir/us/consent-management": {
+        "package_id": "hl7.fhir.us.consent-management",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/fhir-consent-management": {
+        "package_id": "hl7.fhir.us.consent-management",
+        "version": "current"
+    },
     "hl7.org/fhir/us/breast-radiology": {
         "package_id": "hl7.fhir.us.breast-radiology",
         "version": "latest"
@@ -16306,6 +17902,14 @@ export var guide_url_list = {
     "hl7.org/fhir/uv/pddi/2018Sep": {
         "package_id": "hl7.fhir.uv.pddi",
         "version": "0.1.0"
+    },
+    "hl7.org/fhir/us/nhsn-dqm": {
+        "package_id": "hl7.fhir.us.nhsn-dqm",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/HL7/nhsn-dqm": {
+        "package_id": "hl7.fhir.us.nhsn-dqm",
+        "version": "current"
     },
     "hl7.org/fhir/us/core": {
         "package_id": "hl7.fhir.us.core",
@@ -16462,6 +18066,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7/ig-template-base": {
         "package_id": "fhir.base.template",
         "version": "current"
+    },
+    "fhir.org/templates/fhir.base.template/0.7.0": {
+        "package_id": "fhir.base.template",
+        "version": "0.7.0"
     },
     "fhir.org/templates/fhir.base.template/0.6.0": {
         "package_id": "fhir.base.template",
@@ -16667,17 +18275,13 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.us.identity-matching",
         "version": "1.0.0-ballot"
     },
-    "github.com/phenopackets/core-ig": {
-        "package_id": "hl7.fhir.us.ga4gh.phenopacket",
+    "hl7.org/fhir/uv/phenomics-exchange": {
+        "package_id": "hl7.fhir.uv.phenomics-exchange",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/phenomics-exchange-ig": {
         "package_id": "hl7.fhir.uv.phenomics-exchange",
         "version": "current"
-    },
-    "hl7.org/fhir/uv/phenomics-exchange": {
-        "package_id": "hl7.fhir.uv.phenomics-exchange",
-        "version": "latest"
     },
     "hl7.org/fhir/us/pdmp": {
         "package_id": "hl7.fhir.us.pdmp",
@@ -16714,6 +18318,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7/fhir-qi-core": {
         "package_id": "hl7.fhir.us.qicore",
         "version": "current"
+    },
+    "hl7.org/fhir/us/qicore/STU6": {
+        "package_id": "hl7.fhir.us.qicore",
+        "version": "6.0.0"
     },
     "hl7.org/fhir/us/qicore/2023Sep": {
         "package_id": "hl7.fhir.us.qicore",
@@ -16823,6 +18431,10 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.uv.extensions",
         "version": "current"
     },
+    "hl7.org/fhir/extensions/5.1.0-snapshot1": {
+        "package_id": "hl7.fhir.uv.extensions",
+        "version": "5.1.0-snapshot1"
+    },
     "hl7.org/fhir/extensions/5.1.0-ballot": {
         "package_id": "hl7.fhir.uv.extensions",
         "version": "5.1.0-ballot"
@@ -16866,6 +18478,10 @@ export var guide_url_list = {
     "build.fhir.org/ig/HL7/UTG": {
         "package_id": "hl7.terminology",
         "version": "current"
+    },
+    "terminology.hl7.org/5.5.0": {
+        "package_id": "hl7.terminology",
+        "version": "5.5.0"
     },
     "terminology.hl7.org/5.4.0": {
         "package_id": "hl7.terminology",
@@ -17492,39 +19108,39 @@ export var guide_url_list = {
         "version": "0.1.0"
     },
     "hl7.org/fhirpath": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "latest"
     },
     "build.fhir.org/ig/HL7/FHIRPath": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "current"
     },
     "hl7.org/fhirpath/N1/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "2.0.0"
     },
     "hl7.org/fhirpath/2019May/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.3.0"
     },
     "hl7.org/fhirpath/2018Sep/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.2.0"
     },
     "hl7.org/fhirpath/2018May/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.1.0"
     },
     "hl7.org/fhirpath/2017Jan/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "1.0.0"
     },
     "hl7.org/fhirpath/2016Sept/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "0.3.0"
     },
     "hl7.org/fhirpath/2016May/index.html": {
-        "package_id": "hl7.fhirpath",
+        "package_id": "hl7.fhir.uv.fhirpath",
         "version": "0.2.0"
     },
     "hl7.org/fhir/us/vrdr": {
@@ -17796,11 +19412,23 @@ export var guide_url_list = {
         "version": "1.0.0-ballot"
     },
     "build.fhir.org/ig/joofio/spor-as-cs": {
-        "package_id": "hl7.eu.fhir.cs",
+        "package_id": "hl7.fhir.eu.spor",
         "version": "current"
     },
     "build.fhir.org/ig/joofio/ufis-swe-ig": {
         "package_id": "hl7.eu.fhir.ufis-swe-unicom",
+        "version": "current"
+    },
+    "build.fhir.org/ig/joofio/test-epi-composition": {
+        "package_id": "hl7.eu.fhir.ghepi",
+        "version": "current"
+    },
+    "joofio.github.io/obs-cdss-fhir": {
+        "package_id": "obs.cdss.ig",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/joofio/obs-cdss-fhir": {
+        "package_id": "obs.cdss.ig",
         "version": "current"
     },
     "hl7.org/fhir/us/vrsandbox": {
@@ -17809,6 +19437,14 @@ export var guide_url_list = {
     },
     "build.fhir.org/ig/nightingaleproject/vital_records_sandbox_ig": {
         "package_id": "hl7.fhir.us.vrsandbox",
+        "version": "current"
+    },
+    "who-umc.org/idmp": {
+        "package_id": "who-umc.fhir.poc-php",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/gcangioli/who-umc-poc": {
+        "package_id": "who-umc.fhir.poc-php",
         "version": "current"
     },
     "hl7.org/fhir/uv/sql-on-fhir": {
@@ -17839,12 +19475,20 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.uv.tools",
         "version": "0.1.0"
     },
-    "terminology.smarthealth.cards": {
-        "package_id": "cards.smarthealth.terminology",
+    "interoperabilidad.minsal.cl/fhir/ig/eis": {
+        "package_id": "hl7.fhir.cl.minsal.eis",
         "version": "latest"
     },
-    "build.fhir.org/ig/dvci/shc-terminology": {
-        "package_id": "cards.smarthealth.terminology",
+    "build.fhir.org/ig/Minsal-CL/eis": {
+        "package_id": "hl7.fhir.cl.minsal.eis",
+        "version": "current"
+    },
+    "hl7chile.cl/fhir/ig/deis321": {
+        "package_id": "hl7.fhir.cl.deis321",
+        "version": "latest"
+    },
+    "build.fhir.org/ig/Minsal-CL/deis": {
+        "package_id": "hl7.fhir.cl.deis321",
         "version": "current"
     },
     "interoperabilidad.minsal.cl/fhir/ig/snre": {
@@ -17855,13 +19499,17 @@ export var guide_url_list = {
         "package_id": "hl7.fhir.cl.minsal.snre",
         "version": "current"
     },
-    "interoperabilidad.minsal.cl/fhir/ig/tei": {
-        "package_id": "hl7.fhir.cl.minsal.tei",
+    "minsal.cl/listaespera": {
+        "package_id": "fhir.minsal.ListaDeEspera",
         "version": "latest"
     },
     "build.fhir.org/ig/Minsal-CL/SIGTEv2-IG": {
         "package_id": "hl7.fhir.cl.minsal.tei",
         "version": "current"
+    },
+    "interoperabilidad.minsal.cl/fhir/ig/tei": {
+        "package_id": "hl7.fhir.cl.minsal.tei",
+        "version": "latest"
     },
     "interoperabilidad.minsal.cl/fhir/ig/mpi": {
         "package_id": "hl7.fhir.cl.minsal.mpi",
@@ -17876,8 +19524,12 @@ export var guide_url_list = {
         "version": "latest"
     },
     "build.fhir.org/ig/Minsal-CL/MFR": {
-        "package_id": "minsal.fhir.core",
+        "package_id": "hl7.fhir.cl.minsal.mfr",
         "version": "current"
+    },
+    "interoperabilidad.minsal.cl/fhir/ig/mfr": {
+        "package_id": "hl7.fhir.cl.minsal.mfr",
+        "version": "latest"
     }
 };
 

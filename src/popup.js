@@ -14,6 +14,14 @@ searchForm.addEventListener("submit", function(event) {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    // Add listener to the Firely logo
+    var firelyLogo = document.getElementById("firely-logo");
+    firelyLogo.onclick = function() {
+        chrome.tabs.create({url: "https://fire.ly"});
+    };
+
+    // Focus on the search field
     var searchQuery = document.getElementById("search-query");
     searchQuery.focus();
 });

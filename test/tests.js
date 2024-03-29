@@ -89,6 +89,8 @@ describe("getMatchingGuide", function() {
             expect(selectedGuideVersion).to.have.property(
                 'guideVersionLabel', 'latest');
             expect(selectedGuideVersion).to.have.property(
+                'guideVersionNumber', '6.1.0');
+            expect(selectedGuideVersion).to.have.property(
                 'guideVersionLink', 'http://hl7.org/fhir/us/core/index.html');
         });
 
@@ -111,7 +113,7 @@ describe("getMatchingGuide", function() {
             
             const selectedGuideVersion = guide_details.guideVersions.find(version => version.selected === true);
             expect(selectedGuideVersion).to.have.property(
-                'guideVersionLabel', 'build (R6)');
+                'guideVersionLabel', 'current (R6)');
             expect(selectedGuideVersion).to.have.property(
                 'guideVersionLink', 'https://build.fhir.org/');
         });

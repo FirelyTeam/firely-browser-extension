@@ -24,8 +24,7 @@ export function generateSearchUrl(document) {
 function getCoreGuideUrlList() {
     return {
         "build.fhir.org": {
-            "version": "current",
-            "name": "build (R6)"
+            "name": "current (R6)"
         },
         "hl7.org/fhir": {
             "package_id": "hl7.fhir.r5.core",
@@ -189,7 +188,11 @@ function getMatchingHL7Guide(url) {
             if (current_guide_version == 'current') {
                 currentGuideVersion['selected'] = true;
             }
-            currentGuideVersion['guideVersionLabel'] = currentVersionEntry.version;
+            currentGuideVersion['guideVersionLabel'] = currentGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
+            if ('current_version' in guide_details) {
+                currentGuideVersion['guideVersionNumber'] = guide_details.current_version;
+            }
+
             if (currentVersionEntry.name) {
                 currentGuideVersion['guideVersionLabel'] += ' (${currentVersionEntry.name})';
             }
@@ -198,13 +201,22 @@ function getMatchingHL7Guide(url) {
         }
 
         // Add the latest (root) version
-        let latestGuideVersion = {}
-        if (current_guide_version == 'latest') {
+        if (!('not_yet_published' in guide_details)) {
+            let latestGuideVersion = {}
+            if (current_guide_version == 'latest') {
             latestGuideVersion['selected'] = true;
+            }
+            latestGuideVersion['guideVersionLabel'] = 'latest';
+
+            // Find the current version
+            const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.current === true);
+            if (currentVersionEntry) {
+                latestGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
+            }
+
+            latestGuideVersion['guideVersionLink'] = guide_details.url + '/' + current_path;
+            guideVersions.push(latestGuideVersion);
         }
-        latestGuideVersion['guideVersionLabel'] = 'latest';
-        latestGuideVersion['guideVersionLink'] = guide_details.url + '/' + current_path;
-        guideVersions.push(latestGuideVersion);
 
         // Add the other versions
         for (var i = 0; i < guide_details.versions.length; i++) {
@@ -213,7 +225,7 @@ function getMatchingHL7Guide(url) {
                 if (guide_details.versions[i].version == current_guide_version) {
                     guideVersion['selected'] = true;
                 }
-                guideVersion['guideVersionLabel'] = guide_details.versions[i].version;
+                guideVersion['guideVersionLabel'] = guideVersion['guideVersionNumber'] = guide_details.versions[i].version;
                 if (guide_details.versions[i].name) {
                     guideVersion['guideVersionLabel'] += ' ('+guide_details.versions[i].name+')';
                 }
@@ -270,6 +282,7 @@ function getMatchingHl7FhirCoreGuide(url) {
             if (key == longestMatch) {
                 guideVersion['selected'] = true;
             }
+            guideVersion['guideVersionNumber'] = value['version'];
             guideVersion['guideVersionLabel'] = value['name'];
             guideVersion['guideVersionLink'] = 'https://'+key + '/' + current_path;
             guideVersions.push(guideVersion);
@@ -293,6 +306,7 @@ function getMatchingHl7FhirCoreGuide(url) {
 export function createVersionListItem(versionListElement, version, url, selected) {
     var versionListButton = document.createElement("button");
     versionListButton.type = "button";
+    versionListButton.title = "Visit this page in version " + version;
     versionListButton.textContent = version.toUpperCase();
     versionListButton.classList.add("yellow-button"); // add yellow-button class
     if (selected) {
@@ -305,8 +319,28 @@ export function createVersionListItem(versionListElement, version, url, selected
     versionListElement.appendChild(versionListButton);
 }
 
+export function createToolsListItem(toolsListElement, text, url, title) {
+    var toolsListButton = document.createElement("button");
+    toolsListButton.type = "button";
+    toolsListButton.classList.add("tools-button");
+    toolsListButton.textContent = text;
+    toolsListButton.href = url;
+    toolsListButton.title = title;
+    toolsListButton.addEventListener("click", function() {
+        chrome.tabs.create({url: url});
+    });
+    toolsListElement.appendChild(toolsListButton);
+}
+
 function resetUI() {
-    document.getElementById("version-list").innerHTML = '';
+    var versionListElement = document.getElementById("version-list")
+    versionListElement.innerHTML = '';
+    versionListElement.style.display = "none";
+
+    var toolsListElement = document.getElementById("tools-list")
+    toolsListElement.innerHTML = '';
+    toolsListElement.style.display = "none";
+    
     document.getElementById("search-scope").style.display = "none";
 }
 
@@ -333,6 +367,8 @@ export function updateUI(urlString) {
 
         if (guideVersions) {
             var versionListElement = document.getElementById("version-list");
+            versionListElement.style.display = "block";
+
             for (var i = 0; i < guideVersions.length; i++) {
                 var version = guideVersions[i];
                 createVersionListItem(versionListElement, version.guideVersionLabel, version.guideVersionLink, version.selected);
@@ -347,6 +383,7 @@ export function updateUI(urlString) {
                 var showAllLink = document.createElement("a");
                 showAllLink.classList.add("glyphicon", "glyphicon-chevron-down", "more-button");
                 showAllLink.href = "#";
+                showAllLink.title = "Show all versions";
 
                 showAllLink.addEventListener("click", function() {
                     for (var i = 0; i < buttons.length; i++) {
@@ -361,14 +398,46 @@ export function updateUI(urlString) {
 
         if (packageName !== undefined || currentFhirVersion !== undefined
             || simplifierGuideKey !== undefined) {
+            
             var searchScope = document.getElementById("search-scope");
             searchScope.style.display = "block";
+
+            var toolsListElement = document.getElementById("tools-list");
             
             if (packageName) {
                 // Update package search scope button
                 console.log('packageName: ' + packageName);
-                document.getElementById("search-scope-package-name").style.display = "block";
 
+                if (guideVersions) {
+                    var selectedVersion = guideVersions.find(version => version.selected);
+                    if (selectedVersion) {
+                        
+                        var packageVersion = selectedVersion.guideVersionLabel;
+                        if ('guideVersionNumber' in selectedVersion) {
+                            packageVersion = selectedVersion.guideVersionNumber;
+                        }
+
+                        console.log('Selected Version: ' + packageVersion);
+                        // Do something with the selected version
+
+                        if (selectedVersion.guideVersionLabel != 'current') {
+                            toolsListElement.style.display = "block";
+
+                            createToolsListItem(toolsListElement, 'Validator', 'https://simplifier.net/validate?scope='+packageName+'@'+packageVersion, 'Validate against '+packageName+'@'+packageVersion);
+                            
+                            createToolsListItem(toolsListElement, 'FHIRPath', 'https://simplifier.net/fhirpath?scope='+packageName+'@'+packageVersion, 'Query against '+packageName+'@'+packageVersion+' with FHIRPath');
+
+                            createToolsListItem(toolsListElement, 'FQL', 'https://simplifier.net/fql?scope='+packageName+'@'+packageVersion, 'Query against '+packageName+'@'+packageVersion+' with the FHIR Query Language');
+                        }
+
+
+                    } else {
+                        console.log('No selected version found');
+                    }
+                } 
+
+                document.getElementById("search-scope-package-name").style.display = "block";
+                
                 var searchTypePackageLabel = document.querySelector("label[for='search-type-package']");
                 searchTypePackageLabel.textContent = 'In ' + packageName;
                 var searchTypePackage = document.getElementById("search-type-package");
