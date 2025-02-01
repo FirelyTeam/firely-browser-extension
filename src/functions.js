@@ -168,8 +168,87 @@ function processUrl(url) {
     return url.hostname + url.pathname;
 }
 
+export function fetchAndStoreData() {
+    console.log('Fetching new data');
+    var refreshLink = document.getElementById("refresh-link");
+
+    // fetch('https://raw.githubusercontent.com/FirelyTeam/firely-browser-extension/main/scripts/guides.json')
+    fetch('https://hl7.org/fhir/package-registry.json')
+        .then(response => response.json())
+        .then(hl7_package_list => {
+            const now = new Date().getTime();
+            const item = {
+                data: hl7_package_list,
+                timestamp: now
+            };
+
+            chrome.storage.local.set({'hl7-package-list': item}, () => {
+                console.log('Data fetched and stored', hl7_package_list);
+                refreshLink.innerText = 'Package list downloaded';
+            });
+
+            var guide_url_list = transformHL7packagelist(hl7_package_list);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            refreshLink.innerText = 'Error when downloading package list';
+        });
+}
+
+function fetchDataFromStorage() {
+    // Check if there's a recent version of hl7-package-list in storage
+    // If there is, return that. If not, request the data from the server
+    
+    // return new Promise((resolve, reject) => {
+    //     chrome.storage.local.get('hl7-package-list', (result) => {
+    //         if (result && result.hl7-package-list) {
+    //             try {
+    //                 const data = JSON.parse(result.hl7-package-list.data);
+    //                 resolve(data);
+    //             } catch (error) {
+    //                 reject(error);
+    //             }
+    //         } else {
+    //             resolve(guides);
+    //         }
+    //     });
+    // });
+}
+
+export function transformHL7packagelist(hl7_package_list) {
+    // TODO process the hl7_package_list to look like the guide_url_list from guides.js
+
+    var guide_url_list = {};
+
+    hl7_package_list.packages.forEach(package_item => {
+        guide_url_list[package_item['canonical']] = {
+            package_id: package_item['package-id']
+        }
+        guide_url_list[package_item['ci-build']] = {
+            package_id: package_item['package-id']
+        }
+    });
+
+    return guide_url_list
+}
+
+function getHL7GuideUrlList() {
+    // TODO try to get data from local storage
+    // fetchDataFromStorage;
+
+    // TODO if that fails, get it from the internet and get it processed
+    // fetchAndStoreData;
+    // transformHL7packagelist;
+
+    // return guide_url_list
+}
+
 function getMatchingHL7Guide(url) {
     const processedUrl = processUrl(url);
+
+    // TODO get guide_url_list via function instead, not from guides.js
+    // getHL7GuideUrlList;
+
     let longestMatch = findLongestMatch(processedUrl, Object.keys(guide_url_list));
     let guide_url_metadata = guide_url_list[longestMatch]
 

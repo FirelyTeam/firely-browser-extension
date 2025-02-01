@@ -1,7 +1,11 @@
 import {
     generateSearchUrl,
     getMatchingGuide,
+    fetchAndStoreData,
+    transformHL7packagelist
 } from '../src/functions.js';
+import packageRegistry from './test_data/package-registry.json';
+
 
 describe("generateSearchUrl", function() {
 
@@ -59,6 +63,42 @@ describe("generateSearchUrl", function() {
 
     // TODO generateSearchUrl-simplifierGuideKey
 
+});
+
+describe("downloadData", function() {
+
+    it("should check for a local copy of the HL7 guide list and if it finds one return it", function() {
+        // fetchDataFromStorage;
+    });
+
+    it("should process the hl7_package_list to a guides list", function() {
+        // transformHL7packagelist;
+    });
+
+    it("should download the package list and process it", function() {
+        // TODO Mock fetch first
+        // fetchAndStoreData();
+    });
+
+});
+
+describe("transformHL7packagelist", function() {
+    it("should transform the package registry list correctly", function() {
+        const transformedList = transformHL7packagelist(packageRegistry);
+
+        // Check if the transformed list is an array
+        expect(transformedList).to.be.an('object');
+
+        const itemUSCoreCanonical = transformedList['http://hl7.org/fhir/us/core'];
+        console.log(itemUSCoreCanonical);
+        expect(itemUSCoreCanonical).to.have.property('package_id');
+        expect(itemUSCoreCanonical.package_id).to.equal('hl7.fhir.us.core');
+
+        const itemUSCoreBuild = transformedList['http://build.fhir.org/ig/HL7/US-Core'];
+        console.log(itemUSCoreBuild);
+        expect(itemUSCoreBuild).to.have.property('package_id');
+        expect(itemUSCoreBuild.package_id).to.equal('hl7.fhir.us.core');
+    });
 });
 
 describe("getMatchingGuide", function() {

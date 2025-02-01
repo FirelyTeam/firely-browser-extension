@@ -1,17 +1,10 @@
 import {
     generateSearchUrl,
     updateUI,
+    fetchAndStoreData
 } from './functions.js';
 
 console.log('Firely FHIR Extension: This is where popup.js logs to the console.');
-
-// Add listener to the search field
-var searchForm = document.getElementById("search-form");
-searchForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    var searchUrl = generateSearchUrl(document);
-    chrome.tabs.create({url: searchUrl});
-});
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -20,6 +13,18 @@ document.addEventListener("DOMContentLoaded", function() {
     firelyLogo.onclick = function() {
         chrome.tabs.create({url: "https://fire.ly"});
     };
+
+    // Add listener to the search field
+    var searchForm = document.getElementById("search-form");
+    searchForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var searchUrl = generateSearchUrl(document);
+        chrome.tabs.create({url: searchUrl});
+    });
+
+    // Add listener to the refresh link
+    var refreshLink = document.getElementById("refresh-link");
+    refreshLink.addEventListener("click", fetchAndStoreData);
 
     // Focus on the search field
     var searchQuery = document.getElementById("search-query");
