@@ -4,8 +4,8 @@ import {
     fetchAndStoreData,
     transformHL7packagelist
 } from '../src/functions.js';
-import packageRegistry from './test_data/package-registry.json';
-
+import packageRegistry from './test_data/package-registry.json' assert { type: "json" };
+import {expect} from 'chai';
 
 describe("generateSearchUrl", function() {
 
