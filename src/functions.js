@@ -1,5 +1,3 @@
-import { guides, guide_url_list } from './guides.js';
-
 export function generateSearchUrl(document) {
     var searchQuery = document.getElementById("search-query").value;
     var searchUrl = "https://simplifier.net/search?q=" + encodeURIComponent(searchQuery);
@@ -74,7 +72,7 @@ function getFhirVersionLabel(fhirVersionNumber) {
     }
 }
 
-export function getMatchingGuide(urlString) {
+export async function getMatchingGuide(urlString) {
     let url = new URL(urlString);
     let locationHostname = String(url.hostname).toLowerCase();
 
@@ -84,9 +82,9 @@ export function getMatchingGuide(urlString) {
     } else if (locationHostname == 'registry.fhir.org') {
         // Match against registry.fhir.org
     } else {
-        var matchingGuide = getMatchingHL7Guide(url)
+        let matchingGuide = await getMatchingHL7Guide(url);
         if (matchingGuide) {
-            return matchingGuide
+            return matchingGuide;
         } else if (locationHostname == 'hl7.org' || locationHostname == 'www.hl7.org' || locationHostname == 'build.fhir.org') {
             return getMatchingHl7FhirCoreGuide(url);
         }
@@ -168,11 +166,15 @@ function processUrl(url) {
     return url.hostname + url.pathname;
 }
 
+export function refreshClicked(urlString) {
+    fetchAndStoreData();
+    updateUI(urlString);
+}
+
 export function fetchAndStoreData() {
     console.log('Fetching new data');
     var refreshLink = document.getElementById("refresh-link");
 
-    // fetch('https://raw.githubusercontent.com/FirelyTeam/firely-browser-extension/main/scripts/guides.json')
     fetch('https://hl7.org/fhir/package-registry.json')
         .then(response => response.json())
         .then(hl7_package_list => {
@@ -183,11 +185,15 @@ export function fetchAndStoreData() {
             };
 
             chrome.storage.local.set({'hl7-package-list': item}, () => {
-                console.log('Data fetched and stored', hl7_package_list);
+                console.log('Package list fetched and stored', hl7_package_list);
                 refreshLink.innerText = 'Package list downloaded';
             });
 
             var guide_url_list = transformHL7packagelist(hl7_package_list);
+            chrome.storage.local.set({'guide_url_list': guide_url_list}, () => {
+                console.log('Guide URL list transformed', guide_url_list);
+                refreshLink.innerText = 'Package list transformed';
+            });
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -221,11 +227,19 @@ export function transformHL7packagelist(hl7_package_list) {
     var guide_url_list = {};
 
     hl7_package_list.packages.forEach(package_item => {
-        guide_url_list[package_item['canonical']] = {
-            package_id: package_item['package-id']
+        
+        let urlCanonical = new URL(package_item['canonical']);
+        let processedCanonical = processUrl(urlCanonical);
+        guide_url_list[processedCanonical] = {
+            package_id: package_item['package-id'],
+            canonical: package_item['canonical']
         }
-        guide_url_list[package_item['ci-build']] = {
-            package_id: package_item['package-id']
+
+        let urlCiBuild = new URL(package_item['ci-build']);
+        let processedCiBuild = processUrl(urlCiBuild);
+        guide_url_list[processedCiBuild] = {
+            package_id: package_item['package-id'],
+            canonical: package_item['canonical']
         }
     });
 
@@ -245,104 +259,125 @@ function getHL7GuideUrlList() {
 
 function getMatchingHL7Guide(url) {
     const processedUrl = processUrl(url);
+    console.log('HL7Guide processedUrl', processedUrl);
 
-    // TODO get guide_url_list via function instead, not from guides.js
-    // getHL7GuideUrlList;
+    return new Promise((resolve) => {
+        chrome.storage.local.get('guide_url_list', (result) => {
+            let guide_url_list = result?.guide_url_list;
+            if (guide_url_list) {
+                let longestMatch = findLongestMatch(processedUrl, Object.keys(guide_url_list));
+                console.log('HL7Guide longestMatch', longestMatch);
+                let guide_url_metadata = guide_url_list[longestMatch];
 
-    let longestMatch = findLongestMatch(processedUrl, Object.keys(guide_url_list));
-    let guide_url_metadata = guide_url_list[longestMatch]
+                if (guide_url_metadata) {
+                    let current_path = processedUrl.substring(longestMatch.length).replace(/^\/+/, '');
+
+                    let return_array = {
+                        packageName: guide_url_metadata.package_id,
+                    };
+
+                    resolve(return_array);
+                } else {
+                    resolve(null);
+                }
+            } else {
+                console.log('No guide URL list found');
+                resolve(null);
+            }
+        });
+    });
 
     // If there's a match and there are guide details for this match
-    if (guide_url_metadata) {
-        let current_guide_version = guide_url_metadata.version
-        let current_path = processedUrl.substring(longestMatch.length).replace(/^\/+/, '')
-        let guide_details = guides[guide_url_metadata['package_id']]
+    // if (guide_url_metadata) {
+    //     let current_guide_version = guide_url_metadata.version
+    //     let current_path = processedUrl.substring(longestMatch.length).replace(/^\/+/, '')
+    //     let guide_details = guides[guide_url_metadata['package_id']]
 
-        let guideVersions = []
+    //     let guideVersions = []
 
-        // Add the current version
-        const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.version === 'current');
-        if (currentVersionEntry) {
-            let currentGuideVersion = {}
-            if (current_guide_version == 'current') {
-                currentGuideVersion['selected'] = true;
-            }
-            currentGuideVersion['guideVersionLabel'] = currentGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
-            if ('current_version' in guide_details) {
-                currentGuideVersion['guideVersionNumber'] = guide_details.current_version;
-            }
+    //     // Add the current version
+    //     const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.version === 'current');
+    //     if (currentVersionEntry) {
+    //         let currentGuideVersion = {}
+    //         if (current_guide_version == 'current') {
+    //             currentGuideVersion['selected'] = true;
+    //         }
+    //         currentGuideVersion['guideVersionLabel'] = currentGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
+    //         if ('current_version' in guide_details) {
+    //             currentGuideVersion['guideVersionNumber'] = guide_details.current_version;
+    //         }
 
-            if (currentVersionEntry.name) {
-                currentGuideVersion['guideVersionLabel'] += ' (${currentVersionEntry.name})';
-            }
-            currentGuideVersion['guideVersionLink'] = currentVersionEntry.path + '/' + current_path;
-            guideVersions.push(currentGuideVersion);
-        }
+    //         if (currentVersionEntry.name) {
+    //             currentGuideVersion['guideVersionLabel'] += ' (${currentVersionEntry.name})';
+    //         }
+    //         currentGuideVersion['guideVersionLink'] = currentVersionEntry.path + '/' + current_path;
+    //         guideVersions.push(currentGuideVersion);
+    //     }
 
-        // Add the latest (root) version
-        if (!('not_yet_published' in guide_details)) {
-            let latestGuideVersion = {}
-            if (current_guide_version == 'latest') {
-            latestGuideVersion['selected'] = true;
-            }
-            latestGuideVersion['guideVersionLabel'] = 'latest';
+    //     // Add the latest (root) version
+    //     if (!('not_yet_published' in guide_details)) {
+    //         let latestGuideVersion = {}
+    //         if (current_guide_version == 'latest') {
+    //         latestGuideVersion['selected'] = true;
+    //         }
+    //         latestGuideVersion['guideVersionLabel'] = 'latest';
 
-            // Find the current version
-            const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.current === true);
-            if (currentVersionEntry) {
-                latestGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
-            }
+    //         // Find the current version
+    //         const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.current === true);
+    //         if (currentVersionEntry) {
+    //             latestGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
+    //         }
 
-            latestGuideVersion['guideVersionLink'] = guide_details.url + '/' + current_path;
-            guideVersions.push(latestGuideVersion);
-        }
+    //         latestGuideVersion['guideVersionLink'] = guide_details.url + '/' + current_path;
+    //         guideVersions.push(latestGuideVersion);
+    //     }
 
-        // Add the other versions
-        for (var i = 0; i < guide_details.versions.length; i++) {
-            if (guide_details.versions[i].version != 'current') {
-                let guideVersion = {}
-                if (guide_details.versions[i].version == current_guide_version) {
-                    guideVersion['selected'] = true;
-                }
-                guideVersion['guideVersionLabel'] = guideVersion['guideVersionNumber'] = guide_details.versions[i].version;
-                if (guide_details.versions[i].name) {
-                    guideVersion['guideVersionLabel'] += ' ('+guide_details.versions[i].name+')';
-                }
-                guideVersion['guideVersionLink'] = guide_details.versions[i].path + '/' + current_path;
-                guideVersions.push(guideVersion);
-            }
-        }
+    //     // Add the other versions
+    //     for (var i = 0; i < guide_details.versions.length; i++) {
+    //         if (guide_details.versions[i].version != 'current') {
+    //             let guideVersion = {}
+    //             if (guide_details.versions[i].version == current_guide_version) {
+    //                 guideVersion['selected'] = true;
+    //             }
+    //             guideVersion['guideVersionLabel'] = guideVersion['guideVersionNumber'] = guide_details.versions[i].version;
+    //             if (guide_details.versions[i].name) {
+    //                 guideVersion['guideVersionLabel'] += ' ('+guide_details.versions[i].name+')';
+    //             }
+    //             guideVersion['guideVersionLink'] = guide_details.versions[i].path + '/' + current_path;
+    //             guideVersions.push(guideVersion);
+    //         }
+    //     }
         
-        let return_array = {
-            packageName: guide_url_metadata.package_id,
-            guideVersions: guideVersions
-        }
+    //     let return_array = {
+    //         packageName: guide_url_metadata.package_id,
+    //         guideVersions: guideVersions
+    //     }
 
 
-        // Add the FHIR version of the current guide version
-        let current_guide_version_fhir_version;
-        if (current_guide_version=='latest') {
-            // get the details from the latest version
-            let current_guide_version_details = guide_details['versions'].find(version => version['current'] === true && version['version'] !== 'current');
-            if (current_guide_version_details) {
-                current_guide_version_fhir_version = current_guide_version_details['fhirversion'];
-            }
-        } else if (current_guide_version=='current') {
-            current_guide_version_fhir_version = guide_details['fhirversion_latest']
-        } else {
-            // get the details from the version
-            let current_guide_version_details = guide_details['versions'].find(version => version['version'] == guide_url_metadata['version'])    
-            current_guide_version_fhir_version = current_guide_version_details['fhirversion']
-        }
-        if (current_guide_version_fhir_version) {
-            let currentFhirVersion = getFhirVersionLabel(current_guide_version_fhir_version)
-            if (currentFhirVersion) {
-                return_array['currentFhirVersion'] = currentFhirVersion
-            }
-        }
+    //     // Add the FHIR version of the current guide version
+    //     let current_guide_version_fhir_version;
+    //     if (current_guide_version=='latest') {
+    //         // get the details from the latest version
+    //         let current_guide_version_details = guide_details['versions'].find(version => version['current'] === true && version['version'] !== 'current');
+    //         if (current_guide_version_details) {
+    //             current_guide_version_fhir_version = current_guide_version_details['fhirversion'];
+    //         }
+    //     } else if (current_guide_version=='current') {
+    //         current_guide_version_fhir_version = guide_details['fhirversion_latest']
+    //     } else {
+    //         // get the details from the version
+    //         let current_guide_version_details = guide_details['versions'].find(version => version['version'] == guide_url_metadata['version'])    
+    //         current_guide_version_fhir_version = current_guide_version_details['fhirversion']
+    //     }
+    //     if (current_guide_version_fhir_version) {
+    //         let currentFhirVersion = getFhirVersionLabel(current_guide_version_fhir_version)
+    //         if (currentFhirVersion) {
+    //             return_array['currentFhirVersion'] = currentFhirVersion
+    //         }
+    //     }
         
-        return return_array
-    }
+    //     return return_array
+    // }
 }
 
 function getMatchingHl7FhirCoreGuide(url) {
@@ -423,18 +458,11 @@ function resetUI() {
     document.getElementById("search-scope").style.display = "none";
 }
 
-export function updateUI(urlString) {
-    // Here we should send the URL and get:
-    // - currentFhirVersion: the FHIR version
-    // - packageName: the package name
-    // - guideVersions: a list of all versions of the guide
-    //    - guideVersionLabel: Version label
-    //    - guideVersionLink: Version link
-    //    - selected: true if this is the selected version
+export async function updateUI(urlString) {
     resetUI();
 
-    console.log(urlString)
-    var matchingGuide = getMatchingGuide(urlString);
+    console.log('urlString: ' + urlString);
+    var matchingGuide = await getMatchingGuide(urlString);
 
     if (matchingGuide) {
         let currentFhirVersion = matchingGuide.currentFhirVersion;
@@ -442,7 +470,7 @@ export function updateUI(urlString) {
         let guideVersions = matchingGuide.guideVersions;
         let simplifierGuideKey = matchingGuide.simplifierGuideKey;
 
-        console.log(matchingGuide)
+        console.log('matchingGuide', matchingGuide);
 
         if (guideVersions) {
             var versionListElement = document.getElementById("version-list");

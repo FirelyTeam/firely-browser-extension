@@ -1,7 +1,7 @@
 import {
   generateSearchUrl,
   updateUI,
-  fetchAndStoreData
+  refreshClicked
 } from './functions.js';
 
 console.log('Firely FHIR Extension: This is where popup.js logs to the console.');
@@ -24,7 +24,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Add listener to the refresh link
   var refreshLink = document.getElementById("refresh-link");
-  refreshLink.addEventListener("click", fetchAndStoreData);
+  refreshLink.addEventListener("click", function() {
+    chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+      refreshClicked(tabs[0].url);
+    });
+  });
 
   // Focus on the search field
   var searchQuery = document.getElementById("search-query");
