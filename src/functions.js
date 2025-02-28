@@ -161,69 +161,86 @@ function findLongestMatch(element, list) {
 }
 
 function processUrl(url) {
+    // Remove the www. from the hostname and return only the hostname + pathname
+    // Example: https://www.hl7.org/fhir/us/core/STU6/index.html -> hl7.org/fhir/us/core/STU6/index.html
     url.hostname = url.hostname
         .replace('www.', '');
     return url.hostname + url.pathname;
 }
 
-export function refreshClicked(urlString) {
-    fetchAndStoreData();
+export async function refreshClicked(urlString) {
+    await fetchAndStoreHL7GuidesList();
     updateUI(urlString);
 }
 
-export function fetchAndStoreData() {
+export function resetClicked(urlString) {
+    console.log('Resetting');
+    chrome.storage.local.clear(() => {
+        updateUI(urlString);
+    });
+}
+
+export async function fetchAndStoreHL7GuidesList() {
     console.log('Fetching new data');
     var refreshLink = document.getElementById("refresh-link");
 
-    fetch('https://hl7.org/fhir/package-registry.json')
-        .then(response => response.json())
-        .then(hl7_package_list => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const response = await fetch('https://hl7.org/fhir/package-registry.json');
+            const hl7_package_list = await response.json();
+
+            // TODO Also process https://build.fhir.org/ig/qas.json for extra guides
+            
             const now = new Date().getTime();
             const item = {
                 data: hl7_package_list,
                 timestamp: now
             };
 
-            chrome.storage.local.set({'hl7-package-list': item}, () => {
-                console.log('Package list fetched and stored', hl7_package_list);
-                refreshLink.innerText = 'Package list downloaded';
+            await new Promise(resolve => {
+                chrome.storage.local.set({'hl7-package-list': item}, () => {
+                    console.log('Package list fetched and stored', hl7_package_list);
+                    refreshLink.innerText = 'Package list downloaded';
+                    resolve();
+                });
             });
 
-            var guide_url_list = transformHL7packagelist(hl7_package_list);
-            chrome.storage.local.set({'guide_url_list': guide_url_list}, () => {
-                console.log('Guide URL list transformed', guide_url_list);
-                refreshLink.innerText = 'Package list transformed';
+            const guide_url_list = transformHL7packagelist(hl7_package_list);
+            await new Promise(resolve => {
+                chrome.storage.local.set({'guide_url_list': guide_url_list}, () => {
+                    console.log('Guide URL list transformed', guide_url_list);
+                    refreshLink.innerText = 'Package list transformed';
+                    resolve();
+                });
             });
-        })
-        .catch((error) => {
+
+            resolve(guide_url_list);
+        } catch (error) {
             console.error('Error:', error);
             refreshLink.innerText = 'Error when downloading package list';
-        });
+            reject(error);
+        }
+    });
 }
 
-function fetchDataFromStorage() {
-    // Check if there's a recent version of hl7-package-list in storage
-    // If there is, return that. If not, request the data from the server
-    
-    // return new Promise((resolve, reject) => {
-    //     chrome.storage.local.get('hl7-package-list', (result) => {
-    //         if (result && result.hl7-package-list) {
-    //             try {
-    //                 const data = JSON.parse(result.hl7-package-list.data);
-    //                 resolve(data);
-    //             } catch (error) {
-    //                 reject(error);
-    //             }
-    //         } else {
-    //             resolve(guides);
-    //         }
-    //     });
-    // });
+export async function retrieveHL7GuidesList() {
+    return new Promise((resolve, reject) => {
+        chrome.storage.local.get('guide_url_list', async (result) => {
+            try {
+                if (result?.guide_url_list) {
+                    resolve(result.guide_url_list);
+                } else {
+                    const guide_url_list = await fetchAndStoreHL7GuidesList();
+                    resolve(guide_url_list);
+                }
+            } catch (error) {
+                reject(error);
+            }
+        });
+    });
 }
 
 export function transformHL7packagelist(hl7_package_list) {
-    // TODO process the hl7_package_list to look like the guide_url_list from guides.js
-
     var guide_url_list = {};
 
     hl7_package_list.packages.forEach(package_item => {
@@ -241,50 +258,97 @@ export function transformHL7packagelist(hl7_package_list) {
             package_id: package_item['package-id'],
             canonical: package_item['canonical']
         }
+
+        if (processedCiBuild.startsWith('build.fhir.org/ig/')) {
+            let githubUrl = processedCiBuild.replace('build.fhir.org/ig/', 'github.com/');
+            guide_url_list[githubUrl] = {
+                package_id: package_item['package-id'],
+                canonical: package_item['canonical']
+            }
+        }
     });
 
     return guide_url_list
 }
 
-function getHL7GuideUrlList() {
-    // TODO try to get data from local storage
-    // fetchDataFromStorage;
+export async function getHL7GuideVersions(url) {
+    let packageList = await fetch(url + '/package-list.json');
+    let packageListData = await packageList.json();
 
-    // TODO if that fails, get it from the internet and get it processed
-    // fetchAndStoreData;
-    // transformHL7packagelist;
+    let guideVersions = {};
 
-    // return guide_url_list
+    guideVersions[packageListData.canonical] = {
+        guideVersionLabel: 'Latest',
+        guideVersionLink: packageListData.canonical
+    };
+
+    for (let version of packageListData.list) {
+        let processedPath = processUrl(new URL(version.path));
+        guideVersions[processedPath] = {
+            guideVersionLabel: version.version,
+            guideVersionLink: version.path
+        };
+
+        if (version.sequence) {
+            guideVersions[processedPath]['guideVersionLabel'] = guideVersions[processedPath]['guideVersionLabel'] + ' ('+version.sequence+')';
+        }
+
+        if (processedPath.startsWith('build.fhir.org/ig/')) {
+            let githubUrl = processedPath.replace('build.fhir.org/ig/', 'github.com/');
+            guideVersions[githubUrl] = {
+                guideVersionLabel: 'GitHub',
+                guideVersionLink: 'https://'+githubUrl
+            };
+        }
+    }
+
+    return guideVersions;
 }
 
 function getMatchingHL7Guide(url) {
     const processedUrl = processUrl(url);
     console.log('HL7Guide processedUrl', processedUrl);
 
-    return new Promise((resolve) => {
-        chrome.storage.local.get('guide_url_list', (result) => {
-            let guide_url_list = result?.guide_url_list;
-            if (guide_url_list) {
-                let longestMatch = findLongestMatch(processedUrl, Object.keys(guide_url_list));
-                console.log('HL7Guide longestMatch', longestMatch);
-                let guide_url_metadata = guide_url_list[longestMatch];
+    return new Promise(async (resolve) => {
+        let guide_url_list = await retrieveHL7GuidesList();
+        if (guide_url_list) {
+            let longestMatch = findLongestMatch(processedUrl, Object.keys(guide_url_list));
+            console.log('HL7Guide longestGuideMatch', longestMatch);
+            let guide_url_metadata = guide_url_list[longestMatch];
 
-                if (guide_url_metadata) {
+            if (guide_url_metadata) {
+
+                let return_array = {
+                    packageName: guide_url_metadata.package_id,
+                };
+
+                let guideVersions = await getHL7GuideVersions(guide_url_metadata.canonical);
+                if (guideVersions) {
+                    let longestMatch = findLongestMatch(processedUrl, Object.keys(guideVersions));
+                    console.log('HL7Guide longestGuideVersionMatch', longestMatch);
                     let current_path = processedUrl.substring(longestMatch.length).replace(/^\/+/, '');
+                    console.log('HL7Guide current_path', current_path);
 
-                    let return_array = {
-                        packageName: guide_url_metadata.package_id,
-                    };
-
-                    resolve(return_array);
-                } else {
-                    resolve(null);
+                    let versions = [];
+                    for (let [path, version] of Object.entries(guideVersions)) {
+                        // TODO: Add the current_path to the guideVersionLink, unless GitHub
+                        versions.push(version);
+                        if (path == longestMatch) {
+                            version.selected = true;
+                        }
+                    }
+                    console.log('HL7Guide versions', versions);
+                    return_array['guideVersions'] = versions;
                 }
+
+                resolve(return_array);
             } else {
-                console.log('No guide URL list found');
                 resolve(null);
             }
-        });
+        } else {
+            console.log('No guide URL list found');
+            resolve(null);
+        }
     });
 
     // If there's a match and there are guide details for this match

@@ -1,8 +1,9 @@
 import {
     generateSearchUrl,
     getMatchingGuide,
-    fetchAndStoreData,
-    transformHL7packagelist
+    fetchAndStoreHL7GuidesList,
+    transformHL7packagelist,
+    getHL7GuideVersions
 } from '../src/functions.js';
 import packageRegistry from './test_data/package-registry.json' assert { type: "json" };
 import {expect} from 'chai';
@@ -89,19 +90,61 @@ describe("transformHL7packagelist", function() {
         // Check if the transformed list is an array
         expect(transformedList).to.be.an('object');
 
-        const itemUSCoreCanonical = transformedList['http://hl7.org/fhir/us/core'];
-        console.log(itemUSCoreCanonical);
+        const itemUSCoreCanonical = transformedList['hl7.org/fhir/us/core'];
         expect(itemUSCoreCanonical).to.have.property('package_id');
         expect(itemUSCoreCanonical.package_id).to.equal('hl7.fhir.us.core');
         expect(itemUSCoreCanonical).to.have.property('canonical');
         expect(itemUSCoreCanonical.canonical).to.equal('http://hl7.org/fhir/us/core');
         
-        const itemUSCoreBuild = transformedList['http://build.fhir.org/ig/HL7/US-Core'];
-        console.log(itemUSCoreBuild);
+        const itemUSCoreBuild = transformedList['build.fhir.org/ig/HL7/US-Core'];
         expect(itemUSCoreBuild).to.have.property('package_id');
         expect(itemUSCoreBuild.package_id).to.equal('hl7.fhir.us.core');
         expect(itemUSCoreBuild).to.have.property('canonical');
         expect(itemUSCoreBuild.canonical).to.equal('http://hl7.org/fhir/us/core');
+    });
+});
+
+describe("getHL7GuideVersions", function() {
+    beforeEach(function() {
+        // Mock global fetch
+        global.fetch = async (url) => ({
+            json: async () => ({
+                "package-id": "hl7.fhir.us.core",
+                "canonical": "http://hl7.org/fhir/us/core",
+                "list": [
+                    {
+                        "version": "6.0.0",
+                        "path": "http://hl7.org/fhir/us/core/STU6",
+                        "status": "trial-use",
+                        "sequence": "STU 6"
+                    },
+                    {
+                        "version": "5.0.1",
+                        "path": "http://hl7.org/fhir/us/core/STU5.0.1",
+                        "status": "trial-use",
+                        "sequence": "STU 5.0.1"
+                    }
+                ]
+            })
+        });
+    });
+
+    afterEach(function() {
+        delete global.fetch;
+    });
+
+    it("should process package-list.json into guide versions", async function() {
+        const guideVersions = await getHL7GuideVersions("http://hl7.org/fhir/us/core");
+        
+        expect(guideVersions).to.be.an('object');
+        
+        const stu6Version = guideVersions['hl7.org/fhir/us/core/STU6'];
+        expect(stu6Version).to.have.property('guideVersionLabel', '6.0.0');
+        expect(stu6Version).to.have.property('guideVersionLink', 'http://hl7.org/fhir/us/core/STU6');
+        
+        const stu5Version = guideVersions['hl7.org/fhir/us/core/STU5.0.1'];
+        expect(stu5Version).to.have.property('guideVersionLabel', '5.0.1');
+        expect(stu5Version).to.have.property('guideVersionLink', 'http://hl7.org/fhir/us/core/STU5.0.1');
     });
 });
 
@@ -129,6 +172,22 @@ describe("getMatchingGuide", function() {
                 }
             }
         };
+
+        // Mock global fetch
+        global.fetch = async (url) => ({
+            json: async () => ({
+                "package-id": "hl7.fhir.us.core",
+                "canonical": "http://hl7.org/fhir/us/core",
+                "list": [
+                    {
+                        "version": "6.0.0",
+                        "path": "http://hl7.org/fhir/us/core/STU6",
+                        "status": "trial-use",
+                        "sequence": "STU 6"
+                    }
+                ]
+            })
+        });
     });
 
     afterEach(function() {

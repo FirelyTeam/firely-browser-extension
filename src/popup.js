@@ -1,7 +1,8 @@
 import {
   generateSearchUrl,
   updateUI,
-  refreshClicked
+  refreshClicked,
+  resetClicked
 } from './functions.js';
 
 console.log('Firely FHIR Extension: This is where popup.js logs to the console.');
@@ -27,6 +28,14 @@ document.addEventListener("DOMContentLoaded", function() {
   refreshLink.addEventListener("click", function() {
     chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
       refreshClicked(tabs[0].url);
+    });
+  });
+
+  // Add listener to the reset link
+  var resetLink = document.getElementById("reset-link");
+  resetLink.addEventListener("click", function() {
+    chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+      resetClicked(tabs[0].url);
     });
   });
 
