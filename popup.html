@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
             <div class="search-box">
                 <input aria-label="Search on Simplifier.net" class="form-control" name="q" placeholder="Search on Simplifier.net" type="text" autocomplete="off" id="search-query">
                 <button class="btn btn-link" aria-label="Submit Search" id="search-button">
-                    <i class="glyphicon glyphicon-search"></i>
+                    <i class="fas fa-search"></i>
                 </button>
             </div>
 
@@ -45,10 +46,11 @@
                 <label for="search-type-all">In all specifications</label> <br/>
             </div>
         </form>
-
-        <a id="refresh-link" href="#">Refresh</a>
-        <a id="reset-link" href="#">Reset</a>
+        <div id="status-message"></div>
     </div>
+    <button id="reset-button" title="Reset all settings">
+        <i class="fas fa-undo"></i>
+    </button>
     <script type="module" src="/src/popup.js"></script>
 </body>
 </html>

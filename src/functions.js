@@ -1,3 +1,26 @@
+let statusTimeout = null;
+
+export function showStatus(message, statusElement) {
+    if (!statusElement) {
+        console.warn('showStatus called without a status element');
+        return;
+    }
+    
+    // Clear any existing timeout
+    if (statusTimeout) {
+        clearTimeout(statusTimeout);
+    }
+    
+    // Set the message and show it
+    statusElement.textContent = message;
+    statusElement.classList.add('visible');
+    
+    // Hide after 3 seconds
+    statusTimeout = setTimeout(() => {
+        statusElement.classList.remove('visible');
+    }, 3000);
+}
+
 export function generateSearchUrl(document) {
     var searchQuery = document.getElementById("search-query").value;
     var searchUrl = "https://simplifier.net/search?q=" + encodeURIComponent(searchQuery);
@@ -72,7 +95,7 @@ function getFhirVersionLabel(fhirVersionNumber) {
     }
 }
 
-export async function getMatchingGuide(urlString) {
+export async function getMatchingGuide(urlString, statusElement) {
     let url = new URL(urlString);
     let locationHostname = String(url.hostname).toLowerCase();
 
@@ -80,9 +103,9 @@ export async function getMatchingGuide(urlString) {
         // Match against Simplifier.net
         return getSimplifierDetails(url);
     } else if (locationHostname == 'registry.fhir.org') {
-        // Match against registry.fhir.org
+        // TODO: Match against registry.fhir.org
     } else {
-        let matchingGuide = await getMatchingHL7Guide(url);
+        let matchingGuide = await getMatchingHL7Guide(url, statusElement);
         if (matchingGuide) {
             return matchingGuide;
         } else if (locationHostname == 'hl7.org' || locationHostname == 'www.hl7.org' || locationHostname == 'build.fhir.org') {
@@ -168,76 +191,127 @@ function processUrl(url) {
     return url.hostname + url.pathname;
 }
 
-export async function refreshClicked(urlString) {
-    await fetchAndStoreHL7GuidesList();
-    updateUI(urlString);
-}
-
-export function resetClicked(urlString) {
+export function resetClicked(urlString, statusElement) {
     console.log('Resetting');
     chrome.storage.local.clear(() => {
-        updateUI(urlString);
+        showStatus('Resetting', statusElement);
+        updateUI(urlString, statusElement);
     });
 }
 
 export async function fetchAndStoreHL7GuidesList() {
     console.log('Fetching new data');
-    var refreshLink = document.getElementById("refresh-link");
 
-    return new Promise(async (resolve, reject) => {
-        try {
-            const response = await fetch('https://hl7.org/fhir/package-registry.json');
-            const hl7_package_list = await response.json();
+    try {
+        // Fetch both package registry and qas data
+        const [hl7Response, qasResponse] = await Promise.all([
+            fetch('https://hl7.org/fhir/package-registry.json'),
+            fetch('https://build.fhir.org/ig/qas.json')
+        ]);
+        
+        const [hl7_package_list, qas_data] = await Promise.all([
+            hl7Response.json(),
+            qasResponse.json()
+        ]);
 
-            // TODO Also process https://build.fhir.org/ig/qas.json for extra guides
-            
-            const now = new Date().getTime();
-            const item = {
-                data: hl7_package_list,
-                timestamp: now
-            };
-
-            await new Promise(resolve => {
-                chrome.storage.local.set({'hl7-package-list': item}, () => {
-                    console.log('Package list fetched and stored', hl7_package_list);
-                    refreshLink.innerText = 'Package list downloaded';
-                    resolve();
-                });
+        // Process both sources
+        const now = new Date().getTime();
+        
+        // Store HL7 package list
+        await new Promise((resolve) => {
+            chrome.storage.local.set({'hl7-package-list': { data: hl7_package_list, timestamp: now }}, () => {
+                console.log('Package list fetched and stored', hl7_package_list);
+                resolve();
             });
+        });
 
-            const guide_url_list = transformHL7packagelist(hl7_package_list);
-            await new Promise(resolve => {
-                chrome.storage.local.set({'guide_url_list': guide_url_list}, () => {
-                    console.log('Guide URL list transformed', guide_url_list);
-                    refreshLink.innerText = 'Package list transformed';
-                    resolve();
-                });
+        // Store QAS data
+        await new Promise((resolve) => {
+            chrome.storage.local.set({'qas-data': { data: qas_data, timestamp: now }}, () => {
+                console.log('QAS data fetched and stored', qas_data);
+                resolve();
             });
+        });
 
-            resolve(guide_url_list);
-        } catch (error) {
-            console.error('Error:', error);
-            refreshLink.innerText = 'Error when downloading package list';
-            reject(error);
-        }
-    });
+        // Transform and combine both sources
+        const hl7Transformed = transformHL7packagelist(hl7_package_list);
+        const qasTransformed = transformQASData(qas_data);
+
+        const guide_url_list = {
+            ...hl7Transformed,
+            ...qasTransformed
+        };
+
+        await new Promise((resolve) => {
+            chrome.storage.local.set({'guide_url_list': guide_url_list}, () => {
+                console.log('Guide URL list transformed and stored', guide_url_list);
+                resolve();
+            });
+        });
+
+        return guide_url_list;
+        
+    } catch (error) {
+        console.error('Error in fetchAndStoreHL7GuidesList:', error);
+        console.error('Error stack:', error.stack);
+        throw error;
+    }
+}
+
+function transformQASData(qas_data) {
+    const guide_url_list = {};
+    
+    if (qas_data && Array.isArray(qas_data)) {
+        qas_data.forEach(guide => {
+            if (guide.url && guide['package-id']) {
+                // Split URL on 'ImplementationGuide' and take first part
+                let canonical = guide.url.split('/ImplementationGuide')[0];
+                const processedUrl = processUrl(new URL(canonical));
+                guide_url_list[processedUrl] = {
+                    package_id: guide['package-id'],
+                    canonical: canonical
+                };
+
+                let repoPath = guide.repo.split('/branches')[0];
+
+                // Add current version
+                if (guide.repo) {
+                    let repoUrl = 'build.fhir.org/ig/'+repoPath;
+                    guide_url_list[repoUrl] = {
+                        package_id: guide['package-id'],
+                        canonical: canonical
+                    };
+                }
+                // Add GitHub version
+                if (guide.repo) {
+                    let githubUrl = 'github.com/'+repoPath;
+                    guide_url_list[githubUrl] = {
+                        package_id: guide['package-id'],
+                        canonical: canonical
+                    };  
+                }
+            }
+        });
+    }
+    
+    return guide_url_list;
 }
 
 export async function retrieveHL7GuidesList() {
-    return new Promise((resolve, reject) => {
-        chrome.storage.local.get('guide_url_list', async (result) => {
-            try {
-                if (result?.guide_url_list) {
-                    resolve(result.guide_url_list);
-                } else {
-                    const guide_url_list = await fetchAndStoreHL7GuidesList();
-                    resolve(guide_url_list);
-                }
-            } catch (error) {
-                reject(error);
-            }
+    try {
+        const result = await new Promise((resolve) => {
+            chrome.storage.local.get('guide_url_list', resolve);
         });
-    });
+
+        if (result?.guide_url_list) {
+            return result.guide_url_list;
+        } else {
+            return await fetchAndStoreHL7GuidesList();
+        }
+    } catch (error) {
+        console.error('Error in retrieveHL7GuidesList:', error);
+        throw error;
+    }
 }
 
 export function transformHL7packagelist(hl7_package_list) {
@@ -271,26 +345,77 @@ export function transformHL7packagelist(hl7_package_list) {
     return guide_url_list
 }
 
-export async function getHL7GuideVersions(url) {
-    let packageList = await fetch(url + '/package-list.json');
-    let packageListData = await packageList.json();
+export async function getHL7GuideVersions(canonicalUrlString, currentUrlString, statusElement) {
+    // TODO: Store HL7 guide versions in local storage for canonicalUrlString
+
+    console.log('getHL7GuideVersions: canonicalUrlString', canonicalUrlString, 'currentUrlString', currentUrlString);
+    let canonicalUrl = new URL(canonicalUrlString);
+    // Change to https, because canonicals are sometimes http but website is generally https
+    if (canonicalUrl.protocol === 'http:') {
+        canonicalUrl.protocol = 'https:';
+    }
+    // Remove trailing slash if present
+    if (canonicalUrl.pathname.endsWith('/')) {
+        canonicalUrl.pathname = canonicalUrl.pathname.slice(0, -1);
+    }
+
+    // Get domains for comparison
+    const canonicalDomain = canonicalUrl.hostname.toLowerCase();
+    const currentUrl = new URL('https://' + currentUrlString);
+    const currentDomain = currentUrl.hostname.toLowerCase();
+    
+    // Check if domains match or if it's an HL7 domain
+    const isHL7Domain = canonicalDomain === 'hl7.org' || 
+                       canonicalDomain === 'build.fhir.org' || 
+                       canonicalDomain === 'www.hl7.org';
+    const domainsMatch = canonicalDomain === currentDomain;
+    console.log('getHL7GuideVersions: canonicalDomain', canonicalDomain, 'currentDomain', currentDomain, 'isHL7Domain', isHL7Domain, 'domainsMatch', domainsMatch);
+
+    if (!isHL7Domain && !domainsMatch) {
+        console.log('getHL7GuideVersions: Canonical domain', canonicalDomain, 'current domain', currentDomain);
+        showStatus('Please navigate to ' + canonicalUrl + ' and try again', statusElement);
+        return null;
+    } else {
+        console.log('getHL7GuideVersions: Canonical domain', canonicalDomain, 'current domain', currentDomain, 'isHL7Domain', isHL7Domain, 'domainsMatch', domainsMatch);
+    }
+
+    let packageListData;
+    try {
+        let packageList = await fetch(canonicalUrl + '/package-list.json');
+        if (!packageList.ok) {
+            throw new Error(`HTTP error! status: ${packageList.status}`);
+        }
+        packageListData = await packageList.json();
+    } catch (error) {
+        console.error('Error fetching package list:', error);
+        showStatus('Error fetching guide versions', statusElement);
+        return null;
+    }
 
     let guideVersions = {};
 
-    guideVersions[packageListData.canonical] = {
-        guideVersionLabel: 'Latest',
-        guideVersionLink: packageListData.canonical
+    // Add the latest version
+    let processedCanonical = processUrl(new URL(packageListData.canonical));
+    guideVersions[processedCanonical] = {
+        guideVersionLabel: 'latest',
+        guideVersionLink: packageListData.canonical,
+        ...(packageListData.list.find(v => v.current === true) && {
+            guideVersionNumber: packageListData.list.find(v => v.current === true).version,
+            guideFhirVersion: packageListData.list.find(v => v.current === true).fhirversion
+        })
     };
 
     for (let version of packageListData.list) {
         let processedPath = processUrl(new URL(version.path));
         guideVersions[processedPath] = {
             guideVersionLabel: version.version,
-            guideVersionLink: version.path
+            guideVersionLink: version.path,
+            guideVersionNumber: version.version,
+            guideFhirVersion: version.fhirversion
         };
 
-        if (version.sequence) {
-            guideVersions[processedPath]['guideVersionLabel'] = guideVersions[processedPath]['guideVersionLabel'] + ' ('+version.sequence+')';
+        if (version.current === true) {
+            guideVersions[processedPath]['guideVersionLabel'] = guideVersions[processedPath]['guideVersionLabel'] + ' (Latest)';
         }
 
         if (processedPath.startsWith('build.fhir.org/ig/')) {
@@ -302,10 +427,43 @@ export async function getHL7GuideVersions(url) {
         }
     }
 
+    // Reorder versions to put GitHub, current and latest first
+    let orderedVersions = {};
+    
+    // Add GitHub version first if it exists
+    Object.entries(guideVersions).forEach(([path, version]) => {
+        if (version.guideVersionLabel === 'GitHub') {
+            orderedVersions[path] = version;
+        }
+    });
+
+    // Add current version next
+    Object.entries(guideVersions).forEach(([path, version]) => {
+        if (version.guideVersionLabel === 'current') {
+            orderedVersions[path] = version;
+        }
+    });
+
+    // Add latest version if not already added
+    Object.entries(guideVersions).forEach(([path, version]) => {
+        if (version.guideVersionLabel === 'latest') {
+            orderedVersions[path] = version;
+        }
+    });
+
+    // Add remaining versions
+    Object.entries(guideVersions).forEach(([path, version]) => {
+        if (!orderedVersions[path]) {
+            orderedVersions[path] = version;
+        }
+    });
+
+    guideVersions = orderedVersions;
+
     return guideVersions;
 }
 
-function getMatchingHL7Guide(url) {
+function getMatchingHL7Guide(url, statusElement) {
     const processedUrl = processUrl(url);
     console.log('HL7Guide processedUrl', processedUrl);
 
@@ -317,12 +475,11 @@ function getMatchingHL7Guide(url) {
             let guide_url_metadata = guide_url_list[longestMatch];
 
             if (guide_url_metadata) {
-
                 let return_array = {
                     packageName: guide_url_metadata.package_id,
                 };
 
-                let guideVersions = await getHL7GuideVersions(guide_url_metadata.canonical);
+                let guideVersions = await getHL7GuideVersions(guide_url_metadata.canonical, processedUrl, statusElement);
                 if (guideVersions) {
                     let longestMatch = findLongestMatch(processedUrl, Object.keys(guideVersions));
                     console.log('HL7Guide longestGuideVersionMatch', longestMatch);
@@ -330,13 +487,31 @@ function getMatchingHL7Guide(url) {
                     console.log('HL7Guide current_path', current_path);
 
                     let versions = [];
+                    let selectedVersion = null;
+                    
+                    // First pass: find the selected version
                     for (let [path, version] of Object.entries(guideVersions)) {
-                        // TODO: Add the current_path to the guideVersionLink, unless GitHub
-                        versions.push(version);
                         if (path == longestMatch) {
                             version.selected = true;
+                            selectedVersion = version;
+                            if (version.guideFhirVersion) {
+                                return_array['currentFhirVersion'] = getFhirVersionLabel(version.guideFhirVersion);
+                            }
                         }
                     }
+
+                    // Second pass: add versions with appropriate links
+                    for (let [path, version] of Object.entries(guideVersions)) {
+                        // Only add current_path if the selected version is not GitHub
+                        if (selectedVersion?.guideVersionLabel !== 'GitHub') {
+                            version.guideVersionLink = version.guideVersionLabel === 'GitHub' ? 
+                                version.guideVersionLink : 
+                                version.guideVersionLink + (current_path ? '/' + current_path : '');
+                        }
+                        versions.push(version);
+                        console.log('HL7Guide path', path, 'longestMatch', longestMatch);
+                    }
+                    
                     console.log('HL7Guide versions', versions);
                     return_array['guideVersions'] = versions;
                 }
@@ -350,98 +525,6 @@ function getMatchingHL7Guide(url) {
             resolve(null);
         }
     });
-
-    // If there's a match and there are guide details for this match
-    // if (guide_url_metadata) {
-    //     let current_guide_version = guide_url_metadata.version
-    //     let current_path = processedUrl.substring(longestMatch.length).replace(/^\/+/, '')
-    //     let guide_details = guides[guide_url_metadata['package_id']]
-
-    //     let guideVersions = []
-
-    //     // Add the current version
-    //     const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.version === 'current');
-    //     if (currentVersionEntry) {
-    //         let currentGuideVersion = {}
-    //         if (current_guide_version == 'current') {
-    //             currentGuideVersion['selected'] = true;
-    //         }
-    //         currentGuideVersion['guideVersionLabel'] = currentGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
-    //         if ('current_version' in guide_details) {
-    //             currentGuideVersion['guideVersionNumber'] = guide_details.current_version;
-    //         }
-
-    //         if (currentVersionEntry.name) {
-    //             currentGuideVersion['guideVersionLabel'] += ' (${currentVersionEntry.name})';
-    //         }
-    //         currentGuideVersion['guideVersionLink'] = currentVersionEntry.path + '/' + current_path;
-    //         guideVersions.push(currentGuideVersion);
-    //     }
-
-    //     // Add the latest (root) version
-    //     if (!('not_yet_published' in guide_details)) {
-    //         let latestGuideVersion = {}
-    //         if (current_guide_version == 'latest') {
-    //         latestGuideVersion['selected'] = true;
-    //         }
-    //         latestGuideVersion['guideVersionLabel'] = 'latest';
-
-    //         // Find the current version
-    //         const currentVersionEntry = guide_details.versions.find(versionEntry => versionEntry.current === true);
-    //         if (currentVersionEntry) {
-    //             latestGuideVersion['guideVersionNumber'] = currentVersionEntry.version;
-    //         }
-
-    //         latestGuideVersion['guideVersionLink'] = guide_details.url + '/' + current_path;
-    //         guideVersions.push(latestGuideVersion);
-    //     }
-
-    //     // Add the other versions
-    //     for (var i = 0; i < guide_details.versions.length; i++) {
-    //         if (guide_details.versions[i].version != 'current') {
-    //             let guideVersion = {}
-    //             if (guide_details.versions[i].version == current_guide_version) {
-    //                 guideVersion['selected'] = true;
-    //             }
-    //             guideVersion['guideVersionLabel'] = guideVersion['guideVersionNumber'] = guide_details.versions[i].version;
-    //             if (guide_details.versions[i].name) {
-    //                 guideVersion['guideVersionLabel'] += ' ('+guide_details.versions[i].name+')';
-    //             }
-    //             guideVersion['guideVersionLink'] = guide_details.versions[i].path + '/' + current_path;
-    //             guideVersions.push(guideVersion);
-    //         }
-    //     }
-        
-    //     let return_array = {
-    //         packageName: guide_url_metadata.package_id,
-    //         guideVersions: guideVersions
-    //     }
-
-
-    //     // Add the FHIR version of the current guide version
-    //     let current_guide_version_fhir_version;
-    //     if (current_guide_version=='latest') {
-    //         // get the details from the latest version
-    //         let current_guide_version_details = guide_details['versions'].find(version => version['current'] === true && version['version'] !== 'current');
-    //         if (current_guide_version_details) {
-    //             current_guide_version_fhir_version = current_guide_version_details['fhirversion'];
-    //         }
-    //     } else if (current_guide_version=='current') {
-    //         current_guide_version_fhir_version = guide_details['fhirversion_latest']
-    //     } else {
-    //         // get the details from the version
-    //         let current_guide_version_details = guide_details['versions'].find(version => version['version'] == guide_url_metadata['version'])    
-    //         current_guide_version_fhir_version = current_guide_version_details['fhirversion']
-    //     }
-    //     if (current_guide_version_fhir_version) {
-    //         let currentFhirVersion = getFhirVersionLabel(current_guide_version_fhir_version)
-    //         if (currentFhirVersion) {
-    //             return_array['currentFhirVersion'] = currentFhirVersion
-    //         }
-    //     }
-        
-    //     return return_array
-    // }
 }
 
 function getMatchingHl7FhirCoreGuide(url) {
@@ -481,18 +564,33 @@ function getMatchingHl7FhirCoreGuide(url) {
     }
 }
 
-export function createVersionListItem(versionListElement, version, url, selected) {
+export function createVersionListItem(versionListElement, version, urlString, selected, statusElement) {
     var versionListButton = document.createElement("button");
     versionListButton.type = "button";
     versionListButton.title = "Visit this page in version " + version;
-    versionListButton.textContent = version.toUpperCase();
+    
+    if (version === 'GitHub') {
+        // Create a span for the GitHub icon
+        var githubIcon = document.createElement("i");
+        githubIcon.classList.add("fab", "fa-github");
+        versionListButton.appendChild(githubIcon);
+        versionListButton.title = 'View this specification on GitHub';
+    } else if (version === 'current') {
+        // Create a span for the development icon
+        var devIcon = document.createElement("i");
+        devIcon.classList.add("fas", "fa-flask");
+        versionListButton.appendChild(devIcon);
+    } else {
+        versionListButton.textContent = version.toUpperCase();
+    }
+    
     versionListButton.classList.add("yellow-button"); // add yellow-button class
     if (selected) {
         versionListButton.classList.add("selected"); // add selected class
     }
     versionListButton.addEventListener("click", function() {
-        chrome.tabs.update({url: url});
-        updateUI(url);
+        chrome.tabs.update({url: urlString});
+        updateUI(urlString, statusElement);
     });
     versionListElement.appendChild(versionListButton);
 }
@@ -522,11 +620,11 @@ function resetUI() {
     document.getElementById("search-scope").style.display = "none";
 }
 
-export async function updateUI(urlString) {
+export async function updateUI(urlString, statusElement) {
     resetUI();
 
     console.log('urlString: ' + urlString);
-    var matchingGuide = await getMatchingGuide(urlString);
+    var matchingGuide = await getMatchingGuide(urlString, statusElement);
 
     if (matchingGuide) {
         let currentFhirVersion = matchingGuide.currentFhirVersion;
@@ -542,7 +640,7 @@ export async function updateUI(urlString) {
 
             for (var i = 0; i < guideVersions.length; i++) {
                 var version = guideVersions[i];
-                createVersionListItem(versionListElement, version.guideVersionLabel, version.guideVersionLink, version.selected);
+                createVersionListItem(versionListElement, version.guideVersionLabel, version.guideVersionLink, version.selected, statusElement);
             }
 
             if (guideVersions.length > 6) {
@@ -552,7 +650,7 @@ export async function updateUI(urlString) {
                 }
 
                 var showAllLink = document.createElement("a");
-                showAllLink.classList.add("glyphicon", "glyphicon-chevron-down", "more-button");
+                showAllLink.classList.add("fas", "fa-chevron-down", "more-button");
                 showAllLink.href = "#";
                 showAllLink.title = "Show all versions";
 
@@ -594,7 +692,7 @@ export async function updateUI(urlString) {
                         if (selectedVersion.guideVersionLabel != 'current') {
                             toolsListElement.style.display = "block";
 
-                            createToolsListItem(toolsListElement, 'Validator', 'https://simplifier.net/validate?scope='+packageName+'@'+packageVersion, 'Validate against '+packageName+'@'+packageVersion);
+                            createToolsListItem(toolsListElement, 'Validator', 'https://simplifier.net/validator?scope='+packageName+'@'+packageVersion, 'Validate against '+packageName+'@'+packageVersion);
                             
                             createToolsListItem(toolsListElement, 'FHIRPath', 'https://simplifier.net/fhirpath?scope='+packageName+'@'+packageVersion, 'Query against '+packageName+'@'+packageVersion+' with FHIRPath');
 

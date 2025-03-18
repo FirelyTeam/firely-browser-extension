@@ -1,13 +1,14 @@
 import {
   generateSearchUrl,
   updateUI,
-  refreshClicked,
   resetClicked
 } from './functions.js';
 
 console.log('Firely FHIR Extension: This is where popup.js logs to the console.');
 
 document.addEventListener("DOMContentLoaded", function() {
+
+  let statusMessage = document.getElementById('status-message');
 
   // Add listener to the Firely logo
   var firelyLogo = document.getElementById("firely-logo");
@@ -23,28 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
       chrome.tabs.create({url: searchUrl});
   });
 
-  // Add listener to the refresh link
-  var refreshLink = document.getElementById("refresh-link");
-  refreshLink.addEventListener("click", function() {
+  // Add listener to the reset button
+  var resetButton = document.getElementById("reset-button");
+  resetButton.addEventListener("click", function() {
     chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-      refreshClicked(tabs[0].url);
-    });
-  });
-
-  // Add listener to the reset link
-  var resetLink = document.getElementById("reset-link");
-  resetLink.addEventListener("click", function() {
-    chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-      resetClicked(tabs[0].url);
+      resetClicked(tabs[0].url, statusMessage);
     });
   });
 
   // Focus on the search field
   var searchQuery = document.getElementById("search-query");
   searchQuery.focus();
+
+  // Get FHIR Version and Path from current tab
+  chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
+    updateUI(tabs[0].url, statusMessage);
+  });
 });
 
-// Get FHIR Version and Path from current tab
-chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-  updateUI(tabs[0].url);
-});
+

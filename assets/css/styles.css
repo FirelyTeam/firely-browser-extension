@@ -1,11 +1,8 @@
 body {
     width: 250px;
-    /* height: 200px; */
     padding: 10px;
     background: #22b0db;
     color: #fff;
-    /* font-family: "Open Sans",sans-serif; */
-    /* font-size: 17px; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -18,19 +15,11 @@ h1,h2,h3,h4,h5,h6 {
     margin-bottom: 10px
 }
 
-/* .h1,h1 {
-    font-size: 30px
-} */
-
-/* #popup-content {
-    text-align: left;
-} */
-
 .yellow-button {
     background-color: #FBD82D;
     color: black;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bolder;
@@ -39,12 +28,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .yellow-button:hover {
-    background-color: #0056b3;
+    background-color: #BF9217;
     color: #fff;
     text-decoration: none;
 }
 
 .yellow-button.selected {
+    background-color: #CCA31B;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -80,7 +71,7 @@ div#tools-list {
     background-color: #929292;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 9px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bolder;
@@ -133,4 +124,57 @@ div#tools-list {
 
 #search-scope {
     padding-top: 10px;
+}
+
+#popup-content {
+    position: relative;
+    min-height: 200px;
+}
+
+#reset-button {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reset-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#reset-button i {
+    font-size: 14px;
+}
+
+#status-message {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#status-message.visible {
+    opacity: 1;
 }

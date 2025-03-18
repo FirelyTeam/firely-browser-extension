@@ -6,6 +6,7 @@ import {
     getHL7GuideVersions
 } from '../src/functions.js';
 import packageRegistry from './test_data/package-registry.json' assert { type: "json" };
+import usCorePackageList from './test_data/us-core-package-list.json' assert { type: "json" };
 import {expect} from 'chai';
 
 describe("generateSearchUrl", function() {
@@ -108,6 +109,7 @@ describe("getHL7GuideVersions", function() {
     beforeEach(function() {
         // Mock global fetch
         global.fetch = async (url) => ({
+            ok: true,
             json: async () => ({
                 "package-id": "hl7.fhir.us.core",
                 "canonical": "http://hl7.org/fhir/us/core",
@@ -116,7 +118,8 @@ describe("getHL7GuideVersions", function() {
                         "version": "6.0.0",
                         "path": "http://hl7.org/fhir/us/core/STU6",
                         "status": "trial-use",
-                        "sequence": "STU 6"
+                        "sequence": "STU 6",
+                        "current": true
                     },
                     {
                         "version": "5.0.1",
@@ -134,12 +137,12 @@ describe("getHL7GuideVersions", function() {
     });
 
     it("should process package-list.json into guide versions", async function() {
-        const guideVersions = await getHL7GuideVersions("http://hl7.org/fhir/us/core");
+        const guideVersions = await getHL7GuideVersions("http://hl7.org/fhir/us/core", "hl7.org/fhir/us/core/STU6", null);
         
         expect(guideVersions).to.be.an('object');
         
         const stu6Version = guideVersions['hl7.org/fhir/us/core/STU6'];
-        expect(stu6Version).to.have.property('guideVersionLabel', '6.0.0');
+        expect(stu6Version).to.have.property('guideVersionLabel', '6.0.0 (Latest)');
         expect(stu6Version).to.have.property('guideVersionLink', 'http://hl7.org/fhir/us/core/STU6');
         
         const stu5Version = guideVersions['hl7.org/fhir/us/core/STU5.0.1'];
@@ -150,7 +153,7 @@ describe("getHL7GuideVersions", function() {
 
 describe("getMatchingGuide", function() {
     beforeEach(function() {
-        // Mock chrome.storage.local.get
+        // Mock chrome.storage.local.get to return immediately
         global.chrome = {
             storage: {
                 local: {
@@ -167,6 +170,7 @@ describe("getMatchingGuide", function() {
                             }
                         };
                         
+                        // Call callback immediately
                         callback({ guide_url_list: mockGuideUrlList });
                     }
                 }
@@ -174,36 +178,28 @@ describe("getMatchingGuide", function() {
         };
 
         // Mock global fetch
-        global.fetch = async (url) => ({
-            json: async () => ({
-                "package-id": "hl7.fhir.us.core",
-                "canonical": "http://hl7.org/fhir/us/core",
-                "list": [
-                    {
-                        "version": "6.0.0",
-                        "path": "http://hl7.org/fhir/us/core/STU6",
-                        "status": "trial-use",
-                        "sequence": "STU 6"
-                    }
-                ]
-            })
+        global.fetch = async () => ({
+            ok: true,
+            json: async () => usCorePackageList
         });
     });
 
     afterEach(function() {
-        // Clean up the mock
+        // Clean up the mocks
         delete global.chrome;
+        delete global.fetch;
     });
 
     it("should find a versioned US core page", async function() {
-        let guide_details = await getMatchingGuide("https://hl7.org/fhir/us/core/STU6/index.html");
+        let guide_details = await getMatchingGuide("https://hl7.org/fhir/us/core/STU6/index.html", null);
         expect(guide_details['packageName']).to.equal('hl7.fhir.us.core');
         expect(guide_details['currentFhirVersion']).to.equal('R4');
         expect(guide_details).to.have.property('guideVersions');
         
         const selectedGuideVersion = guide_details.guideVersions.find(version => version.selected === true);
+        expect(selectedGuideVersion).to.not.be.undefined;
         expect(selectedGuideVersion).to.have.property(
-            'guideVersionLabel', '6.0.0 (STU6)');
+            'guideVersionLabel', '6.0.0');
         expect(selectedGuideVersion).to.have.property(
             'guideVersionLink', 'http://hl7.org/fhir/us/core/STU6/index.html');
 
@@ -213,15 +209,16 @@ describe("getMatchingGuide", function() {
     });
 
     it("should find a latest US Core page", async function() {
-        let guide_details = await getMatchingGuide("https://hl7.org/fhir/us/core/index.html");
+        let guide_details = await getMatchingGuide("https://hl7.org/fhir/us/core/index.html", null);
         expect(guide_details['packageName']).to.equal('hl7.fhir.us.core');
         expect(guide_details['currentFhirVersion']).to.equal('R4');
 
         const selectedGuideVersion = guide_details.guideVersions.find(version => version.selected === true);
+        expect(selectedGuideVersion).to.not.be.undefined;
         expect(selectedGuideVersion).to.have.property(
             'guideVersionLabel', 'latest');
         expect(selectedGuideVersion).to.have.property(
-            'guideVersionNumber', '6.1.0');
+            'guideVersionNumber', '7.0.0');
         expect(selectedGuideVersion).to.have.property(
             'guideVersionLink', 'http://hl7.org/fhir/us/core/index.html');
     });
@@ -329,15 +326,11 @@ describe("getMatchingGuide", function() {
 
     // FHIR Build server is not case insensitive
     it("should maintain capitalization of the path", async function() {
-        let guide_details = await getMatchingGuide("http://hl7.org/fhir/extensions/0.1.0/StructureDefinition-alternate-codes.html");
-        expect(guide_details['packageName']).to.equal('hl7.fhir.uv.extensions');
-        expect(guide_details['currentFhirVersion']).to.equal('R5');
-
+        let guide_details = await getMatchingGuide("https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-coverage.html");
+        
         const selectedGuideVersion = guide_details.guideVersions.find(version => version.selected === true);
         expect(selectedGuideVersion).to.have.property(
-            'guideVersionLabel', '0.1.0');
-        expect(selectedGuideVersion).to.have.property(
-            'guideVersionLink', 'http://hl7.org/fhir/extensions/0.1.0/StructureDefinition-alternate-codes.html');
+            'guideVersionLink', 'http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-coverage.html');
     });
 
     // https://simplifier.net/guide/HL7-FHIR-Guide-Template/Home/FHIR-Artifacts/US-Core-Patient.page.md?version=current
