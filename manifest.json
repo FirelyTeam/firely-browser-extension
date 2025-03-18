@@ -3,16 +3,13 @@
     "name": "Firely FHIR extension",
     "version": "3.0.0",
     "description": "Get helpful FHIR links and tools across the web",
-    "firefox": {
-        "browser_specific_settings": {
-            "gecko": {
-              "id": "simplifier@fire.ly"
-            }
-          }
-    },
     "permissions": [
         "activeTab", 
         "storage"
+    ],
+    "host_permissions": [
+        "https://hl7.org/*",
+        "https://build.fhir.org/*"
     ],
     "icons": {
         "16": "assets/img/icon16.png",
