@@ -7,7 +7,24 @@ import {
 } from '../src/functions.js';
 import packageRegistry from './test_data/package-registry.json' assert { type: "json" };
 import usCorePackageList from './test_data/us-core-package-list.json' assert { type: "json" };
-import {expect} from 'chai';
+import chCorePackageList from './test_data/ch-core-package-list.json' assert { type: "json" };
+import * as chai from 'chai';
+const { expect } = chai;
+
+// Simple spy implementation
+function createSpy() {
+    const spy = function(...args) {
+        spy.called = true;
+        spy.callCount++;
+        spy.lastCall = args;
+        return spy.returnValue;
+    };
+    spy.called = false;
+    spy.callCount = 0;
+    spy.lastCall = null;
+    spy.returnValue = null;
+    return spy;
+}
 
 describe("generateSearchUrl", function() {
 
@@ -108,7 +125,8 @@ describe("transformHL7packagelist", function() {
 describe("getHL7GuideVersions", function() {
     beforeEach(function() {
         // Mock global fetch
-        global.fetch = async (url) => ({
+        const fetchSpy = createSpy();
+        fetchSpy.returnValue = {
             ok: true,
             json: async () => ({
                 "package-id": "hl7.fhir.us.core",
@@ -129,7 +147,8 @@ describe("getHL7GuideVersions", function() {
                     }
                 ]
             })
-        });
+        };
+        global.fetch = fetchSpy;
     });
 
     afterEach(function() {
@@ -148,6 +167,12 @@ describe("getHL7GuideVersions", function() {
         const stu5Version = guideVersions['hl7.org/fhir/us/core/STU5.0.1'];
         expect(stu5Version).to.have.property('guideVersionLabel', '5.0.1');
         expect(stu5Version).to.have.property('guideVersionLink', 'http://hl7.org/fhir/us/core/STU5.0.1');
+    });
+
+    it("should not query for versions when on a non-HL7 domain", async function() {
+        const guideVersions = await getHL7GuideVersions("http://fhir.ch/ig/ch-core/", "https://build.fhir.org/ig/hl7ch/ch-core/", null);
+        // Check that fetch was not called
+        expect(global.fetch.called).to.be.false;
     });
 });
 
@@ -377,6 +402,94 @@ describe("getMatchingGuide", function() {
     //     expect(guide_details['currentFhirVersion']).to.be.undefined;
     // });
 });
+
+describe("getMatchingGuideNonHL7", function() {
+    beforeEach(function() {
+        // Mock chrome.storage.local.get to return immediately
+        global.chrome = {
+            storage: {
+                local: {
+                    get: function(key, callback) {
+                        // Mock the guide_url_list data
+                        const mockGuideUrlList = {
+                            'fhir.ch/ig/ch-core': {
+                                'package_id': 'hl7.fhir.ch.core',
+                                'canonical': 'http://fhir.ch/ig/ch-core'
+                            },
+                            'github.com/hl7ch/ch-core': {
+                                'package_id': 'hl7.fhir.ch.core',
+                                'canonical': 'http://fhir.ch/ig/ch-core'
+                            },
+                            'build.fhir.org/ig/hl7ch/ch-core': {
+                                'package_id': 'hl7.fhir.ch.core',
+                                'canonical': 'http://fhir.ch/ig/ch-core'
+                            }
+                        };
+                        
+                        // Call callback immediately
+                        callback({ guide_url_list: mockGuideUrlList });
+                    }
+                }
+            }
+        };
+
+        // Mock global fetch
+        global.fetch = createSpy();
+        global.fetch.returnValue = {
+            ok: true,
+            json: async () => chCorePackageList
+        };
+    });
+
+    afterEach(function() {
+        // Clean up the mocks
+        delete global.chrome;
+        delete global.fetch;
+    });
+
+    it("should match a guide for a FHIR Build server", async function() {
+        let guide_details = await getMatchingGuide("https://build.fhir.org/ig/hl7ch/ch-core/something");
+
+        // For non-HL7 domains, fetch should not be called when domain does not match
+        expect(global.fetch.called).to.be.false;
+
+        expect(guide_details['packageName']).to.equal('hl7.fhir.ch.core');
+
+        // Extra path should be added for FHIR Build servers
+        expect(guide_details['guideVersions']).to.be.an('array');
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'current')).to.exist;
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'current')).to.have.property('guideVersionLink', 'https://build.fhir.org/ig/hl7ch/ch-core/something');
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'GitHub')).to.exist;
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'GitHub')).to.have.property('guideVersionLink', 'https://github.com/hl7ch/ch-core');
+    });
+
+    it("should match a guide for a GitHub repository", async function() {
+        let guide_details = await getMatchingGuide("https://github.com/hl7ch/ch-core/something");
+
+        // For non-HL7 domains, fetch should not be called when domain does not match
+        expect(global.fetch.called).to.be.false;
+
+        expect(guide_details['packageName']).to.equal('hl7.fhir.ch.core');
+
+        // Extra path should be ignored for GitHub repositories
+        expect(guide_details['guideVersions']).to.be.an('array');
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'current')).to.exist;
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'current')).to.have.property('guideVersionLink', 'https://build.fhir.org/ig/hl7ch/ch-core');
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'GitHub')).to.exist;
+        expect(guide_details['guideVersions'].find(v => v.guideVersionLabel === 'GitHub')).to.have.property('guideVersionLink', 'https://github.com/hl7ch/ch-core');
+    });
+
+    it("should match a guide for the canonical URL", async function() {
+        let guide_details = await getMatchingGuide("http://fhir.ch/ig/ch-core/");
+
+        // For non-HL7 domains, fetch should only be called when domain matches
+        expect(global.fetch.called).to.be.true;
+
+        expect(guide_details['packageName']).to.equal('hl7.fhir.ch.core');
+    });
+    
+});
+
 
 describe("updateUI", function() {
     // TODO

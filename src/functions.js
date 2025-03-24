@@ -194,7 +194,7 @@ function processUrl(url) {
 export function resetClicked(urlString, statusElement) {
     console.log('Resetting');
     chrome.storage.local.clear(() => {
-        showStatus('Resetting', statusElement);
+        showStatus('Reloading cached guide versions', statusElement);
         updateUI(urlString, statusElement);
     });
 }
@@ -345,10 +345,10 @@ export function transformHL7packagelist(hl7_package_list) {
     return guide_url_list
 }
 
-export async function getHL7GuideVersions(canonicalUrlString, currentUrlString, statusElement) {
+export async function getHL7GuideVersions(canonicalUrlString, processedCurrentUrlString, statusElement) {
     // TODO: Store HL7 guide versions in local storage for canonicalUrlString
 
-    console.log('getHL7GuideVersions: canonicalUrlString', canonicalUrlString, 'currentUrlString', currentUrlString);
+    console.log('getHL7GuideVersions: canonicalUrlString', canonicalUrlString, 'processedCurrentUrlString', processedCurrentUrlString);
     let canonicalUrl = new URL(canonicalUrlString);
     // Change to https, because canonicals are sometimes http but website is generally https
     if (canonicalUrl.protocol === 'http:') {
@@ -361,7 +361,7 @@ export async function getHL7GuideVersions(canonicalUrlString, currentUrlString, 
 
     // Get domains for comparison
     const canonicalDomain = canonicalUrl.hostname.toLowerCase();
-    const currentUrl = new URL('https://' + currentUrlString);
+    const currentUrl = new URL('https://' + processedCurrentUrlString);
     const currentDomain = currentUrl.hostname.toLowerCase();
     
     // Check if domains match or if it's an HL7 domain
@@ -373,8 +373,39 @@ export async function getHL7GuideVersions(canonicalUrlString, currentUrlString, 
 
     if (!isHL7Domain && !domainsMatch) {
         console.log('getHL7GuideVersions: Canonical domain', canonicalDomain, 'current domain', currentDomain);
-        showStatus('Please navigate to ' + canonicalUrl + ' and try again', statusElement);
-        return null;
+        showStatus('Please one-time navigate to the latest version of this guide to load all versions', statusElement);
+        
+        let guideVersions = {
+            [processUrl(canonicalUrl)]: {
+                guideVersionLabel: 'latest',
+                guideVersionLink: canonicalUrl.toString()
+            }
+        };
+
+        if (processedCurrentUrlString.startsWith('github.com/')) {
+            let githubUrl = `${currentUrl.protocol}//${currentUrl.hostname}/${currentUrl.pathname.split('/')[1]}/${currentUrl.pathname.split('/')[2]}`;
+            guideVersions[processUrl(new URL(githubUrl))] = {
+                guideVersionLabel: 'GitHub',
+                guideVersionLink: githubUrl
+            };
+            let buildIgUrl = githubUrl.replace('github.com/', 'build.fhir.org/ig/');
+            guideVersions[processUrl(new URL(buildIgUrl))] = {
+                guideVersionLabel: 'current',
+                guideVersionLink: buildIgUrl
+            };
+        } else if (processedCurrentUrlString.startsWith('build.fhir.org/ig/')) {
+            let buildIgUrl = `${currentUrl.protocol}//${currentUrl.hostname}/${currentUrl.pathname.split('/')[1]}/${currentUrl.pathname.split('/')[2]}/${currentUrl.pathname.split('/')[3]}`;
+            guideVersions[processUrl(new URL(buildIgUrl))] = {
+                guideVersionLabel: 'current',
+                guideVersionLink: buildIgUrl
+            };
+            let githubUrl = buildIgUrl.replace('build.fhir.org/ig/', 'github.com/');
+            guideVersions[processUrl(new URL(githubUrl))] = {
+                guideVersionLabel: 'GitHub',
+                guideVersionLink: githubUrl
+            };
+        }
+        return guideVersions;
     } else {
         console.log('getHL7GuideVersions: Canonical domain', canonicalDomain, 'current domain', currentDomain, 'isHL7Domain', isHL7Domain, 'domainsMatch', domainsMatch);
     }
@@ -480,6 +511,7 @@ function getMatchingHL7Guide(url, statusElement) {
                 };
 
                 let guideVersions = await getHL7GuideVersions(guide_url_metadata.canonical, processedUrl, statusElement);
+                console.log('HL7Guide guideVersions', guideVersions);
                 if (guideVersions) {
                     let longestMatch = findLongestMatch(processedUrl, Object.keys(guideVersions));
                     console.log('HL7Guide longestGuideVersionMatch', longestMatch);

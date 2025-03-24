@@ -128,19 +128,18 @@ div#tools-list {
 
 #popup-content {
     position: relative;
-    min-height: 200px;
 }
 
 #reset-button {
     position: absolute;
-    bottom: 4px;
+    top: 4px;
     right: 4px;
     background: none;
     border: none;
     color: #fff;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     padding: 0;
     border-radius: 50%;
     transition: background-color 0.2s;
@@ -154,7 +153,7 @@ div#tools-list {
 }
 
 #reset-button i {
-    font-size: 14px;
+    font-size: 8px;
 }
 
 #status-message {
@@ -170,9 +169,10 @@ div#tools-list {
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
     max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #status-message.visible {
