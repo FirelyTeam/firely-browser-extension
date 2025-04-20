@@ -27,23 +27,23 @@
                 <div id="search-scope-package-name" style="display: none;">
                     <input type="text" id="package-text-field" name="package" hidden>
                     <input type="radio" name="search-type" value="package" id="search-type-package" disabled>
-                    <label for="search-type-package">In this package</label> <br/>
+                    <label for="search-type-package" title="Search within this FHIR package">in this package</label> <br/>
                 </div>
 
                 <div id="search-scope-guide-key" style="display: none;">
                     <input type="text" id="guide-text-field" name="guide" hidden>
                     <input type="radio" name="search-type" value="guide" id="search-type-guide" disabled>
-                    <label for="search-type-guide">In this guide</label> <br/>
+                    <label for="search-type-guide" title="Search within this implementation guide">in this guide</label> <br/>
                 </div>
 
                 <div id="search-scope-fhir-version" style="display: none;">
                     <input type="text" id="fhir-version-text-field" name="fhir-version" hidden>
                     <input type="radio" name="search-type" value="fhir-version" id="search-type-fhir-version" disabled>
-                    <label for="search-type-fhir-version">In this FHIR version</label> <br/>
+                    <label for="search-type-fhir-version" title="Search within this FHIR version">in this FHIR version</label> <br/>
                 </div>
 
                 <input type="radio" name="search-type" value="all" id="search-type-all" checked>
-                <label for="search-type-all">In all specifications</label> <br/>
+                <label for="search-type-all" title="Search in all specifications">in all specifications</label> <br/>
             </div>
         </form>
         <div id="status-message"></div>

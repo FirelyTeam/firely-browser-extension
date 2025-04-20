@@ -1,9 +1,9 @@
 import {
     generateSearchUrl,
     getMatchingGuide,
-    fetchAndStoreHL7GuidesList,
     transformHL7packagelist,
-    getHL7GuideVersions
+    getHL7GuideVersions,
+    showStatus
 } from '../src/functions.js';
 import packageRegistry from './test_data/package-registry.json' assert { type: "json" };
 import usCorePackageList from './test_data/us-core-package-list.json' assert { type: "json" };
@@ -122,7 +122,7 @@ describe("transformHL7packagelist", function() {
     });
 });
 
-describe("getHL7GuideVersions", function() {
+describe("getHL7GuideVersions US core", function() {
     beforeEach(function() {
         // Mock global fetch
         const fetchSpy = createSpy();
@@ -168,9 +168,80 @@ describe("getHL7GuideVersions", function() {
         expect(stu5Version).to.have.property('guideVersionLabel', '5.0.1');
         expect(stu5Version).to.have.property('guideVersionLink', 'http://hl7.org/fhir/us/core/STU5.0.1');
     });
+});
+
+describe("getHL7GuideVersions Swiss core", function() {
+    beforeEach(function() {
+        // Mock global fetch
+        const fetchSpy = createSpy();
+        fetchSpy.returnValue = {
+            ok: true,
+            json: async () => ({
+                "package-id": "ch.fhir.ig.ch-core",
+                "title": "CH Core (R4)",
+                "introduction": "Core FHIR profiles for Switzerland in development by the HL7 Switzerland FHIR workgroup",
+                "canonical": "http://fhir.ch/ig/ch-core",
+                "category": "National Base",
+                "list": [
+                    {
+                        "version": "6.0.0",
+                        "path": "http://hl7.org/fhir/us/core/STU6",
+                        "status": "trial-use",
+                        "sequence": "STU 6",
+                        "current": true
+                    },
+                    {
+                        "version": "5.0.1",
+                        "path": "http://hl7.org/fhir/us/core/STU5.0.1",
+                        "status": "trial-use",
+                        "sequence": "STU 5.0.1"
+                    }
+                ]
+            })
+        };
+        global.fetch = fetchSpy;
+
+        // Mock chrome.storage.local.get to return immediately
+        global.chrome = {
+            storage: {
+                local: {
+                    get: function(key, callback) {
+                        // Mock the guide_url_list data
+                        const mockGuideUrlList = {
+                            'fhir.ch/ig/ch-core': {
+                                'package_id': 'hl7.fhir.ch.core',
+                                'canonical': 'http://fhir.ch/ig/ch-core'
+                            },
+                            'github.com/hl7ch/ch-core': {
+                                'package_id': 'hl7.fhir.ch.core',
+                                'canonical': 'http://fhir.ch/ig/ch-core'
+                            },
+                            'build.fhir.org/ig/hl7ch/ch-core': {
+                                'package_id': 'hl7.fhir.ch.core',
+                                'canonical': 'http://fhir.ch/ig/ch-core'
+                            }
+                        };
+                        
+                        // Call callback immediately
+                        callback({ guide_url_list: mockGuideUrlList });
+                    },
+                    set: function(data, callback) {
+                        // Mock the set operation
+                        if (callback) {
+                            callback();
+                        }
+                    }
+                }
+            }
+        };
+    });
+
+    afterEach(function() {
+        delete global.fetch;
+    });
 
     it("should not query for versions when on a non-HL7 domain", async function() {
-        const guideVersions = await getHL7GuideVersions("http://fhir.ch/ig/ch-core/", "https://build.fhir.org/ig/hl7ch/ch-core/", null);
+        const guideVersions = await getHL7GuideVersions("http://fhir.ch/ig/ch-core/", "build.fhir.org/ig/hl7ch/ch-core/", null);
         // Check that fetch was not called
         expect(global.fetch.called).to.be.false;
     });
@@ -404,7 +475,9 @@ describe("getMatchingGuide", function() {
 });
 
 describe("getMatchingGuideNonHL7", function() {
+
     beforeEach(function() {
+
         // Mock chrome.storage.local.get to return immediately
         global.chrome = {
             storage: {
@@ -428,6 +501,12 @@ describe("getMatchingGuideNonHL7", function() {
                         
                         // Call callback immediately
                         callback({ guide_url_list: mockGuideUrlList });
+                    },
+                    set: function(data, callback) {
+                        // Mock the set operation
+                        if (callback) {
+                            callback();
+                        }
                     }
                 }
             }
@@ -446,6 +525,8 @@ describe("getMatchingGuideNonHL7", function() {
         delete global.chrome;
         delete global.fetch;
     });
+
+    
 
     it("should match a guide for a FHIR Build server", async function() {
         let guide_details = await getMatchingGuide("https://build.fhir.org/ig/hl7ch/ch-core/something");

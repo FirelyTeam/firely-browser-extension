@@ -126,6 +126,16 @@ div#tools-list {
     padding-top: 10px;
 }
 
+#search-scope-package-name label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    min-width: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 #popup-content {
     position: relative;
 }

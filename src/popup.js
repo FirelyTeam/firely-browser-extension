@@ -4,8 +4,6 @@ import {
   resetClicked
 } from './functions.js';
 
-console.log('Firely FHIR Extension: This is where popup.js logs to the console.');
-
 document.addEventListener("DOMContentLoaded", function() {
 
   let statusMessage = document.getElementById('status-message');
