@@ -112,7 +112,7 @@ export async function getMatchingGuide(urlString, statusElement) {
         let matchingGuide = await getMatchingHL7Guide(url, statusElement);
         if (matchingGuide) {
             return matchingGuide;
-        } else if (locationHostname == 'hl7.org' || locationHostname == 'www.hl7.org' || locationHostname == 'build.fhir.org') {
+        } else if (locationHostname == 'hl7.org' || locationHostname == 'www.hl7.org' || locationHostname == 'build.fhir.org' || locationHostname == 'github.com') {
             return getMatchingHl7FhirCoreGuide(url);
         }
     }
@@ -620,11 +620,17 @@ function getMatchingHl7FhirCoreGuide(url) {
             }
             guideVersion['guideVersionNumber'] = value['version'];
             guideVersion['guideVersionLabel'] = value['name'];
-            if (value['name'] == 'GitHub') {
+
+            if (longestMatch == 'github.com/hl7/fhir') {
                 guideVersion['guideVersionLink'] = 'https://'+key;
             } else {
-                guideVersion['guideVersionLink'] = 'https://'+key + '/' + current_path;
+                if (key == 'github.com/hl7/fhir') {
+                    guideVersion['guideVersionLink'] = 'https://'+key;
+                } else {
+                    guideVersion['guideVersionLink'] = 'https://'+key + '/' + current_path;
+                }
             }
+
             guideVersions.push(guideVersion);
         }
 
