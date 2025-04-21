@@ -799,7 +799,7 @@ export async function updateUI(urlString, statusElement) {
                             selectedGuideVersion = selectedVersion.guideVersionNumber;
                         }
 
-                        if (selectedVersion.guideVersionLabel != 'current') {
+                        if (selectedVersion.guideVersionLabel != 'current' && selectedVersion.guideVersionLabel != 'GitHub') {
                             addToolsListItems(packageName, selectedGuideVersion, toolsListElement);
                         }
 
