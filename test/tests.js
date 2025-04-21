@@ -105,7 +105,7 @@ describe("transformHL7packagelist", function() {
     it("should transform the package registry list correctly", function() {
         const transformedList = transformHL7packagelist(packageRegistry);
 
-        // Check if the transformed list is an array
+        // Check if the transformed list is an object
         expect(transformedList).to.be.an('object');
 
         const itemUSCoreCanonical = transformedList['hl7.org/fhir/us/core'];
