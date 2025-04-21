@@ -1,0 +1,121 @@
+{
+    "package-id": "ch.fhir.ig.ch-core",
+    "title": "CH Core (R4)",
+    "introduction": "Core FHIR profiles for Switzerland in development by the HL7 Switzerland FHIR workgroup",
+    "canonical": "http://fhir.ch/ig/ch-core",
+    "category": "National Base",
+    "list": [
+    {
+    "version": "current",
+    "desc": "Continuous Integration Build (latest in version control)",
+    "path": "http://build.fhir.org/ig/hl7ch/ch-core",
+    "status": "ci-build"
+    },
+    {
+    "version": "5.0.0",
+    "path": "http://fhir.ch/ig/ch-core/5.0.0",
+    "status": "trial-use",
+    "sequence": "STU 5",
+    "fhirversion": "4.0.1",
+    "date": "2024-12-17",
+    "current": true,
+    "desc": "HL7 Switzerland STU 5",
+    "descmd": "HL7 Switzerland STU 5",
+    "changes": "changelog.html"
+    },
+    {
+    "version": "5.0.0-ballot",
+    "path": "http://fhir.ch/ig/ch-core/5.0.0-ballot",
+    "status": "ballot",
+    "sequence": "STU 5",
+    "fhirversion": "4.0.1",
+    "date": "2024-05-16",
+    "desc": "HL7 Switzerland STU 5",
+    "descmd": "HL7 Switzerland STU 5",
+    "changes": "changelog.html"
+    },
+    {
+    "version": "4.0.1",
+    "path": "http://fhir.ch/ig/ch-core/4.0.1",
+    "status": "trial-use",
+    "sequence": "STU 4",
+    "fhirversion": "4.0.1",
+    "date": "2023-12-28",
+    "desc": "HL7 Switzerland STU 4",
+    "descmd": "HL7 Switzerland STU 4",
+    "changes": "changelog.html",
+    "corrections": [
+    {
+    "version": "4.0.0",
+    "path": "ch.fhir.ig.ch-core#4.0.0.zip",
+    "date": "2023-12-28"
+    }
+    ]
+    },
+    {
+    "version": "4.0.0-ballot",
+    "path": "http://fhir.ch/ig/ch-core/4.0.0-ballot",
+    "status": "ballot",
+    "sequence": "STU 4",
+    "fhirversion": "4.0.1",
+    "date": "2023-06-27",
+    "desc": "HL7 Switzerland STU 4",
+    "changes": "changelog.html"
+    },
+    {
+    "version": "3.0.0",
+    "path": "http://fhir.ch/ig/ch-core/3.0.0",
+    "status": "trial-use",
+    "sequence": "STU 3",
+    "fhirversion": "4.0.1",
+    "date": "2022-12-21",
+    "desc": "HL7 Switzerland STU 3",
+    "changes": "changelog.html"
+    },
+    {
+    "version": "2.1.0",
+    "desc": "HL7 Switzerland STU 3 Ballot",
+    "path": "http://fhir.ch/ig/ch-core/2.1.0",
+    "status": "trial-use",
+    "sequence": "STU 3",
+    "fhirversion": "4.0.1",
+    "date": "2022-07-06"
+    },
+    {
+    "version": "2.0.0",
+    "date": "2021-04-24",
+    "desc": "HL7 Switzerland STU 2",
+    "path": "http://fhir.ch/ig/ch-core/2.0.0",
+    "status": "trial-use",
+    "sequence": "STU 2",
+    "fhirversion": "4.0.1"
+    },
+    {
+    "version": "1.2.0",
+    "date": "2021-02-12",
+    "desc": "HL7 Switzerland STU 2 Ballot",
+    "path": "http://fhir.ch/ig/ch-core/1.2.0",
+    "status": "trial-use",
+    "sequence": "STU 2",
+    "fhirversion": "4.0.1"
+    },
+    {
+    "version": "1.0.0",
+    "date": "2020-04-21",
+    "desc": "HL7 Switzerland STU 1 Final Publication",
+    "path": "http://fhir.ch/ig/ch-core/1.0.0",
+    "status": "trial-use",
+    "sequence": "STU 1",
+    "fhirversion": "4.0.1"
+    },
+    {
+    "version": "0.1.0",
+    "date": "2020-02-14",
+    "desc": "HL7 Switzerland STU 1 Ballot",
+    "path": "http://fhir.ch/ig/ch-core/0.1.0",
+    "status": "trial-use",
+    "sequence": "STU 1",
+    "fhirversion": "4.0.1"
+    }
+    ]
+    }

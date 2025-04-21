@@ -1,20 +1,16 @@
 {
-    "name": "__MSG_appName__",
-    "short_name": "__MSG_appShortName__",
-    "description": "__MSG_appDescription__",
-    "homepage_url": "http://chrome.google.com/webstore",
-    "version": "2.0.0",
     "manifest_version": 3,
-    "default_locale": "en",
-    "chrome": {"minimum_chrome_version": "88"},
-    "firefox": {
-        "browser_specific_settings": {
-            "gecko": {
-              "id": "simplifier@fire.ly"
-            }
-          }
-    },
-    "permissions": ["activeTab"],
+    "name": "Firely FHIR extension",
+    "version": "3.0.0",
+    "description": "Get helpful FHIR links and tools across the web",
+    "permissions": [
+        "activeTab", 
+        "storage"
+    ],
+    "host_permissions": [
+        "https://hl7.org/*",
+        "https://build.fhir.org/*"
+    ],
     "icons": {
         "16": "assets/img/icon16.png",
         "48": "assets/img/icon48.png",
@@ -35,4 +31,4 @@
             }
         }
     }
-}
+} 

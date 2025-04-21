@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
             <div class="search-box">
                 <input aria-label="Search on Simplifier.net" class="form-control" name="q" placeholder="Search on Simplifier.net" type="text" autocomplete="off" id="search-query">
                 <button class="btn btn-link" aria-label="Submit Search" id="search-button">
-                    <i class="glyphicon glyphicon-search"></i>
+                    <i class="fas fa-search"></i>
                 </button>
             </div>
 
@@ -26,26 +27,30 @@
                 <div id="search-scope-package-name" style="display: none;">
                     <input type="text" id="package-text-field" name="package" hidden>
                     <input type="radio" name="search-type" value="package" id="search-type-package" disabled>
-                    <label for="search-type-package">In this package</label> <br/>
+                    <label for="search-type-package" title="Search within this FHIR package">in this package</label> <br/>
                 </div>
 
                 <div id="search-scope-guide-key" style="display: none;">
                     <input type="text" id="guide-text-field" name="guide" hidden>
                     <input type="radio" name="search-type" value="guide" id="search-type-guide" disabled>
-                    <label for="search-type-guide">In this guide</label> <br/>
+                    <label for="search-type-guide" title="Search within this implementation guide">in this guide</label> <br/>
                 </div>
 
                 <div id="search-scope-fhir-version" style="display: none;">
                     <input type="text" id="fhir-version-text-field" name="fhir-version" hidden>
                     <input type="radio" name="search-type" value="fhir-version" id="search-type-fhir-version" disabled>
-                    <label for="search-type-fhir-version">In this FHIR version</label> <br/>
+                    <label for="search-type-fhir-version" title="Search within this FHIR version">in this FHIR version</label> <br/>
                 </div>
 
                 <input type="radio" name="search-type" value="all" id="search-type-all" checked>
-                <label for="search-type-all">In all specifications</label> <br/>
+                <label for="search-type-all" title="Search in all specifications">in all specifications</label> <br/>
             </div>
         </form>
+        <div id="status-message"></div>
     </div>
-    <script src="popup.js"></script>
+    <button id="reset-button" title="Reload cached guide versions">
+        <i class="fas fa-undo"></i>
+    </button>
+    <script type="module" src="/src/popup.js"></script>
 </body>
 </html>

@@ -1,0 +1,2069 @@
+{
+  "packages" : [
+    {
+      "path" : "extensions/package-list.json",
+      "package-id" : "hl7.fhir.uv.extensions",
+      "title" : "FHIR Core Extensions Registry",
+      "canonical" : "http://hl7.org/fhir/extensions",
+      "category" : "Extensions",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-extensions",
+      "version-count" : 6,
+      "latest" : {
+        "version" : "5.2.0-ballot",
+        "date" : "2024-07-30",
+        "path" : "http://hl7.org/fhir/extensions/5.2.0-ballot"
+      },
+      "milestone" : {
+        "version" : "5.1.0",
+        "date" : "2024-04-27",
+        "path" : "http://hl7.org/fhir/extensions/5.1.0"
+      }
+    },
+    {
+      "path" : "smart-app-launch/package-list.json",
+      "package-id" : "hl7.fhir.uv.smart-app-launch",
+      "title" : "Smart App Launch Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/smart-app-launch",
+      "category" : "EHR Access",
+      "ci-build" : "http://build.fhir.org/ig/HL7/smart-app-launch",
+      "version-count" : 8,
+      "latest" : {
+        "version" : "2.2.0",
+        "date" : "2024-04-30",
+        "path" : "http://hl7.org/fhir/smart-app-launch/STU2.2"
+      },
+      "milestone" : {
+        "version" : "2.2.0",
+        "date" : "2024-04-30",
+        "path" : "http://hl7.org/fhir/smart-app-launch/STU2.2"
+      }
+    },
+    {
+      "path" : "us/bfdr/package-list.json",
+      "package-id" : "hl7.fhir.us.bfdr",
+      "title" : "Vital Records Birth and Fetal Death Reporting",
+      "canonical" : "http://hl7.org/fhir/us/bfdr",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/bfdr",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-22",
+        "path" : "http://hl7.org/fhir/us/bfdr/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-22",
+        "path" : "http://hl7.org/fhir/us/bfdr/STU1"
+      }
+    },
+    {
+      "path" : "us/breast-radiology/package-list.json",
+      "package-id" : "hl7.fhir.us.breast-radiology",
+      "title" : "HL7 FHIR Profile: Breast Radiology Report (BRR)",
+      "canonical" : "http://hl7.org/fhir/us/breast-radiology",
+      "category" : "Care Planning",
+      "ci-build" : "http://build.hl7.org/fhir/us/breast-radiology/",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2019-3-25",
+        "path" : "http://hl7.org/fhir/us/breast-radiology/2020May"
+      }
+    },
+    {
+      "path" : "us/breastcancer/package-list.json",
+      "package-id" : "hl7.fhir.us.breastcancer",
+      "title" : "Breast Cancer Data Logical Models and FHIR Profiles",
+      "canonical" : "http://hl7.org/fhir/us/breastcancer",
+      "category" : "Diagnostics",
+      "ci-build" : "http://build.fhir.org/ig/HL7/us-breastcancer",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2018-08-31",
+        "path" : "http://hl7.org/fhir/us/breastcancer/2018Sep"
+      }
+    },
+    {
+      "path" : "us/bser/package-list.json",
+      "package-id" : "hl7.fhir.us.bser",
+      "title" : "Bidirectional Services eReferrals (BSeR)",
+      "canonical" : "http://hl7.org/fhir/us/bser",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/bser",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2020-03-02",
+        "path" : "http://hl7.org/fhir/us/bser/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2020-03-02",
+        "path" : "http://hl7.org/fhir/us/bser/STU1"
+      }
+    },
+    {
+      "path" : "us/cancer-reporting/package-list.json",
+      "package-id" : "hl7.fhir.us.cancer-reporting",
+      "title" : "Sharing eCC Data from Pathology Labs to EHR",
+      "canonical" : "http://hl7.org/fhir/us/cancer-reporting",
+      "category" : "Documents",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cancer-reporting",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-08-12",
+        "path" : "http://hl7.org/fhir/us/cancer-reporting/2021Sep"
+      }
+    },
+    {
+      "path" : "us/carin-bb/package-list.json",
+      "package-id" : "hl7.fhir.us.carin-bb",
+      "title" : "CARIN Blue Button Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/carin-bb",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/carin-bb",
+      "version-count" : 6,
+      "latest" : {
+        "version" : "2.1.0-snapshot1",
+        "date" : "2024-07-27",
+        "path" : "http://hl7.org/fhir/us/carin-bb/2.1.0-snapshot1"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2022-11-28",
+        "path" : "http://hl7.org/fhir/us/carin-bb/STU2"
+      }
+    },
+    {
+      "path" : "us/carin-rtpbc/package-list.json",
+      "package-id" : "hl7.fhir.us.carin-rtpbc",
+      "title" : "Consumer Real-time Pharmacy Benefit Check",
+      "canonical" : "http://hl7.org/fhir/us/carin-rtpbc",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/carin-rtpbc",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2020-08-25",
+        "path" : "http://hl7.org/fhir/us/carin-rtpbc/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2020-08-25",
+        "path" : "http://hl7.org/fhir/us/carin-rtpbc/STU1"
+      }
+    },
+    {
+      "path" : "us/ccda/package-list.json",
+      "package-id" : "hl7.fhir.us.ccda",
+      "title" : "C-CDA on FHIR Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/ccda",
+      "category" : "Clinical Documents",
+      "ci-build" : "http://build.fhir.org/ig/HL7/ccda-on-fhir",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "1.2.0-ballot",
+        "date" : "2023-03-27",
+        "path" : "http://hl7.org/fhir/us/ccda/2023May"
+      },
+      "milestone" : {
+        "version" : "1.1.0",
+        "date" : "2020-10-21",
+        "path" : "http://hl7.org/fhir/us/ccda/STU1.1"
+      }
+    },
+    {
+      "path" : "us/cdmh/package-list.json",
+      "package-id" : "hl7.fhir.us.cdmh",
+      "title" : "Common Data Models Harmonization FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/cdmh",
+      "category" : "Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cdmh",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-12-06",
+        "path" : "http://hl7.org/fhir/us/cdmh/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-12-06",
+        "path" : "http://hl7.org/fhir/us/cdmh/STU1"
+      }
+    },
+    {
+      "path" : "us/central-cancer-registry-reporting/package-list.json",
+      "package-id" : "hl7.fhir.us.central-cancer-registry-reporting",
+      "title" : "Making EHR Data MOre available for Research and Public Health (MedMorph) Central Cancer Registry Reporting Content IG",
+      "canonical" : "http://hl7.org/fhir/us/central-cancer-registry-reporting",
+      "category" : "Public Health and Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-central-cancer-registry-reporting",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-12-09",
+        "path" : "http://hl7.org/fhir/us/central-cancer-registry-reporting/2022Jan"
+      }
+    },
+    {
+      "path" : "us/codex-radiation-therapy/package-list.json",
+      "package-id" : "hl7.fhir.us.codex-radiation-therapy",
+      "title" : "CodeX™ Radiation Therapy",
+      "canonical" : "http://hl7.org/fhir/us/codex-radiation-therapy",
+      "category" : "Care Planning",
+      "ci-build" : "http://build.fhir.org/ig/codex-radiation-therapy",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-08-08",
+        "path" : "http://hl7.org/fhir/us/codex-radiation-therapy/2022Sep"
+      }
+    },
+    {
+      "path" : "us/core/package-list.json",
+      "package-id" : "hl7.fhir.us.core",
+      "title" : "US Core",
+      "canonical" : "http://hl7.org/fhir/us/core",
+      "category" : "National Base",
+      "ci-build" : "http://build.fhir.org/ig/HL7/US-Core",
+      "version-count" : 18,
+      "latest" : {
+        "version" : "6.1.0-snapshot1",
+        "date" : "2023-05-27",
+        "path" : "http://hl7.org/fhir/us/core/STU6.1-snapshot1"
+      },
+      "milestone" : {
+        "version" : "6.0.0",
+        "date" : "2023-05-03",
+        "path" : "http://hl7.org/fhir/us/core/STU6"
+      }
+    },
+    {
+      "path" : "us/covid19library/package-list.json",
+      "package-id" : "hl7.fhir.us.covid19library",
+      "title" : "Logica COVID-19 FHIR Profile Library IG",
+      "canonical" : "http://hl7.org/fhir/us/covid19library",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/covid19library",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-07-25",
+        "path" : "http://hl7.org/fhir/us/covid19library/informative1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-07-25",
+        "path" : "http://hl7.org/fhir/us/covid19library/informative1"
+      }
+    },
+    {
+      "path" : "us/cqfmeasures/package-list.json",
+      "package-id" : "hl7.fhir.us.cqfmeasures",
+      "title" : "Quality Measure STU2 for FHIR R4 Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/cqfmeasures",
+      "category" : "Quality / CDS",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cqf-measures",
+      "version-count" : 7,
+      "latest" : {
+        "version" : "4.0.0-ballot",
+        "date" : "2022-12-04",
+        "path" : "http://hl7.org/fhir/us/cqfmeasures/2023Jan"
+      },
+      "milestone" : {
+        "version" : "3.0.0",
+        "date" : "2022-04-28",
+        "path" : "http://hl7.org/fhir/us/cqfmeasures/STU3"
+      }
+    },
+    {
+      "path" : "us/daf/package-list.json",
+      "package-id" : "hl7.fhir.us.daf",
+      "title" : "Data Access Framework",
+      "canonical" : "http://hl7.org/fhir/us/daf",
+      "category" : "EHR Access",
+      "ci-build" : "http://build.fhir.org/ig/HL7/daf-research",
+      "version-count" : 6,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2017-04-21",
+        "path" : "http://hl7.org/fhir/us/daf-research/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2017-04-21",
+        "path" : "http://hl7.org/fhir/us/daf-research/STU2"
+      }
+    },
+    {
+      "path" : "us/davinci-alerts/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-alerts",
+      "title" : "Da Vinci Unsolicited Notifications",
+      "canonical" : "http://hl7.org/fhir/us/davinci-alerts",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-alerts",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2020-10-15",
+        "path" : "http://hl7.org/fhir/us/davinci-alerts/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2020-10-15",
+        "path" : "http://hl7.org/fhir/us/davinci-alerts/STU1"
+      }
+    },
+    {
+      "path" : "us/davinci-atr/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-atr",
+      "title" : "Risk Based Contracts Member Attribution List FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/davinci-atr",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-atr",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "2.0.0-ballot",
+        "date" : "2022-12-05",
+        "path" : "http://hl7.org/fhir/us/davinci-atr/2023Jan"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-02-08",
+        "path" : "http://hl7.org/fhir/us/davinci-atr/STU1"
+      }
+    },
+    {
+      "path" : "us/davinci-cdex/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-cdex",
+      "title" : "Da Vinci Clinical Documentation Exchange",
+      "canonical" : "http://hl7.org/fhir/us/davinci-cdex",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-ecdx",
+      "version-count" : 7,
+      "latest" : {
+        "version" : "2.1.0-snapshot",
+        "date" : "2024-09-28",
+        "path" : "http://hl7.org/fhir/us/davinci-cdex/STU2.1-snapshot"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2023-03-22",
+        "path" : "http://hl7.org/fhir/us/davinci-cdex/STU2"
+      }
+    },
+    {
+      "path" : "us/davinci-crd/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-crd",
+      "title" : "Da Vinci Coverage Requirements Discovery (CRD) FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/davinci-crd",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-crd",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "1.1.0-ballot",
+        "date" : "2022-02-17",
+        "path" : "http://hl7.org/fhir/us/davinci-crd/2022May"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2020-12-22",
+        "path" : "http://hl7.org/fhir/us/davinci-crd/STU1"
+      }
+    },
+    {
+      "path" : "us/davinci-deqm/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-deqm",
+      "title" : "Da Vinci Data Exchange for Quality Measures (DEQM) FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/davinci-deqm",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-deqm",
+      "version-count" : 9,
+      "latest" : {
+        "version" : "4.0.0-ballot",
+        "date" : "2022-12-05",
+        "path" : "http://hl7.org/fhir/us/davinci-deqm/2023Jan"
+      },
+      "milestone" : {
+        "version" : "3.1.0",
+        "date" : "2022-11-21",
+        "path" : "http://hl7.org/fhir/us/davinci-deqm/STU3.1"
+      }
+    },
+    {
+      "path" : "us/davinci-drug-formulary/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-drug-formulary",
+      "title" : "US Drug Formulary",
+      "canonical" : "http://hl7.org/fhir/us/davinci-drug-formulary",
+      "category" : "Medications / Immunizations",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-pdex-formulary",
+      "version-count" : 6,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2022-08-25",
+        "path" : "http://hl7.org/fhir/us/davinci-drug-formulary/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2022-08-25",
+        "path" : "http://hl7.org/fhir/us/davinci-drug-formulary/STU2"
+      }
+    },
+    {
+      "path" : "us/davinci-dtr/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-dtr",
+      "title" : "Documentation Templates and Rules",
+      "canonical" : "http://hl7.org/fhir/us/davinci-dtr",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-dtr",
+      "version-count" : 6,
+      "latest" : {
+        "version" : "2.1.0-preview",
+        "date" : "2024-09-27",
+        "path" : "http://hl7.org/fhir/us/davinci-dtr/2.1.0-preview"
+      },
+      "milestone" : {
+        "version" : "2.0.1",
+        "date" : "2024-01-11",
+        "path" : "http://hl7.org/fhir/us/davinci-dtr/STU2"
+      }
+    },
+    {
+      "path" : "us/davinci-hrex/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-hrex",
+      "title" : "Da Vinci Health Record Exchange",
+      "canonical" : "http://hl7.org/fhir/us/davinci-hrex",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-ehrx",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-03-23",
+        "path" : "http://hl7.org/fhir/us/davinci-hrex/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-03-23",
+        "path" : "http://hl7.org/fhir/us/davinci-hrex/STU1"
+      }
+    },
+    {
+      "path" : "us/davinci-pas/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-pas",
+      "title" : "Da Vinci Prior Authorization Support (PAS) FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/davinci-pas",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-pas",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "1.2.0-ballot",
+        "date" : "2022-02-17",
+        "path" : "http://hl7.org/fhir/us/davinci-pas/2022May"
+      },
+      "milestone" : {
+        "version" : "1.1.0",
+        "date" : "2021-12-20",
+        "path" : "http://hl7.org/fhir/us/davinci-pas/STU1.1"
+      }
+    },
+    {
+      "path" : "us/davinci-pcde/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-pcde",
+      "title" : "Da Vinci Payer Coverage Decision Exchange (PCDE) FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/davinci-pcde",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-pcde",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2020-12-23",
+        "path" : "http://hl7.org/fhir/us/davinci-pcde/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2020-12-23",
+        "path" : "http://hl7.org/fhir/us/davinci-pcde/STU1"
+      }
+    },
+    {
+      "path" : "us/davinci-pct/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-pct",
+      "title" : "Da Vinci Patient Cost Transparency Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/davinci-pct",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-pct",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-30",
+        "path" : "http://hl7.org/fhir/us/davinci-pct/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-30",
+        "path" : "http://hl7.org/fhir/us/davinci-pct/STU1"
+      }
+    },
+    {
+      "path" : "us/davinci-pdex-plan-net/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-pdex-plan-net",
+      "title" : "DaVinci PDEX Plan Net",
+      "canonical" : "http://hl7.org/fhir/us/davinci-pdex-plan-net",
+      "category" : "Administration",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-pdex-plan-net",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.1.0",
+        "date" : "2022-04-04",
+        "path" : "http://hl7.org/fhir/us/davinci-pdex-plan-net/STU1.1"
+      },
+      "milestone" : {
+        "version" : "1.1.0",
+        "date" : "2022-04-04",
+        "path" : "http://hl7.org/fhir/us/davinci-pdex-plan-net/STU1.1"
+      }
+    },
+    {
+      "path" : "us/davinci-pdex/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-pdex",
+      "title" : "Da Vinci Payer Data Exchange",
+      "canonical" : "http://hl7.org/fhir/us/davinci-pdex",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-epdx",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "2.0.0-ballot",
+        "date" : "2022-02-18",
+        "path" : "http://hl7.org/fhir/us/davinci-pdex/2022May"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2020-12-22",
+        "path" : "http://hl7.org/fhir/us/davinci-pdex/STU1"
+      }
+    },
+    {
+      "path" : "us/davinci-ra/package-list.json",
+      "package-id" : "hl7.fhir.us.davinci-ra",
+      "title" : "Da Vinci Risk Adjustment FHIR Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/davinci-ra",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/davinci-ra",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "2.0.0-ballot",
+        "date" : "2023-03-28",
+        "path" : "http://hl7.org/fhir/us/davinci-ra/2023May"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-06-16",
+        "path" : "http://hl7.org/fhir/us/davinci-ra/STU1"
+      }
+    },
+    {
+      "path" : "us/dental-data-exchange/package-list.json",
+      "package-id" : "hl7.fhir.us.dental-data-exchange",
+      "title" : "Dental Data Exchange",
+      "canonical" : "http://hl7.org/fhir/us/dental-data-exchange",
+      "category" : "Clinical Records",
+      "ci-build" : "http://build.fhir.org/ig/HL7/dental-data-exchange",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-11-02",
+        "path" : "http://hl7.org/fhir/us/dental-data-exchange/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-11-02",
+        "path" : "http://hl7.org/fhir/us/dental-data-exchange/STU1"
+      }
+    },
+    {
+      "path" : "us/directory-attestation/package-list.json",
+      "package-id" : "hl7.fhir.us.directory-attestation",
+      "title" : "National Healthcare Directory Attestation",
+      "canonical" : "http://hl7.org/fhir/us/directory-attestation",
+      "category" : "Administration",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-directory-attestation",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-08-09",
+        "path" : "http://hl7.org/fhir/us/directory-attestation/2022Sep"
+      }
+    },
+    {
+      "path" : "us/directory-exchange/package-list.json",
+      "package-id" : "hl7.fhir.us.directory-exchange",
+      "title" : "National Healthcare Directory Exchange",
+      "canonical" : "http://hl7.org/fhir/us/directory-exchange",
+      "category" : "Administration",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-directory-exchange",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-08-09",
+        "path" : "http://hl7.org/fhir/us/directory-exchange/2022Sep"
+      }
+    },
+    {
+      "path" : "us/directory-query/package-list.json",
+      "package-id" : "hl7.fhir.us.directory-query",
+      "title" : "National Healthcare Query",
+      "canonical" : "http://hl7.org/fhir/us/directory-query",
+      "category" : "Administration",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-directory-query",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-08-09",
+        "path" : "http://hl7.org/fhir/us/directory-query/2022Sep"
+      }
+    },
+    {
+      "path" : "us/dme-orders/package-list.json",
+      "package-id" : "hl7.fhir.us.dme-orders",
+      "title" : "Post Acute Orders FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/dme-orders",
+      "category" : "Care Planning",
+      "ci-build" : "http://build.fhir.org/ig/HL7/dme-orders",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2020-08-10",
+        "path" : "http://hl7.org/fhir/us/dme-orders/2020Sep"
+      }
+    },
+    {
+      "path" : "us/ecr/package-list.json",
+      "package-id" : "hl7.fhir.us.ecr",
+      "title" : "electronic Case Reporting (eCR)",
+      "canonical" : "http://hl7.org/fhir/us/ecr",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/case-reporting",
+      "version-count" : 6,
+      "latest" : {
+        "version" : "2.1.0",
+        "date" : "2022-08-31",
+        "path" : "http://hl7.org/fhir/us/ecr/STU2.1"
+      },
+      "milestone" : {
+        "version" : "2.1.0",
+        "date" : "2022-08-31",
+        "path" : "http://hl7.org/fhir/us/ecr/STU2.1"
+      }
+    },
+    {
+      "path" : "us/eltss/package-list.json",
+      "package-id" : "hl7.fhir.us.eltss",
+      "title" : "electronic Long-Term Services and Supports Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/eltss",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/eLTSS",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2019-09-12",
+        "path" : "http://hl7.org/fhir/us/eltss/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2019-09-12",
+        "path" : "http://hl7.org/fhir/us/eltss/STU1"
+      }
+    },
+    {
+      "path" : "us/exchange-routing/package-list.json",
+      "package-id" : "hl7.fhir.us.exchange-routing",
+      "title" : "Hybrid / Intermediary Exchange",
+      "canonical" : "http://hl7.org/fhir/us/exchange-routing",
+      "category" : "EHR Access",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-exchange-routing-ig",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-26",
+        "path" : "http://hl7.org/fhir/us/exchange-routing/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-26",
+        "path" : "http://hl7.org/fhir/us/exchange-routing/STU1"
+      }
+    },
+    {
+      "path" : "us/hai-ltcf/package-list.json",
+      "package-id" : "hl7.fhir.us.hai-ltcf",
+      "title" : "Healthcare Associated Infection Reports (HAI) Long Term Care Facilities (LTCF)",
+      "canonical" : "http://hl7.org/fhir/us/hai-ltcf",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/HAI-LTCF",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.1.0",
+        "date" : "2023-04-19",
+        "path" : "http://hl7.org/fhir/us/hai-ltcf/STU1.1"
+      },
+      "milestone" : {
+        "version" : "1.1.0",
+        "date" : "2023-04-19",
+        "path" : "http://hl7.org/fhir/us/hai-ltcf/STU1.1"
+      }
+    },
+    {
+      "path" : "us/hai/package-list.json",
+      "package-id" : "hl7.fhir.us.hai",
+      "title" : "Healthcare Associated Infection Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/hai",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/HAI",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2019-10-11",
+        "path" : "http://hl7.org/fhir/us/hai/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2019-10-11",
+        "path" : "http://hl7.org/fhir/us/hai/STU2"
+      }
+    },
+    {
+      "path" : "us/health-care-surveys-reporting/package-list.json",
+      "package-id" : "hl7.fhir.us.health-care-surveys-reporting",
+      "title" : "Making EHR Data MOre available for Research and Public Health (MedMorph) Healthcare Surveys Reporting Content IG",
+      "canonical" : "http://hl7.org/fhir/us/health-care-surveys-reporting",
+      "category" : "Public Health and Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-health-care-surveys-reporting",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-12-09",
+        "path" : "http://hl7.org/fhir/us/health-care-surveys-reporting/2022Jan"
+      }
+    },
+    {
+      "path" : "us/home-lab-report/package-list.json",
+      "package-id" : "hl7.fhir.us.home-lab-report",
+      "title" : "At-Home In-Vitro Test Report",
+      "canonical" : "http://hl7.org/fhir/us/home-lab-report",
+      "category" : "Clinical Documents",
+      "ci-build" : "http://build.fhir.org/ig/HL7/home-lab-report",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-25",
+        "path" : "http://hl7.org/fhir/us/home-lab-report/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-25",
+        "path" : "http://hl7.org/fhir/us/home-lab-report/STU1"
+      }
+    },
+    {
+      "path" : "us/hsds/package-list.json",
+      "package-id" : "hl7.fhir.us.hsds",
+      "title" : "FHIR IG Human Services Directory",
+      "canonical" : "http://hl7.org/fhir/us/hsds",
+      "category" : "Mappings to Other Standards",
+      "ci-build" : "http://build.fhir.org/ig/HL7/FHIR-IG-Human-Services-Directory",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-12-08",
+        "path" : "http://hl7.org/fhir/us/hsds/2023Jan"
+      }
+    },
+    {
+      "path" : "us/icsr-ae-reporting/package-list.json",
+      "package-id" : "hl7.fhir.us.icsr-ae-reporting",
+      "title" : "Profiles for ICSR Transfusion and Vaccination Adverse Event Detection and Reporting",
+      "canonical" : "http://hl7.org/fhir/us/icsr-ae-reporting",
+      "category" : "Pharmaceutical",
+      "ci-build" : "https://build.fhir.org/ig/HL7/icsr-ae-reporting",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-01-19",
+        "path" : "http://hl7.org/fhir/us/icsr-ae-reporting/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-01-19",
+        "path" : "http://hl7.org/fhir/us/icsr-ae-reporting/STU1"
+      }
+    },
+    {
+      "path" : "us/identity-matching/package-list.json",
+      "package-id" : "hl7.fhir.us.identity-matching",
+      "title" : "Interoperable Digital Identity and Patient Matching",
+      "canonical" : "http://hl7.org/fhir/us/identity-matching",
+      "category" : "Security",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-identity-matching-ig",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-03-31",
+        "path" : "http://hl7.org/fhir/us/identity-matching/2022May"
+      }
+    },
+    {
+      "path" : "us/immds/package-list.json",
+      "package-id" : "hl7.fhir.us.immds",
+      "title" : "Immunization Decision Support Forecast FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/immds",
+      "category" : "Medications / Immunizations",
+      "ci-build" : "http://build.fhir.org/ig/HL7/ImmunizationFHIRDS",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-06-25",
+        "path" : "http://hl7.org/fhir/us/immds/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-06-25",
+        "path" : "http://hl7.org/fhir/us/immds/STU1"
+      }
+    },
+    {
+      "path" : "us/insurance-card/package-list.json",
+      "package-id" : "hl7.fhir.us.insurance-card",
+      "title" : "CARIN Digital Insurance Card",
+      "canonical" : "http://hl7.org/fhir/us/insurance-card",
+      "category" : "Financial",
+      "ci-build" : "http://build.fhir.org/ig/HL7/insurance-card",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-07-13",
+        "path" : "http://hl7.org/fhir/us/insurance-card/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-07-13",
+        "path" : "http://hl7.org/fhir/us/insurance-card/STU1"
+      }
+    },
+    {
+      "path" : "us/mcc/package-list.json",
+      "package-id" : "hl7.fhir.us.mcc",
+      "title" : "MCC eCare Plan Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/mcc",
+      "category" : "Care Planning",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-us-mcc",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-12-04",
+        "path" : "http://hl7.org/fhir/us/mcc/2023Jan"
+      }
+    },
+    {
+      "path" : "us/mcode/package-list.json",
+      "package-id" : "hl7.fhir.us.mcode",
+      "title" : "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 ",
+      "canonical" : "http://hl7.org/fhir/us/mcode",
+      "category" : "Care Planning",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-mCODE-ig",
+      "version-count" : 6,
+      "latest" : {
+        "version" : "3.0.0-ballot",
+        "date" : "2023-03-28",
+        "path" : "http://hl7.org/fhir/us/mcode/2023May"
+      },
+      "milestone" : {
+        "version" : "2.1.0",
+        "date" : "2023-03-21",
+        "path" : "http://hl7.org/fhir/us/mcode/STU2.1"
+      }
+    },
+    {
+      "path" : "us/mdi/package-list.json",
+      "package-id" : "hl7.fhir.us.mdi",
+      "title" : "Medicolegal Death Investigation (MDI)",
+      "canonical" : "http://hl7.org/fhir/us/mdi",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-mdi-ig",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "2.0.0-snapshot1",
+        "date" : "2024-06-20",
+        "path" : "http://hl7.org/fhir/us/mdi/2.0.0-snapshot1"
+      },
+      "milestone" : {
+        "version" : "1.1.0",
+        "date" : "2023-11-16",
+        "path" : "http://hl7.org/fhir/us/mdi/STU1.1"
+      }
+    },
+    {
+      "path" : "us/medmorph-research-dex/package-list.json",
+      "package-id" : "hl7.fhir.us.medmorph-research-dex",
+      "title" : "Making EHR Data MOre available for Research and Public Health (MedMorph) Research Content IG",
+      "canonical" : "http://hl7.org/fhir/us/medmorph-research-dex",
+      "category" : "Public Health and Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-medmorph-research-dex",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-12-09",
+        "path" : "http://hl7.org/fhir/us/medmorph-research-dex/2022Jan"
+      }
+    },
+    {
+      "path" : "us/medmorph/package-list.json",
+      "package-id" : "hl7.fhir.us.medmorph",
+      "title" : "Making EHR Data MOre available for Research and Public Health (MedMorph)",
+      "canonical" : "http://hl7.org/fhir/us/medmorph",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-medmorph",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2021-12-08",
+        "path" : "http://hl7.org/fhir/us/medmorph/2022Jan"
+      }
+    },
+    {
+      "path" : "us/meds/package-list.json",
+      "package-id" : "hl7.fhir.us.meds",
+      "title" : "US-Medication FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/meds",
+      "category" : "Medications / Immunizations",
+      "ci-build" : "http://build.fhir.org/ig/HL7/FHIR-ONC-Meds",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "1.2.0",
+        "date" : "2019-07-25",
+        "path" : "http://hl7.org/fhir/us/meds/STU2"
+      },
+      "milestone" : {
+        "version" : "1.2.0",
+        "date" : "2019-07-25",
+        "path" : "http://hl7.org/fhir/us/meds/STU2"
+      }
+    },
+    {
+      "path" : "us/mihr/package-list.json",
+      "package-id" : "hl7.fhir.us.mihr",
+      "title" : "Maternal and Infant Health Research",
+      "canonical" : "http://hl7.org/fhir/us/mihr",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-mmm-ig",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-29",
+        "path" : "http://hl7.org/fhir/us/mihr/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-29",
+        "path" : "http://hl7.org/fhir/us/mihr/STU1"
+      }
+    },
+    {
+      "path" : "us/military-service/package-list.json",
+      "package-id" : "hl7.fhir.us.military-service",
+      "title" : "HL7 FHIR Implementation Guide for Military Service History and Status",
+      "canonical" : "http://hl7.org/fhir/us/military-service",
+      "category" : "Clinical Records",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-military-service",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-08-13",
+        "path" : "http://hl7.org/fhir/us/military-service/2021Sep"
+      }
+    },
+    {
+      "path" : "us/nhsn-ade/package-list.json",
+      "package-id" : "hl7.fhir.us.nhsn-ade",
+      "title" : "NHSN Reporting of Adverse Drug Events - Hypoglycemia",
+      "canonical" : "http://hl7.org/fhir/us/nhsn-ade",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-nhsn-ade-ig/branches/main/index.html",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-12",
+        "path" : "http://hl7.org/fhir/us/nhsn-ade/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-12",
+        "path" : "http://hl7.org/fhir/us/nhsn-ade/STU1"
+      }
+    },
+    {
+      "path" : "us/nhsn-med-admin/package-list.json",
+      "package-id" : "hl7.fhir.us.nhsn-med-admin",
+      "title" : "NHSN Reporting: Inpatient Medication Administration",
+      "canonical" : "http://hl7.org/fhir/us/nhsn-med-admin",
+      "category" : "Pharmacy",
+      "ci-build" : "http://build.fhir.org/ig/HL7/nhsn-med-admin-ig/branches/main/index.html",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-12",
+        "path" : "http://hl7.org/fhir/us/nhsn-med-admin/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-12",
+        "path" : "http://hl7.org/fhir/us/nhsn-med-admin/STU1"
+      }
+    },
+    {
+      "path" : "us/odh/package-list.json",
+      "package-id" : "hl7.fhir.us.odh",
+      "title" : "Occupational Data for Health (ODH) FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/odh",
+      "category" : "Clinical Records",
+      "ci-build" : "http://build.fhir.org/ig/HL7/us-odh",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "1.3.0",
+        "date" : "2023-03-27",
+        "path" : "http://hl7.org/fhir/us/odh/STU1.3"
+      },
+      "milestone" : {
+        "version" : "1.3.0",
+        "date" : "2023-03-27",
+        "path" : "http://hl7.org/fhir/us/odh/STU1.3"
+      }
+    },
+    {
+      "path" : "us/pacio-adi/package-list.json",
+      "package-id" : "hl7.fhir.us.pacio-adi",
+      "title" : "PACIO Advance Directive Information Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/pacio-adi",
+      "category" : "Clinical Documents",
+      "ci-build" : "http://build.fhir.org/ig/HL7/pacio-adi",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-12-06",
+        "path" : "http://hl7.org/fhir/us/pacio-adi/2022Jan"
+      }
+    },
+    {
+      "path" : "us/pacio-cs/package-list.json",
+      "package-id" : "hl7.fhir.us.pacio-cs",
+      "title" : "PACIO Cognitive Status Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/pacio-cs",
+      "category" : "Patient Summary",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-pacio-cognitive-status",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-11-03",
+        "path" : "http://hl7.org/fhir/us/pacio-cs/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-11-03",
+        "path" : "http://hl7.org/fhir/us/pacio-cs/STU1"
+      }
+    },
+    {
+      "path" : "us/pacio-fs/package-list.json",
+      "package-id" : "hl7.fhir.us.pacio-fs",
+      "title" : "PACIO Functional Status Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/pacio-fs",
+      "category" : "Patient Summary",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-pacio-functional-status",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-11-03",
+        "path" : "http://hl7.org/fhir/us/pacio-fs/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-11-03",
+        "path" : "http://hl7.org/fhir/us/pacio-fs/STU1"
+      }
+    },
+    {
+      "path" : "us/pacio-pfe/package-list.json",
+      "package-id" : "hl7.fhir.us.pacio-pfe",
+      "title" : "PACIO Personal Functioning and Engagement Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/pacio-pfe",
+      "category" : "Patient Summary",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-pacio-pfe",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-08-05",
+        "path" : "http://hl7.org/fhir/us/pacio-pfe/2022Sep"
+      }
+    },
+    {
+      "path" : "us/pacio-rt/package-list.json",
+      "package-id" : "hl7.fhir.us.pacio-rt",
+      "title" : "PACIO Re-Assessment Timepoints Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/pacio-rt",
+      "category" : "Clinical Documents",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-pacio-rt",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-28",
+        "path" : "http://hl7.org/fhir/us/pacio-rt/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-28",
+        "path" : "http://hl7.org/fhir/us/pacio-rt/STU1"
+      }
+    },
+    {
+      "path" : "us/patient-reported-outcomes/package-list.json",
+      "package-id" : "hl7.fhir.us.patient-reported-outcomes",
+      "title" : "Patient Reported Outcomes (PRO) FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/patient-reported-outcomes",
+      "category" : "Personal Healthcare",
+      "ci-build" : "http://build.fhir.org/ig/HL7/patient-reported-outcomes",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2019-03-27",
+        "path" : "http://hl7.org/fhir/us/patient-reported-outcomes/2019May"
+      }
+    },
+    {
+      "path" : "us/ph-library/package-list.json",
+      "package-id" : "hl7.fhir.us.ph-library",
+      "title" : "US Public Health Profiles Library",
+      "canonical" : "http://hl7.org/fhir/us/ph-library",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-us-ph-library",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-08-05",
+        "path" : "http://hl7.org/fhir/us/ph-library/2022Sep"
+      }
+    },
+    {
+      "path" : "us/phcp/package-list.json",
+      "package-id" : "hl7.fhir.us.phcp",
+      "title" : "Pharmacist Care Plan FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/phcp",
+      "category" : "Medications / Immunizations",
+      "ci-build" : "http://build.fhir.org/ig/HL7/PhCP",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-02-11",
+        "path" : "http://hl7.org/fhir/us/phcp/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-02-11",
+        "path" : "http://hl7.org/fhir/us/phcp/STU1"
+      }
+    },
+    {
+      "path" : "us/physical-activity/package-list.json",
+      "package-id" : "hl7.fhir.us.physical-activity",
+      "title" : "U.S. Physical Activity IG",
+      "canonical" : "http://hl7.org/fhir/us/physical-activity",
+      "category" : "Care Planning",
+      "ci-build" : "https://build.fhir.org/ig/HL7/physical-activity",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2023-03-28",
+        "path" : "http://hl7.org/fhir/us/physical-activity/2023May"
+      }
+    },
+    {
+      "path" : "us/qicore/package-list.json",
+      "package-id" : "hl7.fhir.us.qicore",
+      "title" : "Quality Improvement Core Framework",
+      "canonical" : "http://hl7.org/fhir/us/qicore",
+      "category" : "Quality / CDS",
+      "ci-build" : "https://build.fhir.org/ig/HL7/fhir-qi-core",
+      "version-count" : 14,
+      "latest" : {
+        "version" : "5.0.0",
+        "date" : "2023-04-04",
+        "path" : "http://hl7.org/fhir/us/qicore/STU5"
+      },
+      "milestone" : {
+        "version" : "4.1.1",
+        "date" : "2022-03-31",
+        "path" : "http://hl7.org/fhir/us/qicore/STU4.1.1"
+      }
+    },
+    {
+      "path" : "us/registry-protocols/package-list.json",
+      "package-id" : "hl7.fhir.us.registry-protocols",
+      "title" : "Protocols for Clinical Registry Extraction and Data Submission (CREDS) IG",
+      "canonical" : "http://hl7.org/fhir/us/registry-protocols",
+      "category" : "Public Health and Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-registry-protocols-ig",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2023-03-29",
+        "path" : "http://hl7.org/fhir/us/registry-protocols/2023May"
+      }
+    },
+    {
+      "path" : "us/sdcde/package-list.json",
+      "package-id" : "hl7.fhir.us.sdcde",
+      "title" : "Structured Data Capture - Data Element Exchange Specification",
+      "canonical" : "http://hl7.org/fhir/us/sdcde",
+      "category" : "Forms Management",
+      "ci-build" : "http://build.fhir.org/ig/HL7/sdc-de",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "2.0",
+        "date" : "2017-04-21",
+        "path" : "http://hl7.org/fhir/us/sdcde/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0",
+        "date" : "2017-04-21",
+        "path" : "http://hl7.org/fhir/us/sdcde/STU2"
+      }
+    },
+    {
+      "path" : "us/sdoh-clinicalcare/package-list.json",
+      "package-id" : "hl7.fhir.us.sdoh-clinicalcare",
+      "title" : "SDOH Clinical Care for Multiple Domains",
+      "canonical" : "http://hl7.org/fhir/us/sdoh-clinicalcare",
+      "category" : "Care Planning",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2022-11-21",
+        "path" : "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2022-11-21",
+        "path" : "http://hl7.org/fhir/us/sdoh-clinicalcare/STU2"
+      }
+    },
+    {
+      "path" : "us/sirb/package-list.json",
+      "package-id" : "hl7.fhir.us.sirb",
+      "title" : "Single Institutional Review Board (sIRB) Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/sirb",
+      "category" : "Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-sirb",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-04-20",
+        "path" : "http://hl7.org/fhir/us/sirb/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-04-20",
+        "path" : "http://hl7.org/fhir/us/sirb/STU1"
+      }
+    },
+    {
+      "path" : "us/specialty-rx/package-list.json",
+      "package-id" : "hl7.fhir.us.specialty-rx",
+      "title" : "Specialty Medication Enrollment",
+      "canonical" : "http://hl7.org/fhir/us/specialty-rx",
+      "category" : "EHR Access",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-specialty-rx",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2023-05-04",
+        "path" : "http://hl7.org/fhir/us/specialty-rx/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2023-05-04",
+        "path" : "http://hl7.org/fhir/us/specialty-rx/STU2"
+      }
+    },
+    {
+      "path" : "us/udap-security/package-list.json",
+      "package-id" : "hl7.fhir.us.udap-security",
+      "title" : "Security for Scalable Registration, Authentication, and Authorization",
+      "canonical" : "http://hl7.org/fhir/us/udap-security",
+      "category" : "Security",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-udap-security-ig",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-27",
+        "path" : "http://hl7.org/fhir/us/udap-security/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-27",
+        "path" : "http://hl7.org/fhir/us/udap-security/STU1"
+      }
+    },
+    {
+      "path" : "us/vitals/package-list.json",
+      "package-id" : "hl7.fhir.us.vitals",
+      "title" : "Vital Signs FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/vitals",
+      "category" : "Clinical Records",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cimi-vital-signs",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-12",
+        "path" : "http://hl7.org/fhir/us/vitals/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-12",
+        "path" : "http://hl7.org/fhir/us/vitals/STU1"
+      }
+    },
+    {
+      "path" : "us/vr-common-library/package-list.json",
+      "package-id" : "hl7.fhir.us.vr-common-library",
+      "title" : "Vital Records Common Profile Library",
+      "canonical" : "http://hl7.org/fhir/us/vr-common-library",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/vr-common-library",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-12",
+        "path" : "http://hl7.org/fhir/us/vr-common-library/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-10-12",
+        "path" : "http://hl7.org/fhir/us/vr-common-library/STU1"
+      }
+    },
+    {
+      "path" : "us/vrdr/package-list.json",
+      "package-id" : "hl7.fhir.us.vrdr",
+      "title" : "Vital Records Death Reporting FHIR Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/us/vrdr",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/vrdr",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "2.1.0",
+        "date" : "2023-03-24",
+        "path" : "http://hl7.org/fhir/us/vrdr/STU2.1"
+      },
+      "milestone" : {
+        "version" : "2.1.0",
+        "date" : "2023-03-24",
+        "path" : "http://hl7.org/fhir/us/vrdr/STU2.1"
+      }
+    },
+    {
+      "path" : "us/womens-health-registries/package-list.json",
+      "package-id" : "hl7.fhir.us.womens-health-registries",
+      "title" : "Womens Health Technology Coordinated Registry Network FHIR IG",
+      "canonical" : "http://hl7.org/fhir/us/womens-health-registries",
+      "category" : "Clinical Registries",
+      "ci-build" : "http://build.fhir.org/ig/HL7/coordinated-registry-network",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2019-03-27",
+        "path" : "http://hl7.org/fhir/us/womens-health-registries/2019May"
+      }
+    },
+    {
+      "path" : "uv/bulkdata/package-list.json",
+      "package-id" : "hl7.fhir.uv.bulkdata",
+      "title" : "FHIR Bulk Data Access (Flat FHIR)",
+      "canonical" : "http://hl7.org/fhir/uv/bulkdata",
+      "category" : "EHR Access",
+      "ci-build" : "http://build.fhir.org/ig/HL7/bulk-data",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2021-11-26",
+        "path" : "http://hl7.org/fhir/uv/bulkdata/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2021-11-26",
+        "path" : "http://hl7.org/fhir/uv/bulkdata/STU2"
+      }
+    },
+    {
+      "path" : "uv/cdisc-lab/package-list.json",
+      "package-id" : "hl7.fhir.uv.cdisc-lab",
+      "title" : "CDISC Lab Semantics in FHIR",
+      "canonical" : "http://hl7.org/fhir/uv/cdisc-lab",
+      "category" : "Diagnostics",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cdisc-lab",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2020-08-27",
+        "path" : "http://hl7.org/fhir/uv/cdisc-lab/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2020-08-27",
+        "path" : "http://hl7.org/fhir/uv/cdisc-lab/STU1"
+      }
+    },
+    {
+      "path" : "uv/cdisc-mapping/package-list.json",
+      "package-id" : "hl7.fhir.uv.cdisc-mapping",
+      "title" : "CDISC Mapping FHIR IG",
+      "canonical" : "http://hl7.org/fhir/uv/cdisc-mapping",
+      "category" : "Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cdisc-map",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-08-31",
+        "path" : "http://hl7.org/fhir/uv/cdisc-mapping/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-08-31",
+        "path" : "http://hl7.org/fhir/uv/cdisc-mapping/STU1"
+      }
+    },
+    {
+      "path" : "uv/cpg/package-list.json",
+      "package-id" : "hl7.fhir.uv.cpg",
+      "title" : "Clinical Guidelines",
+      "canonical" : "http://hl7.org/fhir/uv/cpg",
+      "category" : "Quality / CDS",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cqf-recommendations",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-02-11",
+        "path" : "http://hl7.org/fhir/uv/cpg/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-02-11",
+        "path" : "http://hl7.org/fhir/uv/cpg/STU1"
+      }
+    },
+    {
+      "path" : "uv/ehrs-rle/package-list.json",
+      "package-id" : "hl7.fhir.uv.ehrs-rle",
+      "title" : "EHRS Functional Model - Record Lifecycle Events Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/ehrs-rle",
+      "category" : "Mapping to Other Standards",
+      "ci-build" : "https://build.fhir.org/ig/HL7/ehrs-rle-ig",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.1.0-ballot",
+        "date" : "2023-03-29",
+        "path" : "http://hl7.org/fhir/uv/ehrs-rle/2023May"
+      }
+    },
+    {
+      "path" : "uv/emedicinal-product-info/package-list.json",
+      "package-id" : "hl7.fhir.uv.emedicinal-product-info",
+      "title" : "Electronic Medicinal Product Information (ePI) FHIR Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/emedicinal-product-info",
+      "category" : "??",
+      "ci-build" : "http://build.fhir.org/ig/HL7/emedicinal-product-info",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-12-04",
+        "path" : "http://hl7.org/fhir/uv/emedicinal-product-info/2023Jan"
+      }
+    },
+    {
+      "path" : "uv/eyecare/package-list.json",
+      "package-id" : "hl7.fhir.uv.eyecare",
+      "title" : "HL7 FHIR® Implementation Guide: Ophthalmology Retinal, Release 1",
+      "canonical" : "http://hl7.org/fhir/uv/eyecare",
+      "category" : "Diagnostics",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-eyecare-ig",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-08-12",
+        "path" : "http://hl7.org/fhir/uv/eyecare/2021Sep"
+      }
+    },
+    {
+      "path" : "uv/fhir-for-fair/package-list.json",
+      "package-id" : "hl7.fhir.uv.fhir-for-fair",
+      "title" : "FHIR for FAIR - FHIR Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/fhir-for-fair",
+      "category" : "Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-for-fair",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-28",
+        "path" : "http://hl7.org/fhir/uv/fhir-for-fair/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-09-28",
+        "path" : "http://hl7.org/fhir/uv/fhir-for-fair/STU1"
+      }
+    },
+    {
+      "path" : "uv/fhircast/package-list.json",
+      "package-id" : "hl7.fhir.uv.fhircast",
+      "title" : "FHIRcast",
+      "canonical" : "http://hl7.org/fhir/uv/fhircast",
+      "category" : "Imaging",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhircast-docs",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "2.1.0-ballot",
+        "date" : "2022-04-01",
+        "path" : "http://hl7.org/fhir/uv/fhircast/2022May"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2021-02-03",
+        "path" : "https://fhircast.hl7.org/specification/STU2"
+      }
+    },
+    {
+      "path" : "uv/genomics-reporting/package-list.json",
+      "package-id" : "hl7.fhir.uv.genomics-reporting",
+      "title" : "Genetic Reporting Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/genomics-reporting",
+      "category" : "Diagnostics",
+      "ci-build" : "http://build.fhir.org/ig/HL7/genomics-reporting",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2022-05-09",
+        "path" : "http://hl7.org/fhir/uv/genomics-reporting/STU2"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2022-05-09",
+        "path" : "http://hl7.org/fhir/uv/genomics-reporting/STU2"
+      }
+    },
+    {
+      "path" : "uv/ichom-breast-cancer/package-list.json",
+      "package-id" : "hl7.fhir.uv.ichom-breast-cancer",
+      "title" : "ICHOM FHIR Implementation Guide: Breast Cancer",
+      "canonical" : "http://hl7.org/fhir/uv/ichom-breast-cancer",
+      "category" : "Quality / CDS",
+      "ci-build" : "https://build.fhir.org/ig/HL7/fhir-ichom-breast-cancer-ig",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-12-07",
+        "path" : "http://hl7.org/fhir/uv/ichom-breast-cancer/2023Jan"
+      }
+    },
+    {
+      "path" : "uv/ihe-sdc-ecc/package-list.json",
+      "package-id" : "hl7.fhir.uv.ihe-sdc-ecc",
+      "title" : "IHE SDC/eCC on FHIR",
+      "canonical" : "http://hl7.org/fhir/uv/ihe-sdc-ecc",
+      "category" : "Orders and Observaitons",
+      "ci-build" : "http://build.fhir.org/ig/HL7/ihe-sdc-ecc-on-fhir",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-08-11",
+        "path" : "http://hl7.org/fhir/uv/ihe-sdc-ecc/2022Sep"
+      }
+    },
+    {
+      "path" : "uv/immds/package-list.json",
+      "package-id" : "hl7.fhir.uv.immds",
+      "title" : "Immunization Decision Support Forecast FHIR IG",
+      "canonical" : "http://hl7.org/fhir/uv/immds",
+      "category" : "Medications / Immunizations",
+      "ci-build" : "http://build.fhir.org/ig/HL7/ImmunizationFHIRDS",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2019-07-29",
+        "path" : "http://hl7.org/fhir/uv/immds/2019Sep"
+      }
+    },
+    {
+      "path" : "uv/ipa/package-list.json",
+      "package-id" : "hl7.fhir.uv.ipa",
+      "title" : "International Patient Access",
+      "canonical" : "http://hl7.org/fhir/uv/ipa",
+      "category" : "Patient Summary",
+      "ci-build" : "https://build.fhir.org/ig/HL7/fhir-ipa",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-26",
+        "path" : "http://hl7.org/fhir/uv/ipa/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-03-26",
+        "path" : "http://hl7.org/fhir/uv/ipa/STU1"
+      }
+    },
+    {
+      "path" : "uv/ips/package-list.json",
+      "package-id" : "hl7.fhir.uv.ips",
+      "title" : "International Patient Summary Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/ips",
+      "category" : "Patient Summary",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-ips",
+      "version-count" : 5,
+      "latest" : {
+        "version" : "1.1.0",
+        "date" : "2022-11-22",
+        "path" : "http://hl7.org/fhir/uv/ips/STU1.1"
+      },
+      "milestone" : {
+        "version" : "1.1.0",
+        "date" : "2022-11-22",
+        "path" : "http://hl7.org/fhir/uv/ips/STU1.1"
+      }
+    },
+    {
+      "path" : "uv/livd/package-list.json",
+      "package-id" : "hl7.fhir.uv.livd",
+      "title" : "Loinc/IVD Mapping FHIR IG",
+      "canonical" : "http://hl7.org/fhir/uv/livd",
+      "category" : "Diagnostics",
+      "ci-build" : "http://build.fhir.org/ig/HL7/livd",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "0.3.0",
+        "date" : "2020-12-18",
+        "path" : "http://hl7.org/fhir/uv/livd/2021Jan"
+      }
+    },
+    {
+      "path" : "uv/mhealth-framework/package-list.json",
+      "package-id" : "hl7.fhir.uv.mhealth-framework",
+      "title" : "Application Data Exchange Assessment Framework and Functional Requirements for Mobile Health",
+      "canonical" : "http://hl7.org/fhir/uv/mhealth-framework",
+      "category" : "Personal Healthcare",
+      "ci-build" : "http://hl7.org/fhir/uv/mhealth-framework",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2020-04-16",
+        "path" : "http://hl7.org/fhir/uv/mhealth-framework/2020May"
+      }
+    },
+    {
+      "path" : "uv/order-catalog/package-list.json",
+      "package-id" : "hl7.fhir.uv.order-catalog",
+      "title" : "Order Catalog Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/order-catalog",
+      "category" : "Administration",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-order-catalog",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2020-08-05",
+        "path" : "http://hl7.org/fhir/uv/order-catalog/2020Sep"
+      }
+    },
+    {
+      "path" : "uv/patient-corrections/package-list.json",
+      "package-id" : "hl7.fhir.uv.patient-corrections",
+      "title" : "Patient Request for Corrections Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/patient-corrections",
+      "category" : "tbd",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-patient-correction",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-03-29",
+        "path" : "http://hl7.org/fhir/uv/patient-corrections/2022May"
+      }
+    },
+    {
+      "path" : "uv/pddi/package-list.json",
+      "package-id" : "hl7.fhir.uv.pddi",
+      "title" : "Potential Drug-Drug Interaction (PDDI) Clinical Decision Support (CDS) (FHIR IG)",
+      "canonical" : "http://hl7.org/fhir/uv/pddi",
+      "category" : "Medications / Immunizations",
+      "ci-build" : "http://build.fhir.org/ig/HL7/PDDI-CDS",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2022-12-07",
+        "path" : "http://hl7.org/fhir/uv/pddi/2023Jan"
+      }
+    },
+    {
+      "path" : "uv/phd/package-list.json",
+      "package-id" : "hl7.fhir.uv.phd",
+      "title" : "Personal Health Device FHIR IG",
+      "canonical" : "http://hl7.org/fhir/uv/phd",
+      "category" : "Personal Healthcare",
+      "ci-build" : "http://build.fhir.org/ig/HL7/phd",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-05-12",
+        "path" : "http://hl7.org/fhir/uv/phd/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-05-12",
+        "path" : "http://hl7.org/fhir/uv/phd/STU1"
+      }
+    },
+    {
+      "path" : "uv/pocd/package-list.json",
+      "package-id" : "hl7.fhir.uv.pocd",
+      "title" : "Point-of-care Device FHIR IG",
+      "canonical" : "http://hl7.org/fhir/uv/pocd",
+      "category" : "Diagnostics",
+      "ci-build" : "http://build.fhir.org/ig/HL7/uv-pocd",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "0.3.0",
+        "date" : "2021-08-14",
+        "path" : "http://hl7.org/fhir/uv/pocd/2021Sep"
+      }
+    },
+    {
+      "path" : "uv/radiation-dose-summary/package-list.json",
+      "package-id" : "hl7.fhir.uv.radiation-dose-summary",
+      "title" : "Radiation Dose Summary for Diagnostic Procedures on FHIR",
+      "canonical" : "http://hl7.org/fhir/uv/radiation-dose-summary",
+      "category" : "Diagnostics",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2021-12-08",
+        "path" : "http://hl7.org/fhir/uv/radiation-dose-summary/2022Jan"
+      }
+    },
+    {
+      "path" : "uv/rtls/package-list.json",
+      "package-id" : "hl7.fhir.uv.rtls",
+      "title" : "Real Time Location Services Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/rtls",
+      "category" : "administration",
+      "ci-build" : "https://build.fhir.org/ig/HL7/rtls-ig",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2023-03-30",
+        "path" : "http://hl7.org/fhir/uv/rtls/2023May"
+      }
+    },
+    {
+      "path" : "uv/saner/package-list.json",
+      "package-id" : "hl7.fhir.uv.saner",
+      "title" : "Situational Awareness for Novel Epidemic Response",
+      "canonical" : "http://hl7.org/fhir/uv/saner",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-saner",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2021-09-07",
+        "path" : "http://hl7.org/fhir/uv/saner/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2021-09-07",
+        "path" : "http://hl7.org/fhir/uv/saner/STU1"
+      }
+    },
+    {
+      "path" : "uv/sdc/package-list.json",
+      "package-id" : "hl7.fhir.uv.sdc",
+      "title" : "Structured Data Capture FHIR IG",
+      "canonical" : "http://hl7.org/fhir/uv/sdc",
+      "category" : "Forms Management",
+      "ci-build" : "http://build.fhir.org/ig/HL7/sdc",
+      "version-count" : 9,
+      "latest" : {
+        "version" : "3.0.0",
+        "date" : "2022-03-08",
+        "path" : "http://hl7.org/fhir/uv/sdc/STU3"
+      },
+      "milestone" : {
+        "version" : "3.0.0",
+        "date" : "2022-03-08",
+        "path" : "http://hl7.org/fhir/uv/sdc/STU3"
+      }
+    },
+    {
+      "path" : "uv/security-label-ds4p/package-list.json",
+      "package-id" : "hl7.fhir.uv.security-label-ds4p",
+      "title" : "FHIR Data Segmentation for Privacy",
+      "canonical" : "http://hl7.org/fhir/uv/security-label-ds4p",
+      "category" : "Security",
+      "ci-build" : "http://hl7.org/fhir/ig/HL7/security-label-ds4p",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-04-17",
+        "path" : "http://hl7.org/fhir/uv/security-label-ds4p/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-04-17",
+        "path" : "http://hl7.org/fhir/uv/security-label-ds4p/STU1"
+      }
+    },
+    {
+      "path" : "uv/shc-vaccination/package-list.json",
+      "package-id" : "hl7.fhir.uv.shc-vaccination",
+      "title" : "SMART Health Cards Vaccination and Testing, Release 1 | STU 1",
+      "canonical" : "http://hl7.org/fhir/uv/shc-vaccination",
+      "category" : "Public Health",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-shc-vaccination-ig",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.6.2",
+        "date" : "2021-08-13",
+        "path" : "http://hl7.org/fhir/uv/shc-vaccination/2021Sep"
+      }
+    },
+    {
+      "path" : "uv/shorthand/package-list.json",
+      "package-id" : "hl7.fhir.uv.shorthand",
+      "title" : "FHIR Shorthand",
+      "canonical" : "http://hl7.org/fhir/uv/shorthand",
+      "category" : "Administration",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-shorthand",
+      "version-count" : 4,
+      "latest" : {
+        "version" : "2.0.0",
+        "date" : "2022-02-17",
+        "path" : "http://hl7.org/fhir/uv/shorthand/N1"
+      },
+      "milestone" : {
+        "version" : "2.0.0",
+        "date" : "2022-02-17",
+        "path" : "http://hl7.org/fhir/uv/shorthand/N1"
+      }
+    },
+    {
+      "path" : "uv/smart-web-messaging/package-list.json",
+      "package-id" : "hl7.fhir.uv.smart-web-messaging",
+      "title" : "SMART Web Messaging Implementation Guide: STU1",
+      "canonical" : "http://hl7.org/fhir/uv/smart-web-messaging",
+      "category" : "Communications",
+      "ci-build" : "http://build.fhir.org/ig/HL7/smart-web-messaging",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2022-05-06",
+        "path" : "http://hl7.org/fhir/uv/smart-web-messaging/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2022-05-06",
+        "path" : "http://hl7.org/fhir/uv/smart-web-messaging/STU1"
+      }
+    },
+    {
+      "path" : "uv/subscriptions-backport/package-list.json",
+      "package-id" : "hl7.fhir.uv.subscriptions-backport",
+      "title" : "Subscriptions R5 Backport",
+      "canonical" : "http://hl7.org/fhir/uv/subscriptions-backport",
+      "category" : "EHR Access",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.1.0",
+        "date" : "2023-01-11",
+        "path" : "http://hl7.org/fhir/uv/subscriptions-backport/STU1.1"
+      },
+      "milestone" : {
+        "version" : "1.1.0",
+        "date" : "2023-01-11",
+        "path" : "http://hl7.org/fhir/uv/subscriptions-backport/STU1.1"
+      }
+    },
+    {
+      "path" : "uv/v2mappings/package-list.json",
+      "package-id" : "hl7.fhir.uv.v2mappings",
+      "title" : "HL7 Version 2 to FHIR",
+      "canonical" : "http://hl7.org/fhir/uv/v2mappings",
+      "category" : "??",
+      "ci-build" : "http://build.fhir.org/ig/HL7/v2-to-fhir",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.1.0",
+        "date" : "2020-08-12",
+        "path" : "http://hl7.org/fhir/uv/v2mappings/2020Sep"
+      }
+    },
+    {
+      "path" : "uv/vhdir/package-list.json",
+      "package-id" : "hl7.fhir.uv.vhdir",
+      "title" : "Validated Healthcare Directory FHIR IG",
+      "canonical" : "http://hl7.org/fhir/uv/vhdir",
+      "category" : "Administration",
+      "ci-build" : "http://build.fhir.org/ig/HL7/VhDir",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2018-09-01",
+        "path" : "http://hl7.org/fhir/uv/vhdir/2018Sep"
+      }
+    },
+    {
+      "path" : "uv/vulcan-rwd/package-list.json",
+      "package-id" : "hl7.fhir.uv.vulcan-rwd",
+      "title" : "Retrieval of Real World Data for Clinical Research",
+      "canonical" : "http://hl7.org/fhir/uv/vulcan-rwd",
+      "category" : "Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/vulcan-rwd",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-05-26",
+        "path" : "http://hl7.org/fhir/uv/vulcan-rwd/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-05-26",
+        "path" : "http://hl7.org/fhir/uv/vulcan-rwd/STU1"
+      }
+    },
+    {
+      "path" : "uv/vulcan-schedule/package-list.json",
+      "package-id" : "hl7.fhir.uv.vulcan-schedule",
+      "title" : "Clinical Study Schedule of Activities",
+      "canonical" : "http://hl7.org/fhir/uv/vulcan-schedule",
+      "category" : "Research",
+      "ci-build" : "http://build.fhir.org/ig/HL7/Vulcan-schedule-ig",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-04-18",
+        "path" : "http://hl7.org/fhir/uv/vulcan-schedule/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-04-18",
+        "path" : "http://hl7.org/fhir/uv/vulcan-schedule/STU1"
+      }
+    },
+    {
+      "path" : "us/military-service/package-list.json",
+      "package-id" : "hl7.fhir.us.military-service",
+      "title" : "HL7 FHIR Implementation Guide for Military Service History and Status",
+      "canonical" : "http://hl7.org/fhir/us/military-service",
+      "category" : "Clinical Records",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-military-service",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-05-30",
+        "path" : "http://hl7.org/fhir/us/military-service/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-05-30",
+        "path" : "http://hl7.org/fhir/us/military-service/STU1"
+      }
+    },
+    {
+      "path" : "us/identity-matching/package-list.json",
+      "package-id" : "hl7.fhir.us.identity-matching",
+      "title" : "Interoperable Digital Identity and Patient Matching",
+      "canonical" : "http://hl7.org/fhir/us/identity-matching",
+      "category" : "Security",
+      "ci-build" : "http://build.fhir.org/ig/HL7/fhir-identity-matching-ig",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0",
+        "date" : "2023-06-02",
+        "path" : "http://hl7.org/fhir/us/identity-matching/STU1"
+      },
+      "milestone" : {
+        "version" : "1.0.0",
+        "date" : "2023-06-02",
+        "path" : "http://hl7.org/fhir/us/identity-matching/STU1"
+      }
+    },
+    {
+      "path" : "tools/package-list.json",
+      "package-id" : "hl7.fhir.uv.tools",
+      "title" : "HL7 Tools Extension IG",
+      "canonical" : "http://hl7.org/fhir/tools",
+      "category" : "Infrastructure",
+      "ci-build" : "https://build.fhir.org/ig/FHIR/fhir-tools-ig/",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2024-04-26",
+        "path" : "http://hl7.org/fhir/tools/0.2.0"
+      },
+      "milestone" : {
+        "version" : "0.2.0",
+        "date" : "2024-04-26",
+        "path" : "http://hl7.org/fhir/tools/0.2.0"
+      }
+    },
+    {
+      "path" : "uv/crmi/package-list.json",
+      "package-id" : "hl7.fhir.uv.crmi",
+      "title" : "Canonical Resource Management Infrastructure Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/crmi",
+      "category" : "infrastructure",
+      "ci-build" : "http://build.fhir.org/ig/HL7/crmi-ig",
+      "version-count" : 3,
+      "latest" : {
+        "version" : "1.0.0-snapshot",
+        "date" : "2024-04-06",
+        "path" : "http://hl7.org/fhir/uv/crmi/1.0.0-snapshot"
+      }
+    },
+    {
+      "path" : "uv/cql/package-list.json",
+      "package-id" : "hl7.fhir.uv.cql",
+      "title" : "Using CQL with FHIR Implementation Guide",
+      "canonical" : "http://hl7.org/fhir/uv/cql",
+      "category" : "infrastructure",
+      "ci-build" : "http://build.fhir.org/ig/HL7/cql-ig",
+      "version-count" : 2,
+      "latest" : {
+        "version" : "1.0.0-snapshot",
+        "date" : "2024-04-06",
+        "path" : "http://hl7.org/fhir/uv/cql/1.0.0-snapshot"
+      }
+    },
+    {
+      "path" : "us/smp/package-list.json",
+      "package-id" : "hl7.fhir.us.smp",
+      "title" : "US Standardized Medication Profile (SMP)",
+      "canonical" : "http://hl7.org/fhir/us/smp",
+      "category" : "Medications ",
+      "ci-build" : "https://build.fhir.org/ig/HL7/smp",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "1.0.0-ballot",
+        "date" : "2024-08-14",
+        "path" : "http://hl7.org/fhir/us/smp/2024Sep"
+      }
+    }
+  ]
+}
