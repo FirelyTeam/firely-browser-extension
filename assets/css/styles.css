@@ -140,30 +140,74 @@ div#tools-list {
     position: relative;
 }
 
-#reset-button {
+.dropdown {
     position: absolute;
     top: 4px;
     right: 4px;
+}
+
+.dropdown-toggle {
     background: none;
     border: none;
     color: #fff;
     cursor: pointer;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     padding: 0;
     border-radius: 50%;
     transition: background-color 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
+    float: right;
+    clear: both;
 }
 
-#reset-button:hover {
+.dropdown-toggle:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#reset-button i {
-    font-size: 8px;
+.dropdown-toggle i {
+    font-size: 12px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    /* right: 0; */
+    /* top: 100%; */
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1000;
+    float: right;
+    clear: both;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-size: 12px;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    text-decoration: none;
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
 }
 
 #status-message {

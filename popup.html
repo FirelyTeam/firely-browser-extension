@@ -48,9 +48,22 @@
         </form>
         <div id="status-message"></div>
     </div>
-    <button id="reset-button" title="Reload cached guide versions">
-        <i class="fas fa-undo"></i>
-    </button>
+    <div class="dropdown">
+        <button class="dropdown-toggle" title="Options">
+            <i class="fas fa-ellipsis-v"></i>
+        </button>
+        <div class="dropdown-menu">
+            <a href="#" id="reset-button" class="dropdown-item">
+                <i class="fas fa-undo"></i> Refresh
+            </a>
+            <a href="https://github.com/FirelyTeam/firely-browser-extension/issues" target="_blank" class="dropdown-item">
+                <i class="fas fa-bug"></i> Report an issue
+            </a>
+            <a href="https://github.com/FirelyTeam/firely-browser-extension" target="_blank" class="dropdown-item">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </div>
     <script type="module" src="/src/popup.js"></script>
 </body>
 </html>
