@@ -6,15 +6,24 @@
 
 ## Functionality
 
+![IG Publisher guide](./marketing/readme/ig-publisher-guide.png)
+*Switching between different guide versions in an IG Publisher guide*
+
+![Simplifier guide](./marketing/readme/simplifier-guide.png)
+*Switching between different guide versions in a Simplifier guide*
+
+![Simplifier package](./marketing/readme/simplifier-package.png)
+*Package tools and search from a Simplifier package page*
+
+![Registry package](./marketing/readme/registry-package.png)
+*Package tools and search from a Registry package page*
+
 ### Search Capabilities
 * Global search across all FHIR content via Simplifier.net
 * Advanced filtering options:
   * Filter within current guide
   * Filter within current package
   * Filter by current FHIR version
-
-![IG Publisher guide](./marketing/readme/ig-publisher-guide.png)
-*Switching between different guide versions in an IG Publisher guide*
 
 ### Version Management
 
@@ -30,9 +39,6 @@ For Simplifier-based guides:
   * All available versions
   * Latest version
 
-![Simplifier guide](./marketing/readme/simplifier-guide.png)
-*Switching between different guide versions in a Simplifier guide*
-
 ### Package Tools
 When a package name and version are detected, the following tools become available:
 
@@ -42,9 +48,6 @@ When a package name and version are detected, the following tools become availab
 | Validation | Validate content against the package |
 | FHIRPath Query | Execute FHIRPath queries within the package |
 | FQL Query | Execute FHIR Query Language (FQL) queries within the package |
-
-![Simplifier package](./marketing/readme/simplifier-package.png)
-*Package tools and search from a Simplifier package page*
 
 ### Recognized pages
 Currently the following pages are recognized by the extension:
@@ -57,9 +60,6 @@ Currently the following pages are recognized by the extension:
 * All guides with a build guide on [build.fhir.org](https://build.fhir.org/ig)
   * Their current (build) URL, GitHub repo and canonical URL come from [this list](https://build.fhir.org/ig/qas.json)
   * The versions come from package-list.json, eg [this one for CH Core](https://fhir.ch/ig/ch-core/package-list.json). Note that the extension can only load this list when you're currently on the same domain.
-
-![Registry package](./marketing/readme/registry-package.png)
-*Package tools and search from a Registry package page*
 
 ## Development
 
